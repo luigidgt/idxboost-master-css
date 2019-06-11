@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Freight';
+    src: url('Freight-TextBold.eot');
+    src: url('Freight-TextBold.eot?#iefix') format('embedded-opentype'),
+        url('Freight-TextBold.woff2') format('woff2'),
+        url('Freight-TextBold.woff') format('woff'),
+        url('Freight-TextBold.ttf') format('truetype'),
+        url('Freight-TextBold.svg#Freight-TextBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+

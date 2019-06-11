@@ -1,0 +1,375 @@
+#flex-contact-theme{
+	.gwr.c-flex{
+		margin-top: 1.25rem;
+		margin-bottom: 1.25rem;
+		max-width: 924px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		@media screen and (min-width: 640px){
+			margin-top: 3.125rem;
+			margin-bottom: 3.125rem;
+		}
+		.flex-block-description{
+			margin-bottom: 1rem;
+			width: 100%;
+			p{
+				margin-bottom: 0;
+				@media screen and (min-width: 640px){
+					margin-bottom: 1.25rem; 
+				}
+			}
+		}
+		.flex-lateral-a,
+		.flex-lateral-b{
+			width: 100%;
+			@media screen and (min-width: 640px){
+				width: 48%;
+			}
+		}
+		.flex-lateral-b{
+			margin-top: 1.25rem; 
+			@media screen and (min-width: 640px){
+				margin-top: 0
+			}
+		}
+		/*.flex-lateral-a{
+			order: 2;
+			@media screen and (min-width: 640px){
+				order: 1;
+			}
+		}
+		*/
+	}
+	.flex-lateral-a,
+	.flex-lateral-b{
+		h3{
+			font-size: 22/16*1rem;
+			margin-bottom: 1.25rem;
+			text-transform: uppercase;
+			font-weight: 600;
+		}
+	}
+
+	.title-block{
+		text-transform: uppercase;
+	}
+
+	#content-map{
+		margin-top: 1.25rem;
+		#map{
+			min-height: 295px;
+			border: 1px solid #d1d1d1;
+		}
+	}
+
+	.flex-block-share{
+		&.standar{
+			.title-share{
+				font-size: 0.875rem;
+				width: 100%;
+				display: block;
+			}
+			.social-networks{
+				margin-top: 0.9375rem;
+				height: 40px;
+				padding: 0 !important;
+				justify-content: flex-start;
+				display: flex;
+				li{
+					margin: 0 3/16*1rem;
+					position: relative;
+					width: 28px;
+					height: 28px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					a{
+						overflow: hidden;
+						width: 100%;
+						height: 100%;
+						position: absolute;
+						text-indent: -999999px;
+						display: block;
+					}
+
+					&.clidxboost-icon-facebook,
+					&.clidxboost-icon-twitter,
+					&.clidxboost-icon-google-plus,
+					&.clidxboost-icon-instagram,
+					&.clidxboost-icon-linkedin,
+					&.clidxboost-icon-youtube,
+					&.clidxboost-icon-pinterest{
+
+						&:before{ 
+							font-family: $web-icons;
+							display: inline-block;
+							font-size: 28/16*1rem;
+							transition: color .3s;
+						}
+					}
+
+					&.clidxboost-icon-facebook{
+						&:before{
+							content: "\e92f";
+						}
+
+						&:hover{
+							&:before{
+								color: $color-facebook;
+							}
+						}
+					}
+
+					&.clidxboost-icon-twitter{
+						&:before{
+							content: "\e92d";
+						}
+
+						&:hover{
+							&:before{
+								color: $color-twittter;
+							}
+						}
+					}
+
+					&.clidxboost-icon-google-plus{
+						&:before{
+							content: "\e90b";
+						}
+
+						&:hover{
+							&:before{
+								color: $color-youtube;
+							}
+						}
+					}
+
+					&.clidxboost-icon-youtube{
+						&:before{
+							content: "\e92e";
+						}
+
+						&:hover{
+							&:before{
+								color: $color-youtube;
+							}
+						}
+					}
+
+					&.clidxboost-icon-instagram{
+						&:before{
+							content: "\e930";
+						}
+
+						&:hover{
+							&:before{
+								color: $color-instagram;
+							}
+						}
+					}
+
+					&.clidxboost-icon-linkedin{
+						&:before{
+							content: "\e92c";
+						}
+
+						&:hover{
+							&:before{
+								color: $color-linkedin;
+							}
+						}
+					}
+
+					&.clidxboost-icon-pinterest{
+						&:before{
+							content: "\e908";
+						}
+
+						&:hover{
+							&:before{
+								color: $color-pinterest;
+							}
+						}
+					}
+				}
+				&:after{
+					display: none;
+				}
+			}
+		}
+	}
+
+}
+
+.flex-contact-list{
+	li{
+		margin-bottom: 0.3125rem;
+		a{
+			display: block;
+			padding-left: 30px;
+			position: relative;
+			font-size: 0.875rem;
+			@media screen and (min-width: 640px){
+				font-size: 1rem;
+			}
+			&:before{
+				font-family: $web-icons;
+				display: inline-block;
+				position: absolute;
+				left: 0;
+				top: 0;
+				font-size: 18px;
+			}
+			&.phone{
+				&:before{
+					content: "\e91b";
+				}
+			}
+			&.email{
+				&:before{
+					content: "\e91a";
+					top: 3px;
+				}
+			}
+			&.mapa{
+				&:before{
+					content: "\e905";
+				}
+			}
+		}
+	}
+}
+
+.flex-content-form{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	.form-item{
+		width: 100%;
+		@media screen and (min-width: 640px){
+			width: 48%;
+		}
+		margin-bottom: 0.625rem;
+		input,
+		textarea{
+			width: 100%;
+			height: 40px;
+			padding: 0.3125rem 0.9375rem;
+			border: 1px solid #d1d1d1;
+			border-radius: 4px;
+			font-size: 0.875rem;
+		}
+		textarea{
+			height: 97px;
+			resize: none;
+		}
+		span{
+			font-size: 14px;
+			margin-bottom: 0.3125rem;
+		}
+		&.full-item{
+			width: 100%;
+		}
+
+		.clidxboost-btn-link{
+			span{
+				background-color: #FFF;
+				color: #333;
+			}
+			&:hover{
+				span{
+					background-color: $colorweb;
+					color: #FFF;
+				}
+			}
+		}
+	}
+	.opt-list{
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		.chk-item,
+		.radio-item{
+			label{
+				margin-bottom: 0.3125rem;
+				position: relative;
+				padding-left: 25px;
+				cursor: pointer;
+				display: inline-block;
+				&:before{
+					content: "";
+			    display: block;
+			    height: 13px;
+			    width: 14px;
+			    border-radius: 3px;
+			    border: 1px solid #ccc;
+			    position: absolute;
+			    top: 3px;
+			    left: 0;
+			    background-color: #FFF;
+			  }
+			  &:after{
+					content: "\2713";
+					display: inline-block;
+					position: absolute;
+					left: 3px;
+					top: 0px;
+					font-size: 15px;
+					color: $colorweb;
+					transform: scale(0);
+					transition: all 0.2s cubic-bezier(0, 0.86, 1, 1.24);
+			  }
+		  }
+			input[type=checkbox],
+			input[type=radio]{
+				width: 0;
+				height: 0;
+				overflow: hidden;
+				position: absolute;
+				border: 0;
+				z-index: 0;
+				&:checked+label:after {
+					transform: scale(1);
+				}
+			}
+	  }
+	  .radio-item{
+	  	margin-right: 10px;
+	  	label{
+	  		&:after{
+					content: "";
+					display: inline-block;
+					position: absolute;
+					left: 3px;
+					top: 6px;
+					font-size: 15px;
+					transform: scale(0);
+					transition: all 0.2s cubic-bezier(0, 0.86, 1, 1.24);
+					width: 10px;
+					height: 9px;
+					z-index: 1;
+					background-color: $colorweb;
+			  }
+	  	}
+	  }
+	  .opt-item{
+			position: relative;
+			&.full-item{
+				margin-top: 0.625rem;
+				width: 100%;
+				span{
+					width: 100%;
+					display:block;
+				}
+			}
+	  }
+	  label{
+	  	font-size: 0.875rem;
+	  }
+	}
+}

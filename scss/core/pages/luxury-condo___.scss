@@ -1,0 +1,591 @@
+/*----------------------------------------------------------------------------------*/
+/* Vista Lista
+/*----------------------------------------------------------------------------------*/
+##{$prefijo}luxury-condo-page{
+  
+  .#{$prefijo}luxury-condo-title{
+    width: 100%;
+    margin: 10/16*1rem 0;
+    font-weight: 600;
+    font-family: $opensans;
+    font-size: 1rem;
+    min-height: 22px;
+    padding: 0 10/16*1rem;
+    @media screen and (min-width: 640px){
+      padding: 0;
+    }
+  }
+
+  .#{$prefijo}content-filters{
+    ##{$prefijo}wrap-filters{
+      .#{$prefijo}gwr{
+        ##{$prefijo}filters{
+          li{
+            &.#{$prefijo}content_select{
+              &:last-child{
+                border-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  ##{$prefijo}wrap-result{
+    &.#{$prefijo}view-list{
+      ##{$prefijo}result-search{
+        margin-bottom: 2rem;
+        >li{
+          .features{
+            li{
+              &.tg-building-links{
+                display: none;
+              }
+
+              &.unit,
+              &.year{
+                span{
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  ##{$prefijo}wrap-result{
+    ##{$prefijo}result-search{
+      >li{
+        .#{$prefijo}wrap-slider{
+          .#{$prefijo}clidxboost-btn-check{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px){
+    .#{$prefijo}wrap-result,
+    ##{$prefijo}wrap-result{
+      &.#{$prefijo}view-list{
+        ##{$prefijo}head-list,
+        .#{$prefijo}head-list{
+          background-color: $gris-lineas;
+          padding-left: 0;
+          li{
+            height: 40px;
+          }
+        }
+      }
+    }
+  
+    ##{$prefijo}wrap-result{
+      &.#{$prefijo}view-list{
+        ##{$prefijo}result-search{
+          >li{
+            .#{$prefijo}features{
+              padding-left: 0;
+            }
+          }
+        }
+      }
+    }
+
+    ##{$prefijo}wrap-subfilters{
+      .#{$prefijo}gwr{
+        ##{$prefijo}sub-filters {
+          width: 100%;
+          margin-left: 0;
+          >li{
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 640px){
+    .#{$prefijo}content-filters{
+    .#{$prefijo}wrap-filters,
+      ##{$prefijo}wrap-filters{
+        .#{$prefijo}gwr{
+          .#{$prefijo}filters,
+          ##{$prefijo}filters{
+            li:not(.#{$prefijo}mini-search){
+              height: 50px;
+              display: flex;
+              align-items: center;
+              border-right: 1px solid $gris-lineas;
+              border-left: 0;
+              width: 20%;
+              flex-grow: 1;
+              border-bottom: 0;
+              &:last-child{
+                border-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /** Resize 768 **/
+  @media (max-width: 768px){
+    ##{$prefijo}wrap-result{
+      &.#{$prefijo}view-list{
+        ##{$prefijo}result-search{
+          >li{
+            .#{$prefijo}features{
+              li{
+                &.#{$prefijo}name{
+                  display: none;
+                }
+                &.#{$prefijo}address,
+                &.#{$prefijo}city{
+                  display: block;
+                  margin-bottom: 5/16*1rem;
+                  font-size: 14/16*1rem;
+                }
+                &.#{$prefijo}city{
+                  font-size: 13/16*1rem;
+                  color: $gris-intermedio;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .#{$prefijo}content-filters{
+      ##{$prefijo}wrap-filters{
+        .#{$prefijo}gwr{
+          ##{$prefijo}filters{
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            @media (min-width: 640px){
+              border-bottom: 1px solid $gris-lineas;
+            }
+            li{
+              &.#{$prefijo}mini-search{
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px){
+  .#{$prefijo}view-list,
+  .#{$prefijo}view-grid{
+    ##{$prefijo}luxury-condo-page{
+      ##{$prefijo}wrap-subfilters{
+        .#{$prefijo}gwr{
+          ##{$prefijo}sub-filters {
+            position: absolute;
+            top: 0;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+
+    &.#{$prefijo}view-map{
+      ##{$prefijo}luxury-condo-page{
+        ##{$prefijo}wrap-subfilters{
+          .#{$prefijo}gwr{
+            margin-bottom: 0;
+            ##{$prefijo}sub-filters {
+              position: relative;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Vista Grilla
+/*----------------------------------------------------------------------------------*/
+body{
+  &.clidxboost-ngrid{
+    ##{$prefijo}luxury-condo-page{
+      ##{$prefijo}wrap-result{
+        &.#{$prefijo}view-grid{
+          ##{$prefijo}result-search{
+            >li{
+              .#{$prefijo}features{
+                li{
+                  &.#{$prefijo}name{
+                    text-align: center;
+                    font-family: $opensans;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    margin-bottom: 10/16*1rem;
+                  }
+                  &.#{$prefijo}address{
+                    display: block;
+                    font-size: 14/16*1rem;
+                    text-align: center;
+                  }
+                  &.#{$prefijo}unit,
+                  &.#{$prefijo}year,
+                  &.#{$prefijo}type,
+                  &.#{$prefijo}city,
+                  &.#{$prefijo}tg-building-links{
+                    display: none;
+                  }
+                }
+              }
+              >h2{
+                display: none;
+              }
+
+              &.ib-grid-full{
+                .#{$prefijo}features{
+                  padding-left: 0;
+                  padding-right: 0;
+                  padding-bottom: 0;
+                  &:after{
+                    content: "";
+                    display: block;
+                    clear: both;
+                  }
+                  li{
+                    width: 100%;
+                    &.#{$prefijo}unit,
+                    &.#{$prefijo}year{
+                      display: flex;
+                      height: 35px;
+                      align-items: center;
+                      width: 50%;
+                      font-family: $opensans;
+                      font-size: 14/16*1rem;
+                      border-top: 1px solid $gris-lineas;
+                      margin-top: 10px;
+                      padding: 0 10px;
+                      span{
+                        font-weight: 600;
+                      }
+                    }
+                    &.#{$prefijo}unit{
+                      justify-content: flex-start;
+                      float: left;
+                    }
+                    &.#{$prefijo}year{
+                      justify-content: flex-end;
+                      float: right;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body{
+  &:not(.clidxboost-ngrid){
+    ##{$prefijo}luxury-condo-page{
+      #wrap-result{
+        &.#{$prefijo}view-grid{
+          ##{$prefijo}result-search{
+            >li{
+              .#{$prefijo}features{
+                padding-bottom: 25/16*1rem;
+                li{
+                  &.#{$prefijo}name{
+                    line-height: 1.2;
+                    font-weight: 600;
+                    font-family: $opensans;
+                    font-size: 20/16*1rem;
+                    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+                    color: #FFF;
+                    margin-bottom: 5/16*1rem;
+                  }
+                  &.#{$prefijo}address{
+                    display: block;
+                    font-size: 14/16*1rem;
+                    color: #FFF;
+                  }
+                  &.#{$prefijo}unit,
+                  &.#{$prefijo}year,
+                  &.#{$prefijo}type,
+                  &.#{$prefijo}city,
+                  &.#{$prefijo}tg-building-links{
+                    display: none;
+                  }
+                }
+              }
+              >h2{
+                display: none;
+              }
+
+              &.ib-grid-full{
+                .#{$prefijo}features{
+                  li{
+                    &.#{$prefijo}unit,
+                    &.#{$prefijo}year{
+                      display: inline-block;
+                      font-family: $opensans;
+                      font-size: 0.875rem;
+                      margin-right: 5px;
+                      color: #FFF;
+                      span{
+                        font-weight: 600;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Vista Mapa
+/*----------------------------------------------------------------------------------*/
+##{$prefijo}luxury-condo-page{
+  #wrap-result{
+    &.#{$prefijo}view-map{
+      ##{$prefijo}result-search{
+        >li{
+          .#{$prefijo}features{
+            li{
+              &.#{$prefijo}name{
+                font-family: $opensans;
+                font-weight: 600;
+                font-size: 1rem;
+                width: 100%;
+              }
+              &.#{$prefijo}address{
+                display: block;
+                font-size: 14/16*1rem;
+                width: 100%;
+              }
+              /*&.#{$prefijo}city{
+                display: block;
+                font-size: 13/16*1rem;
+                color: $gris-intermedio;
+                display: block;
+                width: 100%;
+                margin-top: 8px;
+                order: 4;
+              }*/
+              &.#{$prefijo}city,
+              &.#{$prefijo}unit,
+              &.#{$prefijo}year,
+              &.#{$prefijo}type{
+                display: none;
+              }
+
+              &.#{$prefijo}unit,
+              &.#{$prefijo}year{
+                display: none;
+              }
+
+              &.#{$prefijo}tg-building-links{
+                position: relative;
+                order: 6;
+                margin-top: 10px;
+                .#{$prefijo}view-map-detail{
+                  display: inline-block;
+                  /*height: 30px;
+                  line-height: 30px;
+                  background-color: $colorweb;
+                  border: 1px solid $colorweb;*/
+                  color: #333;
+                  transition: all .3s;
+                  margin-right: 10px;
+                  font-family: $opensans;
+                  font-size: 11/16*1rem;
+                  font-weight: 600;
+                  /*padding: 0 30/16*1rem;*/
+                  text-transform: uppercase;
+                  cursor: pointer;
+                  &:hover{
+                    /*background-color: #FFF;*/
+                    color: #0072AC;
+                  }
+                }
+              }
+            }
+          }
+          >h2{
+            display: none;
+          }
+
+          .#{$prefijo}view-detail{
+            display: none !important;
+          }
+        }
+      }
+
+      .#{$prefijo}luxury-condo-title{
+        min-height: auto;
+      }
+    }
+  }
+}
+
+/** Resize Max-width 767 **/
+@media (max-width: 767px){
+  .#{$prefijo}clidxboost-gridv2{
+    .#{$prefijo}gwr{
+      &.#{$prefijo}c-flex{
+        width: 100%;
+      }
+    }
+    ##{$prefijo}flex-default-theme ##{$prefijo}wrap-subfilters {
+      margin-top: -1px !important;
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/* All Filters
+/*----------------------------------------------------------------------------------*/
+##{$prefijo}luxury-condo-page{
+
+  #wrap-subfilters{
+    margin-top: -1px !important;
+    #link-favorites{
+      display: none;
+    }
+  }
+
+  .#{$prefijo}content-filters{
+    .#{$prefijo}wrap-filters,
+    ##{$prefijo}wrap-filters {
+      .#{$prefijo}gwr{
+        .#{$prefijo}filters,
+        ##{$prefijo}filters{
+          flex-wrap: wrap;
+          width: 100%;
+          li{
+            &.#{$prefijo}all{
+              button{
+                border: 1px solid $colorweb;
+                font-size: 13px;
+                font-weight: 600;
+                line-height: 40px;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                background-color: $colorweb;;
+                color: #FFF;
+                label{
+                  &.ib-dt{
+                    display: block;    
+                  }
+                  &.ib-ct{
+                    display: none;
+                  }
+                }
+              }
+              @media screen and (min-width: 640px){
+                display: none;
+              }
+            }
+
+            &.#{$prefijo}mini-search{
+              .search_building{
+                padding-right: 55px !important;
+              }
+              .clidxboost-icon-search{
+                right: 0 !important;
+              }
+            }
+          }
+
+          @media (max-width: 767px){
+            li{
+              width: 100%;
+              order: 3;
+
+              &.#{$prefijo}content_select{
+                height: 0;
+                overflow: hidden;
+                transition: all .3s;
+                margin-bottom: -1px;
+                border-bottom: 1px solid $gris-lineas !important;
+                width: 50%;
+                border-right: 1px solid $gris-lineas !important;
+                &:last-child{
+                  border-right: 0 !important;
+                }
+              }
+
+              &.#{$prefijo}mini-search{
+                order: 1;
+                width: 70%;
+                .clidxboost-icon-search{
+                  right: 0;
+                  height: 45px;
+                }
+                input {
+                  height: 45px;
+                }
+              }
+
+              &.#{$prefijo}all{
+                width: 30% !important;
+                order: 2;
+                height: 46px;
+                display: block;
+              }
+            }
+
+            &.#{$prefijo}active-select{
+              li{
+                &.#{$prefijo}content_select{
+                  height: 45px;
+                  border-bottom: 1px solid $gris-lineas;
+                  overflow: visible;
+                }
+
+                &.all{
+                  button{
+                    label{
+                      &.ib-dt{
+                        display: none;
+                      }
+                      &.ib-ct{
+                        display: block;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &.active-select{
+            li{
+              &.content_select{
+                min-height: 45px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

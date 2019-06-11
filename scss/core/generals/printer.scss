@@ -1,0 +1,337 @@
+@media print {
+	a:after{
+		display: none !important;
+	}
+
+	body {
+		-webkit-print-color-adjust: exact;
+	}
+
+	header nav, 
+	footer,
+	aside,
+	.#{$prefijo}aside, 
+	.#{$prefijo}panel-options,
+	.#{$prefijo}moptions,
+	.#{$prefijo}title-conteiner .breadcrumb-options,
+	.#{$prefijo}temporal-content,
+	.#{$prefijo}property-contact,
+	.#{$prefijo}title-temp,
+	.#{$prefijo}options-modal,
+	.#{$prefijo}temporal-margin,
+	.#{$prefijo}overlay_modal,
+	##{$prefijo}slider-properties .#{$prefijo}owl-nav,
+	##{$prefijo}property-contact,
+	##{$prefijo}map-view,
+	##{$prefijo}content-map,
+	##{$prefijo}wrap-result,
+	##{$prefijo}wrap-subfilters,
+	##{$prefijo}wrap-filters,
+	##{$prefijo}footer,
+	##{$prefijo}content-modals,
+	##{$prefijo}save-button-responsive,
+	##{$prefijo}content-ms,
+	##{$prefijo}full-slider,
+	##{$prefijo}view_grip,
+	##{$prefijo}google_translate_element,
+	.#{$prefijo}property-details.theme-2 .#{$prefijo}property-information li.#{$prefijo}favorite,
+	.#{$prefijo}group-flex .#{$prefijo}tabs-btn .#{$prefijo}show-desktop,
+	.#{$prefijo}content-fixed-btn,
+	.#{$prefijo}uc-listingSchools-disclaimer,
+	.#{$prefijo}container-loadMore-niche,
+	.#{$prefijo}idxboost-line-properties,
+	.#{$prefijo}schools-container,
+	##{$prefijo}schools-container,
+	##{$prefijo}clidxboost-schools-container,
+	.#{$prefijo}clidxboost-schools-container,
+	.#{$prefijo}property-description-especial,
+	.#{$prefijo}switcher,
+	.#{$prefijo}nice-scroll .#{$prefijo}nicescroll-rails,
+	.#{$prefijo}temporal-content-bl{
+		display: none !important;
+	}
+
+	main,
+	.#{$prefijo}main{
+		margin-top: 0;
+		height: auto !important;
+	}
+
+	.#{$prefijo}gwr{
+		width: 100% !important;
+		padding: 0 !important;
+	}
+
+	/*----------------------------------------------------------------------------------*/
+	/* Detalle de propiedad
+	/*----------------------------------------------------------------------------------*/
+	##{$prefijo}full-main{
+		
+		/*Titulo documento*/
+		.title-conteiner{
+			position: absolute;
+			right: 0;
+			top: 1rem;
+			width: 50% !important;
+			box-shadow: none;
+			border: 0;
+			left: auto;
+			.content-fixed{
+				.content-fixed-title{
+					.title-page{
+						width: 100%;
+						text-align: right;
+						font-size: 1.25rem;
+					}
+				}
+			}
+		}
+
+		/*Cabecera de impresion*/
+		.header-print{
+			display: block;
+		}
+
+		/*Imagen de impresion*/
+		#imagen-print{
+			display: block;
+			background-color: #333;
+			width: 49%;
+			height: 185px;
+			position: absolute;
+			overflow: hidden;
+			img{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				object-fit: cover;
+			}
+		}
+
+		/*Descripcion de la propiedad*/
+		.container{
+			.property-information{
+				padding: 0;
+				border: 1px solid $gris-lineas;
+				width: 49%;
+				margin-right: 0;
+				margin-left: auto;
+				li{
+					width: 50% !important;
+					height: 50px !important;
+					padding-bottom: 10px !important;
+					span{
+						color: #333;
+					}
+					&.price-property{
+						width: 100% !important;
+						padding: 0 !important;
+						margin: 0 !important;
+						margin-bottom: 10px !important;
+						padding: 10px !important;
+						align-items: center !important;
+						height: auto !important;
+						border-bottom: 1px solid #E5E5E5;
+					}
+					&.btn-save{
+						display: none;
+					}
+				}
+			}
+		}
+
+		/*Detalle propiedad*/
+		.main-content{
+			.property-description{
+				margin: 1rem 0;
+				padding: 0;
+				background-color: transparent;
+				p{
+					font-size: 12px;
+					text-align: justify;
+				}
+			}
+
+			.list-details{
+				.title-details,
+				.title-amenities{
+					background-color: #eaeaea;
+					font-size: 12px;
+					padding: 10px;
+					font-weight: 600;
+					text-transform: uppercase;
+					&:before{
+						display: none;
+					}
+				}
+				
+				.list-detail{
+					max-height: 900px;
+					opacity: 1;
+					li{
+						width: 32%;
+						padding: 7px 0;
+						font-size: 12px;
+					}
+				}
+				
+				.list-amenities{
+					max-height: 900px;
+					opacity: 1;
+					column-count: auto;
+					padding: 7px 0;
+					li{
+						padding: 0;
+						width: auto;
+						float: left;
+						font-size: 12px;
+						&:after{
+							content: ",";
+							display: inline;
+							margin-right: 5px;
+						}
+						&:last-child{
+							&:after{
+								display: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/*----------------------------------------------------------------------------------*/
+	/* Detalle de propiedad - Building
+	/*----------------------------------------------------------------------------------*/
+	.buildingPage{
+		#full-main{
+			.container{
+				.property-details{
+					position: relative;
+					border: 4px solid red;
+
+					/*.container{
+						.property-information{
+							padding: 0;
+							border: 1px solid $gris-lineas;
+							width: 49%;
+							margin-right: 0;
+							margin-left: auto;
+							li{
+								width: 50% !important;
+								height: 50px !important;
+								padding-bottom: 10px !important;
+								span{
+									color: #333;
+								}
+								&.price-property{
+									width: 100% !important;
+									padding: 0 !important;
+									margin: 0 !important;
+									margin-bottom: 10px !important;
+									padding: 10px !important;
+									align-items: center !important;
+									height: auto !important;
+									border-bottom: 1px solid #E5E5E5;
+								}
+								&.btn-save{
+									display: none;
+								}
+							}
+						}
+					}*/
+
+					.property-information{
+						border: 1px solid #E5E5E5 !important;
+						height: 185px !important;
+						position: relative;
+						li{
+							border: 0 !important;
+							display: flex !important;
+							width: 100%;
+							flex-direction: column !important;
+							justify-content: center !important;
+							align-items: center !important;
+							height: 50px !important;
+							&.price{
+								background-color: #E5E5E5;
+								width: 100% !important;
+								padding: 0 !important;
+								margin: 0 !important;
+								margin-bottom: 10px !important;
+								padding: 10px !important;
+								height: auto !important;
+								border-bottom: 1px solid #E5E5E5 !important;
+								order: 0 !important;
+							}
+
+							&.sold,
+							&.sale,
+							&.rent{
+								width: 50% !important;
+								flex-grow: 0 !important;
+								order: 2 !important;
+								background-color: #FFF !important;
+								color: #333 !important;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		/*----------------------------------------------------------------------------------*/
+		/* Detalle Building
+		/*----------------------------------------------------------------------------------*/
+		#view_list.desactivo{
+			display: block !important;
+		}
+
+		##{$prefijo}view-list .#{$prefijo}tbl_properties_wrapper table thead tr th.#{$prefijo}show-desktop,
+		##{$prefijo}view-list .#{$prefijo}tbl_properties_wrapper thead tr th:first-child,
+		##{$prefijo}view-list .#{$prefijo}tbl_properties_wrapper table tbody tr td .#{$prefijo}unit,
+		##{$prefijo}view-list .#{$prefijo}show-desktop{
+			display: table-cell !important;
+		}
+
+		##{$prefijo}view-list .#{$prefijo}tbl_properties_wrapper table thead tr th.#{$prefijo}show-desktop,
+		##{$prefijo}view-list .#{$prefijo}tbl_properties_wrapper thead tr th:first-child,
+		##{$prefijo}view-list .#{$prefijo}tbl_properties_wrapper table tbody tr td .#{$prefijo}unit,
+		##{$prefijo}view-list .#{$prefijo}show-desktop{
+			display: table-cell !important;
+		}
+
+		##{$prefijo}view-list .#{$prefijo}tbl_properties_wrapper table.#{$prefijo}dataTable thead th,
+		##{$prefijo}view-list .#{$prefijo}tbl_properties_wrapper table.#{$prefijo}dataTable tbody td{
+			width: auto !important;
+		}
+
+		table.#{$prefijo}dataTable thead th.#{$prefijo}sorting_desc:after,
+		.#{$prefijo}unit .#{$prefijo}clidxboost-btn-check,
+		table.#{$prefijo}dataTable thead th.#{$prefijo}sorting:after{
+			display: none !important;
+		}
+
+		##{$prefijo}view-list .#{$prefijo}tbl_properties_wrapper table tbody td:first-child{
+		 display: table-cell !important;
+		}
+
+		##{$prefijo}view-list .#{$prefijo}tbl_properties_wrapper table tbody td,
+		##{$prefijo}view-list .#{$prefijo}tbl_properties_wrapper td:first-child{
+			text-align: center !important
+		}
+
+		##{$prefijo}view-list .#{$prefijo}tbl_properties_wrapper td .#{$prefijo}unit span{
+			display: block !important;
+			width: 80px !important;
+			text-align: center;
+		}
+
+		##{$prefijo}view-list .#{$prefijo}tbl_properties_wrapper table.#{$prefijo}dataTable thead th:first-child{
+			width: 80px !important
+		}
+	}
+}

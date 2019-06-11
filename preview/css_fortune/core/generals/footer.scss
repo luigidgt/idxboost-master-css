@@ -1,0 +1,215 @@
+/*----------------------------------------------------------------------------------*/
+/* Footer
+/*----------------------------------------------------------------------------------*/
+##{$prefijo}footer{
+	position: relative;
+	margin: 0 auto;
+}
+
+.#{$prefijo}flex-newsletter-content{
+	padding: 1rem 0;
+	background-color: #efefef;
+	.#{$prefijo}gwr{
+		width: 90%;
+		margin: 0 auto;
+		position: relative;
+		>h2{
+			font-size: 18/16*1rem;
+			font-weight: 600;
+			margin: 1rem auto;
+			font-family: $opensans;
+			text-transform: uppercase;
+			color: #FFF;
+			text-align: center;
+			max-width: 590px;
+			padding: 0;
+			text-align: left;
+			color: #333;
+		}
+		p{
+			margin-bottom: 1rem;
+			font-size: 14/16*1rem;
+			line-height: 1.6;
+			color: #FFF;
+			text-align: center;
+			font-family: $opensans;
+		}
+
+		.flex-content-form{
+			max-width: 590px;
+			margin: 0 auto;
+			.form-master{
+				width: 100%;
+			}
+			.form-content{
+				background-color: transparent;
+			}
+		}
+	}
+
+	.#{$prefijo}form-content{
+		border: 0;
+		margin: 0;
+		padding: 0;
+
+		.#{$prefijo}gform_body{
+			.#{$prefijo}gform_fields{
+				.#{$prefijo}gfield{
+					&.#{$prefijo}requiredFields{
+						color: #333;
+					}
+				}
+			}
+		}
+
+		.#{$prefijo}gform_footer{
+			margin-bottom: 0;
+			.#{$prefijo}button{
+				height: 45px;
+				background-color: #333;
+				border: 0;
+				color: #FFF;
+				width: 100%;
+				text-align: center;
+				text-transform: uppercase;
+				transition: all .3s;
+				font-weight: 600;
+				font-size: 14/16*1rem;
+				&:hover{
+					background-color: $colorweb;
+					color: #FFF;
+				}
+			}
+		}
+
+		@media screen and (min-width: 640px){
+			
+			.dgtFormAction{
+				justify-content: space-between;
+				display: flex;
+			}
+
+			.#{$prefijo}gform_body{
+				.#{$prefijo}gform_fields{
+					.#{$prefijo}gfield{
+						width: 49%;
+						.#{$prefijo}medium{
+							height: 45px;
+						}
+						&.#{$prefijo}requiredFields{
+							width: 100%;
+						}
+					}
+				}	
+			}
+
+			.#{$prefijo}gform_footer{
+				width: 110px;
+				margin-left: 1rem;
+				flex-shrink: 0;
+			}
+		}
+
+		@media screen and (min-width: 768px){
+			.#{$prefijo}gform_body{
+				.#{$prefijo}gform_fields {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-between;
+				}
+			}
+		}
+	}
+}
+
+.#{$prefijo}flex-footer-content{
+	padding: 1rem 0;
+	.#{$prefijo}gwr{
+		position: relative;
+		width: 90%;
+		margin: 0 auto;
+
+		.#{$prefijo}flex-site-description{
+			.#{$prefijo}logo-footer{
+				text-align: center;
+				img{
+					display: inline-block;
+					max-height: 80px;
+				}
+			}
+
+			li{
+				font-size: 14/16*1rem;
+				font-family: $opensans;
+				margin-bottom: 3/16*1rem;
+				text-align: center;
+				a{
+					color: #0072ac;
+					font-family: $opensans;
+				}
+			}
+		}
+
+		.#{$prefijo}flex-company-site{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			.#{$prefijo}company-parnet{
+				order: 2;
+				margin-top: 0.625rem;
+				margin-bottom: 0.625rem;
+				text-align: center;
+				order: 2;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				.#{$prefijo}idx_image_broker_2_footer_theme{
+					display: inline-block;
+					margin: 0 5px;
+				}
+			}
+
+			.#{$prefijo}copyright-site{
+				order: 1;
+				font-size: 12/16*1rem;
+				color: $gris-intermedio;
+				margin: 5/16*1rem 0;
+				text-align: center;
+			}
+		}
+
+		@media screen and (min-width: 991px){
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+
+			.#{$prefijo}flex-site-description{
+				li{
+					text-align: left;
+				}
+			}
+
+			.#{$prefijo}flex-company-site{
+				justify-content: flex-end;
+				.#{$prefijo}company-parnet,
+				.#{$prefijo}copyright-site{
+					text-align: right;
+				}
+
+				.#{$prefijo}company-parnet{
+					order: 1;
+				  justify-content: flex-end;
+				  .#{$prefijo}idx_image_broker_2_footer_theme{
+				  	margin: 0;
+				  	margin-left: 1rem;
+				  }
+				}
+			
+				.#{$prefijo}copyright-site{
+					order: 2;
+				}
+			}
+		}
+	}
+}

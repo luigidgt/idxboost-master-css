@@ -1,0 +1,77 @@
+/*----------------------------------------------------------------------------------*/
+/* Property Deatail
+/*----------------------------------------------------------------------------------*/
+@media screen and (min-width: 1024px){
+	##{$prefijo}full-main{
+		.#{$prefijo}main{
+			.#{$prefijo}gwr {
+				max-width: 1430px;
+			}
+		}
+	}
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Reset wrap filters
+/*----------------------------------------------------------------------------------*/
+.#{$prefijo}content-filters{
+	##{$prefijo}wrap-filters{
+		.#{$prefijo}gwr-filters{
+			margin-top: -1px;
+			//max-width: 100% !important;
+			width: 100% !important;
+		}
+	}
+}
+
+#flex-filters-theme{
+	.content-filters{
+		#wrap-filters{
+			.gwr-filters {
+				max-width: 1430px !important;
+			}
+		}
+	}
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Preloader
+/*----------------------------------------------------------------------------------*/
+.#{$prefijo}wrap-preloader{
+	background-color: #1d1d1d;
+	.#{$prefijo}item-wrap-preloader{
+		.#{$prefijo}text-logo{
+			h1.#{$prefijo}idx_site_text_tit {
+    		font-size: 36px !important;
+    		color: #FFF !important;
+    		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    	}
+    	span{
+    		color: #FFF;
+    		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    	}
+		}
+	}
+
+	.#{$prefijo}preloader-icon:before {
+		border-color: rgba(255,255,255,.3);
+		border-top-color: #ffffff;
+	}
+}
+
+#full-main{
+	background-color: #FFF;
+}
+
+@media (max-width: 767px){
+	#drift-widget-container{
+		display: none;
+		iframe{
+			bottom: 50px !important;
+			right: 0 !important;
+		}
+		&.active{
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,274 @@
+/*----------------------------------------------------------------------------------*/
+/* Deafult Template
+/*----------------------------------------------------------------------------------*/
+.#{$prefijo}flex-block-description{
+
+  ##{$prefijo}full-main{
+    .#{$prefijo}container{
+      .#{$prefijo}property-details{
+        &.#{$prefijo}theme-2{
+          .#{$prefijo}property-information{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .#{$prefijo}title-block{
+    font-weight: 400;
+    font-family: $opensans;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 22/16*1rem;
+    flex-grow: 1;
+    @media screen and (min-width: 768px){
+      font-size: 2rem;
+      margin-bottom: 20/16*1rem;
+    }
+  }
+
+  p{
+    margin: 1rem 0;
+    font-size: 14/16*1rem;
+    font-family: $opensans;
+    line-height: 1.6;
+  }
+
+  a{
+    &:not(.clidxboost-icon-favorite){
+      color: #0072AC;
+    }
+  }
+
+  ul{
+    &::not(##{$prefijo}mini-filters),
+    &::not(##{$prefijo}filters),
+    &::not(.#{$prefijo}features),
+    &::not(##{$prefijo}result-search),
+    &::not(.#{$prefijo}result-search),
+    &::not(.#{$prefijo}sub-filters),
+    &::not(##{$prefijo}sub-filters),
+    &::not(.#{$prefijo}sub-filters > ul),
+    &::not(##{$prefijo}sub-filters > ul){
+      li{
+        &::not(.propertie){
+          font-size: 14/16*1rem;
+          font-family: $opensans;
+          position: relative;
+          padding-left: 10px;
+          margin-bottom: 10/16*1rem;
+          &:before{
+            content: "";
+            width: 4px;
+            height: 4px;
+            position: absolute;
+            top: 4px;
+            background-color: #333;
+            left: 0;
+            display: block;
+            border-radius: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.#{$prefijo}default-img{
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+##{$prefijo}flex-default-theme{
+  position: relative;
+  padding-bottom: 4rem;
+
+  .#{$prefijo}content-filters{
+    .#{$prefijo}wrap-filters,
+    ##{$prefijo}wrap-filters{
+      .#{$prefijo}gwr{
+        width: 100% !important;
+      }
+    }
+  }
+
+  ##{$prefijo}wrap-subfilters{
+    margin-top: 0 !important;
+    border-top: 1px solid $gris-lineas;
+    .#{$prefijo}gwr{
+      width: 100% !important;
+    }
+    @media screen and (min-width: 768px){
+      border-top: 0;
+    }
+  }
+
+  ##{$prefijo}wrap-result{
+    .#{$prefijo}gwr{
+      width: 100% !important;
+    }
+  }
+
+	##{$prefijo}wrap-subfilters{
+    @media screen and (min-width: 768px){
+      .#{$prefijo}gwr{
+        justify-content: flex-end;
+        ##{$prefijo}info-subfilters {
+          display: block;
+          text-align: left;
+          position: absolute;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+	.#{$prefijo}title_building_name{
+		font-size: 18/16*1rem;
+		font-weight: 600;
+		text-align: center;
+		margin: 10/16*1rem;
+		font-family: $opensans;
+	}
+
+	.#{$prefijo}title_building_address{
+		font-size: 14/16*1rem;
+		text-align: center;
+		margin: 10/16*1rem;
+		font-family: $opensans;
+	}
+
+  .#{$prefijo}wrap-result,
+  ##{$prefijo}wrap-result{
+    &.#{$prefijo}full-map,
+    &.#{$prefijo}view-grid{
+      .#{$prefijo}result-search,
+      ##{$prefijo}result-search{
+        >li{
+          .wrap-slider{
+            height: auto;
+            >ul{
+              &:before{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px){
+    .#{$prefijo}wrap-result,
+    ##{$prefijo}wrap-result{
+      &.#{$prefijo}full-map,
+      &.#{$prefijo}view-grid{
+        .#{$prefijo}result-search,
+        ##{$prefijo}result-search{
+          >li{
+            width: 32%;
+            margin-right: 2%;
+            &:nth-child(3n) {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+	@media screen and (min-width: 1360px){
+		.#{$prefijo}wrap-result,
+		##{$prefijo}wrap-result{
+			&.#{$prefijo}full-map,
+			&.#{$prefijo}view-grid{
+				.#{$prefijo}result-search,
+				##{$prefijo}result-search{
+					>li{
+            width: 24%;
+            margin-right: 1.3%;
+            &:nth-child(3n) {
+              margin-right: 1.3%;
+            }
+            &:nth-child(4n) {
+              margin-right: 0;
+            }
+					}
+				}
+			}
+		}
+	}
+
+  @media (max-width: 767px){
+    .#{$prefijo}gwr{
+      &.#{$prefijo}c-flex{
+        width: 100% !important;
+      }
+    }
+
+    ##{$prefijo}wrap-result,
+    .#{$prefijo}wrap-result{
+      &.#{$prefijo}view-grid,
+      &.#{$prefijo}full-map{
+        .#{$prefijo}gwr{
+          width: 96% !important;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 639px){
+    ##{$prefijo}wrap-result,
+    .#{$prefijo}wrap-result{
+      &.#{$prefijo}view-grid,
+      &.#{$prefijo}full-map{
+        .#{$prefijo}gwr{
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/* ALL FILTERS EN GENERAL (PARA FILTROS Y PAGINAS POR DEFAULT)
+/*----------------------------------------------------------------------------------*/
+##{$prefijo}wp-neighborhoods,
+##{$prefijo}flex-default-theme,
+##{$prefijo}flex-filters-theme{
+  @media screen and (min-width: 991px){
+    .#{$prefijo}content-filters{
+      .#{$prefijo}wrap-filters,
+      ##{$prefijo}wrap-filters{
+        .#{$prefijo}gwr{
+          ##{$prefijo}all-filters{
+            &:not(.#{$prefijo}individual){
+              ##{$prefijo}mini-filters{
+                height: 525px;
+                >li{
+                  &.#{$prefijo}price{ order: 0 }
+                  &.#{$prefijo}baths{ order: 5 }
+                  &.#{$prefijo}living{ order: 2 }
+                  &.#{$prefijo}parking{ order: 3 }
+                  &.#{$prefijo}year{ order: 4 }
+                  &.#{$prefijo}beds{ order: 1 }
+                  &.#{$prefijo}land{ order: 6 }
+                  &.#{$prefijo}waterfront{ order: 7 }
+                  &.#{$prefijo}features{ order: 9 }
+                  &.#{$prefijo}type{ 
+                    order: 8;
+                    .#{$prefijo}wrap-item{
+                      margin: 21.5px 0px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

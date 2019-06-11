@@ -1,0 +1,325 @@
+.clidxboost-wrap-information{
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  width: auto;
+  z-index: 31;
+  transition: opacity .6s;
+  display: block;
+
+  @media (max-width: 767px){
+    display: none !important;
+  }
+
+  >h2{
+    font-family: $opensans;
+    font-weight: 600;
+    font-size: 20/16*1rem;
+    color: #FFF;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  }
+
+  ul{
+    li{
+      font-family: $opensans;
+      font-size: 14/16*1rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+      position: relative;
+      display: inline-block;
+      padding-right: 1rem;
+      color: #FFF;
+      &:after{
+        content: "";
+        width: 1px;
+        height: 10px;
+        background-color: #FFF;
+        border-radius: 100%;
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        margin-top: -5px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+      }
+      &:last-child{
+        &:after{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Variaciones del slider
+/*----------------------------------------------------------------------------------*/
+.general-item-ls{
+  position: relative;
+  line-height: 0;
+  .gs-item-title{
+    line-height: normal;
+    font-family: $opensans;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 10/16*1rem 0;
+  }
+  .figure-general-ls{
+    position: relative;
+    overflow: hidden;
+    &:after{
+      content: "";
+      display: block;
+      padding-bottom: 110%
+    }
+    img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all .6s;
+      &:hover{
+        transform: scale(1.025);
+      }
+    }
+  }
+}
+
+.general-slider{
+  .gs-wrapper-content{
+    padding: 0 10px;
+  }
+
+  .gs-wrapper-arrows{
+    padding: 0 10px;
+    &.gs-style-arrow{
+      .gs-next-arrow,
+      .gs-prev-arrow{
+        background-color: transparent;
+      }
+    }
+  }
+
+  .gs-container-navs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    .gs-wrapper-bullets{
+      .gs-bullet{
+        margin: 0;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        &:before{
+          content: "";
+          width: 13px;
+          height: 13px;
+          background-color: #ababad;
+          display: block;
+          border-radius: 100%;
+          transition: all .3s;
+          margin: 0 auto;
+        }
+        &.gs-bullet-active{
+          &:before{
+            background-color: #333;
+          }
+        }
+      }
+    }
+  }
+}
+
+.clidxboost-content-slider{
+  position: relative;
+}
+
+.gs-container-slider{
+  .clidxboost-ms-item{
+    position: relative;
+    img,
+    iframe,
+    embed,
+    object,
+    video{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.clidxboost-gs-wrapper-bullets{
+  display: flex;
+  justify-content: center;
+  margin: 10/16*1rem 0;
+  .gs-bullet{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    &:before{
+      content: "";
+      display: block;
+      width: 13px;
+      height: 13px;
+      background-color: #d2d2d2;
+      border-radius: 100%;
+      margin: auto;
+    }
+    &.gs-bullet-active{
+      &:before{
+        background-color: $colorweb;
+      }
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Main slider
+/*----------------------------------------------------------------------------------*/
+.clidxboost-main-slider{
+  .gs-wrapper-items{
+    &:after{
+      content: "";
+      display: block;
+      height: 410px;
+      @media screen and (min-width: 640px){
+        height: auto;
+        padding-bottom: 48%;
+      }
+    }
+
+    .clidxboost-ms-item,
+    .gs-wrapper-content{
+      height: 100%;
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Properties slider
+/*----------------------------------------------------------------------------------*/
+.clidxboost-properties-slider{
+  .gs-item-slider{
+    margin: 0;
+    @media screen and (min-width: 640px){
+      margin: 0 10/16*1rem;
+    }
+  }
+  .result-search,
+  .propertie{
+    width: 100% !important;
+    margin: 0 !important;
+  }
+  
+  .gs-wrapper-arrows{
+    position: relative;
+    top: 0;
+    transform: none;
+    padding: 0;
+    height: auto;
+    margin-top: 10/16*1rem;
+    @media screen and (min-width: 640px){
+      padding: 0 10/16*1rem;
+    }
+    .gs-next-arrow,
+    .gs-prev-arrow{
+      width: 100%;
+      color: #FFF;
+      background-color: $colorweb;
+      border: 1px solid $colorweb;
+      transition: all .3s;
+      height: 45px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-family: $opensans;
+      font-size: 14/16*1rem;
+      &:hover{
+        background-color: #FFF;
+        color: #333;
+      }
+      &:before{
+        display: none;
+      }
+    }
+    .gs-prev-arrow{
+      margin-right: 1px; 
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Full slider
+/*----------------------------------------------------------------------------------*/
+.clidxboost-full-slider{
+  .gs-wrapper-content{
+    position: relative;
+    .img-slider{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+    }
+    &:after{
+      content: "";
+      display: block;
+      padding-bottom: 85%;
+    }
+  }
+  .gs-next-arrow, 
+  .gs-prev-arrow{
+    background-color: rgba(0,0,0,0.8);
+    &:before{
+      content: "\e921";
+      font-family: $web-icons;
+      display: inline-block;
+      font-size: 22px;
+      transform: rotate(90deg);
+      margin-top: 3px;
+      color: #FFF;
+    }
+  }
+  .gs-next-arrow{
+    &:before{
+      transform: rotate(-90deg);
+    }
+  }
+  .gs-fs.gs-attached{
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+
+  &.gs-infs{
+    .gs-fs{
+      opacity: 1;
+      height: 40px;
+      width: 40px;
+      &:before{
+        content: "\e913";
+        font-family: $web-icons;
+        font-size: 22px;
+        color: #FFF;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        text-indent: 0 !important;
+        background-size: auto;
+        background-image: none;
+        transform: none;
+        top: 0;
+        left: 0;
+      }
+
+      &:after{
+        display: none;
+      }
+    }
+  }
+}

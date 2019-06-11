@@ -1,0 +1,177 @@
+doctype html
+html(lang='en')
+  head
+    title Home | Flexidx
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style", content="#4b4b4b")
+    meta(name="theme-color", content="#4b4b4b")
+    meta(name="msapplication-navbutton-color", content="#4b4b4b")
+    link(rel="stylesheet", href="../css/main.css")
+    link(rel="stylesheet", href="css/main-project.css")
+    //font theme
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800")
+
+  body
+    include header.jade
+    main.clidxboost-collection-condo
+      #wrap-filters
+        .gwr
+          ul#filters
+            li.item-bubble
+              button#bubble-filter
+                span.clidxboost-icon-arrow-select 
+                  span Filters
+              ul.bubble-filter
+                li.type-rt.clidxboost-icon-arrow-select
+                  select
+                    option(value="0", selected="selected") Luxury Condos by Name
+                    option(value="1") Lorem ipsum
+                    option(value="2") Lorem ipsum
+                    option(value="3") Lorem ipsum
+                    option(value="4") Lorem ipsum
+                li.type-rt.clidxboost-icon-arrow-select
+                  select
+                    option(value='') Luxury Condos by Neighborhood
+                    option(value='all') Show all
+                    option(value='aventura') Aventura
+                    option(value='bal-harbour', selected='selected') Bal Harbour
+                    option(value='bay-harbor-islands') Bay Harbor Islands
+                    option(value='brickell-brickell-key') Brickell/ Brickell Key
+                    option(value='coconut-grove') Coconut Grove
+                    option(value='downtown-miami') Downtown Miami
+                    option(value='edgewater') Edgewater
+                    option(value='fisher-island') Fisher Island
+                    option(value='fort-lauderdale') Fort Lauderdale
+                    option(value='hollywood') Hollywood
+                    option(value='indian-creek') Indian Creek
+                    option(value='key-biscayne') Key Biscayne
+                    option(value='north-beach-miami-beach') North Beach
+                    option(value='sunny-isles-beach') Sunny Isles Beach
+                li.type-rt.clidxboost-icon-arrow-select
+                  select
+                    option(value='1') All Buildings
+                    option(value='2') Existings Buildings
+                    option(value='3') Preconstruction
+
+            li.mini-search
+              form(action="#")
+                input(type='search', placeholder="Select Area or Enter City, Zip, Condo Name or Keyword")#autocomplete-ajax
+                #submit-ms.clidxboost-icon-search
+                  input(type="submit", value="Submit")
+              #search-suggestions
+                ul
+                  li(data-slug='Aventura|city') Aventura
+                  li(data-slug='Bal Harbour|city') Bal Harbour
+                  li(data-slug='Bay Harbor Islands|city') Bay Harbor Islands
+                  li(data-slug='Brickell|city') Brickell
+                  li(data-slug='Brickell Key|city') Brickell Key
+                  li(data-slug='Coconut Grove|city') Coconut Grove
+                  li(data-slug='Coral Gables|city') Coral Gables
+                  li(data-slug='Fisher Island|city') Fisher Island
+                  li(data-slug='Hollywood|city') Hollywood
+                  li(data-slug='Indian Creek|city') Indian Creek
+                  li(data-slug='Key Biscayne|city') Key Biscayne
+                  li(data-slug='Miami|city') Miami
+                  li(data-slug='Miami Beach|city') Miami Beach
+                  li(data-slug='Miami Shores|city') Miami Shores
+                  li(data-slug='North Miami|city') North Miami
+                  li(data-slug='North Miami Beach|city') North Miami Beach
+                  li(data-slug='Pembroke Pines|city') Pembroke Pines
+                  li(data-slug='Sunny Isles Beach|city') Sunny Isles Beach
+                  li(data-slug='Surfside|city') Surfside
+              #autocomplete-matches
+                ul
+                  li(data-slug='Aventura|city') Aventura
+                  li(data-slug='Bal Harbour|city') Bal Harbour
+                  li(data-slug='Bay Harbor Islands|city') Bay Harbor Islands
+                  li(data-slug='Brickell|city') Brickell
+                  li(data-slug='Brickell Key|city') Brickell Key
+                  li(data-slug='Coconut Grove|city') Coconut Grove
+                  li(data-slug='Coral Gables|city') Coral Gables
+                  li(data-slug='Fisher Island|city') Fisher Island
+                  li(data-slug='Hollywood|city') Hollywood
+                  li(data-slug='Indian Creek|city') Indian Creek
+                  li(data-slug='Key Biscayne|city') Key Biscayne
+                  li(data-slug='Miami|city') Miami
+                  li(data-slug='Miami Beach|city') Miami Beach
+                  li(data-slug='Miami Shores|city') Miami Shores
+                  li(data-slug='North Miami|city') North Miami
+                  li(data-slug='North Miami Beach|city') North Miami Beach
+                  li(data-slug='Pembroke Pines|city') Pembroke Pines
+                  li(data-slug='Sunny Isles Beach|city') Sunny Isles Beach
+                  li(data-slug='Surfside|city') Surfside
+            //li.end-item
+              a(href="#",title="Looking to Buy or Sell a Condo?",rel="nofollow").btn.btn-green Looking to Buy or Sell a Condo?
+      #wrap-subfilters
+        .gwr
+          ul#sub-filters
+            li#link-favorites
+              a(href="#", title="Save Favorites", rel="nofollow").clidxboost-icon-favorite
+                span
+                  span 0
+                  | Favorites
+            
+            li.clidxboost-icon-arrow-select.grid#filter-views
+              select
+                option(value="grid", selected="selected") Grid
+                option(value="list") List
+                option(value="map") Map
+
+      section#wrap-result.view-grid
+        h1.title Condo Colection
+        .gwr
+          
+          //#wrap-map
+            #code-map
+              iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28742.90968747849!2d-80.20231346071917!3d25.77506484106738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2sMiami%2C+Florida!5e0!3m2!1ses!2s!4v1490883858310", allowfullscreen)
+            #map-actions.show-message
+                #message-map 
+                  span Only showing 500 homes. 
+                  | Zoom in, or use filters to narrow your search.
+                #message-map
+                  span Only showing 500 homes. 
+                  | Zoom in, or use filters to narrow your search.
+                  a(href="javascript:void(0)")#close-drag Close
+                  a(href="javascript:void(0)")#apply-drag Apply
+                .content-map-btn-actions
+                  button.open-map Close
+                  button.close-map.hide Open
+
+        
+        //.gwr
+          nav#nav-results
+            span#indicator Pag 1 of 6
+            a(href="#", title="First Page", rel="nofollow")#firstp.ad.visible
+              span.clidxboost-icon-arrow-select
+              span.clidxboost-icon-arrow-select
+              span First page
+            a(href="#", title="Prev Page", rel="nofollow")#prevn.arrow.clidxboost-icon-arrow-select.prevn.visible
+              span Previus page
+            ul#principal-nav
+              li: a(href='#', rel="nofollow") 1
+              li: a(href='#', rel="nofollow") 2
+              li.active: a(href='#', rel="nofollow") 3
+            span.points ...
+            ul#complementary-nav
+              li: a(href='#', rel="nofollow") 4
+              li: a(href='#', rel="nofollow") 5
+              li: a(href='#', rel="nofollow") 6
+            span.points ...
+            a(href="#", title="Prev Page", rel="nofollow")#nextn.arrow.clidxboost-icon-arrow-select.nextn.visible
+              span Next page
+            a(href="#", title="First Page", rel="nofollow")#lastp.ad.visible
+              span.clidxboost-icon-arrow-select
+              span.clidxboost-icon-arrow-select
+              span Last page
+      //button(data-modal="modal_save_search").show-modal#save-button-responsive
+        span Save search
+    include footer.jade
+
+    script(type="text/javascript", src="../js/jquery-3.1.1.min.js")
+    script(type="text/javascript", src="../js/plugins/jquery-ui.min.js")
+    script(type="text/javascript", src="../js/plugins/jquery.ui.touch-punch.min.js")
+    script(type="text/javascript", src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbcWAf3LnqNPxdZ5TP5resRxl3I3BPZb8&#038")
+    script(type="text/javascript", src="../js/dgt-master.min.js")
+    script(type="text/javascript", src="js/dgt-project-master.js")

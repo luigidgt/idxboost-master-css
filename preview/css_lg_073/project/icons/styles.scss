@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "roberto-malca";
+  src: url("../icons/fonts/roberto-malca.eot");
+  src: url("../icons/fonts/roberto-malca.eot?#iefix") format("embedded-opentype"),
+    url("../icons/fonts/roberto-malca.woff") format("woff"),
+    url("../icons/fonts/roberto-malca.ttf") format("truetype"),
+    url("../icons/fonts/roberto-malca.svg#roberto-malca") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+[data-icon]:before {
+  font-family: "roberto-malca" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="rm-icon-"]:before,
+[class*=" rm-icon-"]:before {
+  font-family: "roberto-malca" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.rm-icon-facebook:before {
+  content: "\61";
+}
+.rm-icon-twitter:before {
+  content: "\62";
+}
+.rm-icon-google-plus:before {
+  content: "\63";
+}
+.rm-icon-youtube:before {
+  content: "\64";
+}
+.rm-icon-linked:before {
+  content: "\65";
+}
+.rm-icon-instragram:before {
+  content: "\66";
+}
+.rm-icon-palm-tree:before {
+  content: "\67";
+}
+.rm-icon-bag:before {
+  content: "\68";
+}
+.rm-icon-bank:before {
+  content: "\69";
+}
+.rm-icon-star:before {
+  content: "\6b";
+}

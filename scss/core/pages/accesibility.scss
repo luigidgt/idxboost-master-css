@@ -1,0 +1,139 @@
+.ms-access-content-terms {
+  margin: 0 auto;
+  padding: 30px 10px 80px 10px;
+  position: relative;
+  max-width: 1130px;
+  width: 100%;
+
+  h1 {
+    color: #333;
+    font-size: 1.5625rem;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 1.25rem;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+}
+
+.ms-access-accordion {
+  .accordion-title {
+    border: 1px solid #ccc;
+    background-color: #eaeaea;
+    color: #333;
+
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 1rem 3rem 1rem 1rem;
+    position: relative;
+    width: 100%;
+
+    &::after {
+      //border: 1px solid #333;
+      border-radius: 50%;
+      color: #333;
+      content: "\e902";
+      font-family: "idx-icons"!important;
+      font-size: 1rem;
+      float: right;
+      height: 25px;
+      padding: 5px;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      width: 25px;
+      top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .3s;
+    }
+
+    &:hover,
+    &:hover::after {
+      //color: #7288a2;
+      cursor: pointer;
+    }
+
+    /*&:hover::after {
+      background-color: #333;
+      color: #FFF;
+    }*/
+
+    &.active {
+      /*color: #7288a2;
+      border-bottom: 1px solid #7288a2;*/
+
+      &::after {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  .ms-access-content {
+    border: 1px solid #ccc;
+    clear: both;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 2rem;
+    transition: all 0.2s ease 0.15s;
+    margin-bottom: 5px;
+
+    &.active {
+      opacity: 1;
+      padding: 2rem;
+      max-height: 100%;
+      transition: all 0.35s ease 0.15s;
+      margin-top: -1px;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    a{
+      color: #0072ac;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+
+    ul{
+      li{
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 10px;
+        &:before{
+          content: "";
+          display: block;
+          width: 6px;
+          height: 6px;
+          top: 8px;
+          left: 0;
+          border-radius: 50%;
+          background-color: #333;
+          position: absolute;
+        }
+      }
+    }
+
+    h2, h3, h4, h5{
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+  }
+}

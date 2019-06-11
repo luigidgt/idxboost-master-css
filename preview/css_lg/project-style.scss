@@ -1,0 +1,33 @@
+/*-----------------------------------------------------------------------------------------------------*/
+/* LG - ESTILOS DEFINIDOS POR EL MAQUETADOR ASIGNADO: Aquí puedes generar el css para tu proyecto
+/*-----------------------------------------------------------------------------------------------------*/
+
+/*Esto es solo para la demo, no es necesario que trabajes con esto*/
+.lg-main{
+	background-color: #333;
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+	height: 100vh;
+	.lg-layer{
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.basic-content{
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	.basic-content-title{
+		margin: 1rem 0;
+		text-align: center;
+		font-size: 22/16*1rem;
+		font-weight: 600;
+	}
+}

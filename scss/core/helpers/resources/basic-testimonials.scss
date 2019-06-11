@@ -1,0 +1,18 @@
+/*----------------------------------------------------------------------------------*/
+/* Basic Testimonials
+/*----------------------------------------------------------------------------------*/
+.#{$prefijo}item-testimonial{
+	text-align: center;
+	p{
+		font-size: 14/16*1rem;
+		font-family: $opensans;
+		line-height: 1.6;
+		margin: 1rem 0;
+	}
+	.#{$prefijo}create-testimonial{
+		font-size: 1rem;
+		font-family: $opensans;
+		margin: 1rem 0;
+		font-weight: 600;
+	}
+}

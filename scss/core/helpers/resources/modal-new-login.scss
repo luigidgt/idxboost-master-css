@@ -1,0 +1,866 @@
+/*----------------------------------------------------------------------------------*/
+/* MODAL LOGIN 2019
+/*----------------------------------------------------------------------------------*/
+%icon-input {
+	background-image: url('../images/icons-login.png') !important;
+	background-size: 44px;
+	background-repeat: no-repeat;
+	background-position: 0 -1px;
+	padding-left: 44px;
+	background-color: #FFF !important;
+}
+
+#modal_login{
+	.modal_cm{
+		height: auto;
+		@media screen and (min-width: 640px){
+			min-height: 480px;
+			padding-bottom: 40px;
+		}
+		
+		.ms-samll{
+			max-width: 210px;
+		}
+
+		.content_md{
+			height: 100%;
+			padding-bottom: 0;
+			.heder_md,
+			.ms-header-md{
+				padding: 0;
+				padding-left: 15px;
+				padding-right: 15px;
+				padding-top: 25px;
+				/*min-height: 90px;*/
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				text-align: center;
+				font-size: 14px;
+				flex-direction: column;
+				.ms-title-modal{
+					font-size: 20px;
+					font-weight: 600;
+					margin-bottom: 5px;
+					padding: 0 20px;
+					span{
+						&.ms-spn{
+							margin-top: 0;
+							display: block;
+							font-size: 20px !important;
+						}
+
+						&:not(.ms-spn){
+							display: none !important
+						}
+					}
+				}
+
+				a{
+					color: #333;
+					transition: color .3s;
+					&:hover{
+						color: #0072AC;
+					}
+				}
+			}
+
+			.ms-strong{
+				font-weight: 600;
+				&.ms-tab{
+					color: #6388cf;
+				}
+			}
+
+			.header-tab{
+				display: none;
+			}
+
+			.ms-sub-title{
+				font-size: 18px;
+				font-weight: 600;
+				margin-bottom: 40px;
+				&.ms-no-mb{
+					margin-bottom: 0;
+				}
+				@media (max-width: 639px){
+					font-size: 16px;
+				}
+			}
+
+			.body_md{
+				.header-tab{
+					margin-top: 20px;
+					li{
+						a{
+							justify-content: center;
+							border-bottom: 1px solid #E5E5E5;
+							&.active{
+								border-color: #333 !important;
+							}
+						}
+					}
+				}
+			}
+
+			.line_or {
+				position: relative;
+				text-align: center;
+				margin: 15px 0;
+				&:before {
+					content: '';
+					position: absolute;
+					left: 0;
+					right: 0;
+					height: 1px;
+					top: 50%;
+					background: #adadad;
+					z-index: 1;
+				}
+				span {
+					display: inline-block;
+					position: relative;
+					z-index: 2;
+					vertical-align: top;
+					width: 25px;
+					height: 25px;
+					line-height: 22px;
+					border-radius: 50%;
+					background: #adadad;
+					color: #fff;
+					font-size: 0.8125rem;
+					font-family: "Open Sans", sans-serif;
+				}
+			}
+
+			&.ms-hidden-extras{
+				.heder_md,
+				.header-tab,
+				.line_or,
+				.social_login{
+					display: none;
+				}
+			}
+
+			.ms-header-md{
+				.ms-title-modal{
+					&.ms-no-mb{
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			.ms-icon{
+				width: 66px;
+				height: 66px;
+				margin: 20px auto 15px auto;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: #FFF;
+				color: #676766;
+				&:before{
+					display: inline-block;
+					font-family: "idx-icons" !important;
+				}
+				&.ms-register{
+					&:before{
+						content: "\e943";
+						font-size: 40px;
+					}
+				}
+				&.ms-phone{
+					&:before{
+						content: "\e91d";
+						font-size: 40px;
+					}
+				}
+				&.ms-time{
+					color: #000000;
+					&:before{
+						content: "\e942";
+						font-size: 40px;
+					}
+				}
+				&.ms-financing{
+					color: #000000;
+					&:before{
+						content: "\e941";
+						font-size: 40px;
+					}
+				}
+				&.ms-sale{
+					color: #000000;
+					&:before{
+						content: "\e940";
+						font-size: 40px;
+					}
+				}
+			}
+
+			.pr-step{
+				.ms-link{
+					&.close-modal{
+						position: relative;
+						width: 200px;
+						top: 0;
+						right: auto;
+						display: block;
+						height: 40px;
+						margin: 5px auto 0 auto;
+						background-color: transparent;
+						color: #333;
+						font-size: 14px;
+						font-weight: 600;
+						transition: color .3s;
+						text-indent: 0;
+						&:hover{
+							color: #0072AC;
+						}
+					}
+				}
+			}
+		}
+
+		.form_content{
+			.form_md{
+				.form_input{
+					margin-bottom: 10px;
+					input{
+						height: 55px;
+						&::-webkit-input-placeholder {
+							color: #b9b9b9;
+						}
+						&::-moz-placeholder {
+							color: #b9b9b9;
+						}
+						&:-ms-input-placeholder {
+							color: #b9b9b9;
+						}
+						&:-moz-placeholder {
+							color: #b9b9b9;
+						}
+					}
+				}
+			}
+
+			.showpassord{
+				height: 55px !important;
+			}
+			
+			.pr-steps-container{
+				.pr-step{
+					.pr-dgray {
+						font-size: 14px;
+						margin-top: 5px;
+					}
+					
+					.ms-text{
+						p{
+							margin-bottom: 0;
+						}
+					}
+
+					.wrapper-input{
+						input{
+							height: 55px;
+							&::-webkit-input-placeholder {
+								color: #b9b9b9;
+							}
+							&::-moz-placeholder {
+								color: #b9b9b9;
+							}
+							&:-ms-input-placeholder {
+								color: #b9b9b9;
+							}
+							&:-moz-placeholder {
+								color: #b9b9b9;
+							}
+						}
+					}
+
+					label{
+						margin: 7px 0 !important;
+						font-size: 15px !important;
+						&.ms-strong{
+							font-weight: 700;
+						}
+						.txtgray{
+							font-size: 15px !important;
+						}
+					}
+				}
+			}
+			
+			#push-registration,
+			#cntLoginForm{
+				input[name='register_email'],
+				input[name="register_name"],
+				input[name="register_last_name"],
+				input[name="register_phone"],
+				input[name="register_phone_facebook"],
+				#txt_user,
+				#txt_pwd,
+				#reset_email{
+					@extend %icon-input;
+
+					&:-webkit-autofill,
+					&:-webkit-autofill:hover, 
+					&:-webkit-autofill:focus{
+						@extend %icon-input;
+					}
+				}
+
+				#txt_pwd,
+				#reset_email,
+				input[name="register_phone"],
+				input[name="register_phone_facebook"]{
+					background-position: 0 -57px;
+					&:-webkit-autofill,
+					&:-webkit-autofill:hover, 
+					&:-webkit-autofill:focus{
+						background-position: 0 -57px;
+					}
+				}
+
+				input[name="register_name"],
+				input[name="register_last_name"]{
+					background-position: 0 -114px;
+					&:-webkit-autofill,
+					&:-webkit-autofill:hover, 
+					&:-webkit-autofill:focus{
+						background-position: 0 -114px;
+					}
+				}
+			}
+
+			.btn_form,
+			.pr-steps-container .pr-step .pr-next-step,
+			.pr-steps-container .pr-step .pr-redbtn{
+				border-radius: 4px;
+				height: 55px;
+				font-size: 15px;
+				border: 0 !important;
+				background-color: #cd1414 !important;
+				text-transform: none;
+				&:hover{
+					background-color: #ec2424 !important;
+					color: #FFF !important;
+				}
+			}
+
+			#formReset{
+				.btn_form{
+					background-color: #464646 !important;
+					&:hover{
+						background-color: #000 !important;
+					}
+				}
+
+				#reset_email{
+					@extend %icon-input;
+				}
+			}
+		}
+
+		.ms-label{
+			display: block;
+			text-align: center;
+			margin: 10px 0;
+			a{
+				transition: color .3s;
+				font-weight: 600;
+				color: #648ad2;
+				&:hover{
+					color: #648ad2;
+					text-decoration: underline;
+				}
+			}
+		}
+		
+		.ms-sub-text{
+			display: block;
+			text-align: center;
+			margin: 20px 0 10px 0;
+			font-weight: 400;
+			font-size: 16px;
+		}
+
+		#tabLogin{
+			.ms-text{
+				text-align: center;
+				display: block;
+				margin-bottom: 15px;
+			}
+		}
+
+		label.agile-label{
+			margin: 7px 0!important;
+			font-size: 16px!important;
+			display: block;
+		}
+
+		#formReset{
+			p{
+				font-size: 15px;
+				text-align: center;
+				line-height: 1.6;
+				padding: 0 10px;
+			}
+		}
+	}
+
+	.social_login{
+		.ico-facebook {
+			background-color: #3C5A99;
+			border: 1px solid #3C5A99;
+			height: 55px;
+			font-weight: 600;
+			&:before{
+				color: #FFF !important;
+				font-weight: 100;
+				content: "";
+				background-image: url('images/iconfacebook.png');
+				width: 28px;
+				height: 28px;
+				background-size: cover;
+				background-position: 0 0;
+				margin-top: 2px;
+			}
+			&:hover{
+				color: #3C5A99;
+				background-color: #FFF;
+				border-color: #3C5A99;
+				&:before{
+					color: #3C5A99;
+					background-position: 0 -28px;
+				}
+			}
+		}
+	}
+
+	.ms-separator{
+		display: inline-block;
+		vertical-align: middle;
+		height: 10px;
+		width: 1px;
+		vertical-align: middle;
+		margin-left: 10px;
+		margin-right: 10px;
+		background-color: #333
+	}
+
+	.footer_md.terms-md{
+		border-top: 0;
+		position: relative;
+		width: 100%;
+		text-align: center;
+		margin-top: 20px;
+
+		@media screen and (min-width: 640px){
+			position: absolute;
+			bottom: 15px;
+			margin-top: 0;
+		}
+
+		*{
+			font-size: 14px;
+		}
+		a{
+			color: #648ad2;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+		
+		@media (max-width: 640px){
+			p{
+				span{
+					display: block
+				}
+			}
+		}
+	}
+
+	.modal_cm{
+		#push-registration{
+			.pr-steps-container{
+				.pr-step{
+					.pr-radio-list{
+						margin: 15px 0;
+						li{
+							height: 55px;
+							position: relative;
+							input{
+								position: absolute;
+								top: 0;
+								left: 0;
+								width: 0;
+								height: 0;
+								z-index: 0;
+							}
+
+							label{
+								position: relative;
+								z-index: 2;
+								color: #333;
+								background-color: transparent;
+								border: 1px solid #909092;
+								height: 100%;
+								margin: 0;
+								cursor: pointer;
+								&:hover{
+									background-color: #333;
+									border-color: #333;
+									color: #FFF;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.ms-back{
+		width: 45px;
+		height: 45px;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		.ms-icon-back{
+			width: 100%;
+			height: 100%;
+			background-color: transparent;
+			span{
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				&:before{
+					content: "";
+					width: 0;
+					height: 0;
+					border-top: 45px solid #FFF;
+					border-right: 45px solid transparent;
+					transition: all .3s;
+				}
+
+				&:after{
+					content: "\e944";
+					font-family: "idx-icons"!important;
+					display: inline-block;
+					font-size: 20px;
+					position: absolute;
+					top: 4px;
+					left: 4px;
+					color: #333;
+					transition: all .3s;
+				}
+			}
+
+			&:hover{
+				span{
+					&:before{
+						border-top: 45px solid #3a5a93;
+					}
+					&:after{
+						color: #FFF;
+					}
+				}
+			}
+		}
+	}
+
+	.pr-step{
+		&.email-registration{
+			.name-input-content{
+				margin-top: 15px;
+			}
+		}
+	}
+
+	@media (max-width: 639px){
+		min-height: 100vh;
+		background-color: rgba(0,0,0,0.7) !important;
+		.modal_cm{
+			//background: linear-gradient(to bottom, black 0%, rgba(0, 0, 0, 0) 100%);
+			background: linear-gradient(0deg, rgba(0,0,0,1) 10%, rgba(255,255,255,0) 50%, rgba(0,0,0,1) 100%);
+			.content_md{
+				.heder_md{
+					.ms-title-modal{
+						color: #FFF;
+					}
+				}
+				.heder_md,
+				.ms-header-md{
+					padding-top: 40px;
+					padding-left: 0;
+					padding-right: 0;
+					.ms-title-modal{
+						font-size: 19px;
+						color: #FFF;
+					}
+				}
+				.modal_cm{
+					.close-modal{
+						span{
+							color: #FFF !important;
+						}
+					}
+				}
+			}
+
+			#tabLogin{
+				.ms-text {
+					color: #FFF;
+				}
+			}
+			
+			.form_content .pr-steps-container .pr-step .pr-dgray,
+			.form_content .pr-steps-container .pr-step label,
+			label.agile-label,
+			#formReset p,
+			.ms-sub-text,
+			.ms-label,
+			.footer_md.terms-md,
+			.ms-text,
+			.ms-sub-title{
+				color: #FFF;
+			}
+
+			.ms-text{
+				margin-top: 15px;
+				p{
+					color: #FFF;
+				}
+			}
+
+			.name-input-content {
+				display: flex;
+				justify-content: space-between;
+				.item-name{
+					width: 48%;
+				}
+			}
+
+			#push-registration .pr-steps-container .pr-step .pr-radio-list li label{
+				background-color: #f4f5f9;
+				color: #333;
+				&:hover{
+					background-color: #FFF;
+					color: #333;
+				}
+			}
+		}
+	}
+}
+
+.ib-pr-step.ib-pr-radio,
+.pr-step.facebook-registration{
+	min-height: 425px;
+	.ms-header-md{
+		padding-top: 25px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		text-align: center;
+		font-size: 14px;
+		flex-direction: column;
+		.ms-title-modal {
+			font-size: 20px;
+			font-weight: 600;
+			margin-bottom: 5px;
+			padding: 0;
+		}
+		.ms-sub-title {
+			font-size: 18px;
+			font-weight: 600;
+			margin-bottom: 20px;
+			@media (max-width: 639px){
+				font-size: 16px;
+			}
+
+			&.ms-no-mb{
+				margin-bottom: 0;
+			}
+		}
+		.ms-icon{
+			width: 66px;
+			height: 66px;
+			margin: 20px auto 15px auto;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: #FFF;
+			color: #000;
+			&:before{
+				display: inline-block;
+				font-family: "idx-icons"!important;
+				font-size: 40px;
+			}
+			&.ms-time:before {
+				content: "\e942";
+			}
+			&.ms-financing:before {
+				content: "\e941";
+			}
+			&.ms-sale:before {
+				content: "\e940";
+			}
+		}
+	}
+
+	label {
+		width: 100%;
+		display: block;
+		margin: 7px 0!important;
+		font-size: 15px!important;
+		font-family: "Open Sans", sans-serif;
+		span {
+  		color: #a7a6ae;
+  	}
+	}
+
+	input[name=register_phone_facebook] {
+		padding: 0 1rem;
+		background-position: 0 -57px;
+		background-image: url('../images/icons-login.png') !important;
+		background-size: 44px;
+		background-repeat: no-repeat;
+		padding-left: 44px;
+		background-color: #FFF!important;
+		height: 55px;
+		border: 1px solid #E5E5E5;
+		border-radius: 4px;
+		width: 100%;
+	}
+
+	.wrapper-input {
+		width: 100%;
+		margin-bottom: 0.625rem;
+	}
+
+	.pr-redbtn {
+		border-radius: 4px;
+		height: 55px;
+		font-size: 15px;
+		border: 0!important;
+		background-color: #cd1414;
+		text-transform: none;
+		color: #FFF;
+		width: 100%;
+		text-align: center;
+		transition: all .3s;
+		font-weight: 600;
+		&:hover{
+			background-color: #ec2424;
+			color: #FFF;
+		}
+	}
+	
+	.ib-pr-radio-list {
+		margin: 15px 0;
+		li {
+			height: 55px !important;
+			position: relative !important;
+			width: 100% !important;
+			display: block !important;
+			margin-bottom: 0.625rem !important;
+			&:last-child {
+				margin-bottom: 0 !important;
+			}
+
+			label {
+				position: relative !important;
+				z-index: 2 !important;
+				color: #333 !important;
+				background-color: transparent !important;
+				border: 1px solid #909092 !important;
+				height: 100% !important;
+				margin: 0 !important;
+				cursor: pointer !important;
+				font-size: 15px !important;
+				font-weight: 600 !important;
+				display: flex !important;
+				align-items: center !important;
+				justify-content: center !important;
+				width: 100% !important;
+				transition: all .3s !important;
+				&:hover {
+					background-color: #333 !important;
+					border-color: #333 !important;
+					color: #FFF !important;
+				}
+			} 
+		}
+	}
+}
+
+#ib-push-registration-quizz-ct{
+	height: 100vh;
+	.ms-center{
+		text-align: center;
+		margin: 15px 0 0;
+		.ms-skip{
+			font-size: 16px;
+			font-weight: 600;
+			color: #333;
+			background-color: transparent;
+			@media (max-width: 639px){
+				color: #FFF;
+			}
+	  }
+	}
+
+	.ib-mwrapper.ib-mgeneric{
+		padding: 0;
+		.ib-mgcontent{
+			padding: 0 20px 20px;
+		}
+	}
+
+	@media (max-width: 639px){
+		width: 100%;
+		.ib-mmcontent,
+		.ib-mgeneric{
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 639px){
+	#ib-push-registration-quizz-ct{
+		background-color: rgba(0,0,0,0.1) !important;
+		.ib-mgeneric{
+			background: linear-gradient(0deg, rgba(0,0,0,1) 10%, rgba(255,255,255,0) 50%, rgba(0,0,0,1) 100%) !important;
+		}
+
+		.ib-pr-step.ib-pr-radio .ms-header-md, 
+		.pr-step.facebook-registration .ms-header-md,
+		.ib-pr-step.ib-pr-radio label, 
+		.pr-step.facebook-registration label,
+		.ib-pr-step.ib-pr-radio .ms-header-md, 
+		.pr-step.facebook-registration .ms-header-md{
+			color: #FFF !important;
+		}
+
+		#ib-push-registration .ib-pr-steps-container .ib-pr-step .ib-pr-radio-list li label{
+			background-color: #f4f5f9 !important;
+    	color: #333 !important;
+		}
+	}
+}
+
+.dgt-email-error{
+  color: rgb(241, 92, 92);
+  font-weight: 600;
+  text-align: center;
+  font-size: 13px !important;
+  display: none;
+}

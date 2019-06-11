@@ -1,0 +1,43 @@
+$web-icons : 'idx-icons' !important;
+$modal-icons : $web-icons;
+$properties-icons : $web-icons;
+
+/*Social media colors*/
+$color-blue: #0072ac;
+$color-facebook: #3B5998;
+$color-twittter: #08a0e9;
+$color-youtube: #dc472e;
+$color-instagram: #bd00a0;
+$color-pinterest: #BD081C;
+$color-linkedin: #0077B5;
+$color-google: #DD4B39;
+$color-whatsapp: #25d366;
+$color-black: #000;
+
+/*Font type*/
+$opensans	: 'Open Sans', sans-serif;
+$gotham		: 'Gotham';
+$oswald		: 'Oswald';
+
+/*Website font type and color text*/
+$fontweb	: $opensans;
+$colortext	: #434343; //Listo
+
+/*Basic menu text color*/
+$colormenu	: #333;
+$colormenutexthover: #333;
+
+/*Basic colors button*/
+$buttoncolor: #333;
+$buttonhover: #FFF;
+$buttonsecondcolor: #0072ac;
+
+/*Web colors*/
+$colorweb	: #333;
+$colorhover	: #ccc;
+
+/*Prefijo*/
+$prefijo : '';
+$gris-bajo : #f0f0f0;
+$gris-intermedio: #a7a6ae;
+$gris-lineas : #E5E5E5; /*#cecece*/

@@ -1,0 +1,1079 @@
+/*----------------------------------------------------------------------------------*/
+/* All Filters
+/*----------------------------------------------------------------------------------*/
+##{$prefijo}luxury-condo-page{
+
+  #wrap-subfilters{
+    margin-top: -1px !important;
+    #link-favorites{
+      display: none;
+    }
+  }
+
+  .#{$prefijo}content-filters{
+    .#{$prefijo}wrap-filters,
+    ##{$prefijo}wrap-filters {
+      .#{$prefijo}gwr{
+        .#{$prefijo}filters,
+        ##{$prefijo}filters{
+          flex-wrap: wrap;
+          width: 100%;
+          li{
+            &.#{$prefijo}all{
+              button{
+                border: 1px solid $colorweb;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 40px;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                background-color: $colorweb;;
+                color: #FFF;
+                label{
+                  &.ib-dt{
+                    display: block;    
+                  }
+                  &.ib-ct{
+                    display: none;
+                  }
+                }
+              }
+              @media screen and (min-width: 640px){
+                display: none;
+              }
+            }
+
+            &.#{$prefijo}mini-search{
+              .search_building{
+                padding-right: 55px !important;
+              }
+              .clidxboost-icon-search{
+                right: 0 !important;
+              }
+            }
+          }
+
+          @media (max-width: 767px){
+            li{
+              width: 100%;
+              order: 3;
+
+              &.#{$prefijo}content_select{
+                height: 0;
+                overflow: hidden;
+                transition: all .3s;
+                margin-bottom: -1px;
+                border-bottom: 1px solid $gris-lineas !important;
+                width: 50%;
+                border-right: 1px solid $gris-lineas !important;
+                &:last-child{
+                  border-right: 0 !important;
+                }
+              }
+
+              &.#{$prefijo}mini-search{
+                order: 1;
+                width: 70%;
+                .clidxboost-icon-search{
+                  right: 0;
+                  height: 45px;
+                }
+                input {
+                  height: 45px;
+                }
+              }
+
+              &.#{$prefijo}all{
+                width: 30% !important;
+                order: 2;
+                height: 46px;
+                display: block;
+              }
+            }
+
+            &.#{$prefijo}active-select{
+              li{
+                &.#{$prefijo}content_select{
+                  height: 45px;
+                  border-bottom: 1px solid $gris-lineas;
+                  overflow: visible;
+                }
+
+                &.all{
+                  button{
+                    label{
+                      &.ib-dt{
+                        display: none;
+                      }
+                      &.ib-ct{
+                        display: block;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &.active-select{
+            li{
+              &.content_select{
+                min-height: 45px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .ib-group-btn{
+    width: 100%;
+    background-color: #FFF;
+    display: none;
+
+    @media screen and (min-width: 768px){
+      max-width: 250px;
+      display: flex;
+    }
+
+    .ib-btn-mp{
+      border-bottom: 1px solid $gris-lineas;
+      border-top: 1px solid $gris-lineas;
+      width: 33.33% !important;
+      flex-grow: 1;
+      border-right: 1px solid $gris-lineas !important;
+      height: 45px;
+      background-color: #FFF;
+      padding: 0 !important;
+      margin-top: -1px;
+      color: #a7a6ae;
+
+      &:before{
+        display: none !important;
+      }
+      
+      &.ib-active,
+      &:hover{
+        color: #333;
+      }
+
+      &:last-child{
+        border-right: 0 !important;
+      }
+
+      @media screen and (min-width: 768px){
+        border-bottom: 0;
+        border-top: 0;
+        margin-top: 0;
+      }
+
+      span{
+        font-size: 14px;
+        font-weight: 600;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        padding: 0 10px !important;
+        &:before{
+          display: none !important;
+        }
+        &:after{
+          transition: color .3s;
+          font-family: "idx-icons"!important;
+          display: inline-block;
+          width: 13px;
+          height: 13px;
+          font-size: 13px;
+          font-weight: 100;
+          margin-left: 10px;
+        }
+      }
+
+      &.ib-icon-grid{
+        span{
+          &:after{
+            content: "\e903" !important;
+          }
+        }
+      }
+
+      &.ib-icon-list{
+        span{
+          &:after{
+            content: "\e904" !important;
+          }
+        }
+      }
+
+      &.ib-icon-map{
+        span{
+          &:after{
+            content: "\e91e" !important;
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 768px){
+      order: 0;
+    }
+  }
+
+  #wrap-subfilters{
+    @media screen and (min-width: 768px){
+      overflow: hidden;
+      height: 0;
+      width: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .tg-building-links{
+    display: none;
+  }
+
+  #wrap-filters #filters{
+    border-right: 0;
+    >li{
+      &.mini-search{
+        form{
+          #submit-ms{
+            input[type=submit] {
+              background-color: transparent !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .content-filters #wrap-filters .gwr #filters li.content_select select, 
+  .content-filters #wrap-filters .gwr .filters li.content_select select, 
+  .content-filters .wrap-filters .gwr #filters li.content_select select, 
+  .content-filters .wrap-filters .gwr .filters li.content_select select {
+    font-size: 14px !important;
+  }
+
+  
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .content-filters #wrap-filters .gwr #filters li.mini-search, 
+    .content-filters #wrap-filters .gwr .filters li.mini-search, 
+    .content-filters .wrap-filters .gwr #filters li.mini-search, 
+    .content-filters .wrap-filters .gwr .filters li.mini-search {
+      width: 62%;
+    }
+
+    .ib-group-btn{
+      border-bottom: 1px solid #E5E5E5 !important;
+      order: 0 !important;
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Vista Mapa
+/*----------------------------------------------------------------------------------*/
+##{$prefijo}luxury-condo-page{
+  #wrap-result{
+    &.#{$prefijo}view-map{
+      .luxury-condo-title{
+        font-size: 18px;
+        font-weight: 600;
+        margin: 10px 0;
+      }
+      .ib-btn-show{
+        display: none;
+      }
+
+      ##{$prefijo}result-search{
+        >li{
+          .#{$prefijo}features{
+            li{
+              &.#{$prefijo}name{
+                font-family: $opensans;
+                font-weight: 600;
+                font-size: 1rem;
+                width: 100%;
+              }
+              &.#{$prefijo}address{
+                display: block;
+                font-size: 14/16*1rem;
+                width: 100%;
+              }
+              &.#{$prefijo}city,
+              &.#{$prefijo}unit,
+              &.#{$prefijo}year,
+              &.#{$prefijo}type,
+              &.#{$prefijo}floors{
+                display: none;
+              }
+
+              &.#{$prefijo}unit,
+              &.#{$prefijo}year{
+                display: none;
+              }
+
+              /*&.#{$prefijo}tg-building-links{
+                position: relative;
+                order: 6;
+                margin-top: 10px;
+                .#{$prefijo}view-map-detail{
+                  display: inline-block;
+                  color: #333;
+                  transition: all .3s;
+                  margin-right: 10px;
+                  font-family: $opensans;
+                  font-size: 11/16*1rem;
+                  font-weight: 600;
+                  text-transform: uppercase;
+                  cursor: pointer;
+                  &:hover{
+                    color: #0072AC;
+                  }
+                }
+              }*/
+            }
+          }
+          >h2{
+            display: none;
+          }
+
+          /*.#{$prefijo}view-detail{
+            display: none !important;
+          }*/
+        }
+      }
+
+      .#{$prefijo}luxury-condo-title{
+        min-height: auto;
+      }
+
+      .tg-building-links{
+        display: block;
+      }
+    }
+  }
+
+  .dgt-richmarker-group, 
+  .dgt-richmarker-single {
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+}
+
+#luxury-condo-page{
+/*----------------------------------------------------------------------------------*/
+/* Vista Grid
+/*----------------------------------------------------------------------------------*/
+  .view-grid{
+    margin-top: 25px;
+    #wrap-list-result{
+
+      padding: 0 15px;
+      @media screen and (min-width: 768px){
+        padding: 0;
+      }
+    }
+
+    .luxury-condo-title{
+      font-size: 18px;
+      font-weight: 600;
+      margin: 10px 0;
+    }
+
+    .result-search,
+    #result-search{
+      .propertie{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        @media screen and (min-width: 1200px){
+          width: 24.24% !important;
+          //width: 19.19% !important;
+          margin-right: 1% !important;
+          &:nth-child(4n){
+          //&:nth-child(5n){
+            margin-right: 0 !important;
+          }
+        }
+
+        >h2{
+          display: none;
+        }
+
+        .features{
+          position: relative;
+          order: 2;
+          padding: 0 !important;
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-wrap: wrap;
+          &:after{
+            content: "";
+            display: block;
+            clear: both;
+          }
+
+          li{
+            width: 100%;
+          }
+
+          .city{
+            display: none;
+          }
+
+          .name{
+            min-height: 45px;
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $colorweb;
+            color: #FFF;
+            font-weight: 600;
+            text-align: center;
+            span{
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              width: 100%;
+            }
+          }
+
+          .address{
+            min-height: 40px;
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-bottom: 1px solid $gris-lineas;
+            font-size: 14px;
+            span{
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              width: 100%;
+            }
+          }
+
+          .year,
+          .unit,
+          .floors{
+            height: 40px;
+            width: 33.33%;
+            align-items: center;
+            font-size: 14px;
+            margin: 0;
+            padding: 0 10px;
+            flex-grow: 1;
+            float: left;
+            display: none;
+            &:before{
+              content: attr(data-text);
+              display: inline-block;
+              font-size: 12px;
+              margin-right: 5px;
+            }
+          }
+
+          .unit{
+            text-align: left;
+          }
+
+          .year{
+            justify-content: flex-end;
+          }
+
+          .floors{
+            justify-content: center;
+          }
+
+          &.ib-show-extra-info{
+            .year,
+            .unit,
+            .floors{
+              display: flex;
+            }
+          }
+        }
+
+        .view-detail{
+          text-indent: -999999px;
+          overflow: hidden;
+          position: absolute;
+          top: 0;
+          left: 0;
+          overflow: hidden;
+          height: 100%;
+          width: 100%;
+        }
+
+        .wrap-slider{
+          order: 1;
+          width: 100%;
+          height: auto;
+          margin-bottom: -5px;
+          img{
+            transition: opacity .3s, transform 1s, -webkit-transform 1s;
+          }
+        }
+
+        &:hover{
+          .wrap-slider{
+            img{
+              transform: scale3d(1.1, 1.1, 1);
+            }
+          }
+        }
+
+        &.ib-hidden-yuf{
+          .features{
+            .year,
+            .unit,
+            .floors{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .ib-btn-show{
+      display: none;
+    }
+  }
+
+/*----------------------------------------------------------------------------------*/
+/* Vista List
+/*----------------------------------------------------------------------------------*/
+  .view-list{
+
+    #head-list{
+      padding: 0;
+      display: none;
+      li{
+        padding: 5px 10px;
+        width: 25%;
+        min-width: 65px;
+        border: 1px solid transparent;
+        text-align: center;
+        justify-content: center !important;
+        &.name,
+        &.addres{
+          width: 74%;
+          min-width: 280px;
+        }
+      }
+      @media screen and (min-width: 991px){
+        display: flex;
+      }
+    } 
+
+    #wrap-list-result{
+      padding: 0 15px;
+      @media screen and (min-width: 768px){
+        padding: 0;
+      }
+    }
+
+    .luxury-condo-title{
+      font-size: 18px;
+      font-weight: 600;
+      margin: 10px 0;
+    }
+    .result-search,
+    #result-search{
+      .propertie{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        padding: 0;
+        min-height: auto;
+        overflow: hidden;
+        height: 45px;
+        margin-bottom: 5px;
+        @media screen and (min-width: 991px){
+          height: auto;
+          overflow: visible;
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+
+        >h2{
+          display: none;
+        }
+
+        .features{
+          position: relative;
+          order: 2;
+          padding: 0;
+          width: 100%;
+          height: auto;
+          margin: 0;
+          display: flex;
+          flex-wrap: wrap;
+          @media screen and (min-width: 991px){
+            flex-wrap: nowrap;
+            &:before{
+              content: "";
+              display: block;
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              background-color: rgba(0,0,0,0.065);
+              opacity: 0;
+              transition: opacity .4s;
+            }
+          }
+
+          &:after{
+            content: "";
+            display: block;
+            clear: both;
+          }
+
+          li{
+            width: 100%;
+            @media screen and (min-width: 991px){
+              width: 25%;
+              min-width: 65px;
+            }
+          }
+
+          .city{
+            display: none;
+          }
+
+          .name{
+            min-height: 45px;
+            padding: 5px 10px;
+            padding-left: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $colorweb;
+            color: #FFF;
+            font-weight: 600;
+            text-align: center;
+            span{
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              width: 100%;
+            }
+            @media screen and (min-width: 991px){
+              width: 75%;
+              min-width: 280px;
+              padding-left: 10px;
+            }
+          }
+
+          .address{
+            min-height: 45px;
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: 1px solid $gris-lineas;
+            font-size: 14px;
+            font-weight: normal !important;
+            span{
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              width: 100%;
+            }
+            @media screen and (min-width: 991px){
+              width: 75%;
+              min-width: 280px;
+              margin-right: -1px;
+            }
+          }
+
+          .year,
+          .unit,
+          .floors{
+            align-items: center;
+            border-bottom: 1px solid $gris-lineas;
+            border-left: 1px solid $gris-lineas;
+            display: flex;
+            flex-grow: 1;
+            flex-grow: 1;
+            font-size: 14px;
+            height: 45px;
+            margin: 0;
+            margin-top: -1px;
+            padding: 0 10px;
+            width: 25%;
+            float: left;
+            justify-content: center;
+            flex-direction: column;
+            &:before{
+              content: attr(data-text);
+              display: inline-block;
+              font-size: 12px;
+              margin-bottom: 5px;
+              @media screen and (min-width: 991px){
+                display: none;
+              }
+            }
+            @media screen and (min-width: 991px){
+              margin-top: 0;
+              border-top: 1px solid $gris-lineas;
+            }
+          }
+
+          /*.tg-building-links{
+            border-right: 1px solid $gris-lineas;
+            border-left: 0;
+            text-align: center;
+            color: #FFF;
+            background-color: $colorweb;
+            font-size: 13px;
+            @media screen and (min-width: 991px){
+              display: none;
+            }
+            .view_inmap{
+              display: none;
+            }
+            &:before{
+              display: none;
+            }
+            a{
+              font-weight: 600;
+              color: #FFF;
+            }
+          }*/
+
+          .year{
+            border-right: 1px solid $gris-lineas;
+          }
+        }
+
+        .view-detail{
+          text-indent: -999999px;
+          overflow: hidden;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          border: 0 !important;
+        }
+
+        .wrap-slider{
+          display: none;
+          position: absolute;
+          z-index: -1;
+          width: 31.65%;
+          height: 45px;
+          transition: opacity .4s;
+          opacity: 0;
+          @media screen and (min-width: 991px){
+            display: block;
+          }
+          >ul{
+            display: block;
+            width: 150px;
+            height: 100px;
+            margin: 0 auto;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: -115px;
+            box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.3);
+            transition: top .4s;
+            &:after{
+              content: "";
+              width: 0;
+              height: 0;
+              border-left: 7px solid transparent;
+              border-right: 7px solid transparent;
+              border-top: 10px solid #FFF;
+              position: absolute;
+              bottom: -10px;
+              right: 0;
+              left: 0;
+              margin: 0 auto;
+            }
+            >li{
+              border: 5px solid #FFF;
+              cursor: pointer;
+            }
+          }
+        }
+
+        &:hover{
+          .wrap-slider{
+            z-index: 1;
+            opacity: 1;
+            >ul{
+              top: -105px;
+            }
+          }
+          .features{
+            &:before{
+              opacity: 1;
+            }
+          }
+        }
+
+        &.active-list{
+          height: auto;
+          .ib-btn-show{
+            span{
+              &:before{
+                transform: rotate(45deg);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .ib-btn-show{
+      display: block;
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 4;
+      border: 1px solid $gris-lineas;
+      background-color: #f6f6f6;
+      cursor: pointer;
+      span{
+        display: block;
+        &:before{
+          content: "+";
+          text-indent: 0;
+          font-size: 30px;
+          display: flex;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          align-items: center;
+          justify-content: center;
+          transition: transform .3s;
+          font-weight: 600;
+        }
+      }
+
+      @media screen and (min-width: 991px){
+        display: none;
+      }
+    }
+  }
+
+  .mbt-active{
+    display: none;
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Vista Mapa Full page
+/*----------------------------------------------------------------------------------*/
+.full-page-luxury{
+  &.view-map{
+    overflow: hidden;
+    footer,
+    .contact-area,
+    .gwr-breadcrumb,
+    .flex-breadcrumb{
+      display: none;
+    }
+
+    .flex-block-description{
+      margin-top: -1px;
+      .title-block{
+        position: absolute;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+      }
+    }
+
+    #wrap-result,
+    .wrap-result{
+      &.view-map{
+        >.gwr{
+          flex-direction: row-reverse;
+        }
+
+        #wrap-map,
+        .wrap-map {
+          height: calc(100vh - 193px);
+          @media screen and (min-width: 768px){
+            height: calc(100vh - 204px);
+          }
+          @media screen and (min-width: 1024px){
+            height: calc(100vh - 142px);
+          }
+        }
+
+        #wrap-list-result{
+          height: calc(100vh - 142px);
+          padding-left: 15px;
+        }
+
+        #result-search{
+          >li{
+            .view-detail {
+              display: block !important;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              z-index: 2;
+            }
+          }
+        }
+      }
+    }
+
+    main {
+      padding-bottom: 0 !important;
+    }
+
+    #luxury-condo-page{
+      .mbt-active{
+        width: 35px;
+        height: 35px;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 10px;
+        z-index: 5;
+        text-indent: -999999px;
+        cursor: pointer;
+        &:before{
+          font-family: "idx-icons"!important;
+          display: flex;
+          width: 35px;
+          height: 35px;
+          font-size: 21px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          content: "\e91e";
+          text-indent: 0;
+          align-items: center;
+          justify-content: center;
+          color: #333;
+        }
+      }
+    }
+
+    #flex-default-theme{
+      #wrap-result{
+        .gwr{
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+      }
+
+      .content-filters{
+        .wrap-filters,
+        #wrap-filters{
+          .gwr{
+            width: 100%;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+
+    .gwr.c-flex{
+      width: 100%;
+      max-width: 100%;
+    }
+
+    #header{
+      .wrap-options,
+      .wrap-menu{
+        .gwr {
+          max-width: 98% !important;
+        }
+      }
+    }
+  }
+
+  .mapview-container{
+    .mapviwe-body{
+      .mapviwe-item{
+        ul{
+          li{
+            &:after {
+              display: none
+            }
+            &.beds,
+            &.baths,
+            &.living-size,
+            &.price-sf{
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  &:not(.view-map){
+    &.fixed-active-m{
+      .fixed-box-m {
+        background-color: #FFF;
+        position: fixed;
+        z-index: 31;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 2px 3px -2px rgba(0,0,0,.16);
+        width: 100%;
+        max-width: 100%;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-name: fadeInDown;
+        animation-name: fadeInDown;
+      }
+    }
+  }
+
+  #wrap-filters{
+    #filters{
+      #autocomplete-ui-build{
+        top: 100%;
+        .ui-widget-content{
+          &.ui-autocomplete {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+.content-search-building{
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+#wrap-filters #filters>li.mini-search form #submit-ms input[type=submit] {
+  height: 100%;
+}

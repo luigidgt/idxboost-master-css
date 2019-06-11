@@ -1,0 +1,104 @@
+.rm-agents {
+    padding: 35px 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+}
+
+.rm-gtitle {
+    font-family: 'Neutra Text Book';
+    color: #1F265C;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-top: 85px;
+    position: relative;
+    position: relative;
+    &:before{
+		content: "";
+		position: absolute;
+		background-image: url(../images/mexico-bandera.jpg);
+		width: 120px;
+		height: 69px;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+    }
+    &:after{
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 1px;
+		width: 100%;
+		background-color: #7D7E80;
+    }
+}
+
+.rm-glitem {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.rm-agents.animated .rm-glitem {
+    position: relative;
+}
+.rm-agents.animated .rm-glitem:first-child {
+    animation: salta2 .8s linear .5s;
+}
+
+.rm-glititle {
+    color: #1F265C;
+    font-weight: bold;
+    font-size: 1.25em;
+    margin-bottom: 5px;
+    font-family: 'Neutra Text Book';
+}
+.rm-ginfo {
+    font-size: .9em;
+}
+.rm-giiagent {
+    color: #1F265C;
+    font-size: 1.2em;
+}
+.rm-gii a {
+    transition: all .3s linear;
+}
+
+.rm-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: .625em 0;
+}
+
+.rm-fcopy {
+    text-align: center;
+    font-size: .8em;
+    margin-bottom: .9375em;
+    color: #848484;
+}
+
+.rm-ftremgroup {
+    text-transform: uppercase;
+    color: #828282;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .7em;
+}
+
+.rm-ftlink {
+	margin-left: 5px;
+	color: #fff;
+	background-color: #0180C5;
+	height: 1.6964em;
+	width: 7.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

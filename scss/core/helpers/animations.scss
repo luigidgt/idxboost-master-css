@@ -1,0 +1,175 @@
+/*----------------------------------------------------------------------------------*/
+/* Spinner Loading
+/*----------------------------------------------------------------------------------*/
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Animated
+/*----------------------------------------------------------------------------------*/
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Fade In Up
+/*----------------------------------------------------------------------------------*/
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Fade In
+/*----------------------------------------------------------------------------------*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Fade Out
+/*----------------------------------------------------------------------------------*/
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+}
+
+
+/*----------------------------------------------------------------------------------*/
+/* FadeIn Down
+/*----------------------------------------------------------------------------------*/
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+
+/*----------------------------------------------------------------------------------*/
+/* Floating
+/*----------------------------------------------------------------------------------*/
+
+@keyframes floating {
+  0% {
+    transform: translateY(0%);  
+  }
+  50% {
+    transform: translateY(8%);  
+  } 
+  100% {
+    transform: translateY(0%);
+  }     
+}
+
+.floating{
+  animation-name: floating;
+  -webkit-animation-name: floating;
+
+  animation-duration: 1.5s; 
+  -webkit-animation-duration: 1.5s;
+
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+
+/*----------------------------------------------------------------------------------*/
+/* ExpandUp
+/*----------------------------------------------------------------------------------*/
+@keyframes expandUp {
+  0% {
+    transform: translateY(100%) scale(0.6) scaleY(0.5);
+  }
+  60%{
+    transform: translateY(-7%) scaleY(1.12);
+  }
+  75%{
+    transform: translateY(3%);
+  } 
+  100% {
+    transform: translateY(0%) scale(1) scaleY(1);
+  } 
+}
+
+.expandUp{
+  animation-name: expandUp;
+  -webkit-animation-name: expandUp; 
+  animation-duration: 0.7s; 
+  -webkit-animation-duration: 0.7s;
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease;    
+}
+
+/*----------------------------------------------------------------------------------*/
+/* ExpandUp sin rebote
+/*----------------------------------------------------------------------------------*/
+@keyframes expandUpBasic {
+  0% {
+    transform: translateY(100%) scale(0.6) scaleY(0.5);
+  }
+  100% {
+    transform: translateY(0%) scale(1) scaleY(1);
+  } 
+}
+
+.expandUpBasic{
+  animation-name: expandUpBasic;
+  -webkit-animation-name: expandUpBasic; 
+  animation-duration: 0.7s; 
+  -webkit-animation-duration: 0.7s;
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease;    
+}

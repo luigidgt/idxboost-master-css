@@ -1,0 +1,244 @@
+##{$prefijo}flex-about-theme{
+
+	.#{$prefijo}gwr{
+
+		&.#{$prefijo}c-flex{
+			
+			margin-top: 1.25rem;
+			margin-bottom: 1.25rem;
+			width: 90%;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			max-width: 1430px;
+
+			@media screen and (min-width: 768px){
+				margin-top: 3.125rem;
+				margin-bottom: 3.125rem;
+			}
+
+	    .#{$prefijo}flex-block-description{
+	    	order: 1;
+	    	width: 100%;
+	    	margin: 0;
+
+	    	@media screen and (min-width: 1024px){
+					width: 50%;
+
+					h2,p{
+						width: 100%;
+						max-width: 550px;
+					}
+	    	}
+
+				.#{$prefijo}title-block{
+					font-size: 1.5rem;
+					text-align: left;
+					text-transform: uppercase;
+					margin-bottom: 20/16*1rem;
+					font-weight: 400;
+					margin-top: 0;
+
+					@media screen and (min-width: 640px){
+						margin-top: 20/16*1rem;
+					}
+
+					@media screen and (min-width: 768px){
+						font-size: 45/16*1rem;
+						line-height: 1.2;
+						margin-bottom: 45/16*1rem;
+					}
+
+					&:after{
+						display: none;
+					}
+				}
+
+				p{
+					font-size: 14/16*1rem;
+					line-height: 1.8;
+					text-align: left;
+					margin-bottom: 0.625rem;
+					text-align: justify;
+					margin-left: 0;
+
+					@media screen and (min-width: 768px){
+						line-height: 2;
+						margin-bottom: 1.875rem;
+					}
+				}
+
+				ul{
+					li{
+						font-size: 14/16*1rem;
+						position: relative;
+						margin-bottom: 10px;
+						padding-left: 15px;
+						&:before{
+							content: "";
+							display: block;
+							width: 6px;
+							height: 6px;
+							border-radius: 100%;
+							left: 0;
+							top: 7px;
+							position: absolute;
+							background-color: $colorweb;
+						}
+					}
+				}
+			}
+
+			img{
+				order: 2;
+				width: 100%;
+				height: auto;
+
+				@media screen and (min-width: 1024px){
+					width: 46%;
+	    	}
+			}
+
+			##{$prefijo}testimonials{
+				order: 3;
+				width: 100%;
+				background-color: #333;
+				padding: 1.625rem 0;
+				
+				>h2{
+					position: absolute;
+					width: 0;
+					height: 0;
+					overflow: hidden;
+				}
+
+				ul{
+					li{
+						font-size: 0.875rem;
+						line-height: 1.8;
+						text-align: center;
+
+						span{
+							font-style: normal;
+							display: block;
+							margin-top: 1.25rem;
+						}
+
+						.#{$prefijo}item-testimonial{
+							width: 90%;
+							margin: 0 auto;
+							position: relative;
+							color: #FFF;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.#{$prefijo}box-btn{
+		display: flex;
+		flex-wrap: wrap;
+		text-align: center;
+		margin-bottom: 15px;
+		margin-top: 60px;
+
+		@media screen and (min-width: 1024px){
+			max-width: 550px;
+			justify-content: space-between;
+		}
+
+		.#{$prefijo}btn-link{
+			width: 100%;
+			margin-bottom: 10px;
+			height: 45px;
+
+			span{
+				border: 1px solid $colorweb;
+				background-color: $colorweb;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				height: 100%;
+				padding: 0 15px;
+				text-transform: uppercase;
+				font-size: 14/16*1rem;
+				transition: all .3s;
+				font-weight: 600;
+				font-family: $opensans;
+				color: #FFF;
+				&:hover{
+					background-color: #dc3d41;
+				}
+			}
+		}
+	}
+}
+
+##{$prefijo}flex-about-theme{
+
+	.#{$prefijo}gwr{
+
+		&.#{$prefijo}c-flex{
+
+			&.#{$prefijo}intro-about{
+				//padding-bottom: 125px;
+				position: relative;
+
+				/*@media screen and (min-width: 640px){
+					padding-bottom: 65px;
+				}*/
+
+				.#{$prefijo}box-btn{
+					position: absolute;
+					margin: 0;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					.#{$prefijo}btn-link{
+						width: 100%;
+					}
+
+					@media screen and (min-width: 640px){
+						display: flex;
+						justify-content: space-between;
+						.#{$prefijo}btn-link{
+							width: 48%;
+							margin: 0;
+						}
+					}
+
+					@media screen and (min-width: 1024px){
+						position: relative;
+						margin-top: 70px;
+					}
+				}
+			}
+		}
+	}
+
+	.#{$prefijo}btn-link{
+		span{
+			color: #333;
+		}
+	}
+
+	.clidxboost-slider{
+		.clidxboost-nav{
+			.clidxboost-bullets{
+				button{
+					&:hover,
+					&.#{$prefijo}active{
+						span{
+							&:before{
+    						background-color: #FFF;
+    					}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,136 @@
+/*----------------------------------------------------------------------------------*/
+/* Main
+/*----------------------------------------------------------------------------------*/
+.idx-main-content{
+	background-color: #333;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 40px 15px;
+	position: relative;
+	height: auto;
+	min-height: 200px;
+	margin-bottom: 20px;
+	@media screen and (min-width: 768px){
+		min-height: 300px;
+	}
+
+	@media screen and (min-width: 991px){
+		min-height: 370px;
+	}
+
+	&:before{
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.33);
+		z-index: 1;
+	}
+
+	.idx-title{
+		font-size: 25px;
+		color: #FFF;
+		font-family: $opensans;
+		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+		z-index: 2;
+		text-align: center;
+		line-height: 1.2;
+		
+		@media screen and (min-width: 768px){
+			font-size: 34px;
+		}
+
+		@media screen and (min-width: 991px){
+			font-size: 40px;
+		}
+	}
+
+	.idx-layer-img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: 0;
+	}
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Detail
+/*----------------------------------------------------------------------------------*/
+.idx-detail{
+	margin: 20px 0;
+	p{
+		margin: 15px 0;
+		font-size: 14px;
+		line-height: 1.6;
+		font-family: $opensans;
+	}
+	a{
+		color: #0b88e6;
+	}
+	strong{
+		font-weight: 600;
+	}
+	ul{
+		margin: 15px 0;
+		li{
+			position: relative;
+			font-size: 14px;
+			font-family: $opensans;
+			margin-bottom: 10px;
+			padding-left: 15px;
+			&:before{
+				content: "";
+				display: block;
+				width: 6px;
+				height: 6px;
+				background-color: #333;
+				border-radius: 100%;
+				left: 0;
+				top: 8px;
+				position: absolute;
+			}
+		}
+	}
+}
+
+.idx-filter-item{
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 40px;
+	.idx-title{
+		font-size: 18px;
+		font-family: $opensans;
+		text-align: left;
+		width: 100%;
+		@media screen and (min-width: 991px){
+			font-size: 20px;
+		}
+	}
+	.idx-btn-link{
+		color: #0b88e6;
+		font-size: 13px;
+		font-family: $opensans;
+		text-align: left;
+		display: inline-block;
+		margin: 5px 0;
+		&:hover{
+			text-decoration: underline;
+		}
+
+		@media screen and (min-width: 991px){
+			position: absolute;
+	    right: 0;
+	    top: 0;
+		}
+	}
+}

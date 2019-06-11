@@ -1,0 +1,541 @@
+/*----------------------------------------------------------------------------------*/
+/*  Quick Search - Max
+/*----------------------------------------------------------------------------------*/
+.idxboost-quick-search-ct,
+.clidxboost-idxboost-quick-search-ct{
+  position: relative;
+  /*border: 1px solid #ccc;*/
+  margin: 10px 0;
+  box-sizing: border-box;
+  width: 100%;
+
+  form{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+
+  select, input, button{
+    border: 1px solid #ccc!important;
+    width: 100% !important;
+    height: 42px;
+    border-radius: 4px !important;
+    box-shadow: none!important;
+    background-color: #FFF!important;
+    text-align: left;
+    padding: 0px 15px;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    margin: 0 !important;
+    max-width: 100% !important;
+    &:hover,
+    &:focus{
+      color: #333 !important;
+      background-color: #FFF !important;
+    }
+  }
+
+  select{
+    padding: 0px 30px 0px 10px; 
+  }
+
+  .clidxboost-item-anyprice,
+  .clidxboost-item-beds,
+  .clidxboost-item-baths,
+  .clidxboost-item-type,
+  .clidxboost-item-search,
+  .clidxboost-item-adsearch,
+  .clidxboost-item-autocomplete,
+  .clidxboost-item-forsale{
+    position: relative;
+    margin-bottom: 15px;
+  }
+
+  .clidxboost-item-forsale{
+    width: 33%;
+    @media screen and (min-width: 1024px) {
+      width: 16%;
+    }
+  } 
+
+  .clidxboost-item-autocomplete{
+    width: 64%;
+    @media screen and (min-width: 1024px) {
+      width: 82%;
+    }
+  }
+
+  .clidxboost-item-forsale{
+    &:after{
+      content: "\e902";
+      font-family: $web-icons;
+      position: absolute;
+      font-size: 12px;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #8cccb2;
+    }
+  }
+
+  .clidxboost-item-anyprice,
+  .clidxboost-item-beds,
+  .clidxboost-item-baths,
+  .clidxboost-item-type{
+    width: 48%;
+    &:after{
+      content: "\e902";
+      font-family: $web-icons;
+      position: absolute;
+      font-size: 12px;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #8cccb2;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 22%;
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 18%;
+    }
+  }
+
+  .clidxboost-item-search,
+  .clidxboost-item-adsearch{
+    width: 100%;
+  }
+  
+  .clidxboost-item-search{
+    button{
+      padding: 0;
+      border: 0 !important;
+      span{
+        transition: all .3s;
+        background-color: $colorweb;
+        border: 1px solid $colorweb;
+        color: #FFF;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px !important;
+        &:hover{
+          background-color: #FFF;
+          color: #333;
+        }
+        &:before{
+          content: "\e901";
+          font-family: $web-icons;
+          display: inline-block;
+          margin-right: 5px;
+          font-size: 18px;
+        }
+      }
+    }
+    @media screen and (min-width: 1024px) {
+      width: 22%;
+    }
+  }
+
+  .clidxboost-item-adsearch{
+    margin-bottom: 0;
+    text-align: right;
+    @media screen and (min-width: 1024px) {
+      margin-top: -10px;
+    }
+    a{
+      margin: 0 !important;
+      float: none !important;
+      box-sizing: border-box;
+      color: #333;
+      font-size: 14px;
+      transition: all .3s;
+      padding: 0;
+      background-color: transparent;
+      text-transform: capitalize !important;
+      &:hover{
+        background-color: transparent !important;
+        color: #8cccb2;
+      }
+    }
+    p{
+      box-sizing: border-box;
+      margin: 0;
+    }
+  }
+
+  /** Hover bubble **/
+  .clidxboost-item-anyprice,
+  .clidxboost-item-beds,
+  .clidxboost-item-baths{
+    padding-bottom: 7px;
+    margin-bottom: 8px;
+    &:hover{
+      .clidxboost-item-bubble{
+        opacity: 1;
+        z-index: 2;
+      }
+    }
+  }
+
+  /** Bubbles **/
+  .clidxboost-item-bubble{
+    border: 1px solid #ccc;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background: #FFF;
+    box-shadow: 2px 0px 3px 0 rgba(0, 0, 0, 0.16);
+    border-top: 3px solid #8cccb2;
+    top: 100%;
+    z-index: -1;
+    transition: opacity .3s;
+    opacity: 0;
+    &:before{
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 0 10px 10px;
+      border-color: #8cccb2 transparent;
+      display: block;
+      width: 0;
+      z-index: 1;
+      top: -10px;
+      left: 50%;
+      margin-left: -10px;
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/*  Quick Search - Larico
+/*----------------------------------------------------------------------------------*/
+.quickSearch {
+  position: absolute;
+  left: 0;
+  top: 130px;
+  z-index: 14;
+  width: 100%;
+  h2,
+  h3 {
+    font-family: $opensans;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  h2 {
+    text-shadow: 0 0 8px #000;
+  }
+
+  h3 {
+    background-color: #8c8d91;
+    margin-bottom: 1px;
+    letter-spacing: 1px;
+  }
+
+  .scols {
+    width: 90%;
+    max-width: 826px;
+    margin: auto;
+    .col {
+      margin-bottom: 14px;
+    }
+  }
+
+  .sfield {
+    background-color: rgba(255, 255, 255, 0.88);
+    margin-bottom: 1px;
+    position: relative;
+
+    &.small {
+      width: 49%;
+      width: 49.5%;
+      label {
+        text-align: left;
+        text-transform: uppercase;
+        color: #5c5c5c;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        font-weight: 600;
+
+        &:before,
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          border-radius: 50%;
+        }
+
+        &:after {
+          width: 17px;
+          height: 17px;
+          border: solid 1px $colorweb;
+        }
+
+        &:before {
+          width: 11px;
+          height: 11px;
+          background-color: $colorweb;
+          transition: all 0.3s ease-in-out;
+          opacity: 0;
+        }
+      }
+
+      input[type="radio"]:checked+label {
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+
+    &.sleft {
+      float: left;
+    }
+
+    &.sright {
+      float: right;
+    }
+
+    &.large {
+      clear: both;
+    }
+
+    select {
+      background: none;
+      font-size: 13px;
+      color: #5c5c5c;
+      width: 100%;
+      position: relative;
+      z-index: 5;
+    }
+  }
+
+  .selectf {
+    &:after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 7px solid #8b8d90;
+      position: absolute;
+    }
+  }
+
+  button {
+    background-color: $colorweb;
+    width: 100%;
+    border: 0;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #8c8d91;
+    }
+  }
+
+  .links {
+    ul {
+      background-color: rgba(255, 255, 255, 0.88);
+    }
+
+    li {
+      border-bottom: solid 1px #fff;
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    a {
+      text-align: left;
+      display: block;
+      font-size: 12px;
+      letter-spacing: 1px;
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #8c8d91;
+        position: absolute;
+      }
+
+      &:hover {
+        background-color: $colorweb;
+        color: #fff;
+      }
+    }
+  }
+
+  @media (max-width:767px) {
+    h2 {
+      font-size: 20px;
+      max-width: 93%;
+      margin: auto auto 12px auto;
+    }
+    h3 {
+      font-size: 14px;
+      padding: 9px 0;
+    }
+
+    .sfield {
+      &.small {
+        padding: 6px 0;
+        height: 34px;
+        label {
+          line-height: 33px;
+          padding-left: 45px;
+          font-size: 11px;
+          &:before {
+            left: 22px;
+            top: 11px;
+          }
+          &:after {
+            left: 18px;
+            top: 7px;
+          }
+        }
+      }
+    }
+
+    select,
+    button {
+      height: 34px;
+    }
+
+    .selectf {
+      &:after {
+        right: 15px;
+        top: 12px;
+      }
+    }
+
+    select {
+      padding-left: 19px;
+    }
+
+    .links {
+      a {
+        padding: 5px 0 5px 40px;
+        &:before {
+          left: 25px;
+          top: 12px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+      top: 50%;
+      transform: translateY(-50%);
+      h2 {
+        font-size: 26px;
+        margin-bottom: 16px;
+      }
+
+      h3 {
+        font-size: 16px;
+        letter-spacing: 2px;
+        padding: 13px 0;
+      }
+
+      .scols {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+        .col {
+          width: 33%;
+        }
+      }
+
+      .sfield.small,
+        select,
+        button {
+          height: 46px;
+        }
+
+        label {
+          font-size: 13px;
+          padding-left: 38px;
+          padding-top: 14px;
+          &:after {
+            left: 12px;
+            top: 13px;
+          }
+          &:before {
+            left: 16px;
+            top: 17px;
+          }
+        }
+
+        .selectf:after {
+          right: 18px;
+          top: 18px;
+        }
+
+        select {
+          padding-left: 20px;
+        }
+
+        .links {
+          ul {
+            padding: 1px 0 2px 0;
+          }
+          a {
+            padding: 2px 5px 3px 28px;
+            &:before {
+            left: 16px;
+            top: 9px;
+          }
+        }
+      }
+  }
+
+  @media (min-width: 1366px) {
+    h2 {
+      letter-spacing: 1.5px;
+    }
+
+    label {
+      padding-left: 50px;
+      &:after {
+        left: 22px;
+      }
+      &:before {
+        left: 26px;
+      }
+    }
+
+    .links {
+      a {
+        padding-left: 50px;
+        &:before {
+          left: 38px;
+        }
+      }
+    }
+  }
+}

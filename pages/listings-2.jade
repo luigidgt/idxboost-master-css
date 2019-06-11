@@ -1,0 +1,574 @@
+doctype html
+html(lang='en')
+  head
+    title My Profile | Master Elite 2017
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style", content="#0073AC")
+    meta(name="theme-color", content="#0073AC")
+    meta(name="msapplication-navbutton-color", content="#0073AC")
+    link(rel="stylesheet", href="../css/main.css")
+    link(rel="stylesheet", href="https://file.myfontastic.com/v6vr22zQVKSnTWTxBBpbWC/icons.css")
+  body.home.page-result
+    include ../header.jade
+    section#wrap-result.saved-list.view-list
+      h1.title Search results
+      .gwr
+
+        #saved-building.flex-table
+          .flex-table-row.table-header
+            .flex-table-row-item.select-item.text-center Select
+            .flex-table-row-item.fwrap Building Name
+            .flex-table-row-item.text-center Building Address
+            .flex-table-row-item.text-center Year Built
+            .flex-table-row-item.text-center Total Units
+            .flex-table-row-item.select-action.text-center Action
+          
+          .flex-table-row.flex-body
+            .flex-table-row-item.select-item.text-center: button.select-chk: span
+            .flex-table-row-item.fwrap
+              .info-sub-item
+                  .info-a
+                    .content-img
+                      img(src='http://rets-images-b5.s3.amazonaws.com/49/09621349_1.jpg', title='Map Factory Lofts', alt='5235 N. Ravenswood, Chicago, IL 60640')
+                  .info-b
+                    h2 Map Factory Lofts
+                    span 5235 N. Ravenswood, Chicago, IL 60640
+                    button(data-modal="modal_schedule").show-modal.request: span request showing
+                    .notify Notifications
+                      label(for="flex_saved_search_on_31", namesearch="wwww", data-alert-token="96d77759576e283ef946be24f88d83225f4f147f").opt_content
+                        input(type="radio", value="on", id="flex_saved_search_on_31", name="flex_saved_search[31]")
+                        span(taction="1") On                      
+                    
+                      label(for="flex_saved_search_off_31", namesearch="wwww", data-alert-token="96d77759576e283ef946be24f88d83225f4f147f").opt_content
+                        input(type="radio", value="off", id="flex_saved_search_off_31", name="flex_saved_search[31]")
+                        span(taction="0") Off
+                    
+                    .action-info-b
+                      button.btn-show
+                        span.s1 View more
+                        span.s2 Less
+                      button(data-building-id="MzEwNTU=").btn-remove.dgt-remove-favorite: span Remove
+            .flex-table-row-item.text-center 800 South Pointe Drive, Miami Beach, FL 33139
+            .flex-table-row-item.text-center 2008
+            .flex-table-row-item.text-center 67
+            .flex-table-row-item.select-action.text-center: button(data-building-id="MzEwNTU=").btn-remove.dgt-remove-favorite: span Remove
+
+            //.flex-table-row-item dsds
+              .flex-table-row-item.fwrap
+                .info-sub-item
+                  .info-a
+                    .date-info
+                      | 24
+                      span aug 17
+                    span.time-date 12:06 am
+                  .info-b
+                    h3
+                      | From: 
+                      span Building Detail
+                    h3
+                      | Mls Number: 
+                      span 09679903
+                    h3
+                      | Price: 
+                      span $440,000
+                    button.read-comment
+                      span.s1 View more
+                      span.s2 Close
+              .flex-table-row-item(data-header='First Name:') Jon Alberto
+              .flex-table-row-item(data-header='Last Name:') Paredes Paredes
+              .flex-table-row-item(data-header='Email:') jalbertoparedes@gmail.com
+              .flex-table-row-item(data-header='Telephone:') 999999999/999555999
+              .flex-table-row-item(data-header='Address:')
+                span 3505 south parnell Avenue
+              .flex-table-row-item(data-header='Address:')
+                span 3505 south parnell Avenue
+              .hiddenInformation
+                ul
+                  li
+                    span Date:
+                    |  2017/08/17 - 12:06 am
+                  li
+                    span From:
+                    |  Building Detail
+                  li
+                    span Mls Number:
+                    |  09679903
+                  li
+                    span Price:
+                    |  $440,000
+                  li
+                    span First Name:
+                    |  Jon Alberto
+                  li
+                    span Last Name:
+                    |  Paredes Paredes
+                  li
+                    span Email:
+                    |  jalbertoparedes@gmail.com
+                  li
+                    span Telephone:
+                    |  999999999 / 999555999
+                  li
+                    span Address:
+                    |  3505 south parnell Avenue
+        
+        //********************************************************
+
+        #saved-properties.flex-table
+          .flex-table-row.table-header
+            .flex-table-row-item.select-item.text-center Select
+            .flex-table-row-item.fwrap Address
+            .flex-table-row-item.text-center Asking Price
+            .flex-table-row-item.text-center Beds
+            .flex-table-row-item.text-center Baths
+            .flex-table-row-item.text-center Price / Sq.Ft.
+            .flex-table-row-item.text-center MLS
+            .flex-table-row-item.select-action.text-center Action
+          
+          .flex-table-row.flex-body
+            .flex-table-row-item.select-item.text-center: button.select-chk: span
+            .flex-table-row-item.fwrap
+              .info-sub-item
+                  .info-a
+                    .content-img
+                      img(src='http://rets-images-b5.s3.amazonaws.com/49/09621349_1.jpg', title='Map Factory Lofts', alt='5235 N. Ravenswood, Chicago, IL 60640')
+                  .info-b
+                    h2 8901 Arvida Ln
+                    span Coral Gables, FL 33156
+                    button(data-modal="modal_schedule").show-modal.request: span request showing
+                    button.btn-show
+                      span.s1 View more
+                      span.s2 Less
+            .flex-table-row-item.text-center $45,000,000
+            .flex-table-row-item.text-center 6 Beds
+            .flex-table-row-item.text-center 9 Baths
+            .flex-table-row-item.text-center 12,930 Sq.Ft
+            .flex-table-row-item.text-center A10250359
+            .flex-table-row-item.select-action.text-center: button(data-building-id="MzEwNTU=").btn-remove.dgt-remove-favorite: span Remove
+
+            //.flex-table-row-item dsds
+              .flex-table-row-item.fwrap
+                .info-sub-item
+                  .info-a
+                    .date-info
+                      | 24
+                      span aug 17
+                    span.time-date 12:06 am
+                  .info-b
+                    h3
+                      | From: 
+                      span Building Detail
+                    h3
+                      | Mls Number: 
+                      span 09679903
+                    h3
+                      | Price: 
+                      span $440,000
+                    button.read-comment
+                      span.s1 View more
+                      span.s2 Close
+              .flex-table-row-item(data-header='First Name:') Jon Alberto
+              .flex-table-row-item(data-header='Last Name:') Paredes Paredes
+              .flex-table-row-item(data-header='Email:') jalbertoparedes@gmail.com
+              .flex-table-row-item(data-header='Telephone:') 999999999/999555999
+              .flex-table-row-item(data-header='Address:')
+                span 3505 south parnell Avenue
+              .flex-table-row-item(data-header='Address:')
+                span 3505 south parnell Avenue
+              .hiddenInformation
+                ul
+                  li
+                    span Date:
+                    |  2017/08/17 - 12:06 am
+                  li
+                    span From:
+                    |  Building Detail
+                  li
+                    span Mls Number:
+                    |  09679903
+                  li
+                    span Price:
+                    |  $440,000
+                  li
+                    span First Name:
+                    |  Jon Alberto
+                  li
+                    span Last Name:
+                    |  Paredes Paredes
+                  li
+                    span Email:
+                    |  jalbertoparedes@gmail.com
+                  li
+                    span Telephone:
+                    |  999999999 / 999555999
+                  li
+                    span Address:
+                    |  3505 south parnell Avenue
+          
+          //  
+            .flex-table-row.flex-body
+              .flex-table-row-item.fwrap
+                .info-sub-item
+                  .info-a
+                    .date-info
+                      | 24
+                      span aug 17
+                    span.time-date 12:06 am
+                  .info-b
+                    h3
+                      | From: 
+                      span Building Detail
+                    h3
+                      | Mls Number: 
+                      span 09679903
+                    h3
+                      | Price: 
+                      span $440,000
+                    button.read-comment
+                      span.s1 View more
+                      span.s2 Close
+              .flex-table-row-item(data-header='First Name:') Jon Alberto
+              .flex-table-row-item(data-header='Last Name:') Paredes Paredes
+              .flex-table-row-item(data-header='Email:') jalbertoparedes@gmail.com
+              .flex-table-row-item(data-header='Telephone:') 999999999/999555999
+              .flex-table-row-item(data-header='Address:')
+                span 3505 south parnell Avenue
+              .hiddenInformation
+                ul
+                  li
+                    span Date:
+                    |  2017/08/17 - 12:06 am
+                  li
+                    span From:
+                    |  Building Detail
+                  li
+                    span Mls Number:
+                    |  09679903
+                  li
+                    span Price:
+                    |  $440,000
+                  li
+                    span First Name:
+                    |  Jon Alberto
+                  li
+                    span Last Name:
+                    |  Paredes Paredes
+                  li
+                    span Email:
+                    |  jalbertoparedes@gmail.com
+                  li
+                    span Telephone:
+                    |  999999999 / 999555999
+                  li
+                    span Address:
+                    |  3505 south parnell Avenue
+            .flex-table-row.flex-body
+              .flex-table-row-item.fwrap
+                .info-sub-item
+                  .info-a
+                    .date-info
+                      | 24
+                      span aug 17
+                    span.time-date 12:06 am
+                  .info-b
+                    h3
+                      | From: 
+                      span Building Detail
+                    h3
+                      | Mls Number: 
+                      span 09679903
+                    h3
+                      | Price: 
+                      span $440,000
+                    button.read-comment
+                      span.s1 View more
+                      span.s2 Close
+              .flex-table-row-item(data-header='First Name:') Jon Alberto
+              .flex-table-row-item(data-header='Last Name:') Paredes Paredes
+              .flex-table-row-item(data-header='Email:') jalbertoparedes@gmail.com
+              .flex-table-row-item(data-header='Telephone:') 999999999/999555999
+              .flex-table-row-item(data-header='Address:')
+                span 3505 south parnell Avenue
+              .hiddenInformation
+                ul
+                  li
+                    span Date:
+                    |  2017/08/17 - 12:06 am
+                  li
+                    span From:
+                    |  Building Detail
+                  li
+                    span Mls Number:
+                    |  09679903
+                  li
+                    span Price:
+                    |  $440,000
+                  li
+                    span First Name:
+                    |  Jon Alberto
+                  li
+                    span Last Name:
+                    |  Paredes Paredes
+                  li
+                    span Email:
+                    |  jalbertoparedes@gmail.com
+                  li
+                    span Telephone:
+                    |  999999999 / 999555999
+                  li
+                    span Address:
+                    |  3505 south parnell Avenue
+            .flex-table-row.flex-body
+              .flex-table-row-item.fwrap
+                .info-sub-item
+                  .info-a
+                    .content-img
+                      img(src='http://rets-images-b5.s3.amazonaws.com/49/09621349_1.jpg', title='Map Factory Lofts', alt='5235 N. Ravenswood, Chicago, IL 60640')
+                  .info-b
+                    h2 Map Factory Lofts
+                    span 5235 N. Ravenswood, Chicago, IL 60640
+              .flex-table-row-item(data-header='First Name:') Jon Alberto
+              .flex-table-row-item(data-header='Last Name:') Paredes Paredes
+              .flex-table-row-item(data-header='Email:') jalbertoparedes@gmail.com
+              .flex-table-row-item(data-header='Telephone:') 999999999/999555999
+              .flex-table-row-item(data-header='Address:')
+                span 3505 south parnell Avenue
+
+        //********************************************************
+
+        #saved-search.flex-table
+          .flex-table-row.table-header
+            .flex-table-row-item.select-item.text-center Select
+            .flex-table-row-item.fwrap Address
+            .flex-table-row-item.text-center Price Range
+            .flex-table-row-item.text-center Bedrooms
+            .flex-table-row-item.text-center Bathrooms
+            .flex-table-row-item.text-center Living Size
+            .flex-table-row-item.select-action.text-center Action
+          
+          .flex-table-row.flex-body
+            .flex-table-row-item.select-item.text-center: button.select-chk: span
+            .flex-table-row-item.fwrap
+              .info-sub-item
+                  .info-a
+                    .date-info
+                      | 33
+                      span Listing
+                  .info-b
+                    h2 Map Factory Lofts
+                    .notify Notifications
+                      label(for="flex_saved_search_on_31", namesearch="wwww", data-alert-token="96d77759576e283ef946be24f88d83225f4f147f").opt_content
+                        input(type="radio", value="on", id="flex_saved_search_on_31", name="flex_saved_search[31]")
+                        span(taction="1") On                      
+                    
+                      label(for="flex_saved_search_off_31", namesearch="wwww", data-alert-token="96d77759576e283ef946be24f88d83225f4f147f").opt_content
+                        input(type="radio", value="off", id="flex_saved_search_off_31", name="flex_saved_search[31]")
+                        span(taction="0") Off
+                    button.btn-show
+                      span.s1 View more
+                      span.s2 Less
+            .flex-table-row-item.text-center $20,000,000 - $100,000,000
+            .flex-table-row-item.text-center Any Bed - Any Bed
+            .flex-table-row-item.text-center Any Bath - Any Bath
+            .flex-table-row-item.text-center Any Size - Any Size
+            .flex-table-row-item.select-action.text-center: button(data-building-id="MzEwNTU=").btn-remove.dgt-remove-favorite: span Remove
+            a(href="#").view-item
+
+            //.flex-table-row-item dsds
+              .flex-table-row-item.fwrap
+                .info-sub-item
+                  .info-a
+                    .date-info
+                      | 24
+                      span aug 17
+                    span.time-date 12:06 am
+                  .info-b
+                    h3
+                      | From: 
+                      span Building Detail
+                    h3
+                      | Mls Number: 
+                      span 09679903
+                    h3
+                      | Price: 
+                      span $440,000
+                    button.read-comment
+                      span.s1 View more
+                      span.s2 Close
+              .flex-table-row-item(data-header='First Name:') Jon Alberto
+              .flex-table-row-item(data-header='Last Name:') Paredes Paredes
+              .flex-table-row-item(data-header='Email:') jalbertoparedes@gmail.com
+              .flex-table-row-item(data-header='Telephone:') 999999999/999555999
+              .flex-table-row-item(data-header='Address:')
+                span 3505 south parnell Avenue
+              .flex-table-row-item(data-header='Address:')
+                span 3505 south parnell Avenue
+              .hiddenInformation
+                ul
+                  li
+                    span Date:
+                    |  2017/08/17 - 12:06 am
+                  li
+                    span From:
+                    |  Building Detail
+                  li
+                    span Mls Number:
+                    |  09679903
+                  li
+                    span Price:
+                    |  $440,000
+                  li
+                    span First Name:
+                    |  Jon Alberto
+                  li
+                    span Last Name:
+                    |  Paredes Paredes
+                  li
+                    span Email:
+                    |  jalbertoparedes@gmail.com
+                  li
+                    span Telephone:
+                    |  999999999 / 999555999
+                  li
+                    span Address:
+                    |  3505 south parnell Avenue
+          
+          //  
+            .flex-table-row.flex-body
+              .flex-table-row-item.fwrap
+                .info-sub-item
+                  .info-a
+                    .date-info
+                      | 24
+                      span aug 17
+                    span.time-date 12:06 am
+                  .info-b
+                    h3
+                      | From: 
+                      span Building Detail
+                    h3
+                      | Mls Number: 
+                      span 09679903
+                    h3
+                      | Price: 
+                      span $440,000
+                    button.read-comment
+                      span.s1 View more
+                      span.s2 Close
+              .flex-table-row-item(data-header='First Name:') Jon Alberto
+              .flex-table-row-item(data-header='Last Name:') Paredes Paredes
+              .flex-table-row-item(data-header='Email:') jalbertoparedes@gmail.com
+              .flex-table-row-item(data-header='Telephone:') 999999999/999555999
+              .flex-table-row-item(data-header='Address:')
+                span 3505 south parnell Avenue
+              .hiddenInformation
+                ul
+                  li
+                    span Date:
+                    |  2017/08/17 - 12:06 am
+                  li
+                    span From:
+                    |  Building Detail
+                  li
+                    span Mls Number:
+                    |  09679903
+                  li
+                    span Price:
+                    |  $440,000
+                  li
+                    span First Name:
+                    |  Jon Alberto
+                  li
+                    span Last Name:
+                    |  Paredes Paredes
+                  li
+                    span Email:
+                    |  jalbertoparedes@gmail.com
+                  li
+                    span Telephone:
+                    |  999999999 / 999555999
+                  li
+                    span Address:
+                    |  3505 south parnell Avenue
+            .flex-table-row.flex-body
+              .flex-table-row-item.fwrap
+                .info-sub-item
+                  .info-a
+                    .date-info
+                      | 24
+                      span aug 17
+                    span.time-date 12:06 am
+                  .info-b
+                    h3
+                      | From: 
+                      span Building Detail
+                    h3
+                      | Mls Number: 
+                      span 09679903
+                    h3
+                      | Price: 
+                      span $440,000
+                    button.read-comment
+                      span.s1 View more
+                      span.s2 Close
+              .flex-table-row-item(data-header='First Name:') Jon Alberto
+              .flex-table-row-item(data-header='Last Name:') Paredes Paredes
+              .flex-table-row-item(data-header='Email:') jalbertoparedes@gmail.com
+              .flex-table-row-item(data-header='Telephone:') 999999999/999555999
+              .flex-table-row-item(data-header='Address:')
+                span 3505 south parnell Avenue
+              .hiddenInformation
+                ul
+                  li
+                    span Date:
+                    |  2017/08/17 - 12:06 am
+                  li
+                    span From:
+                    |  Building Detail
+                  li
+                    span Mls Number:
+                    |  09679903
+                  li
+                    span Price:
+                    |  $440,000
+                  li
+                    span First Name:
+                    |  Jon Alberto
+                  li
+                    span Last Name:
+                    |  Paredes Paredes
+                  li
+                    span Email:
+                    |  jalbertoparedes@gmail.com
+                  li
+                    span Telephone:
+                    |  999999999 / 999555999
+                  li
+                    span Address:
+                    |  3505 south parnell Avenue
+            .flex-table-row.flex-body
+              .flex-table-row-item.fwrap
+                .info-sub-item
+                  .info-a
+                    .content-img
+                      img(src='http://rets-images-b5.s3.amazonaws.com/49/09621349_1.jpg', title='Map Factory Lofts', alt='5235 N. Ravenswood, Chicago, IL 60640')
+                  .info-b
+                    h2 Map Factory Lofts
+                    span 5235 N. Ravenswood, Chicago, IL 60640
+              .flex-table-row-item(data-header='First Name:') Jon Alberto
+              .flex-table-row-item(data-header='Last Name:') Paredes Paredes
+              .flex-table-row-item(data-header='Email:') jalbertoparedes@gmail.com
+              .flex-table-row-item(data-header='Telephone:') 999999999/999555999
+              .flex-table-row-item(data-header='Address:')
+                span 3505 south parnell Avenue
+
+    include ../footer.jade
+    script(type="text/javascript", src="../js/jquery-3.1.1.min.js")
+    script(type="text/javascript", src="../js/plugins/perfect-scrollbar.jquery.min.js")
+    script(type="text/javascript", src="../js/plugins/jquery-ui.min.js")
+    script(type="text/javascript", src="../js/plugins/jquery.ui.touch-punch.min.js")
+    script(type="text/javascript", src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbcWAf3LnqNPxdZ5TP5resRxl3I3BPZb8&#038")
+    script(type="text/javascript", src="../js/dgt-master.min.js")
+    

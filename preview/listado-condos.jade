@@ -1,0 +1,78 @@
+doctype html
+html(lang='en')
+	head
+		title Filters | Listado Condos
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		meta(name="apple-mobile-web-app-capable", content="yes")
+		meta(name="apple-mobile-web-app-status-bar-style", content="#4b4b4b")
+		meta(name="theme-color", content="#4b4b4b")
+		meta(name="msapplication-navbutton-color", content="#4b4b4b")
+		link(rel="stylesheet", href="../css/main.css")
+		//link(rel="stylesheet", href="https://file.myfontastic.com/v6vr22zQVKSnTWTxBBpbWC/icons.css")
+	body
+		///include header.jade
+		main.idx-new-page-content
+			
+			section.idx-main-content
+				h1.idx-title Chicago Condos For Sale
+				img(src="../images/4.jpg").idx-layer-img
+
+			section.idx-detail
+				p Welcome to our Miami Condos For Sale collection. Miami condominiums attract buyers from all over the world, and for good reason. Due to its beautiful beaches, breathtaking water views, and picturesque sunsets, Miami has become one of the nation’s hottest real estate markets. Many real estate buyers opt to purchase a condominium over a house due to the conveniences and amenities that owning a condo has to offer. Our Miami condos for sale page is your source for real estate sales listings in Miami’s top condominium developments. Whether you’re searching for oceanfront condominiums for sale, spacious townhomes for sale, lofts for sale, or condos for sale near me, you are sure to find on our website apartments for sale that suit your style and needs. Additionally, if you are in the market to buy a Miami condominium for investment purposes or to occupy it as a primary residence or vacation home, you are sure to find on this site options for apartments and condos for sale that meet your criteria.
+				
+				p Unlike other real estate websites, the Miami condos for sale listings that you find here are updated twice a day. If you have any questions about the process of buying a condo in Miami, please do not hesitate to contact our office. We are more than happy to answer any questions that you may have regarding the buying process and/or any specific condos for sale that you come across on our Miami condos website. If you are actively searching to buy an apartment in Miami or Miami Beach, you have come to the right place!
+
+				ul
+					li Unlike other real estate websites, the Miami condos for sale listings that you find here are updated twice a day.
+					li Unlike other real estate websites, the Miami condos for sale listings that you find here are updated twice a day.
+					li Unlike other real estate websites, the Miami condos for sale listings that you find here are updated twice a day.
+					li Unlike other real estate websites, the Miami condos for sale listings that you find here are updated twice a day.
+					li Unlike other real estate websites, the Miami condos for sale listings that you find here are updated twice a day.
+			
+			.idx-ft-content
+				.idx-filter-content
+					.idx-search-input
+						input(type="search", placeholder="Search (web site name) Condos")
+						button.idx-btn-search search
+					.idx-btn-action
+						button.idx-icon-grid: span Grid
+						button.idx-icon-list: span List
+			
+			.idx-list-n-condo.view-list
+				- for(a = 0; a < 8; a++)
+					section.idx-filter-item
+						h3.idx-title Streeterville (Downtown Chicago)
+						a(href="#" class="idx-btn-link") View all Streeterville Condos For Sale
+
+						ul.idx-table-header
+							li.idx-name Development
+							li.idx-address Address
+							li.idx-form From
+							li.idx-to To
+							li.idx-floors Floors
+							li.idx-built Built
+							li.idx-sale For Sale
+							li.idx-rank Pr Rank
+
+						- for(b = 0; b < 8; b++)
+							.idx-box-item
+								ul.idx-table-body
+									li.idx-name: h2 One Bennett Park
+									li.idx-address: h3 451 E Grand Ave. Chicago, IL 60611
+									li.idx-form(data-text="From") $1.5M
+									li.idx-to(data-text="To") $7.5M
+									li.idx-floors(data-text="Floors") 65
+									li.idx-built 2017
+									li.idx-sale 61
+									li.idx-rank(data-text="PR Rank") 10
+								button.idx-active show more
+								a(href="#").idx-link-view view more
+								.idx-thumb-content
+									span
+										img(src="//retsimages.s3.amazonaws.com/35/A10487435_1.jpg")
+
+					
+		//include footer.jade
+		script(type="text/javascript", src="../js/jquery-3.1.1.min.js")
+		script(type="text/javascript", src="../js/script.js")

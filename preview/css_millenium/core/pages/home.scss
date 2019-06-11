@@ -1,0 +1,424 @@
+/*----------------------------------------------------------------------------------*/
+/* Home
+/*----------------------------------------------------------------------------------*/
+body,
+main{
+	background-color: #FFF;
+}
+
+##{$prefijo}flex-home-theme{
+	.#{$prefijo}gwr{
+		width: 100% !important;
+	}
+
+	/*----------------------------------------------------------------------------------*/
+	/* Sección: Main Slider
+	/*----------------------------------------------------------------------------------*/
+	.#{$prefijo}clidxboost-content-slider{
+		height: 100vh;
+		@media screen and (min-width: 640px){
+			padding: 1rem;
+		}
+	}
+
+	##{$prefijo}slider-main{
+		height: 100%;
+
+		.clidxboost-nav{
+			position: absolute;
+			z-index: 4;
+			bottom: 12px;
+			width: auto;
+			padding-left: 23px;
+			display: none;
+			@media screen and (min-width: 768px){
+				display: block;
+			}
+		}
+
+		.clidxboost-wrap-slider{
+			>ul{
+				>li{
+					.clidxboost-item-slider{
+						height: 100% !important;
+					}
+				}
+			}
+		}
+
+		.clidxboost-wrap-information {
+	    bottom: 5rem;
+	  }
+	}
+
+	/*----------------------------------------------------------------------------------*/
+	/* Sección: Autocomplete Home
+	/*----------------------------------------------------------------------------------*/
+	##{$prefijo}flex-bubble-search{
+		background-color: transparent;
+
+		.#{$prefijo}content-flex-bubble-search{
+
+			.#{$prefijo}flex-link {
+				text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+			}
+		}
+
+		.flex-bubble-header{
+			.flex-bubble-sub-title{
+				font-style: normal;
+			}
+		}
+
+		.#{$prefijo}idx_text_search_bar{
+			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+			letter-spacing: 1px;
+			font-size: 27/16*1rem;
+
+			@media screen and (min-width: 640px){
+				font-size: 54/16*1rem;
+			}
+
+			@media screen and (min-width: 768px){
+				font-size: 68/16*1rem;
+				margin-bottom: 20px;
+			}
+
+			@media screen and (min-width: 1024px){
+				font-size: 80/16*1rem;
+			}
+		}
+	}
+
+
+	/*----------------------------------------------------------------------------------*/
+	/* Sección: Featured Properties
+	/*----------------------------------------------------------------------------------*/
+	##{$prefijo}featured-section{
+		.clidxboost-btn-link{
+			span {
+				background-color: #FFF;
+				border: 1px solid #333;
+				color: #333;
+			}
+			&:hover{
+				span{
+					background-color: #333;
+					color: #FFF;
+				}
+			}
+		}
+
+		.#{$prefijo}title-block{
+			margin-bottom: 2rem;
+		}
+	}
+
+	.#{$prefijo}flex-block-description{
+		padding: 4rem 1rem;
+		text-align: center;
+		max-width: 1700px;
+		margin-right: auto;
+		margin-left: auto;
+
+		@media screen and (min-width: 640px){
+			padding: 6rem 1rem;
+		}
+
+		.#{$prefijo}title-block{
+	    font-weight: 300;
+	    font-family: $opensans;
+	    text-align: center;
+	    margin-bottom: 1rem;
+	    font-size: 30/16*1rem;
+	    flex-grow: 1;
+	    text-transform: uppercase;
+	    letter-spacing: 1px;
+	    @media screen and (min-width: 768px){
+	      font-size: 40/16*1rem;
+	      margin-bottom: 20/16*1rem;
+	    }
+
+	    &:after{
+				content: "";
+				width: 34px;
+				height: 1px;
+				display: block;
+				margin: 1.25rem auto 0 auto;
+				background-color: #333;
+	    }
+	  }
+
+	  p{
+			max-width: 950px;
+			font-family: $opensans;
+			font-size: 14/16*1rem;
+			line-height: 1.6;
+			margin: 1rem auto;
+			text-align: justify;
+			-moz-text-align-last: center;
+			text-align-last:  center
+	  }
+
+	  .clidxboost-btn-link{
+			margin-top: 1rem;
+			@media (max-width: 480px){
+				width: 100%;
+			}
+	  }
+	}
+
+	##{$prefijo}featured-section{
+		.#{$prefijo}title-block{
+			&:after{
+				display: none;
+			}
+		}
+	}
+
+	/*----------------------------------------------------------------------------------*/
+	/* Sección: About Us
+	/*----------------------------------------------------------------------------------*/
+	##{$prefijo}profile-section{
+		display: flex;
+		flex-direction: column;
+		height: auto;
+		background-color: #f6f6f6;
+
+		article{
+			order: 1;
+			width: 90%;
+			padding: 30/16*1rem 0;
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			flex-direction: column;
+
+			p{
+				line-height: 1.6;
+				font-size: 14/16*1rem;
+				text-align: justify;
+				margin-bottom: 2rem;
+
+				@media screen and (min-width: 768px){
+					line-height: 2;
+					font-size: 14/16*1rem;
+					margin-bottom: 0;
+				}
+			}
+
+			h2{
+				font-weight: 300;
+				line-height: 1.2;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				font-size: 30/16*1rem;
+				margin-bottom: 1rem;
+				text-align: center;
+				width: 100%;
+
+				@media screen and (min-width: 768px){
+					font-size: 40/16*1rem;
+					margin-bottom: 30/16*1rem;
+					text-align: left;
+				}
+			}
+		}
+
+		.#{$prefijo}content-flex-img{
+			order: 0;
+			width: 100%;
+			position: relative;
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			overflow: hidden;
+			height: 300px;
+
+			img{
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+
+			@media screen and (min-width: 640px) {
+				height: 350px;
+			}
+
+			@media screen and (min-width: 768px) {
+				height: 430px;
+			}
+		}
+
+		.#{$prefijo}clidxboost-btn-link {
+			width: auto;
+			margin: 0 auto;
+			margin-bottom: 20/16*1rem;
+
+			@media screen and (min-width: 640px){
+				margin-top: 30px;
+				margin-left: 0;
+			}
+
+			span{
+				background-color: transparent;
+				border-color: #333;
+				color: #333;
+				&:hover{
+					background-color: #333;
+					color: #FFF;
+				}
+			}
+		}
+
+		@media screen and (min-width: 991px){
+			height: 100vh;
+			max-height: 870px;
+			flex-direction: row;
+			article{
+				order: 1;
+				max-width: 430px;
+				width: 50%;
+				@media screen and (min-width: 1366px){
+					max-width: 580px;
+				}
+			}
+
+			.#{$prefijo}content-flex-img{
+				height: 100%;
+				order: 2;
+				width: 50%;
+				img{
+					width: auto;
+				}
+			}
+		}
+	}
+	
+	/*----------------------------------------------------------------------------------*/
+	/* Sección: Blog
+	/*----------------------------------------------------------------------------------*/
+	##{$prefijo}blog-collection{
+		.#{$prefijo}title-block{
+			margin-bottom: 2rem;
+
+			&:after{
+				display: none;
+			}
+		}
+
+		##{$prefijo}articles-blog{
+			@media screen and (min-width: 640px){
+				justify-content: center;
+			}
+
+			li{
+				border: 1px solid #333;
+
+				&:hover{
+					border-color: #333;
+				}
+
+				@media screen and (min-width: 640px){
+					border: 1px solid transparent;
+					width: 49%;
+				}
+
+				@media screen and (min-width: 1024px){
+					width: 32%;
+				}
+
+				.#{$prefijo}content-article{
+					p{
+						text-align: left;
+						-moz-text-align-last: left;
+						text-align-last: left;
+					}
+				}
+			}
+		}
+
+		.clidxboost-btn-link{
+			span {
+				background-color: #FFF;
+				border: 1px solid #333;
+				color: #333;
+			}
+
+			&:hover{
+				span{
+					background-color: #333;
+					color: #FFF;
+				}
+			}
+		}
+	}
+}
+
+
+##{$prefijo}next-step{
+	background-color: transparent;
+	width: 45px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+	position: absolute;
+	z-index: 4;
+	bottom: 3rem;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	
+	&:before{
+		content: "\e921";
+		font-family: $web-icons;
+		display: inline-block;
+		font-size: 30px;
+		color: #FFF;
+		margin: 0 auto;
+	}
+}
+
+#flex-home-theme{
+	@media (max-width: 640px){
+		.active-search-modal{
+			#flex-bubble-search{
+				.flex-link {
+					text-shadow: none;
+				}
+			}
+		}
+	}
+	#flex-bubble-search{
+		max-width: 900px;
+		.content-flex-bubble-search{
+			max-width: 630px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+}
+
+#blog-collection{
+	#articles-blog{
+		li{
+			.content-article{
+				>h3{
+					font-size: 24px;
+					text-overflow: unset;
+					overflow: -webkit-paged-y;
+					white-space: unset;
+					line-height: 1.1;
+					font-weight: 300; 
+					@media screen and (min-width: 768px){
+						font-size: 30px;
+					}
+				}
+			}
+		}
+	}
+}

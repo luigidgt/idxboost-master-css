@@ -1,0 +1,93 @@
+/*----------------------------------------------------------------------------------*/
+/* Inventory
+/*----------------------------------------------------------------------------------*/
+.#{$prefijo}wp-statisticss,
+.#{$prefijo}condo-statics{
+	margin-bottom: 30px;
+	.#{$prefijo}subtitle-b{
+		text-transform: uppercase;
+		font-size: 1rem;
+		font-family: $opensans;
+		font-weight: 600;
+		margin: 1rem 0;
+		padding-bottom: 1rem;
+		border-bottom: 3px solid #333;
+	}
+
+	.#{$prefijo}inventory-sta{
+		>h4{
+			font-size: 14/16*1rem;
+			font-weight: 600;
+			font-family: $opensans;
+			text-align: center;
+			margin: 10/16*1rem 0;
+		}
+	}
+
+	.#{$prefijo}data-inventory{
+		display: flex;
+		justify-content: space-between;
+		.#{$prefijo}div{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			font-size: 12px;
+			color: #333;
+			font-weight: 600;
+			font-family: $opensans;
+			flex-grow: 1;
+			text-transform: uppercase;
+			.#{$prefijo}cir-sta{
+				width: 50px;
+				display: block;
+				height: 50px;
+				border-radius: 50%;
+				color: #fff;
+				font-size: 20px;
+				line-height: 50px;
+				text-align: center;
+				margin: 0 auto 5px auto;
+				vertical-align: middle;
+				margin-bottom: 12px;
+				font-family: $opensans;
+				&.#{$prefijo}sale {
+					background: #0072ac;
+				}
+				&.#{$prefijo}rent {
+					color: #FFF;
+					background: #99999a;
+				}
+			}
+		}
+	}
+
+	.#{$prefijo}condo-st{
+		li{
+			display: flex;
+			justify-content: space-between;
+			flex-direction: row-reverse;
+			text-transform: capitalize;
+			font-size: 13/16*1rem;
+    	color: #909090;
+    	font-family: $opensans;
+    	span{
+    		font-weight: 600;
+    		color: #333;
+    	}
+		}
+	}
+
+	#chart-container {
+		width: 100%;
+		position: relative;
+		#chartobject-1 {
+		  width: 100% !important;
+		  position: relative;
+			svg {
+				left: 50% !important;
+				transform: translateX(-50%);
+			}
+		}
+	}
+}

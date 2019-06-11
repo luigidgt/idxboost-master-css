@@ -1,0 +1,32 @@
+/*----------------------------------------------------------------------------------*/
+/* Collapse
+/*----------------------------------------------------------------------------------*/
+/*.#{$prefijo}*/
+
+.#{$prefijo}wrap-collapse{
+	width: 100%;
+	position: relative;
+
+	.#{$prefijo}item-collapse{
+		padding: 10/16*1rem 0;
+		border-bottom: 1px solid $gris-lineas;
+		
+		.#{$prefijo}header-collapse{
+			font-weight: 600;
+			font-family: $opensans;
+			font-size: 14/16*1rem;
+			position: relative;
+		}
+
+		.#{$prefijo}body-collpase{
+			position: relative;
+			*{
+				font-family: $opensans;
+				font-size: 14/16*1rem;
+			}
+			p{
+				line-height: 1.6;
+			}
+		}
+	}
+}

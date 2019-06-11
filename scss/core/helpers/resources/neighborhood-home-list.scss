@@ -1,0 +1,309 @@
+/*----------------------------------------------------------------------------------*/
+/* Neighborhoods List Home - Shortcode
+/*----------------------------------------------------------------------------------*/
+.#{$prefijo}idx-wrap-grid{
+	position: relative;
+	margin-left: -1px;
+	margin-right: -1px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+
+	&:not(.idx-sp-view),
+	&:not(.gs-builded){
+		.#{$prefijo}idx-wrap-item-grid{
+			@media screen and (min-width: 768px){
+				max-width: 50%;
+			}
+
+			@media screen and (min-width: 1100px){
+				max-width: 33.33%;
+			}
+
+			@media screen and (min-width: 1400px){
+				max-width: 25%;
+			}
+		}
+	}
+
+	.#{$prefijo}idx-wrap-item-grid{
+		float: left;
+		position: relative;
+		width: 100%;
+		padding: 0 1px;
+		margin-bottom: 2px;
+		flex-grow: 1;
+
+		.#{$prefijo}idx-wrap-action{
+			width: 100%;
+			height: 100%;
+			bottom: 0;
+			left: 0;
+		}
+
+		.#{$prefijo}idx-item-grid{
+			width: 100%;
+			position: relative;
+			border: 1px solid $gris-lineas;
+			transition: border-color .3s;
+			.#{$prefijo}idx-item-grid-img{
+				position: relative;
+				overflow: hidden;
+				&:after{
+					content: "";
+					display: block;
+					padding-bottom: 70%;
+				}
+				img{
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					transition: transform 1s, opacity 1s;
+					&.idx-sp-img{
+						z-index: 0;
+					}
+					&.idx-item-grid-map{
+						z-index: 1;
+						opacity: 0;
+					}
+				}
+			}
+			
+			.#{$prefijo}idx-btn-content{
+				display: flex;
+				padding: 15px;
+				width: 100%;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				z-index: 3;
+				.#{$prefijo}idx-item-title{
+					display: block;
+					height: 30px;
+					font-weight: 600;
+					font-family: $opensans;
+					font-size: 12px;
+					text-transform: uppercase;
+					background-color: #FFF;
+					flex-grow: 1;
+					width: 60%;
+					a{
+						width: 100%;
+						height: 100%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+				}
+				.#{$prefijo}idx-btn-map{
+					width: 40%;
+					position: relative;
+					span{
+						width: 100%;
+						display: flex;
+						height: 30px;
+						padding: 5px;
+						align-items: center;
+						justify-content: center;
+						font-weight: 600;
+						font-family: $opensans;
+						font-size: 12px;
+						text-transform: uppercase;
+						color: #FFF;
+						background-color: $colorweb;
+						transition: all .3s;
+						&.text-btn-close{
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							opacity: 0;
+							z-index: 1;
+						}
+					}
+
+					&:hover{
+						span{
+							background-color: #000;
+						}
+					}
+				}
+				.#{$prefijo}idx-item-act{
+					margin-right: 5px;
+					&:last-child{
+						margin: 0;
+					}
+				}
+			}
+
+			.#{$prefijo}idx-item-link{
+				position: absolute;
+				overflow: hidden;
+				text-indent: -999999px;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				z-index: 2;
+			}
+
+			&:hover{
+				border-color: $colorweb;
+				.#{$prefijo}idx-item-grid-img{
+					img{
+						transform: scale3d(1.1, 1.1, 1);
+					}
+				}
+			}
+		}
+
+		&.active-map{
+			.#{$prefijo}idx-item-grid{
+				.#{$prefijo}idx-item-grid-img{
+					img{
+						&.idx-sp-img{
+							opacity: 0;
+						}
+						&.idx-item-grid-map{
+							opacity: 1;
+						}
+					}
+				}
+
+				.#{$prefijo}idx-btn-content{
+					.#{$prefijo}idx-btn-map{
+						span{
+							&.text-btn-close{
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	/** SLIDER **/
+	.gs-wrapper-arrows{
+		&.gs-style-arrow{
+			.gs-next-arrow,
+			.gs-prev-arrow {
+	  		background-color: transparent;
+	  	}
+	  }
+	}
+
+	&.gs-resize{
+		&:after{
+			z-index: 6; 
+		}
+		&:before{
+			z-index: 5;
+		}
+	}
+
+	/*----------------------------------------------------------------------------------*/
+	/* Special view
+	/*----------------------------------------------------------------------------------*/
+	@media screen and (min-width: 1024px){
+		&.idx-sp-view{
+			padding-left: calc(45% + 2px);
+			.#{$prefijo}idx-wrap-item-grid{
+				&:first-child{
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: calc(100% - 2px);
+					margin-bottom: 0;
+					max-width: 100%;
+					padding-right: 55%;
+				}
+				.#{$prefijo}idx-item-grid{
+					height: 100%;
+					&:hover{
+						border-color: $gris-lineas;
+					}
+					.#{$prefijo}idx-item-grid-img{
+						height: 100%;
+					}
+				}
+				@media screen and (min-width: 1024px){
+					max-width: 50%;
+				}
+			}
+		}
+	}
+}
+
+.idx-ng-wrap{
+	position: relative;
+	.idx-wrap-action{
+		height: 100%;
+		background-color: #333;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 40px 20px;
+		position: relative;
+		z-index: 4;
+		h3{
+			text-align: center;
+			font-size: 24px;
+			font-family: $opensans;
+			color: #FFF;
+			margin-bottom: 5px;
+			text-transform: uppercase;
+			line-height: 1.2;
+			padding: 0 15px;
+			font-weight: 600;
+		}
+
+		p{
+			color: #FFF;
+			text-transform: uppercase;
+			font-size: 12px;
+			margin: 5px 0;
+		}
+
+		a{
+			margin-top: 10px;
+			display: inline-block;
+			border: 1px solid #FFF;
+			transition: all .3s;
+			background-color: #FFF;
+			padding: 10px 40px;
+			font-weight: 600;
+			color: #333;
+			text-transform: uppercase;
+			font-family: $opensans;
+			font-size: 12px;
+			&:hover{
+				background-color: #333;
+				color: #FFF;
+			}
+		}
+	}
+}
+
+#idx-mp-item{
+	@media screen and (min-width: 1024px){
+		position: absolute;
+		bottom: 2px;
+		right: 0px;
+		height: calc(50% - 2px);
+		width: calc(28% - 8.33px);
+	}
+	
+	@media screen and (min-width: 1300px){
+		width: calc(28% - 10.33px);
+	}
+
+	@media screen and (min-width: 1600px){
+		width: calc(28% - 12.33px);
+	}
+}

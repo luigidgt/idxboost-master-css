@@ -1,0 +1,97 @@
+/*----------------------------------------------------------------------------------*/
+/* Preloader
+/*----------------------------------------------------------------------------------*/
+.#{$prefijo}wrap-preloader{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	z-index: 999999;
+	background-color: #FFF;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	padding: 1rem;
+
+	top: 0;
+	left: 0;
+
+	.item-wrap-preloader{
+		animation-duration: 1s;
+		animation-fill-mode: both;
+		animation-name: fadeInUp;
+		animation-delay: 0.2s;
+		text-align: center;
+		margin-top: -60px;
+
+		img{
+			display: inline-block;
+			max-width: 100%;
+			margin: 0 auto;
+		}
+
+		.text-logo{
+			position: relative;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			justify-content: center;
+			margin-bottom: 2rem;
+			.idx_site_text_tit{
+				font-family: $opensans;
+				font-weight: 600;
+				font-size: 26/16*1rem;
+			}
+			span{
+				display: block;
+				font-family: $opensans;
+				font-size: 1rem;
+				margin-top: -3px;
+			}
+		}
+	}
+
+
+	.logo-preloader,
+	.logo-content{
+		display: block;
+		margin-bottom: 2rem;
+		margin-top: -2rem;
+		text-align: center;
+	}
+	
+	.preloader-icon{
+		animation-duration: 1s;
+		animation-fill-mode: both;
+		animation-name: fadeInUp;
+		animation-delay: 0.9s;
+		position: absolute;
+		top: 100%;
+		left: auto;
+		width: 60px;
+		height: 60px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		&:before{
+			content: "";
+			position: relative;
+			width: 50px;
+			height: 50px;
+			/*margin-top: -25px;
+			margin-left: -25px;*/
+			border-radius: 50%;
+			border: 10px solid #ccc;
+			border-top-color: #e82f5e;
+			border-width: 5px;
+			animation: spin 1s infinite linear;
+			z-index: 2;
+			display: block;
+			top: 50%;
+			left: 50%;
+		}
+	}
+}

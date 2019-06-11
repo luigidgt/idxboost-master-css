@@ -1,0 +1,122 @@
+/*----------------------------------------------------------------------------------*/
+/* Preloader
+/*----------------------------------------------------------------------------------*/
+.#{$prefijo}wrap-preloader{
+	background-color: #1d1d1d;
+	.#{$prefijo}item-wrap-preloader{
+		.#{$prefijo}text-logo{
+			h1.#{$prefijo}idx_site_text_tit {
+    		font-size: 36px !important;
+    		color: #FFF !important;
+    		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    	}
+    	span{
+    		color: #FFF;
+    		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    	}
+		}
+	}
+
+	.#{$prefijo}preloader-icon:before {
+		border-color: rgba(255,255,255,.3);
+		border-top-color: #075c91;
+	}
+}
+
+#blog-collection #articles-blog li:hover{
+  border-color: #075c91;
+}
+#blog-collection #articles-blog li .content-article time,
+.flex-content-form .opt-list .radio-item label:after {
+	background-color:  #075c91;
+}
+.flex-content-form .opt-list .chk-item label:after, .flex-content-form .opt-list .radio-item label:after{
+	color: #075c91;
+}
+
+.clidxboost-btn-link, 
+.clidxboost-btn{
+	span{
+		background-color: #075c91;
+		border: 1px solid #075c91;
+	}
+  &:hover{
+  	span{
+	  	border-color: #075c91;
+	  	color: #075c91;
+	  }
+  }
+}
+
+.form-content .gform_footer .gform_button,
+#full-main .title-conteiner .content-fixed .content-fixed-title .breadcrumb-options .btn-request,{
+	background-color: #075c91;
+	border: 1px solid #075c91;
+	&:hover{
+		border-color: #075c91;
+		color: #075c91;
+	}
+}
+
+#wrap-result,
+.wrap-result{
+	&.full-map,
+	&.view-grid{
+		.result-search,
+		#result-search{
+			>li{
+				&:hover{
+					.view-detail{
+						border-color: #013766;
+					}
+				}
+			}
+		}
+	}
+}
+
+.flex-block-description{
+	.title-block,
+	.flex-page-title{
+		color: #013766;
+	}
+}
+
+#header-filters{
+	background-color: #013766;
+	.allf-ss{
+		background-color: #013766 !important;
+		border: 1px solid #FFF !important;
+		color: #FFF !important;
+		&:hover{
+			background-color: #FFF !important;
+			color: #013766 !important;
+		}
+	}
+
+	.allf-callus{
+		color: #FFF;
+		a{
+			color: #FFF;
+		}
+	}
+}
+
+#header-filters #show-mobile-menu{
+	span{
+		background: #FFF;
+		&:before,
+		&:after{
+			background: #FFF
+		}
+	}
+}
+
+.temporal-color-header{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 50px;
+	z-index: -1;
+	background-color: #013766;
+}

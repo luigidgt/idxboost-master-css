@@ -1,0 +1,55 @@
+doctype html
+html(lang='en')
+	head
+		title About | Flexidx
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		meta(name="apple-mobile-web-app-capable", content="yes")
+		meta(name="apple-mobile-web-app-status-bar-style", content="#4b4b4b")
+		meta(name="theme-color", content="#4b4b4b")
+		meta(name="msapplication-navbutton-color", content="#4b4b4b")
+		link(rel="stylesheet", href="css/main-project.css")
+		link(rel="stylesheet", href="https://file.myfontastic.com/v6vr22zQVKSnTWTxBBpbWC/icons.css")
+	body
+		include header.jade
+		main#flex-about-theme
+			.gwr
+				.flex-breadcrumb
+					ol
+						li: a(href="#", title="Home") Home
+						li About Us
+			.gwr.c-flex
+				article.flex-block-description
+					h2.title-block hello world!
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					
+					.box-btn
+						a(href="#", title="View our recent sales").btn-link: span View our recent sales
+				img(src="images/about.jpg", title="About", alt="About")
+			
+				section#testimonials
+					h2 Testimonials
+					#slider-testimonial.slider-standar
+						ul.built.interval
+							li 
+								.item-testimonial “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”
+									span By Janet Marlon, Florida
+							li 
+								.item-testimonial “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”
+									span By Julio Florida, Marlon
+							li 
+								.item-testimonial “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”
+									span By José Paholo, Guerrero
+						.nav
+							.bullets
+							.next-prev
+								button.prev: span.icon-arrow
+								button.next: span.icon-arrow
+		include footer.jade
+		script(type="text/javascript", src="../js/jquery-3.1.1.min.js")
+		script(type="text/javascript", src="../js/plugins/jquery-ui.min.js")
+		script(type="text/javascript", src="../js/plugins/jquery.ui.touch-punch.min.js")
+		script(type="text/javascript", src="../js/dgt-master.min.js")
+		script(type="text/javascript", src="js/dgt-project-master.js")

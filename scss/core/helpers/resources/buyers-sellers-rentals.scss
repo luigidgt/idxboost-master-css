@@ -1,0 +1,440 @@
+$colorp: #FFF;
+
+// MIXINS
+
+	@mixin flexpa(){
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	@mixin ibfont(){
+		font-family: "idx-boost-icons" !important;
+		font-style: normal !important;
+		font-weight: normal !important;
+		font-variant: normal !important;
+		text-transform: none !important;
+		speak: none;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+//
+
+// ESTILOS GENERALES DE LOS FORMS
+	.ib-form-buyandsell {
+		@include flexpa();
+		position: relative;
+		min-height: calc(100vh - 169px);
+		overflow: hidden;
+		&:before{
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: rgba(0,0,0,0.33);
+			z-index: 2;
+		}
+	}
+//
+
+// LAYOUT
+	.ib-form-bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+		/*transform: translateX(-50%);
+
+		@media screen and (min-width: 1800px) {
+			width:100%;
+			left: 0;
+			transform: translateY(-50%);
+			top: 50%;
+			height: auto;
+		}*/
+	}
+
+	.ib-fbscontainer {
+		position: relative;
+		z-index: 2;
+		padding: 0 20px;
+	}
+
+	.ib-fsinformation {
+		overflow: hidden;
+		max-width: 680px;
+		margin-left: auto;
+		margin-right: auto;
+
+		@media screen and (min-width: 768px) {
+			margin-top: 25px;
+		}
+
+		@media screen and (min-width: 1024px) {
+			margin-top: 35px;
+		}
+	}
+
+	.ib-fsftem {
+		width: 100%;
+		margin-bottom: 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@media screen and (min-width: 640px) {
+			&:not(.ib-fsftem-textarea) {
+				width: calc(33.33% - 6.6667px);
+				margin-right: 10px;
+				float: left;
+
+				&:nth-child(3) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	.ib-fsinput, .ib-fstextarea {
+		border-radius: 3px;
+		font-size: .8em;
+	}
+
+	.ib-fsinput {
+		width: 100%;
+		height: 40px;
+		padding: 0 15px;
+		border-radius: 3px;
+
+		@media screen and (min-width: 1024px) {
+			height: 44px;
+		}
+	}
+
+	.ib-fstextarea {
+		width: 100%;
+		height: 70px;
+		padding: 10px;
+		font-family: inherit;
+
+		@media screen and (min-width: 1024px) {
+			height: 80px;
+		}
+	}
+//
+
+// ACTIVADORES
+	.ib-fsitem {
+		overflow: hidden;
+		max-height: 0;
+
+		&.ib-fsitem-active {
+			transition: all 1s linear;
+			max-height: 500px;
+		}
+	}
+//
+
+// TEXTOS
+	.ib-fstitle {
+		color: #fff;
+		text-align: center;
+		text-shadow: 2px 2px 2px rgba(#000, .5);
+		font-size: 2em;
+		line-height: 1.1;
+		font-weight: 600;
+		text-transform: capitalize;
+
+		@media screen and (min-width: 480px) {
+			font-size: 2.25em;
+		}
+
+		@media screen and (min-width: 768px) {
+			font-size: 2.5em;
+		}
+	}
+
+	.ib-ftext {
+		margin: 12px 0;
+		color: #fff;
+		display: block;
+		text-align: center;
+		font-size: .9em;
+		text-shadow: 1px 1px 1px rgba(#000, .8);
+
+		@media screen and (min-width: 1024px) {
+			font-size: .95em;
+		}
+	}
+//
+
+// RADIOS
+
+	.ib-fsradios {
+		@include flexpa();
+		flex-wrap: wrap;
+		margin-top: 25px;
+
+		@media screen and (min-width: 480px) and (max-width: 639px) {
+			margin-top: 35px;
+		}
+
+		@media screen and (min-width: 1024px) {
+			margin-top: 40px;
+		}
+
+		&.ib-fsrnumbers {
+			/*.ib-filabel {
+				font-size: 1.05em;
+			}*/
+			.ib-filabel {
+				font-size: 15px;
+			}
+
+			@media screen and (min-width: 1024px) {
+				.ib-fsritem {
+					min-width: 134px;
+				}
+
+				/*.ib-filabel {
+					font-size: 14px;
+				}*/
+			}
+		}
+	}
+
+	.ib-fsritem {
+		border: 1px solid rgba(#fff, .8);	
+		overflow: hidden;
+		position: relative;
+		min-width: 120px;
+		padding:0 15px;
+		height: 80px;
+		margin-bottom: 10px;
+		margin-right: 10px;
+		@include flexpa();
+
+
+		&:nth-child(n + 3) {
+			margin-bottom: 0;
+		}
+
+		@media screen and (max-width: 639px) {
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+		}
+
+		@media screen and (min-width: 480px) {
+			min-width: 160px;
+			height: 100px;
+			margin-bottom: 15px;
+			margin-right: 15px;
+		}
+
+		@media screen and (min-width: 640px) {
+			min-width: 130px;
+			height: 90px;
+			margin-bottom: 0;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+
+		@media screen and (min-width: 768px) {
+			//width: 150px;
+			height: 100px;
+			margin-right: 15px;
+		}
+
+		@media screen and (min-width: 1024px) {
+			min-width: 166px;
+			height: 105px;
+		}
+
+		@media screen and (min-width: 1024px) {
+			min-width: 220px;
+		}
+	}
+
+	.ib-firadio {
+		opacity: 0;
+		position: absolute;
+		top: -200px;
+		left: 0;
+	}
+
+	.ib-filabel {
+		position: absolute;
+		height: 81.25%;
+		width: 86.6667%;
+		background-color: rgba( $colorp, .8);
+		color: #333;
+		text-transform: uppercase;
+		padding: 0 7px;
+		@include flexpa();
+		font-size: .8em;
+		text-align: center;
+		transition: all .2s linear;
+		//text-shadow: 2px 2px 2px rgba(#000, .25);
+
+		@media screen and (min-width: 480px) and (max-width: 639px) {
+			font-size: .9em
+		}
+
+		@media screen and (min-width: 768px) {
+			font-size: .9em;
+		}
+
+		@media screen and (min-width: 1024px) {
+			//font-size: 1em;
+			font-size: 15px;
+		}
+
+		&:hover {
+			cursor:pointer;
+			background-color: $colorp;
+		}
+	}
+
+	.ib-firadio:checked + .ib-filabel{
+		height: 100%;
+		width: 100%;
+		//font-weight: 600;
+		background-color: $colorp;
+	}
+//
+
+// BOTONES (CONTINUE, NEXT, BACK, IMPUT)
+
+	.ib-fbtn {
+		display: none;
+		background-color: $colorp;
+		color: #333;
+		text-transform: uppercase;
+		height: 45px;
+		padding: 0 25px;
+		font-size: .8em;
+		transition: all .2s linear;
+		font-weight: 400;
+		border: 1px solid $colorp;
+		transition: all .3s;
+
+		&:hover {
+			background-color: #333;
+			color: #fff;
+			cursor:pointer;
+		}
+
+		@media screen and (min-width: 480px) and (max-width: 639px) {
+			height: 50px;
+			padding: 0 35px;
+			font-size: .9em;
+		}
+
+		&.ib-fbtn-back {
+			margin-right: 10px;
+			background-color: transparent;
+			border: 1px solid $colorp;
+			color: #FFF;
+
+			&:hover {
+				background-color: $colorp;
+				color: #333;
+			}
+		}
+
+		@media screen and (min-width: 1024px) {
+			height: 45px;
+			padding: 0 35px;
+			font-size: .9em;
+		}
+	}
+
+	.ib-fbtns {
+		margin-top: 20px;
+
+
+		@include flexpa();
+
+		&.ib-fbtns-continue {
+			.ib-fbtn-continue {
+				@include flexpa();
+			}
+		}
+
+		&.ib-fbtns-backnext {
+			.ib-fbtn-back, .ib-fbtn-next {
+				@include flexpa();
+			}
+		}
+
+		&.ib-fbtns-submit {
+			.ib-fsubmit {
+				@include flexpa();
+			}
+		}
+
+		@media screen and (min-width: 480px) {
+			margin-top: 35px;
+		}
+	}
+//
+
+// MINI SEARCH
+	.ib-fsifind {
+		max-width: 520px;
+		margin-left: auto;
+		margin-right: auto;
+
+		@media screen and (min-width: 480px) {
+			@include flexpa();
+
+			.ib-fsinput {
+				flex-grow: 1;
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+		}	
+	}
+
+	.ib-fsifsubmit {
+		margin-top: 7px;
+		background-color: #333;
+		@include flexpa();
+		color: #fff;
+		transition: all .2s linear;
+		height: 40px;
+		border-radius: 3px;
+		text-transform: uppercase;
+		font-size: .9em;
+
+		&:hover {
+			background-color: darken($colorp, 15%);
+			cursor: pointer;
+			color: #333;
+		}
+
+		@media screen and (min-width: 480px) {
+			margin-top: 0;
+			flex-shrink: 0;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+			white-space: nowrap;
+			padding:0 15px;
+		}
+
+		@media screen and (min-width: 1024px) {
+			height: 44px;
+		}
+	}
+//

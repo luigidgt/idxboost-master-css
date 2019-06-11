@@ -1,0 +1,114 @@
+.rm-cfimg {
+  width: 100%;
+  display: block; }
+
+.rm-cfbright {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #242B3E), to(#515566));
+  background: -webkit-linear-gradient(#242B3E 60%, #515566);
+  background: -o-linear-gradient(#242B3E 60%, #515566);
+  background: linear-gradient(#242B3E 60%, #515566);
+  color: #fff;
+  padding: 1.875em .9375em; }
+
+.rm-cfbr-wrapper {
+  max-width: 627px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.rm-cfbr-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  text-transform: uppercase;
+  margin-bottom: .625em; }
+
+.rm-cfbr-title {
+  /*font-family: "Neutra Text Bold";*/
+  text-align: center;
+  font-size: 1.8em;
+  line-height: 1; }
+
+.rm-cfbr-stitle {
+  /*font-family: "Neutra Text Bold";*/
+  text-align: center; }
+
+.rm-cfbr-paragraph {
+  text-align: center;
+  line-height: 1.4;
+  font-size: .8em;
+  margin-bottom: 1.1718em; }
+
+.rm-cfwrapper h3 {
+  display: none; }
+
+.flex-content-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+
+.flex-content-form .form-item {
+  width: 100%;
+  margin-bottom: 0.625rem; }
+
+.rm-cfwrapper .form-item {
+  margin-bottom: 7px; }
+
+.flex-content-form .form-item span {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #FFF; }
+
+.rm-cfwrapper .form-item > span {
+  display: none; }
+
+.rm-cfwrapper .form-item .medium {
+  width: 100%;
+  height: 2.7343em;
+  background-color: transparent;
+  border: 1px solid #7D7E80;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #fff;
+  font-size: .8em;
+  margin-top: 0; }
+
+@media screen and (min-width: 1280px) {
+  .rm-cform {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .rm-cfbleft, .rm-cfbright {
+    width: 50%; }
+  .rm-cfbleft {
+    position: relative;
+    overflow: hidden; }
+  .rm-cfimg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 100%;
+    width: auto; } }

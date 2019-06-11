@@ -1,0 +1,229 @@
+/*----------------------------------------------------------------------------------*/
+/* Blog Detail
+/*----------------------------------------------------------------------------------*/
+##{$prefijo}flex-blog-detail-theme{
+  .#{$prefijo}gwr.#{$prefijo}c-flex{
+    margin-top: 0;
+    margin-bottom: 3.125rem;
+    max-width: 924px;
+
+    @media screen and (min-width: 640px){
+      margin-top: 3.125rem;
+    }
+
+    .flex-blog-header{
+			margin-bottom: 2.5rem;
+    }
+
+    .#{$prefijo}flex-block-description{
+      position: relative;
+
+      .#{$prefijo}flex-page-title{
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        text-align: left;
+        font-weight: 600;
+
+        @media screen and (min-width: 640px){
+          font-size: 2rem;
+          //margin-bottom: 2.5rem;
+        }
+      }
+
+      p{
+        font-size: 0.875rem;
+        line-height: 1.6;
+        margin-bottom: 0.625rem;
+        text-align: left;
+        max-width: 100%;
+
+        @media screen and (min-width: 640px){
+          margin-bottom: 1.875rem;
+        }
+      }
+    }
+  }
+
+  .#{$prefijo}flex-block-img{
+    margin: 1.25rem 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    align-items: flex-start;
+
+    @media screen and (min-width: 640px){
+      flex-wrap: nowrap;
+      -webkit-flex-wrap: nowrap;
+    }
+
+    img{
+      width: 100%;
+      margin-bottom: 0.625rem;
+
+      @media screen and (min-width: 640px){
+        width: 48%;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .#{$prefijo}full-img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.25rem;
+  }
+
+  .#{$prefijo}date-publish{
+    color: #bfbfbf;
+    position: relative;
+    left: 0;
+    top: 0;
+    display: block;
+    text-align: left;
+    margin: 10px 0;
+    font-size: 0.875rem;
+    @media screen and (min-width: 640px){
+      //position: absolute;
+      //left: 0;
+      //top: 40px;
+      //margin-bottom: 0;
+      font-size: 1rem;
+    }
+  }
+
+  .#{$prefijo}flex-block-share{
+    text-align: center;
+    &.#{$prefijo}mini{
+      position: absolute;
+      top: 17px;
+      right: 0;
+      text-align: right;
+      display: none;
+
+      @media screen and (min-width: 640px){
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+      }
+
+      .#{$prefijo}title-share{
+        font-size: 0.75rem;
+        width: 100%;
+        display: block;
+      }
+
+      .#{$prefijo}social-networks{
+        padding: 0 !important;
+        li{
+          a{
+            text-indent: -9999999999px;
+            font-size: 1px;
+            color: transparent;
+          }
+        }
+
+        &:after{
+          display: none;
+        }
+      }
+    }
+
+    &.#{$prefijo}standar{
+      margin-top: 2.5rem;
+
+      @media screen and (min-width: 640px){
+        margin-top: 0;
+      }
+
+      .#{$prefijo}title-share{
+        font-size: 0.875rem;
+        width: 100%;
+        display: block;
+      }
+
+      .#{$prefijo}social-networks{
+        margin-top: 0.9375rem;
+        height: 40px;
+        padding: 0 !important;
+
+        li{
+          width: 38px;
+          height: 36px;
+          &:before{
+            height: 100%;
+            font-size: 1.375rem;
+          }
+
+          a{
+            text-indent: -9999999999px;
+            font-size: 1px;
+            color: transparent;
+          }
+        }
+
+        &:after{
+          display: none;
+        }
+      }
+    }
+  }
+
+  .#{$prefijo}back-link{
+    margin-top: 2.5rem;
+    &:before{
+      font-size: 2rem;
+    }
+  }
+
+  img{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#flex-blog-detail-theme{
+	.flex-block-description{
+		ol{
+			list-style: decimal;
+			padding-left: 15px;
+			font-size: 0.875rem;
+			line-height: 1.6;
+		}
+		ol li{
+			list-style: decimal;
+		}
+
+		ul{
+			list-style: initial;
+			padding-left: 15px;
+			font-size: 0.875rem;
+			line-height: 1.6;
+		}
+
+		ul li{
+			list-style: initial;
+		}
+	}
+}

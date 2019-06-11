@@ -1,0 +1,722 @@
+/*----------------------------------------------------------------------------------*/
+/* Condo Detail
+/*----------------------------------------------------------------------------------*/
+#wrap-neighborhood{
+	max-width: 1431px;
+	position: relative;
+	margin: 0 auto;
+	//width: 94%;
+  width: 100% !important;
+
+  .btnb-blue{
+    display: none;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    height: 45px;
+    text-transform: uppercase;
+    border: 1px solid $colorweb;
+    background-color: $colorweb;
+    color: #FFF;
+    padding: 0 30px;
+    @media screen and (min-width: 991px){
+      display: flex;
+    }
+  }
+
+  .gwr{
+    width: 100% !important;
+  }
+  
+  #header-title{
+    width: 94%;
+		padding-bottom: 1rem;
+		margin: 1rem auto;
+		border-bottom: 3px solid #333;
+
+    .title-header{
+      font-family: $opensans;
+      font-weight: 600;
+      font-size: 18/16*1rem;
+      margin: 10/16*1rem 0;
+    }
+
+    .clidxboost-btn,
+    #wrap-breacrumb{
+      display: none;
+    }
+
+    .filter-by{
+      position: relative;
+      width: 100%;
+      padding-top: 45px;
+      &:after{
+        content: "\e902";
+        font-family: $web-icons;
+        display: flex;
+        width: 30px;
+        height: 45px;
+        font-size: 12px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        transition: all .6s;
+      }
+      ul{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        padding-top: 45px;
+        border: 1px solid $gris-lineas;
+        li{
+          background-color: #FFF;
+          width: 100%;
+          position: relative;
+          height: 0;
+          opacity: 0;
+          transition: all .3s;
+          overflow: hidden;
+          &.active{
+            height: 45px;
+            opacity: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: transparent;
+            a{
+              border-bottom: 0;
+              &:hover{
+                background-color: transparent;
+                color: #333;
+              }
+            }
+          }
+          a{
+            display: flex;
+            padding: 0 1rem;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            font-family: $opensans;
+            font-size: 14/16*1rem;
+            border-bottom: 1px solid $gris-lineas;
+            transition: all .3s;
+            &:hover{
+              background-color: #333;
+              color: #FFF;
+            }
+          }
+        }
+      }
+      &.show-list{
+        &:after{
+          transform: rotate(180deg);
+        }
+        ul{
+          li{
+            height: 45px;
+            opacity: 1;
+            &.active{
+              a{
+                border-bottom: 1px solid $gris-lineas;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #neighborhood{
+    .block-description{
+      >h2{
+        font-family: $opensans;
+        font-weight: 600;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      p{
+        font-size: 14/16*1rem;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+        text-align: justify;
+        a{
+          color: #0072AC;
+          text-decoration: underline;
+        }
+      }
+
+      .gwr{
+        width: 100% !important;
+      }
+    }
+  }
+
+	.wrap-result,
+  #wrap-result{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width: 640px){
+      width: 94%;
+    }
+
+    @media screen and (min-width: 768px){
+      width: 100%;
+    }
+
+    &.view-list{
+      #head-list{
+        li{
+          &.price-sf,
+          &.development{
+            display: none;
+          }
+        }
+      }
+
+      #result-search{
+        > li{
+          .features{
+            li{
+              &.price-sf,
+              &.development{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+		
+		&.view-map{
+			#wrap-map{
+				width: 100% !important;
+			}
+
+			#wrap-list-result,
+			.wrap-list-result{
+				display: none;
+			}
+
+			#map-actions{
+				display: none;
+			}
+		}
+  }
+
+  #wrap-subfilters{
+    margin-top: 0 !important;
+    .gwr{
+      justify-content: flex-end;
+      #title-subfilters {
+        display: none;
+      }
+      #info-subfilters{
+        display: block !important;
+        text-align: left;
+        @media screen and (min-width: 768px){
+          position: absolute;
+        }
+      }
+    }
+  }
+
+	.filter-by{
+    margin-top: 10px;
+    border: 1px solid $gris-lineas;
+		.select-btn-ft{
+			width: 100%;
+			top: 0;
+			left: 0;
+			height: 47px;
+			position: absolute;
+			z-index: 3;
+			background-color: transparent;
+			text-indent: -999999px;
+			overflow: hidden;
+		}
+
+    select{
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 100%;
+      position: absolute;
+      background-color: transparent;
+      padding: 0 10px;
+      padding-right: 40px;
+    }
+	}
+
+  #nav-results{
+    margin-top: 0;
+  }
+
+  @media screen and (min-width: 1024px){
+    #wrap-result{
+      &.view-grid{
+        #result-search{
+          >li{
+            width: 32%;
+            margin-right: 2%;
+            &:nth-child(2n) {
+              margin-right: 2%;
+            }
+            &:nth-child(3n) {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px){
+    .content-filters{
+      .wrap-filters,
+      #wrap-filters{
+        .gwr{
+          #all-filters:not(.individual) {
+            left: 50% !important;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1300px){
+    .content-filters{
+      .wrap-filters,
+      #wrap-filters{
+        .gwr{
+          #all-filters:not(.individual) {
+            left: 63% !important;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1600px){
+    .content-filters{
+      .wrap-filters,
+      #wrap-filters{
+        .gwr{
+          #all-filters:not(.individual) {
+            left: 50.9% !important;
+          }
+        }
+      }
+    }
+  }
+
+  #wrap-subfilters .gwr #info-subfilters{
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+    @media screen and (min-width: 640px){
+      width: 94%;
+    }
+    @media screen and (min-width: 768px){
+      width: 100%;
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Contenedor del widget lateral
+/*----------------------------------------------------------------------------------*/
+.content-nav{
+  margin-bottom: 1rem;
+  width: 100%;
+  position: relative;
+  .title-list-aside{
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: $opensans;
+    font-size: 1rem;
+    margin-bottom: 10/16*1rem;
+    padding-bottom: 10/16*1rem;
+    border-bottom: 2px solid #333;
+    font-weight: 600;
+  }
+
+  .form-content{
+    .gform_body{
+      .gform_fields{
+        .gfield{
+          width: 100% !important;
+        }
+      }
+    }
+
+    .gform_footer{
+      .gform_button{
+        width: 100%;
+      }
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Neighborhood avatar
+/*----------------------------------------------------------------------------------*/
+.card-neightborhood {
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*margin: 16px 0;*/
+  position: relative;
+  .card-neightborhood-img {
+    width: 100px;
+    height: 54px;
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 15px;
+    img {
+      background-position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.card-neightborhood-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 67%;
+  h2 {
+    font-size: 16px;
+    color: #FFF;
+    font-weight: 600;
+    order: 2;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 100%;
+    font-family: $opensans;
+  }
+  h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #FFF;
+    order: 1;
+    font-family: $opensans;
+  }
+  span {
+    font-size: 13px;
+    color: #FFF;
+    order: 3;
+    font-family: $opensans;
+  }
+}
+
+.card-neightborhood .card-neightborhood-link {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-indent: -999999px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Lista de condos
+/*----------------------------------------------------------------------------------*/
+.list-nav-aside{
+  li{
+    border-bottom: 1px solid #CCC;
+    &:last-child{
+      border-bottom: 0;
+    }
+    a{
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      color: #333;
+      transition: all .3s;
+      font-size: 0.875rem;
+      position: relative;
+      overflow: hidden;
+      @media screen and (min-width: 1024px){
+        height: 50px;
+      }
+      &:before{
+        content: '';
+        position: absolute;
+        border-style: solid;
+        border-width: 5px 0 5px 5px;
+        border-color: transparent $colorweb;
+        display: block;
+        width: 0;
+        z-index: 1;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all .3s;
+        left: -10px;
+      }
+      &:hover,
+      &.active{
+        color: $colorweb;
+        padding-left: 10px;
+        &:before{
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Bloque de video y foto
+/*----------------------------------------------------------------------------------*/
+.wrap-map-img{
+  position: relative;
+  width: 100%;
+  &:after{
+    content: "";
+    display: block;
+    padding-bottom: 60%;
+    @media screen and (min-width: 1024px){
+      padding-bottom: 45%;
+    }
+  }
+
+  .item-im{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 0;
+    &.active{
+      opacity: 1;
+      z-index: 1;
+    }
+    img,
+    iframe,
+    video,
+    embed{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .moptions{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    z-index: 3;
+    .btn-im-op{
+      margin-right: 1rem;
+      height: 30px;
+      background-color: #333;
+      color: #FFF;
+      width: 100px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-family: $opensans;
+      font-size: 11/16*1rem;
+      transition: all .3s;
+      border: 1px solid $colorweb;
+      &.active{
+        background-color: #FFF;
+        color: #333;
+      }
+    }
+  }
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Formulario de contacto
+/*----------------------------------------------------------------------------------*/
+.nav-aside{
+  .form-search{
+    position: relative;
+    border: 1px solid $gris-lineas;
+    padding: 1rem;
+    padding-top: 20/16*1rem;
+    .flex-content-form{
+      .form-item{
+        width: 100% !important;
+        &:nth-child(6){
+          height: 0;
+          margin: 0;
+          overflow: hidden;
+          padding: 0;
+        }
+        .clidxboost-btn-link{
+          width: 100%;
+          min-width: 100%;
+          span{
+            border-color: $colorweb !important;
+          }
+        }
+      }
+    }
+
+    >h3{
+      text-align: center;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 22/16*1rem;
+      margin-bottom: 1rem;
+    }
+
+    &:before{
+      content: "";
+      display: block;
+      margin: 1px;
+      background-color: $colorweb;
+      height: 5px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  .flex-content-form{
+    .form-item{
+      input,
+      textarea{
+        border-color: $gris-lineas;
+      }
+    }
+  }
+}
+
+
+/** Resize: 960 **/
+@media screen and (min-width: 960px){
+  #wrap-neighborhood{
+    .content-filters{
+      .wrap-filters,
+      #wrap-filters {
+        .gwr{
+
+          #all-filters{
+            #mini-filters{
+              height: 530px;
+              >li{
+                &.type{ 
+                  order: 0;
+                  .wrap-item{
+                    margin: 19/16*1rem 0;
+                  }
+                }
+
+                &.price{ order: 1}
+                &.beds{ order: 2}
+                &.baths{ order: 3}
+                &.year{ order: 4}
+                &.living{ order: 5}
+
+                &.waterfront{ 
+                  order: 6;
+                  .wrap-item{
+                    margin: 23px 0;
+                  }
+                }
+
+                &.parking{ order: 7}
+                &.land{ order: 8}
+                &.features{ order: 9}
+              }
+            }
+
+            &.individual{
+              #mini-filters{
+                height: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/** Resize: 991 **/
+@media screen and (min-width: 991px){
+  #wrap-neighborhood{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    #header-title{
+    	.gwr{
+    		display: flex;
+    		justify-content: space-between;
+    		align-items: center;
+    	}
+    	.clidxboost-btn {
+    		display: inline-block;
+    	}
+    }
+
+    .filter-by{
+      display: none;
+    }
+
+    .nav-aside{
+      display: block;
+      width: 30%;
+      order: 2;
+
+      @media screen and (min-width: 1300px){
+        width: 28%;
+      }
+    }
+
+    #neighborhood{
+      order: 3;
+      width: 68%;
+
+      @media screen and (min-width: 1300px){
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 991px){
+  #wrap-neighborhood{
+    width: 96% !important;
+    #header-title {
+      width: 100% !important;
+    }
+  }
+}

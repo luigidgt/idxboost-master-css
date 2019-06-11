@@ -1,0 +1,83 @@
+doctype html
+html(lang='en')
+	head
+		title Contact | Flexidx
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		meta(name="apple-mobile-web-app-capable", content="yes")
+		meta(name="apple-mobile-web-app-status-bar-style", content="#4b4b4b")
+		meta(name="theme-color", content="#4b4b4b")
+		meta(name="msapplication-navbutton-color", content="#4b4b4b")
+		link(rel="stylesheet", href="css/main-project.css")
+		link(rel="stylesheet", href="https://file.myfontastic.com/v6vr22zQVKSnTWTxBBpbWC/icons.css")
+	body
+		include header.jade
+
+		main#flex-contact-theme
+			.gwr
+				.flex-breadcrumb
+					ol
+						li: a(href="#", title="Home") Home
+						li Contact Us
+
+			.gwr.c-flex
+				section.flex-block-description
+					h1.title-block Contact us
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				
+				section.flex-lateral-a
+					h3 Flex Idx
+					ul.flex-contact-list
+						li: a(href="tel:+13057055000", title="Call us +1-305-705-5000").phone +1 305 705 5000
+						li: a(href="mailto:info@flexidx.com", title="Call us +1-305-705-5000").email info@flexidx.com
+						li: a(href="#", title="2828 Coral Way, Suite 435, Miami Fl 33145").mapa 2828 Coral Way, Suite 435, Miami Fl 33145
+
+					.flex-block-share.standar
+						.social-networks
+							li.icon-facebook: a(href="#", title="Facebook", target="_blank", rel="nofollow") Facebook
+							li.icon-twitter: a(href="#", title="Twitter", target="_blank", rel="nofollow") Twitter
+							li.icon-google-plus: a(href="#", title="Google+", target="_blank", rel="nofollow") Google+
+							li.icon-instagram: a(href="#", title="Instagram", target="_blank", rel="nofollow") Instagram
+							li.icon-linkedin: a(href="#", title="Linked In", target="_blank", rel="nofollow") Linked In
+					#content-map
+						#map(data-lat="26.1151040", data-lng="-80.1207070")
+				
+				section.flex-lateral-b
+					h3 Email Us
+					ul.flex-content-form
+						li.form-item
+							span First Name *
+							input(name="name", type="text").medium
+						li.form-item
+							span Last Name
+							input(name="lastname", type="").medium
+						li.form-item
+							span Email *
+							input(name="email", type="").medium
+						li.form-item
+							span Phone
+							input(name="phone", type="").medium
+						li.form-item.full-item
+							span Comments
+							textarea(name="message").textarea.medium
+						li.form-item.full-item
+							span Best Time to Reach You
+							ul.opt-list
+								li.opt-item.radio-item
+									input(name="option_time", type="radio", value="am", id="choice_1")
+									label(for="choice_1") am
+								li.opt-item.radio-item
+									input(name="option_time", type="radio", value="pm", id="choice_2")
+									label(for="choice_2") pm
+								li.opt-item.chk-item.full-item
+									span Receive Newsletter
+									input(name="chk", type="checkbox", value="1", id="Newsletter")
+									label(for="Newsletter") I would like to receive Newsletters
+						li.form-item.full-item
+							button.btn-link 
+								span Submit
+
+		include footer.jade
+		script(type="text/javascript", src="../js/jquery-3.1.1.min.js")
+		script(type="text/javascript", src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbcWAf3LnqNPxdZ5TP5resRxl3I3BPZb8&#038")
+		script(type="text/javascript", src="js/dgt-project-master.min.js")

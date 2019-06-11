@@ -1,0 +1,728 @@
+/*----------------------------------------------------------------------------------*/
+/* View List
+/*----------------------------------------------------------------------------------*/
+.#{$prefijo}wrap-result,
+##{$prefijo}wrap-result{
+	&.#{$prefijo}view-list{
+		position: relative;
+
+		.#{$prefijo}gwr{
+			margin-left: auto;
+			margin-right: auto;
+			/*@media (max-width: 767px){
+				width: 100% !important;
+			}*/
+		}
+		
+		/*Map*/
+		##{$prefijo}wrap-map{
+			display: none;
+		}
+		
+		/*Header List*/
+		##{$prefijo}head-list{
+			display: none;
+		}
+
+		/*List*/
+		.#{$prefijo}result-search,
+		##{$prefijo}result-search{
+			position: relative;
+			margin-bottom: 1rem;
+			>li{
+				position: relative;
+				margin-bottom: 10/16*1rem;
+				padding-bottom: 10/16*1rem;
+				padding-left: 110px;
+				padding-right: 35px;
+				min-height: 75px;
+				h2{
+					width: 100%;
+					font-size: 15/16*1rem;
+					font-family: $opensans;
+					position: relative;
+					z-index: 1;
+					color: #333;
+					font-weight: 600;
+
+					margin-bottom: 5/16*1rem;
+					span{
+						display: block;
+						text-overflow: ellipsis;
+						overflow: hidden;
+						white-space: nowrap;
+						span{
+							display: inline;
+							margin-left: 5/16*1rem;
+						}
+					}
+				}
+
+				.#{$prefijo}flex-property-new-listing{
+					display: none;
+				}
+
+				.#{$prefijo}features{
+					width: 100%;
+					position: relative;
+					z-index: 1;
+					line-height: 1.1;
+					margin-bottom: 7/16*1rem;
+					li{
+						&.#{$prefijo}development,
+						&.#{$prefijo}price-sf,
+						&.#{$prefijo}address,
+						&.#{$prefijo}pr,
+						&.#{$prefijo}unit,
+						&.#{$prefijo}type,
+						&.#{$prefijo}year,
+						&.#{$prefijo}city{
+							display: none;
+						}
+						&.#{$prefijo}price{
+							line-height: 1.2;
+							font-weight: 600;
+							font-family: $opensans;
+							font-size: 14/16*1rem;
+							color: #333;
+						}
+						&.#{$prefijo}beds,
+						&.#{$prefijo}baths,
+						&.#{$prefijo}living-size{
+							font-family: $opensans;
+							font-size: 10/16*1rem;
+							position: relative;
+							display: inline-block;
+							padding-right: 1rem;
+							color: $gris-intermedio;
+
+							&:after{
+								content: "";
+								width: 4px;
+								height: 4px;
+								background-color: $gris-intermedio;
+								border-radius: 100%;
+								position: absolute;
+								right: 5px;
+								top: 50%;
+								margin-top: -2px;
+							}
+						}
+						&.#{$prefijo}living-size{
+							font-size: 10/16*1rem;
+							padding-right: 0;
+							span{
+								font-size: 10/16*1rem;
+								margin-right: 5/16*1rem;
+								&:last-child{
+									display: none;
+								}
+							}
+							&:after{
+								display: none;
+							}
+						}
+					}
+				}
+
+				.#{$prefijo}wrap-slider{
+					top: 0;
+					left: 0;
+					position: absolute;
+					width: 100%;
+					>ul{
+						position: relative;
+						width: 100px;
+						>li{
+							position: relative;
+							width: 100%;
+							&:after{
+								content: "";
+								display: block;
+								padding-bottom: 65%;
+							}
+
+							&:before{
+								content: "";
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								width: 30px;
+								height: 30px;
+								border-radius: 50%;
+								border: 10px solid #ccc;
+								border-top-color: #333;
+								border-width: 5px;
+								-webkit-animation: spin 1s infinite linear;
+								animation: spin 1s infinite linear;
+								z-index: 2;
+								display: block;
+							}
+
+							&.flex-slider-item-hidden{
+								display: none;
+							}
+
+							img{
+								position: absolute;
+								top: 0;
+								left: 0;
+								width: 100%;
+								height: 100%;
+								object-fit: cover;
+								z-index: 2;
+							}
+						}
+					}
+					.#{$prefijo}prev,
+					.#{$prefijo}next{
+						display: none;
+					}
+
+					.clidxboost-btn-check{
+						width: 30px;
+						height: 30px;
+						position: absolute;
+						top: 0;
+						right: 0;
+						z-index: 4;
+						background-color: transparent;
+						span{
+							display: flex;
+							width: 100%;
+							height: 100%;
+							align-items: flex-start;
+							justify-content: center;
+							&:before{
+								content: "";
+								background-image: url('../images/corazon.png');
+								background-repeat: no-repeat;
+								display: block;
+								width: 30px;
+								height: 23px;
+								display: block;
+								opacity: 0;
+							}
+						}
+
+						/*HEART*/
+						&.clidxboost-icon-heart{
+							span{
+								&:before{
+									opacity: 1;
+									background-position: 0 -347px;
+								}
+								&.#{$prefijo}active{
+									&:before{
+										background-position: 0 -304px;
+									}
+								}
+							}
+						}
+						/*START*/
+						&.clidxboost-icon-star{
+							span{
+								&:before{
+									opacity: 1;
+									background-position: 0 -415px;
+								}
+								&.#{$prefijo}active{
+									&:before{
+										background-position: 0 -370px;
+									}
+								}
+							}
+						}
+						/*SQUARE*/
+						&.clidxboost-icon-square{
+							span{
+								&:before{
+									opacity: 1;
+									background-position: 0 -478px;
+								}
+								&.#{$prefijo}active{
+									&:before{
+										background-position: 0 -437px;
+									}
+								}
+							}							
+						}
+					}
+				}
+
+				.#{$prefijo}view-detail{
+					overflow: hidden;
+					text-indent: -999999px;
+					display: block;
+					position: absolute;
+					z-index: 3;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					border: 1px solid transparent;
+					border-bottom: 1px solid $gris-lineas;
+					transition: border-color .3s;
+				}
+			}
+		}
+	}
+}
+
+/** Resize: 640 **/
+@media screen and (min-width: 640px){
+	.#{$prefijo}wrap-result,
+	##{$prefijo}wrap-result{
+		&.#{$prefijo}view-list{
+
+			/*List*/
+			.#{$prefijo}result-search,
+			##{$prefijo}result-search{
+				>li{
+					padding-left: 160px;
+					padding-right: 40px;
+					padding-bottom: 27/16*1rem;
+					min-height: 103px;
+					h2{
+						font-size: 1rem;
+					}
+					.#{$prefijo}features{
+						margin-bottom: 7/16*1rem;
+						li{
+							&.#{$prefijo}price{
+								font-size: 1rem;
+								margin-bottom: 5/16*1rem;
+							}
+							&.#{$prefijo}beds,
+							&.#{$prefijo}baths,
+							&.#{$prefijo}living-size{
+								font-size: 13/16*1rem;
+							}
+							&.#{$prefijo}living-size{
+								font-size: 12/16*1rem;
+								span{
+									font-size: 13/16*1rem;
+								}
+							}
+
+							&.#{$prefijo}unit,
+							&.#{$prefijo}year{
+								max-width: 150px
+							}
+						}
+					}
+
+					.#{$prefijo}wrap-slider{
+						>ul{
+							width: 140px;
+						}
+					}
+
+					.#{$prefijo}view-detail{
+						transition: all .6s;
+						&:hover{
+							border-color: transparent;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/** Resize: 768 **/
+@media screen and (min-width: 768px){
+	.#{$prefijo}wrap-result,
+	##{$prefijo}wrap-result{
+		&.#{$prefijo}view-list{
+
+			.#{$prefijo}gwr{
+				padding: 0;
+			}
+
+			/*Header List*/
+			.#{$prefijo}head-list,
+			##{$prefijo}head-list{
+	      display: flex;
+	      padding-left: 35px;
+	      li{
+	        width: 100%;
+	        display: flex;
+	        justify-content: center;
+	        align-items: center;
+	        font-size: 13/16*1rem;
+	        font-weight: 600;
+	        height: 30px;
+	        padding: 3px 7px;
+	        &.#{$prefijo}pr,
+	        &.#{$prefijo}living-size,
+	        &.#{$prefijo}price-sf,
+	        &.#{$prefijo}development,
+					&.#{$prefijo}type,
+	        &.#{$prefijo}city{
+	        	display: none;
+	        }
+
+	        &.#{$prefijo}name{
+	        	justify-content: flex-start;
+	        	span{
+	        		display: none !important;
+	        	}
+	        }
+
+	        &.#{$prefijo}beds,
+	        &.#{$prefijo}baths,
+	        &.#{$prefijo}pr{
+	        	max-width: 100px;
+	        }
+
+	        &.#{$prefijo}price,
+	        &.#{$prefijo}city,
+					&.#{$prefijo}type{
+						max-width: 200px;
+					}
+
+					&.#{$prefijo}unit,
+	        &.#{$prefijo}year{
+						max-width: 150px;
+					}
+	      }
+			}
+
+			/*List*/
+			.#{$prefijo}result-search,
+			##{$prefijo}result-search{
+				>li{
+					padding: 0;
+					margin: 0;
+					min-height: auto;
+					h2{
+						display: none;
+					}
+
+					.#{$prefijo}features{
+						display: flex;
+						margin: 0;
+						padding: 0 0 0 35px;
+						li{
+							&.#{$prefijo}development,
+							&.#{$prefijo}price-sf,
+							&.#{$prefijo}address,
+							&.#{$prefijo}pr,
+							&.#{$prefijo}price,
+							&.#{$prefijo}beds,
+							&.#{$prefijo}baths,
+							&.#{$prefijo}living-size,
+
+							&.#{$prefijo}name{
+								margin: 0;
+								padding: 0;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								width: 100%;
+								padding: 3px 7px;
+								font-size: 14/16*1rem;
+								color: #333;
+								height: 45px;
+								&:after{
+									display: none;
+								}
+							}
+
+							&.#{$prefijo}unit,
+							&.#{$prefijo}type,
+							&.#{$prefijo}year,
+							&.#{$prefijo}city{
+								margin: 0;
+								padding: 0;
+								align-items: center;
+								justify-content: center;
+								width: 100%;
+								padding: 3px 7px;
+								font-size: 14/16*1rem;
+								color: #333;
+								height: 45px;
+								display: flex;
+								&:after{
+									display: none;
+								}
+							}
+
+							&.#{$prefijo}unit,
+							&.#{$prefijo}year{
+								max-width: 150px;
+							}
+
+							&.#{$prefijo}development,
+							&.#{$prefijo}price-sf,
+							&.#{$prefijo}pr,
+							&.#{$prefijo}living-size,
+							&.#{$prefijo}type,
+							&.#{$prefijo}city{
+								display: none;
+							}
+
+							&.#{$prefijo}address,
+							&.#{$prefijo}name{
+								overflow: hidden;
+								font-weight: 600;
+								justify-content: flex-start;
+								span{
+									display: block;
+									text-overflow: ellipsis;
+									overflow: hidden;
+									white-space: nowrap;
+								}
+							}
+
+							&.#{$prefijo}beds,
+							&.#{$prefijo}baths,
+							&.#{$prefijo}pr{
+								max-width: 100px;
+								span{
+									display: none;
+								}
+							}
+
+							&.#{$prefijo}price{
+								max-width: 200px;
+							}
+						}
+					}
+
+					.#{$prefijo}wrap-slider{
+						top: 0;
+						left: 0;
+						position: absolute;
+						width: 100%;
+						>ul{
+							display: none;
+						}
+
+						.clidxboost-btn-check{
+							height: 45px;
+							top: 0;
+							right: auto;
+							left: 0;
+							span{
+								align-items: center;
+							}
+							
+							/*HEART*/
+							&.clidxboost-icon-heart{
+								span{
+									&:before{
+										opacity: 1;
+										background-position: -2px -347px;
+									}
+									&.#{$prefijo}active{
+										&:before{
+											background-position: -2px -304px;
+										}
+									}
+								}
+							}
+
+							/*STAR*/
+							&.clidxboost-icon-star{
+								span{
+									&:before{
+										opacity: 1;
+										background-position: -2px -415px;
+									}
+									&.#{$prefijo}active{
+										&:before{
+											background-position: -2px -370px;
+										}
+									}
+								}
+							}
+
+							/*SQUARE*/
+							&.clidxboost-icon-square{
+								span{
+									&:before{
+										opacity: 1;
+										background-position: 0 -478px;
+									}
+									&.#{$prefijo}active{
+										&:before{
+											background-position: 0 -437px;
+										}
+									}
+								}							
+							}
+						}
+					}
+
+					.#{$prefijo}view-detail{
+						&:hover{
+							border-color: #333;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/** Resize: 991 **/
+@media screen and (min-width: 991px){
+	.#{$prefijo}wrap-result,
+	##{$prefijo}wrap-result{
+		&.#{$prefijo}view-list{
+			
+			/*Header List*/
+			.#{$prefijo}head-list,
+			##{$prefijo}head-list{
+	      li{
+	      	&.#{$prefijo}type,
+	        &.#{$prefijo}pr,
+	        &.#{$prefijo}living-size{
+	        	display: flex;
+	        }
+
+	        &.#{$prefijo}unit,
+	        &.#{$prefijo}year{
+						max-width: 200px;
+					}
+
+	        &.#{$prefijo}living-size{
+	        	max-width: 150px;
+	        }
+	      }
+			}
+
+			/*List*/
+			.#{$prefijo}result-search,
+			##{$prefijo}result-search{
+				>li{
+					.#{$prefijo}features{
+						li{
+							&.#{$prefijo}pr,
+							&.#{$prefijo}living-size{
+								display: flex;
+							}
+
+							&.#{$prefijo}type{
+								display: flex;
+								max-width: 200px;
+							}
+
+							&.#{$prefijo}unit,
+							&.#{$prefijo}year{
+								max-width: 200px;
+							}
+
+							&.#{$prefijo}pr{
+								&:before{
+									content: "";
+									width: 0;
+									height: 0;
+									margin-right: .3rem;
+									border-left: 4px solid transparent;
+									border-right: 4px solid transparent;
+								}
+								&.#{$prefijo}down{
+									color: #C61414;
+									&:before{
+										border-top: 6px solid #C61414;
+									}
+								}
+
+								&.#{$prefijo}up{
+									color: #008000;
+									&:before{
+										border-bottom: 6px solid #008000;
+									}
+								}
+							}
+
+							&.#{$prefijo}living-size{
+								max-width: 150px;
+								font-size: 12/16*1rem;
+								span{
+									font-size: 14/16*1rem;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/** Resize: 1350 (Especial) **/
+@media screen and (min-width: 1350px){
+	.#{$prefijo}wrap-result,
+	##{$prefijo}wrap-result{
+		&.#{$prefijo}view-list{
+
+			/*Header List*/
+			.#{$prefijo}head-list,
+			##{$prefijo}head-list{
+				li{
+					&.#{$prefijo}price-sf,
+					&.#{$prefijo}development{
+						display: flex;
+						max-width: 200px;
+					}
+					&.#{$prefijo}city{
+						display: flex;
+					}
+				}
+			}
+
+			/*List*/
+			.#{$prefijo}result-search,
+			##{$prefijo}result-search{
+				>li{
+					.#{$prefijo}features{
+						li{
+							&.#{$prefijo}price-sf,
+	        		&.#{$prefijo}development,
+	        		&.#{$prefijo}city{
+								display: flex;
+								max-width: 200px;
+							}
+
+							&.#{$prefijo}development{
+								overflow: hidden;
+								justify-content: flex-start;
+								span{
+									display: block;
+									text-overflow: ellipsis;
+									overflow: hidden;
+									white-space: nowrap;
+								}
+							}
+
+							&.#{$prefijo}city{
+								overflow: hidden;
+								span{
+									display: block;
+									text-overflow: ellipsis;
+									overflow: hidden;
+									white-space: nowrap;
+								}
+							}
+							
+							&.#{$prefijo}price-sf{
+								font-size: 12/16*1rem;
+								span{
+									font-size: 14/16*1rem;
+									&:nth-child(2){
+										font-size: 12/16*1rem;
+										margin-left: 5/16*1rem;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

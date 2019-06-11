@@ -1,0 +1,120 @@
+/*----------------------------------------------------------------------------------*/
+/* View Grid Formato #1
+/*----------------------------------------------------------------------------------*/
+body{
+	&.clidxboost-ngrid{
+		.#{$prefijo}wrap-result,
+		##{$prefijo}wrap-result{
+
+			&.#{$prefijo}full-map,
+			&.#{$prefijo}view-grid{
+
+				/*Grid*/
+				.#{$prefijo}result-search,
+				##{$prefijo}result-search{
+					>li{
+						background-color: #FFF;
+						display: flex;
+						flex-direction: column;
+						align-items: flex-start;
+						.#{$prefijo}features{
+							position: relative;
+							order: 2;
+							padding-bottom: 10/16*1rem;
+							padding-top: 10/16*1rem;
+						}
+						h2{
+							position: relative;
+							order: 3;
+							bottom: 5/16*1rem;
+							margin-bottom: 10/16*1rem;
+							color: #333;
+							text-shadow: none;
+							span{
+								span{
+									display: block;
+									margin: 0;
+								}
+							}
+						}
+
+						.#{$prefijo}wrap-slider{
+							>ul{
+								&:before{
+									display: none;
+								}
+							}
+							.clidxboost-btn-check {
+								top: auto;
+								margin-top: 10/16*1rem;
+								/*HEART*/
+								&.clidxboost-icon-heart{
+									span{
+										&:before{
+											opacity: 1;
+											background-position: 0 -66px;
+										}
+										&.#{$prefijo}active{
+											&:before{
+												background-position: 0 0;
+											}
+										}
+									}
+								}
+								/*STAR*/
+								&.clidxboost-icon-star{
+									span{
+										&:before{
+											opacity: 1;
+											background-position: 0 -168px;
+										}
+										&.#{$prefijo}active{
+											&:before{
+												background-position: 0 -100px;
+											}
+										}
+									}
+								}
+								/*SQUARE*/
+								&.clidxboost-icon-square{
+									span{
+										&:before{
+											opacity: 1;
+											background-position: 0 -264px;
+										}
+										&.#{$prefijo}active{
+											&:before{
+												background-position: 0 -201px;
+											}
+										}
+									}				
+								}
+							}
+						}
+
+						.#{$prefijo}features{
+							li{
+								&.#{$prefijo}price,
+								&.#{$prefijo}beds,
+								&.#{$prefijo}baths,
+								&.#{$prefijo}living-size{
+									text-shadow: none;
+									color: #333;
+								}
+								&.#{$prefijo}beds,
+								&.#{$prefijo}baths,
+								&.#{$prefijo}living-size{
+									&:after{
+										background-color: #333;
+										margin-top: -1px;
+									}
+								}
+							}
+						}
+					}
+				}
+
+			}
+		}
+	}
+}

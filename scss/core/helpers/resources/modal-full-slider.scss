@@ -1,0 +1,196 @@
+/*----------------------------------------------------------------------------------*/
+/* Modals Full Slider
+/*----------------------------------------------------------------------------------*/
+.#{$prefijo}content-modal-full-slider{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	max-height: 100vh;
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 4;
+}
+
+.#{$prefijo}modal-full-slider{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	max-height: 100vh;
+
+	@media screen and (min-width: 768px){
+		padding: 1rem;
+	}
+	
+	.#{$prefijo}wrapper-img{
+		position: relative;
+		line-height: 0;
+		&.#{$prefijo}loading{
+			background-color: #FFF;
+			&:before{
+				content: "";
+				background-color: rgba(255,255,255,0.5);
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+
+			&:after{
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				margin: auto;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				border: 10px solid #ccc;
+				border-top-color: #333;
+				border-width: 5px;
+				animation: spin 1s infinite linear;
+				z-index: 2;
+			}
+
+			img{
+				opacity: 0;
+			}
+		}
+	}
+
+	/*Imagen*/
+	img{
+		width: 100%;
+		object-fit: cover;
+		max-height: 90vh;
+		transition: opacity .6s;
+		opacity: 1; 
+	}
+	
+	/*Boton cerrar modal*/
+	.#{$prefijo}actions-buttons{
+		position: relative;
+		width: 100%;
+	}
+
+	.#{$prefijo}close-modal{
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		right: 10/16*1rem;
+		top: 10/16*1rem;
+		button{
+			position: relative;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.75);
+			span{
+				display: block;
+				width: 100%;
+				height: 100%;
+				text-indent: -999999px;
+				color: #FFF;
+				&:after{
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					content: "\e913";
+					font-family: $opensans;
+					text-indent: 0;
+					font-family: $web-icons;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+		}
+	}
+
+	/*Titulo - Descripcion */
+	h4{
+		font-size: 13/16*1rem;
+		font-family: $opensans;
+		color: #FFF;
+		width: 100%;
+		background-color: rgba(0,0,0,0.75);
+		text-align: center;
+		padding: 10/16*1rem;
+	}
+
+	/*Numeracion*/
+	.#{$prefijo}numeration{
+		position: absolute;
+		bottom: 1rem;
+		background-color: rgba(0,0,0,0.75);
+		color: #FFF;
+		font-size: 13/16*1rem;
+		padding: 5/16*1rem 10/16*1rem;
+		left: 50%;
+    transform: translateX(-50%);
+    line-height: normal;
+    border-radius: 4px;
+	}
+
+	/*Next y Prev*/
+	.#{$prefijo}prev,
+	.#{$prefijo}next{
+		position: absolute;
+		top: 50%;
+		width: 35px;
+		height: 46px;
+		background-color: rgba(0, 0, 0, 0.7);
+		margin-top: -23px;
+		z-index: 3;
+		transition: all .3s;
+		span{
+			display: flex;
+			width: 100%;
+			height: 100%;
+			align-items: center;
+			justify-content: center;
+			&:before{
+				content: "\e921";
+				font-family: "idx-icons"!important;
+				display: flex;
+				width: 12px;
+				height: 100%;
+				font-size: 18px;
+				position: absolute;
+				justify-content: center;
+				align-items: center;
+				transition: all .6s;
+				color: #FFF;
+				right: 0;
+				left: 0;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.#{$prefijo}prev{
+		left: 0;
+		span{
+			&:before{
+				transform: rotate(90deg);
+			}
+		}
+	}
+
+	.#{$prefijo}next{
+		right: 0;
+		span{
+			&:before{
+				transform: rotate(-90deg);
+			}
+		}
+	}
+}

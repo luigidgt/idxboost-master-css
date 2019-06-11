@@ -1,0 +1,70 @@
+doctype html
+html(lang='en')
+  head
+    title Email Settings | FlexIdx
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style", content="#0073AC")
+    meta(name="theme-color", content="#0073AC")
+    meta(name="msapplication-navbutton-color", content="#0073AC")
+    link(rel="stylesheet", href="../css/main.css")
+    link(rel="stylesheet", href="https://file.myfontastic.com/v6vr22zQVKSnTWTxBBpbWC/icons.css")
+  body.home.page-result
+    include ../header.jade
+
+    //AQUÍ INICIA EL HTML DE EMAIL SETTINGS
+    
+    #email-settings-content
+      h1 Email Alert Settings
+      form(action="", method="post")
+        ul.email-settings-list
+          li
+            h2 Your updates are:
+            ul
+              li.opt_content
+                input(type="radio", value="1", id="on" name="radio1")
+                label(for="on") On
+              li.opt_content
+                input(type="radio", value="2", id="off" name="radio1")
+                label(for="off") Off
+
+          li
+            h2 How often do you want your alerts?
+            ul
+              li.opt_content
+                input(type="radio", value="1", id="daily" name="radio2")
+                label(for="daily") Daily
+                  
+              li.opt_content
+                input(type="radio", value="2", id="weekly" name="radio2")
+                label(for="weekly") Weekly
+
+          li
+            h2 What would you like to be updated on?
+            ul
+              li.opt_content
+                input(type="checkbox", value="1", id="nlistings" name="checkbox")
+                label(for="nlistings") New Listings
+
+              li.opt_content
+                input(type="checkbox", value="2", id="pricechange" name="checkbox")
+                label(for="pricechange") Price Changes
+
+              li.opt_content
+                input(type="checkbox", value="3", id="statuschange" name="checkbox")
+                label(for="statuschange") Status Changes   
+        button
+          span Save Settings
+    
+    //AQUÍ TERMINA EL HTML DE EMAIL SETTINGS
+
+    include ../footer.jade
+
+    script(type="text/javascript", src="../js/jquery-3.1.1.min.js")
+    script(type="text/javascript", src="../js/plugins/perfect-scrollbar.jquery.min.js")
+    script(type="text/javascript", src="../js/plugins/jquery-ui.min.js")
+    script(type="text/javascript", src="../js/plugins/jquery.ui.touch-punch.min.js")
+    script(type="text/javascript", src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbcWAf3LnqNPxdZ5TP5resRxl3I3BPZb8&#038")
+    script(type="text/javascript", src="../js/dgt-master.min.js")
+    

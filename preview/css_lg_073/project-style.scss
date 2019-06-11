@@ -1,0 +1,253 @@
+/*-----------------------------------------------------------------------------------------------------*/
+/* LG - ESTILOS DEFINIDOS POR EL MAQUETADOR ASIGNADO: Aquí puedes generar el css para tu proyecto
+/*-----------------------------------------------------------------------------------------------------*/
+
+/*Esto es solo para la demo, no es necesario que trabajes con esto*/
+.lg-main{
+	background-color: #333;
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+	height: 100vh;
+	overflow: hidden;
+	@media screen and (min-width: 768px) {
+		border: 20px solid #FFF;
+	}
+	.lg-layer{
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		width: auto;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+/*----------------------------------------------------------------------------------*/
+/* INICIO HEADER
+/*----------------------------------------------------------------------------------*/
+#header{
+	&.header-home {
+		padding: 0;
+		@media screen and (min-width: 768px) {
+			padding: 35px 40px 10px 40px;
+		}
+		.lg-headertxt{
+			color: #FFF;
+		}
+	}
+
+	.lg-btn-cta{
+		background: linear-gradient(#394081, #1A2054);
+		font-weight: 600;
+		border-radius: 20px;
+		border: 0;
+		overflow: hidden;
+		span{
+			padding: 0 20px;
+			position: relative;
+			z-index: 2;
+			&:before{
+				content: "";
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(#1A2054, #394081);
+				opacity: 0;
+				transition: opacity .3s;
+			}
+		}
+
+		&:hover{
+			color: #FFF;
+			span{
+				&:before{
+					opacity: 1;
+				}
+			}
+		}
+	}
+	
+	.rm-mxflag{
+		width: 30px;
+		height: 18px;
+		background-color: #fff;
+		background-image: url(../images/mexico-bandera.jpg);
+		background-size: 28px 16px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		position: absolute;
+		right: 49px;
+		top: 61px;
+	
+		@media screen and (min-width: 1024px) {
+			position: relative;
+			right: auto;
+			margin-right: 15px;
+			margin-top: 10px;
+			top: 0;
+		}
+		span{
+			display: none;
+		}
+	}
+}
+
+.fixed-active{
+	#header {
+		&.header-home {
+			height: auto;
+		  background-color: #1A2054;
+
+		  @media screen and (min-width: 768px) {
+				padding: 10px 40px;
+			}
+
+			.lg-btn-cta{
+				background: linear-gradient(#ffffff, #d8d8d8);
+				color: #394081;
+				span{
+					&:before{
+						background: linear-gradient(#d8d8d8, #ffffff);
+					}
+				}
+			}
+		}
+	}
+}
+
+#header{
+	.wrap-menu{
+		.gwr{
+			.menu-responsive{
+				background-color: rgba(31, 38, 92, 0.9);
+			}
+		}
+	}
+	.wrap-options {
+	  border-bottom: 0;
+	}
+}
+
+.cta-container{
+	background: linear-gradient(#394081, #1A2054);
+}
+
+#flex-bubble-search {
+  padding: 0;
+  background-color: transparent !important;
+	.content-flex-bubble-search{
+		.flex-link {
+  		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  	}
+  }
+}
+
+@media (max-width: 640px){
+	.active-search-modal #flex-bubble-search .flex-link {
+	  text-shadow: none;
+	}
+}
+
+@import 'project/css/styles.scss';
+
+.rm-cfwrapper{
+	.form-item{
+		&:nth-child(6){
+			display: none !important;
+		}
+
+		.medium {
+		  border-radius: 0 !important;
+		}
+
+		.clidxboost-btn-link{
+			background: linear-gradient(#394081, #1A2054);
+			font-weight: 600;
+			border-radius: 20px;
+			border: 0;
+			overflow: hidden;
+			height: 45px;
+			span{
+				padding: 0 20px;
+				position: relative;
+				z-index: 2;
+				background: transparent;
+				border: 0;
+				&:before{
+					content: "";
+					position: absolute;
+					z-index: -1;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background: linear-gradient(#1A2054, #394081);
+					opacity: 0;
+					transition: opacity .3s;
+				}
+			}
+
+			&:hover{
+				color: #FFF !important;
+				span{
+					color: #FFF !important;
+					&:before{
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
+
+#next-step {
+  background-color: transparent;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 4;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+	&:before {
+	  content: "\e921";
+	  font-family: "idx-icons"!important;
+	  display: inline-block;
+	  font-size: 30px;
+	  color: #FFF;
+	  margin: 0 auto;
+	}
+}
+
+.floating {
+    animation-name: floating;
+    -webkit-animation-name: floating;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.flex-wrap-contact{
+	height: auto !important;
+	.flex-wrap-company{
+		padding: 40px 0 !important;
+		margin: 0 auto !important;
+	}
+}
+
+@media (max-width: 989px){
+	.lg-theme .ib-filter-container.ib-filter-container-inscroll {
+	  top: 111px !important;
+	}
+}

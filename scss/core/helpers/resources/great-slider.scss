@@ -1,0 +1,399 @@
+/*----------------------------------------------------------------------------------*/
+/* Great slider
+/*----------------------------------------------------------------------------------*/
+.#{$prefijo}gs-none {
+	display: none !important;
+}
+
+.#{$prefijo}gs-container-slider {
+	position: relative;
+
+	&.#{$prefijo}gs-infs {
+		width: 100% !important; 
+		height: 100% !important;
+		max-width: 100% !important;
+		max-height: 100% !important;
+		.#{$prefijo}gs-style-prev, 
+		.#{$prefijo}gs-style-next, 
+		.#{$prefijo}gs-fs {
+			opacity: .8;
+		}
+
+		.#{$prefijo}gs-wrapper-items {
+			height: 100% !important;
+		}
+	}
+
+	/*&.#{$prefijo}gs-resize {
+		position: relative;
+
+		&:after, &:before {
+			content: "";
+			position: absolute;
+		}
+
+		&:before {
+			z-index: 5;
+		}
+
+		&:after {
+			z-index: 6;
+		}
+	}
+
+	&.#{$prefijo}gs-resized {
+		&:before, &:after {
+			opacity:0;
+		}
+	}*/
+}
+
+.#{$prefijo}gs-container-items {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	&.#{$prefijo}gs-mouse-enter {
+		cursor:grab;
+
+		&.#{$prefijo}gs-mouse-down {
+			cursor: grabbing;
+		}
+	}
+}
+
+.#{$prefijo}gs-wrapper-items {
+	/*overflow: hidden;*/
+	width: 100%;
+	height: 100%;
+
+	&.#{$prefijo}gs-transition-fade {
+		position: relative;
+
+		.#{$prefijo}gs-item-slider {
+			position: absolute;
+			top:0;
+			left:0;
+			z-index:0;
+			width: 100%;
+			height: 100%;
+			opacity:0;
+
+			&.#{$prefijo}gs-item-active {
+				z-index: 1;
+				opacity: 1;
+			}
+		}
+	}
+
+	&.#{$prefijo}gs-transition-swipe {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+}
+
+.#{$prefijo}gs-item-slider {
+	position: relative;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+
+	&.#{$prefijo}gs-item-loaded {
+		&:before, &:after {
+			opacity: 0;
+		}
+	}
+}
+
+//.#{$prefijo}gs-resize,
+.#{$prefijo}gs-item-loading {
+		
+	&:before, &:after {
+		content:"";
+		position: absolute;
+		display:block;
+		transition: all .3s linear;
+	}
+
+	&:before {
+		top:0;
+		left:0;
+		z-index:2;
+		width: 100%;
+		height: 100%;
+		transition: all .3s linear;
+		background-color: #F6F6F6;
+		opacity: .8;
+	}
+
+	&:after {
+		top:50%;
+		left:50%;
+		z-index:2;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		border: 5px solid #f3f3f3;
+		border-top: 5px solid #555;
+		animation: spin .7s linear infinite;
+	}
+
+	@keyframes spin {
+		0% { transform: translate(-50%, -50%) rotate(0deg); }
+		100% { transform: translate(-50%, -50%) rotate(360deg); }
+	}
+}
+
+
+.#{$prefijo}gs-wrapper-content {
+	img, video, iframe {
+		max-width: 100%;
+	}
+
+	* {
+		-webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select:none;
+	}
+}
+
+.#{$prefijo}gs-wrapper-arrows {
+	z-index:4;
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	left:0;
+	top:50%;
+	transform: translateY(-50%);
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&.#{$prefijo}gs-style-arrow {
+		.#{$prefijo}gs-prev-arrow, 
+		.#{$prefijo}gs-next-arrow {
+			background-color: #000;
+			opacity: .45;
+			overflow: hidden;
+			transition: margin .1s linear, opacity .2s linear;
+			position: relative;
+
+			&:before {
+				content: "";
+				position: absolute;
+				top:0;
+				left:0;
+				right:0;
+				bottom: 0;
+				margin: auto;
+				background-image: url('../images/arrow.png');
+				background-repeat: no-repeat;
+				background-position: center center;
+				width: 16px;
+				height: 25px;
+				transition: all .1s linear;
+			}
+
+			&:hover {
+				opacity: .8;
+				cursor:pointer;
+			}
+
+			&:active {
+				opacity: 1;
+			}
+		}
+
+		.#{$prefijo}gs-prev-arrow {
+			&:before {
+				transform: rotateY(180deg);
+			}
+		}
+	}
+}
+
+.#{$prefijo}gs-prev-arrow, 
+.#{$prefijo}gs-next-arrow {
+	height: 60px;
+	width: 45px;
+}
+
+.#{$prefijo}gs-style-bullets {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index:4;
+	max-width: 100%;
+	
+	padding: 10px 15px;
+	background-color: rgba(#000, .5);
+	border-radius: 10px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+
+	.#{$prefijo}gs-bullet {
+		border-radius: 50%;
+		width: 20px;
+		height: 20px;
+		background-color: #d2d2d2;
+		margin-right: 10px;
+		opactiy: .5;
+		transition: all .3s linear;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:hover {
+			cursor:pointer;
+			opacity: .9;
+			background-color: #333;
+		}
+
+		&:active {
+			opacify: 1;
+		}
+
+		&.#{$prefijo}gs-bullet-active {
+			opacity: .8;
+			background-color: #fff;
+
+			&:hover {
+				background-color: #fff;
+			}
+		}
+	}
+}
+
+.#{$prefijo}gs-fs {
+	display:block;
+	width: 40px;
+	height: 40px;
+	background-color: #000;
+	position: absolute;
+	z-index: 2;
+	top:15px;
+	right: 15px;
+	opacity: .45;
+	transition: all .3s linear;
+	overflow: hidden;
+	text-indent: -200px;
+	border-radius: 1px;
+
+	&:before, &:after {
+		content: "";
+		display:block;
+		background-image: url('../images/arrow.png');
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		width: 12px;
+		height: 19px;
+		position: absolute;
+		transition: all .1s linear;
+	}
+
+	&:before {
+		bottom:3px;
+		left:6px;
+		transform: rotate(135deg);
+	}
+
+	&:after {
+		top: 3px;
+		right: 6px;
+		transform: rotate(-45deg);
+	}
+
+	
+	&:hover {
+		cursor: pointer;
+		opacity: 1;
+
+		&:before {
+			bottom:2px;
+			left:5px;
+		}
+
+		&:after {
+			top: 2px;
+			right: 5px;
+		}
+	}
+
+	&.#{$prefijo}gs-infs {
+
+		&:before {
+			bottom:5px;
+			left:9px;
+			transform: rotate(-48deg);
+		}
+
+		&:after {
+			top: 5px;
+			right: 9px;
+			transform: rotate(135deg);
+		}
+	}
+}
+
+.gs-fs{
+	overflow: hidden;
+	height: 0;
+	width: 0;
+}
+
+.gs-infs{
+	.gs-wrapper-content{
+		img{
+		  width: auto !important;
+		  height: auto !important;
+		}
+	}
+}
+
+.mg-neighborhoods{
+	.gs-container-navs{
+		.gs-wrapper-arrows{
+			.gs-prev-arrow,
+			.gs-next-arrow{
+				height: 46px;
+	    	width: 34px;
+	    	overflow: hidden;
+	    	background-color: rgba(0, 0, 0, 0.7);
+				position: relative;
+				cursor:pointer;
+				&:before {
+					content: "\e921";
+					font-family: "idx-icons"!important;
+					display: inline-block;
+					font-size: 18px;
+					color: #FFF;
+					margin: 0 auto;
+					display: flex;
+					width: 100%;
+					height: 100%;
+					align-items: center;
+					justify-content: center;
+					transform: rotate(90deg);
+				}
+
+				&:hover,
+				&:active{
+					background-color: rgba(0, 0, 0, 0.9);
+				}
+			}
+
+			.gs-next-arrow {
+				&:before {
+					transform: rotate(-90deg);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,111 @@
+/*----------------------------------------------------------------------------------*/
+/* TERMS AND CONDITIONS
+/*----------------------------------------------------------------------------------*/
+#clidxboost-terms-policy{
+  position: relative;
+  padding: 2rem auto;
+
+  .clidxboost-terms-tab-nav{
+    display: flex;
+    li{
+      margin-right: 10px;
+    }
+  }
+
+  a{
+    color: #0072AC; 
+  }
+
+  .clidxboost-tp-title{
+    font-size: 26/16*1rem;
+    font-weight: 600;
+    font-family: $opensans;
+    margin: 1rem 0 2rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    &:after{
+      content: "";
+      width: 100px;
+      height: 3px;
+      display: block;
+      margin: 1rem auto;
+      background-color: $colorweb;
+    }
+    @media screen and (min-width: 768px){
+      font-size: 32/16*1rem;
+    }
+  }
+
+  .h3, h4, h5{
+    font-size: 18/16*1rem;
+    font-weight: 600;
+    font-family: $opensans;
+    margin-bottom: 1rem;
+    @media screen and (min-width: 768px){
+      font-size: 22/16*1rem;
+    }
+  }
+
+  p{
+    font-size: 14/16*1rem;
+    line-height: 1.4;
+    font-family: $opensans;
+    margin: 1rem 0;
+    text-align: justify;
+    @media screen and (min-width: 768px){
+      line-height: 1.8;
+    }
+  }
+
+  ul, ol{
+    margin: 1rem 0;
+    li{
+      position: relative;
+      font-size: 14/16*1rem;
+      line-height: 1.4;
+      font-family: $opensans;
+      margin-bottom: 1rem;
+      text-align: justify;
+      @media screen and (min-width: 768px){
+        line-height: 1.8;
+      }
+      h2, h3, h4{
+        font-family: $opensans;
+        font-size: 1rem !important;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+      span{
+        font-weight: 600;
+      }
+    }
+  }
+
+  ul{
+    li{
+      list-style: none;
+      padding-left: 15px;
+      &:before{
+        content: "";
+        width: 6px;
+        height: 6px;
+        background-color: #333;
+        border-radius: 100%;
+        position: absolute;
+        left: 0;
+        top: 11px;
+        display: block
+      }
+    }
+  }
+
+  .clidxboost-tp-title,
+  .clidxboost-terms-tab-nav,
+  #atospp-terms,
+  #atospp-privacy{
+    margin-left: auto;
+    margin-right: auto;
+    width: 96%;
+    max-width: 1100px;
+  }
+}

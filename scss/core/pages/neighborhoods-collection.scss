@@ -1,0 +1,290 @@
+/*----------------------------------------------------------------------------------*/
+/* Neighborhoods Collection
+/*----------------------------------------------------------------------------------*/
+body{
+  &.#{$prefijo}neighborhood-collection{
+    .#{$prefijo}title-block{
+      display: none;
+    }
+    .#{$prefijo}flex-breadcrumb{
+      margin-bottom: 0;
+    }
+    .#{$prefijo}gwr.#{$prefijo}c-flex{
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+    ##{$prefijo}flex-default-theme{
+      padding-bottom: 0;
+    }
+  }
+}
+
+##{$prefijo}wrap-neighborhood-collection{
+  position: relative;
+  margin: 0 auto;
+  @media screen and (min-width: 1200px){
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .#{$prefijo}wrap-neighborhood-section{
+    padding: 0 1rem;
+    ##{$prefijo}wrap-neighborhood-title{
+      font-family: $opensans;
+      font-weight: 600;
+      font-size: 18/16*1rem;
+      margin: 1rem 0;
+      border-bottom: 1px solid $gris-lineas;
+      padding-bottom: 1rem;
+      text-align: left;
+    }
+  }
+
+  ##{$prefijo}wrap-map{
+    display: none;
+  }
+  
+  .wrap-result,
+  #wrap-result{
+    &.view-map{
+      #map-actions{
+        display: none !important;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px){
+    display: flex;
+    flex-direction: row-reverse;
+    .#{$prefijo}wrap-neighborhood-section{
+      width: 50%;
+      height: calc(100% - 102px);
+      overflow-y: auto;
+      /*direction:rtl;*/
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $colorweb;
+      }
+      &::-webkit-scrollbar-track {
+        border: 0px solid black;
+        background-color: rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    ##{$prefijo}wrap-map{
+      width: 50%;
+      background-color: #333;
+      height: 100%;
+      min-height: 450px;
+      position: relative;
+      display: block;
+      ##{$prefijo}code-map{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
+.#{$prefijo}wrap-neighborhood-list{
+  position: relative;
+  margin: 0 -10px;
+  padding-bottom: 40px;
+  &:after{
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+  .#{$prefijo}wrap-neighborhood-item{
+    padding: 0 10px;
+    position: relative;
+    margin-bottom: 1rem;
+    width: 100%;
+
+    @media screen and (min-width: 640px){
+      width: 50%;
+      float: left;
+    }
+
+    @media screen and (min-width: 991px){
+      width: 33.33%;
+    }
+
+    @media screen and (min-width: 1200px){
+      width: 50%;
+    }
+
+    @media screen and (min-width: 1600px){
+      width: 33.33%;
+    }
+
+    .#{$prefijo}wrap-neighborhood-description{
+      position: relative;
+      transition: border-color .3s;
+      border: 1px solid $gris-lineas;
+      &:hover{
+        border-color: #333;
+      }
+
+      h2{
+        text-align: center;
+        font-size: 14/16*1rem;
+        font-weight: 600;
+        font-family: $opensans;
+        padding: 1rem;
+      }
+    }
+
+    .#{$prefijo}wrap-neighborhood-image{
+      position: relative;
+      &:after{
+        content: "";
+        display: block;
+        padding-bottom: 60%;
+      }
+
+      &:before{
+        /*content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 10px solid #ccc;
+        border-top-color: #333;
+        border-width: 5px;
+        animation: spin 1s infinite linear;
+        z-index: 1;*/
+
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 10px solid #ccc;
+        border-top-color: #333;
+        border-width: 5px;
+        -webkit-animation: spin 1s infinite linear;
+        animation: spin 1s infinite linear;
+        z-index: 2;
+        display: block;
+      }
+
+      &.cm-background-img{
+        background-size: cover;
+        background-position: center center;
+      }
+
+      img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        transition: opacity .6s;
+        opacity: 1;
+        z-index: 2;
+        &.blazy{
+          opacity: 0;
+        }
+      }
+
+      &.loaded{
+        &:before{
+          display: none;
+        }
+      }
+    }
+
+    .#{$prefijo}wrap-neighborhood-layout{
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-indent: -999999px;
+      z-index: 3;
+    }
+  }
+}
+
+// select  en mobile
+.ib-neighborhood-select {
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+  margin-bottom: 15px;
+  height: 34px;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #333;
+    z-index: 1;
+  }
+
+  @media screen and (min-width: 640px) {
+    margin-bottom: 0;
+    position: absolute;
+    top: -5px;
+    right: 1rem;
+  }
+
+  @media screen and (min-width: 1023px) {
+    display: none;
+  }
+}
+
+.ib-nlist_neighborhoods {
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+}
+
+.wrap-neighborhood-section {
+  @media screen and (min-width: 640px) and (max-width: 1023px) {
+    position: relative;
+  }
+}
+
+
+#wrap-neighborhood{
+  #neighborhood{
+    .block-description{
+      .gwr{
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+
+    .gwr{
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+  }
+}

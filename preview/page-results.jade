@@ -1,0 +1,530 @@
+doctype html
+html(lang='en')
+  head
+    title Page Results | FlexIdx
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style", content="#4b4b4b")
+    meta(name="theme-color", content="#4b4b4b")
+    meta(name="msapplication-navbutton-color", content="#4b4b4b")
+    link(rel="stylesheet", href="../css/main.css")
+    //link(rel="stylesheet", href="css/main-project.css")
+
+    //Font
+    //link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese")
+
+  body.full-map
+	
+    .wrap-preloader
+      .item-wrap-preloader
+        img(src="images/logo.png").logo-preloader
+        span.preloader-icon
+
+    //include header.jade
+    main.page-results
+
+      //span pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon
+
+      .wrap-page-idx
+        .content-filters
+          #wrap-filters.search-page-ft
+            .gwr
+              ul#filters
+                li.mini-search
+                  form(action="#")
+                    input(type='search', placeholder="Select Area or Enter City, Zip, Condo Name")#autocomplete-ajax
+                    label.line-form
+                    #submit-ms.icon-search
+                      input(type="submit", value="Submit")
+                li.price
+                  button 
+                    span
+                      span#text-price Any Price
+                li.beds
+                  button 
+                    span
+                      span#text-beds Beds
+                li.baths
+                  button 
+                    span
+                      span#text-baths Baths
+                li.type
+                  button 
+                    span
+                      span#text-type Single Family
+                li.all
+                  button
+                    span
+                      span Advance
+                li.save
+                  strong#properties-found
+                    span 36,324
+                    | Properties
+                  button.refresh-btn
+                    span Clear
+                  button(data-modal="modal_save_search").show-modal.save-btn
+                    span Save
+              #all-filters
+                ul#mini-filters.hidden-sr
+                  li.filter-box
+                    .gwr
+                      h4.icon-arrow-select Property search
+                      .wrap-item
+                        ul.list-type-sr
+                          li: button#for-sale.active 
+                                span For sale
+                          li: button#for-rent 
+                                span For Rent
+                        input(type="search", placeholder="Select Area or Enter City, Zip, Condo Name or Keyword", id="autocomplete-ajax-min")
+                        .icon-search#submit-ms-min
+                          input(type="submit", value="Submit")
+                        label.line-form
+                  li.cities
+                    .gwr
+                      .wrap-item
+                        #cities-list
+                          ul
+                            li(data-slug='Aventura|city') Aventura
+                            li(data-slug='Bal Harbour|city').active Bal Harbour
+                            li(data-slug='Bay Harbor Islands|city') Bay Harbor Islands
+                            li(data-slug='Biscayne Park|city') Biscayne Park
+                            li(data-slug='Brickell|city') Brickell
+                            li(data-slug='Brickell Key|city') Brickell Key
+                            li(data-slug='Coconut Grove|city') Coconut Grove
+                            li(data-slug='Coral Gables|city') Coral Gables
+                            li(data-slug='Cutler Bay|city') Cutler Bay
+                            li(data-slug='Doral|city') Doral
+                            li(data-slug='Eastern Shores|city') Eastern Shores
+                            li(data-slug='El Portal|city') El Portal
+                            li(data-slug='Fisher Island|city') Fisher Island
+                            li(data-slug='Florida City|city') Florida City
+                            li(data-slug='Fort Lauderdale|city') Fort Lauderdale
+                            li(data-slug='Golden Beach|city') Golden Beach
+                            li(data-slug='Goulds|city') Goulds
+                            li(data-slug='Hialeah Gardens|city') Hialeah Gardens
+                            li(data-slug='Hollywood|city') Hollywood
+                            li(data-slug='Homestead|city') Homestead
+                            li(data-slug='Indian Creek|city') Indian Creek
+                            li(data-slug='Kendall|city') Kendall
+                            li(data-slug='Key Biscayne|city') Key Biscayne
+                            li(data-slug='Medley|city') Medley
+                            li(data-slug='Miami|city') Miami
+                            li(data-slug='Miami Beach|city') Miami Beach
+                            li(data-slug='Miami Gardens|city') Miami Gardens
+                            li(data-slug='Miami Lakes|city') Miami Lakes
+                            li(data-slug='Miami Shores|city') Miami Shores
+                            li(data-slug='Miami Springs|city') Miami Springs
+                            li(data-slug='North Bay Village|city') North Bay Village
+                            li(data-slug='North Miami|city') North Miami
+                            li(data-slug='North Miami Beach|city') North Miami Beach
+                            li(data-slug='Opa-Locka|city') Opa-Locka
+                            li(data-slug='Palmetto Bay|city') Palmetto Bay
+                            li(data-slug='Pembroke Pines|city') Pembroke Pines
+                            li(data-slug='Pinecrest|city') Pinecrest
+                            li(data-slug='South Miami|city') South Miami
+                            li(data-slug='Sunny Isles Beach|city') Sunny Isles Beach
+                            li(data-slug='Surfside|city') Surfside
+                            li(data-slug='Sweetwater|city') Sweetwater
+                            li(data-slug='Virginia Gardens|city') Virginia Gardens
+                            li(data-slug='West Miami|city') West Miami
+                  li.price
+                    .gwr
+                      h4.icon-arrow-select Price Range
+                      .wrap-item          
+                        .wrap-inputs
+                          input(id="price_from", type='text', name='', value="$0")
+                          span to
+                          input(id="price_to", type='text', name='', value="$50,000,000")
+                        .wrap-range
+                          #range-price.range-slide
+                        span.direct-results 
+                          label 4,109 
+                          |Properties
+                  li.baths
+                    .gwr
+                      h4.icon-arrow-select Bathrooms
+                      .wrap-item
+                        .wrap-range
+                          #range-baths.range-slide
+                        ul.markers-range
+                          each bath, a in ['0', '', '1', '', '2', '', '3', '', '4', '', '5','','+']
+                            li #{bath}
+                        span.direct-results 
+                          label 4,109 
+                          |Properties
+                  li.beds
+                    .gwr
+                      h4.icon-arrow-select Bedrooms
+                      .wrap-item
+                        .wrap-range
+                          #range-beds.range-slide
+                        ul.markers-range
+                          each beds, e in ['Studio', '1', '2', '3', '4', '5', '+']
+                            li #{beds}
+                        span.direct-results 
+                          label 4,109 
+                          |Properties  
+                  li.type
+                    .gwr
+                      h4.icon-arrow-select Property type
+                      .wrap-item
+                        .wrap-checks
+                          ul
+                            li
+                              input(type='checkbox', value='', id="first")
+                              label(for="first") Single Family Home
+                            li
+                              input(type='checkbox', value='', id="second")
+                              label(for="second") Condo / Townhome
+                            li
+                              input(type='checkbox', value='', id="third")
+                              label(for="third") Vacant Land
+                  li.living
+                    .gwr
+                      h4.icon-arrow-select Living size
+                      .wrap-item
+                        .wrap-inputs
+                          input(id="living_from", type='text', name='', value="0 SF")
+                          span to
+                          input(id="living_to", type='text', name='', value="9,000 SF")
+                        .wrap-range
+                          #range-living.range-slide
+                  li.year
+                    .gwr
+                      h4.icon-arrow-select Year Built
+                      .wrap-item
+                        .wrap-inputs
+                          input( id="year_from", type='text', name='', value="1961")
+                          span to
+                          input( id="year_to", type='text', name='', value="2021")
+                        .wrap-range
+                          #range-year.range-slide
+                  li.waterfront
+                    .gwr
+                      h4.icon-arrow-select Waterfront description
+                      .wrap-item
+                        .wrap-select.icon-arrow-select
+                          select
+                            each waterfront , w in ["Any", "Bay Front", "Canal", "Fixed Bridge", "Intracoastal", "Lake front", "Ocean acces", "Ocean Front", "Point lot", "River front"]
+                              option(value='') #{waterfront}
+                  li.parking
+                    .gwr
+                      h4.icon-arrow-select Parking spaces
+                      .wrap-item
+                        .wrap-select.icon-arrow-select
+                          select
+                            option(value='0') Any
+                            - for(p = 1; p < 4; p++)
+                              option(value='#{p}') #{p}
+                            option(value='+') 4+
+                  li.land
+                    .gwr
+                      h4.icon-arrow-select Land size
+                      .wrap-item
+                        .wrap-inputs
+                          input(id="land_from", type='text', name='', value="0 SF")
+                          span to
+                          input(id="land_to", type='text', name='', value="9,000 SF")
+                        .wrap-range
+                          #range-land.range-slide
+                  li.features
+                    .gwr
+                      h4.icon-arrow-select 
+                        label Features
+                      .wrap-item
+                        .wrap-checks
+                          ul
+                            li
+                              input(type='checkbox', value='', id="check1")
+                              label(for="check1") Waterfront
+                            li
+                              input(type='checkbox', value='', id="check2")
+                              label(for="check2") Ocean Acces
+                            li
+                              input(type='checkbox', value='', id="check3")
+                              label(for="check3") Ocean Views
+                            li
+                              input(type='checkbox', value='', id="check4")
+                              label(for="check4") Tennis Courts
+                            li
+                              input(type='checkbox', value='', id="check5")
+                              label(for="check5") Swimming Poll
+                            li
+                              input(type='checkbox', value='', id="check6")
+                              label(for="check6") Golf Course
+                            
+                            //li
+                              input(type='checkbox', value='', id="check7")
+                              label(for="check7") Guest House
+                            //li
+                              input(type='checkbox', value='', id="check8")
+                              label(for="check8") Boat Dock
+                            //li
+                              input(type='checkbox', value='', id="check9")
+                              label(for="check9") Covered Parking
+                            //li
+                              input(type='checkbox', value='', id="check10")
+                              label(for="check10") Bated Community
+                            //li
+                              input(type='checkbox', value='', id="check11")
+                              label(for="check11") Bated Lorem
+                            //li
+                              input(type='checkbox', value='', id="check12")
+                              label(for="check12") Ipsum Community
+                  li.action-filter
+                    button#apply-filters-min Matching 
+                      span 29K 
+                      |Listings
+
+                button#apply-filters: span Apply Filters
+        #wrap-subfilters.search-page-ft
+          .gwr
+            span#title-subfilters
+              span Villa, Condo, Twnhouse in Fl from $100,000 to $1,500,000
+            ul#sub-filters
+              li#link-favorites
+                a(href="#", title="Save Favorites", rel="nofollow")
+                  span
+                    span 999999
+                    | Favorites
+              li#filter-by
+                span.filter-text Beds High to Low
+                select
+                  option(value="price-desc") Highest Price
+                  option(value="price-asc") Lowest Price
+                  option(value="bed-desc") Beds High to Low
+                  option(value="bed-asc") Beds Low to High
+                  option(value="size-desc") Size High to Low
+                  option(value="size-asc") Size Low  to High 
+                  option(value="year-newest") Year Newest
+                  option(value="year-oldest") Year Oldest
+                  option(value="newest-listed") Newest Listed
+                  option(value="oldest-listed") Oldest Listed
+                  option(value="#", selected="selected") Newest First
+              li.grid#filter-views
+                select
+                  option(value="grid", selected="selected") Grid
+                  option(value="list") List
+                  option(value="map") Map
+                ul
+                  li.grid.active Grid
+                  li.list List
+                  li.map Map
+                  
+            span#info-subfilters Showing 1 to 24 of 15,201 Properties.
+
+        section#wrap-result.view-grid
+          //h1.title Search results
+          .gwr
+            #wrap-list-result
+              ul#head-list
+                li.address Address
+                li.price Asking Price
+                li.pr % / $
+                li.beds Beds
+                li.baths Baths
+                li.living-size Living Size
+                li.price-sf Price / SF 
+                li.development Development / Subdivision
+              ul#result-search.slider-generator
+                - for(b = 0; b < 24; b++)
+                    - var price = Math.floor(Math.random() * 101)
+                    li.propertie(data-id='343278191', data-mls='A10172834', data-counter='10', data-mode="idx")
+                      h2: a(href="#"): span 151012 Collins Avenue Suit
+                        span Fort Lauderdale , FL 33301
+                      h3.flex-property-new-listing: a(href="#") Condo For Sale
+                      ul.features
+                        li.address: span 151012 Collins Avenue Suit Fort Lauderdale , FL 33301
+                        li.price $#{price},000,000
+                        li.pr.up 2.05%
+                        li.beds 10  
+                          span Beds 
+                        li.baths 10.5 
+                          span Baths 
+                        li.living-size 
+                          span 20,534
+                          | Sq.Ft. 
+                          span (452 m2)
+                        li.price-sf
+                          span $7,859 
+                          | / Sq.Ft.
+                          span ($84,635 m2)
+                        li.development
+                          span Indian Beach Corp Amd 
+                      .wrap-slider
+                        ul
+                          li.flex-slider-current
+                            img(src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg", title="#", alt="#")
+                          li.flex-slider-item-hidden
+                            img(src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg", title="#", alt="#")
+                          li.flex-slider-item-hidden
+                            img(src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg", title="#", alt="#")
+                          li.flex-slider-item-hidden
+                            img(src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg", title="#", alt="#")
+                          li.flex-slider-item-hidden
+                            img(src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg", title="#", alt="#")
+
+                        button.prev: span.icon-arrow-select
+                        button.next: span.icon-arrow-select
+                        button.clidxboost-btn-check.clidxboost-icon-star: span.icon-check.active
+                      a(href="property-detail.html", rel="nofollow").view-detail Condo for sale Miami, FL 33145
+            #wrap-map
+              #code-map
+                iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28742.90968747849!2d-80.20231346071917!3d25.77506484106738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2sMiami%2C+Florida!5e0!3m2!1ses!2s!4v1490883858310", allowfullscreen)
+              #map-actions.show-message
+                  //
+                    #message-map 
+                      span Only showing 500 homes. 
+                      | Zoom in, or use filters to narrow your search.
+                    #message-map
+                      span Only showing 500 homes. 
+                      | Zoom in, or use filters to narrow your search.
+                      a(href="javascript:void(0)")#close-drag Close
+                      a(href="javascript:void(0)")#apply-drag Apply
+                  .content-map-btn-actions
+                    button.open-map Close
+                    button.close-map.hide Open
+        
+          .gwr
+            #paginator-cnt
+              nav#nav-results
+                span#indicator Pag 1 of 467
+                a(href="#", title="First Page", rel="nofollow")#firstp.ad.visible
+                  span.icon-arrow-select
+                  span.icon-arrow-select
+                  span First page
+                a(href="#", title="Prev Page", rel="nofollow")#prevn.arrow.icon-arrow-select.prevn.visible
+                  span Previus page
+                ul#principal-nav
+                  li: a(href='#', rel="nofollow") 1
+                  li: a(href='#', rel="nofollow") 2
+                  li.active: a(href='#', rel="nofollow") 3
+                  li: a(href='#', rel="nofollow") 4
+                  li: a(href='#', rel="nofollow") 5
+                  li: a(href='#', rel="nofollow") 6
+                  li: a(href='#', rel="nofollow") 7
+                a(href="#", title="Prev Page", rel="nofollow")#nextn.arrow.icon-arrow-select.nextn.visible
+                  span Next page
+                a(href="#", title="First Page", rel="nofollow")#lastp.ad.visible
+                  span.icon-arrow-select
+                  span.icon-arrow-select
+                  span Last page
+        .content-rsp-btn
+          button(data-modal="modal_save_search").show-modal#save-button-responsive
+            span Save search
+          button.refresh-btn#refresh-button-responsive
+            span Clear
+
+    
+    //Modal register
+    //.overlay_modal#modal_login.active_modal
+      .modal_cm
+        button.close.close-modal(data-id="modal_login") Close
+          span 
+        .content_md
+          .body_md
+            .confirm-message
+              span.confirmation-icon
+              p Your changes have been saved successfully
+                
+
+      .overlay_modal_closer(data-id="modal_schedule")
+
+    .overlay_modal#modal_login.active_modal
+      .modal_cm
+        button.close.close-modal(data-id="modal_login") Close
+          span 
+        .content_md
+          .heder_md
+            h2 Want to Compare Homes?
+          
+          .body_md
+            
+            //ul.contact-opt
+              li: a(href="tel:8558935390") (855) 893-5390
+              li: a(href="mailto:contact2@idxboost.com").cnt-opt-email contact2@idxboost.com
+
+            ul.social_login
+              li: a.ico-google.flex-social-login-gplus(href="#")#gSignIn Continue with Google+
+              li: a.ico-facebook.flex-social-login-fb(href="#") Continue with Facebook
+
+            .line_or: span or
+            
+            ul.header-tab
+              li: a.active(href="javascript:void(0)", data-tab="tabLogin") Sign in
+              li: a(href="javascript:void(0)", data-tab="tabRegister") Register
+              li: a(href="javascript:void(0)", data-tab="tabReset") Reset Password
+            
+            .item_tab.active#tabLogin
+              .form_content
+                form#formLogin(method="post")
+                  input(type="hidden", name="logon_type", value="")
+                  input(name="action", type="hidden", value="")
+                  ul.form_md#cntLoginForm
+                    li.form_input: input(placeholder="Enter email", type="email")
+                    li.form_input 
+                      input(placeholder="Enter password", type="password")
+                      span.showpassord(action="hide")
+                  button.btn_form#clidxboost-btn-user-login Sign in
+            .item_tab#tabRegister
+              .form_content
+                #push-registration
+                  form#formRegister(method="post")
+                    input(type="hidden", name="logon_type", id="formRegister_logonType", value="email")
+                    input(type="hidden", name="register_password", id="formRegister_password", value="")
+                    input(type="hidden", name="action", value="flex_idx_lead_signup")
+                    ul.pr-steps-container
+                      li.pr-step.active
+                        .wrapper-input
+                          label.agile-label Email Address 
+                            span.txtgray (Must be valid)
+                          input#agilefield-9(type="email").agile-height-default
+                        button(type="button").pr-redbtn.pr-next-step Continue With Email
+                        .wrapper-login
+                          span Already signed up? 
+                          a.ib-switch-login-tab(href="#login") Log in
+                      li.pr-step.email-registration
+                        h4.pr-title Email Registration?
+                        label.agile-label Just a few more details so we can help you 
+                          span.txtgray (All fields are required)
+                        .wrapper-input
+                          label.agile-label Full Name 
+                            span.txtgray (First &amp; Last)
+                          input#agilefield-6(type="text").agile-height-default
+                        .wrapper-input
+                          label.agile-label Phone Number 
+                            span.txtgray (Used as password)
+                          input#agilefield-8(type="text").agile-height-default
+                        button(type="button").pr-redbtn.pr-registering I'm Finished
+                    span#agile-error-msg
+            .item_tab#tabReset
+              .form_content
+                form#formReset(method="post")
+                  p Enter you email address and we'll send you a link to your password
+                  ul.form_md#cntResetForm
+                    li.form_input: input#reset_email(placeholder="Enter E-mail", type="email")
+                  button.btn_form#clidxboost-btn-user-reset Send
+          
+          .footer_md.terms-md
+            p In agreement with our 
+              a(href="#" target="_blank") Terms of Use
+            
+
+      .overlay_modal_closer(data-id="modal_schedule")
+
+
+    //include footer.jade
+    script(type="text/javascript", src="../js/jquery-3.1.1.min.js")
+    script(type="text/javascript", src="../js/plugins/jquery-ui.min.js")
+    script(type="text/javascript", src="../js/plugins/jquery.ui.touch-punch.min.js")
+    script(type="text/javascript", src="../js/dgt-master_X.js")
+    script(type="text/javascript", src="../js/idx-js.js")
+
+    //
+      script(type="text/javascript", src="../js/plugins/perfect-scrollbar.jquery.min.js")
+      script(type="text/javascript", src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbcWAf3LnqNPxdZ5TP5resRxl3I3BPZb8&#038")
+      script(type="text/javascript", src="../js/dgt-master.js")
+      script(type="text/javascript", src="js/dgt-project-master.js")
+    

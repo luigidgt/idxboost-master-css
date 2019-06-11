@@ -1,0 +1,50 @@
+doctype html
+html(lang='en')
+	head
+		title Default | Flexidx
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		meta(name="apple-mobile-web-app-capable", content="yes")
+		meta(name="apple-mobile-web-app-status-bar-style", content="#4b4b4b")
+		meta(name="theme-color", content="#4b4b4b")
+		meta(name="msapplication-navbutton-color", content="#4b4b4b")
+		link(rel="stylesheet", href="../css/main.css")
+		link(rel="stylesheet", href="css_minimal/main-project.css")
+	body
+		//include header.jade
+		main#flex-default-theme
+			.gwr
+				.flex-breadcrumb
+					ol
+						li: a(href="#", title="Home") Home
+						li About Us
+
+				.idx-ng-wrap
+					.idx-wrap-grid#neighborhood-shortcode
+						- for(b = 0; b < 8; b++)
+							.idx-wrap-item-grid
+								.idx-item-grid
+									.idx-item-grid-img
+										img(class="img-slider gs-lazy" data-lazy="//idxboost.com/i/default_thumbnail.jpg").idx-sp-img
+										img(data-blazy="https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.015794&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Clabel:C%7C40.718217,-73.998284&key=AIzaSyDIJ9XX2ZvRKCJcFRrl-lRanEtFUow4piM&signature=pgcz8_2FdcdBqftd6BrlxesXTjA=").idx-item-grid-map
+									.idx-btn-content
+										h3.idx-item-title.idx-item-act: a(href="#") Aventura
+										button.idx-btn-map.idx-item-act
+											span.text-btn View map
+											span.text-btn-close Close map
+									a(href="#").idx-item-link View detail
+					
+					.idx-wrap-action
+						h3 Featured Neighborhoods
+						p The most sought areas in miami
+						a(href="#") view neighborhoods
+
+
+		include footer.jade
+		script(type="text/javascript", src="../js/jquery-3.1.1.min.js")
+		script(type="text/javascript", src="../js/plugins/jquery-ui.min.js")
+		script(type="text/javascript", src="../js/plugins/jquery.ui.touch-punch.min.js")
+		script(type="text/javascript", src="../js/dgt-master.min.js")
+		script(type="text/javascript", src="js/dgt-project-master.js")
+		script(type="text/javascript", src="js/greatslider.jquery.min.js")
+		script(type="text/javascript", src="js/greatslider-main.js")

@@ -1,0 +1,149 @@
+/*----------------------------------------------------------------------------------*/
+/* Basic Form
+/*----------------------------------------------------------------------------------*/
+
+.#{$prefijo}form-master{
+  width: 100%;
+}
+
+.#{$prefijo}form-content{
+	padding: 15/16*1rem;
+	border: 1px solid $gris-lineas;
+  margin-bottom: 1rem;
+  background-color: #FFF;
+
+	.#{$prefijo}gform_body{
+		.#{$prefijo}gform_fields{
+
+			.#{$prefijo}gfield{
+				width: 100%;
+				margin-bottom: 10/16*1rem;
+				font-family: $opensans;
+
+				&.#{$prefijo}requiredFields{
+					font-size: 10/16*1rem;
+				}
+
+				label{
+					display: none;
+				}
+
+				.#{$prefijo}medium{
+					border-radius: 4px;
+					height: 40px;
+					width: 100%;
+					border: 1px solid $gris-lineas;
+					font-family: $opensans;
+					font-size: 14/16*1rem;
+					padding: 0 1rem;
+
+					&.#{$prefijo}textarea{
+						resize: none;
+						height: 100px;
+						padding: 10/16*1rem 1rem;
+					}
+				}
+			}
+		}
+	}
+
+	.#{$prefijo}gform_footer{
+		width: 100%;
+		margin-bottom: 1rem;
+
+		.#{$prefijo}gform_button{
+			height: 45px;
+			background-color: #333;
+			border: 1px solid #333;
+			color: #FFF;
+			width: 100%;
+			text-align: center;
+			text-transform: uppercase;
+			transition: all .3s;
+			font-weight: 600;
+			font-size: 14/16*1rem;
+
+			&:hover{
+				background-color: #FFF;
+				color: #333;
+			}
+		}
+	}
+}
+
+/** Resize: 768 **/
+@media screen and (min-width: 640px){
+
+	.#{$prefijo}form-content{
+		.#{$prefijo}gform_body{
+
+			.#{$prefijo}gform_fields{
+				display: flex;
+				flex-wrap: wrap;
+				-webkit-flex-wrap: wrap;
+				justify-content: space-between;
+				.#{$prefijo}gfield{
+					width: 49%;
+
+					&.#{$prefijo}requiredFields,
+					&.#{$prefijo}comments{
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		.#{$prefijo}gform_footer{
+			text-align: left;
+
+			.#{$prefijo}gform_button{
+				width: auto;
+				padding: 0 2rem; 
+			}
+		}
+	}
+}
+
+.#{$prefijo}name-input-content{
+  display: block;
+  .#{$prefijo}item-name{
+    width: 100%;
+  }
+  @media screen and (min-width: 640px){
+    display: flex;
+    justify-content: space-between;
+    .#{$prefijo}item-name{
+      width: 48%;
+    }
+  }
+}
+
+.ibregister-tg-submit{
+	cursor: pointer;
+}
+
+.sp-box{
+	display: flex;
+	align-items: flex-start;
+	width: 100%;
+	.gender{
+		width: 150px;
+		height: 40px;
+		padding: 0 20px 0 10px;
+		border: 1px solid #E5E5E5;
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+		background-image: url(../images/select-mb.png);
+		background-repeat: no-repeat;
+		background-size: 28px 35px;
+		background-position: right;
+		margin-right: -1px;
+	}
+
+	.medium,
+	input{
+		border-radius : 0 !important;
+		border-top-right-radius: 4px !important;
+		border-bottom-right-radius: 4px !important;
+	}
+}

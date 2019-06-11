@@ -1,0 +1,181 @@
+/*----------------------------------------------------------------------------------*/
+/* Neighborhoods menu
+/*----------------------------------------------------------------------------------*/
+.clidxboost-wrap-ng{
+	height: 50px;
+	display: flex;
+	align-items: center;
+}
+
+.clidxboost-menu-ng{
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100%;
+	z-index: 999;
+	width: 0;
+	transform: translate(100%, 0%);
+	overflow: hidden;
+	transition: all .3s ease-in-out;
+	background-color: $colorweb;
+	padding-top: 45px;
+	opacity: 0;
+	overflow-y: auto;
+	height: 100vh;
+	@media screen and (min-width: 768px){
+		max-width: 450px;
+	}
+
+	&::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: #FFF;
+	}
+
+	&::-webkit-scrollbar-track {
+		border: 0px solid black;
+		background-color: rgba(255, 255, 255, 0.35);
+	}
+}
+
+.opened-menu-ng {
+	overflow: hidden;
+	.clidxboost-menu-ng {
+    opacity: 1;
+    width: 100%;
+    transform: translateX(0);
+  }
+  .r-overlay {
+    visibility: visible;
+    opacity: 0.5;
+  }
+}
+
+.clidxboost-menu-ng-title{
+	color: #FFF;
+	font-family: $opensans;
+	display: flex;
+	align-items: center;
+	height: 35px;
+	padding: 0 1rem;
+	font-size: 14/16*1rem;
+	position: relative;
+	&.active{
+		background-color: rgba(0, 0, 0, 0.5);
+		& + .clidxboost-ng-sub-menu{
+			padding: 1rem;
+			opacity: 1;
+			max-height: 1000%;
+		}
+
+		&.clidxboost-child{
+			&:before{
+				transform: rotate(-180deg);
+			}
+		} 
+	}
+
+	&.clidxboost-child{
+		padding-left: 45px;
+		&:before{
+			content: "\e921";
+			font-family: $web-icons;
+			display: flex;
+			width: 12px;
+			height: 100%;
+			font-size: 18px;
+			position: absolute;
+			justify-content: center;
+			align-items: center;
+			transition: all .6s;
+			color: #FFF;
+			left: 1rem;
+			top: 0;
+			margin: 0 auto;
+		}
+	}
+}
+
+.clidxboost-ng-sub-menu{
+	background-color: rgba(0, 0, 0, 0.3);
+	transition: all .3s;
+	opacity: 1;
+	overflow: hidden;
+	max-height: 0;
+	padding: 0 1rem;
+	border: 0;
+	li{
+		position: relative;
+		a{
+			color: #FFF;
+			font-family: $opensans;
+			display: flex;
+			align-items: center;
+			height: 35px;
+			padding: 0 1rem;
+			font-size: 14/16*1rem;
+			position: relative;
+		}
+	}
+}
+
+#clidxboost-close-menu-ng{
+	width: 35px;
+	height: 35px;
+	top: 7px;
+	right: 5px;
+	position: absolute;
+	z-index: 4;
+	background-color: transparent;
+	display: block;
+	span{
+		text-indent: -999999px;
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+		&:before,
+		&:after{
+			content: "";
+			position: absolute;
+			left: 0;
+			display: block;
+			width: 35px;
+			height: 1px;
+			background: #fff;
+			transform: rotate(45deg);
+			top: 16px;
+			text-indent: 0;
+		}
+		&:after{
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+#clidxboost-btn-ng{
+	margin-left: 1rem;
+	text-indent: -999999px;
+	overflow: hidden;
+	background-color: transparent;
+	span{
+		display: block;
+		width: 35px;
+		height: 35px;
+		position: relative;
+		&:before{
+			content: "\e93c";
+			font-family: $web-icons;
+			display: flex;
+			width: 100%;
+			height: 100%;
+			font-size: 22px;
+			align-items: center;
+			justify-content: center;
+			text-indent: 0;
+		}
+	}
+}

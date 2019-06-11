@@ -1,0 +1,52 @@
+doctype html
+html(lang='en')
+	head
+		title Blog | Flexidx
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		meta(name="apple-mobile-web-app-capable", content="yes")
+		meta(name="apple-mobile-web-app-status-bar-style", content="#4b4b4b")
+		meta(name="theme-color", content="#4b4b4b")
+		meta(name="msapplication-navbutton-color", content="#4b4b4b")
+		link(rel="stylesheet", href="css/main-project.css")
+		link(rel="stylesheet", href="https://file.myfontastic.com/v6vr22zQVKSnTWTxBBpbWC/icons.css")
+	body.blog
+		include header.jade
+		
+		main#flex-blog-theme
+			.gwr
+				.flex-breadcrumb
+					ol
+						li: a(href="#", title="Home") Home
+						li Blog
+
+			.gwr
+				.widget.search
+					h1.title Search Articles
+					form(action="#", method="get", autocomplete="off").form-search
+						input(type="search", name="search", placeholder="Search articles").input-search
+						button.icon-search(type='submit') 
+				#blog-collection
+					ul#articles-blog
+						- for(b = 0; b < 9; b++)
+							li
+								.content-item
+									img(src="../images/blogImg.jpg", title="#", alt="#").blazy
+									.content-article
+										h3 the top 5 south beach penthouses
+										p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+										time(datetime="2017-05-24 20:00")
+											span Thu 24, 2017
+									a(href='blog-detail.html', title='Read More').readmore.icon-arrowb Read more
+				#wrap-result.paginator
+					nav#nav-results
+						ul#principal-nav
+							li
+								a(href='#', rel='nofollow') 1
+							li
+								a(href='#', rel='nofollow') 2
+							li.active
+								a(href='#', rel='nofollow') 3
+								
+		include footer.jade
+		script(type="text/javascript", src="../js/jquery-3.1.1.min.js")

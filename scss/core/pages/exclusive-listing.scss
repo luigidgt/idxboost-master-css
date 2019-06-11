@@ -1,0 +1,54 @@
+/*----------------------------------------------------------------------------------*/
+/* Exclusive Listings
+/*----------------------------------------------------------------------------------*/
+##{$prefijo}flex-filters-theme{
+  ##{$prefijo}wrap-subfilters{
+    @media screen and (min-width: 768px){
+      .#{$prefijo}gwr{
+        justify-content: flex-end;
+        ##{$prefijo}info-subfilters {
+          display: block;
+          text-align: left;
+          position: absolute;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  ##{$prefijo}wrap-subfilters{
+    margin-top: 0 !important;
+    border-top: 1px solid $gris-lineas;
+    @media screen and (min-width: 768px){
+      border-top: 0;
+    }
+  }
+
+  .#{$prefijo}gwr{
+    &.#{$prefijo}c-flex{
+      margin-top: 3rem;
+      
+      .#{$prefijo}flex-block-description{
+        flex-grow: 1;
+      }
+
+      @media screen and (min-width: 991px){
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+
+        .#{$prefijo}default-img{
+          width: 35%;
+          margin-right: 2rem;
+        }
+
+        .#{$prefijo}flex-block-description{
+          width: 65%;
+          .#{$prefijo}title-block{
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}

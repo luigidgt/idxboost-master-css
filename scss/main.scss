@@ -1,0 +1,35 @@
+@import 'core/helpers/reset.scss';
+@import 'core/helpers/animations.scss';
+
+@import '../fonts/icons/style.css';
+@import 'core/plugins/jquery-ui.scss';
+
+@import 'core/variables/variables.scss';
+@import 'core/generals/general.scss';
+
+/*Se mantiene del anterior css*/
+@import 'core/generals/profile-table.scss';
+
+/** Nuevo css IdxBoost **/
+@import 'core/pages/search-results.scss';
+@import 'core/pages/property-detail.scss';
+@import 'core/pages/building-detail.scss';
+@import 'core/pages/exclusive-listing.scss';
+@import 'core/pages/default-template.scss';
+@import 'core/pages/blog.scss';
+@import 'core/pages/blog-detail.scss';
+@import 'core/pages/luxury-condo.scss';
+@import 'core/pages/condo-detail.scss';
+@import 'core/pages/404.scss';
+@import 'core/pages/agents.scss';
+@import 'core/pages/agents-detail.scss';
+@import 'core/pages/neighborhoods-collection.scss';
+@import 'core/pages/terms-and-conditions.scss';
+@import 'core/pages/amenities.scss';
+@import 'core/pages/new-condo-list.scss';
+@import 'core/generals/printer.scss';
+@import 'core/helpers/resources/buyers-sellers-rentals.scss';
+@import 'core/helpers/resources/flex-idx-search-filter.scss';
+@import 'core/helpers/resources/menu-history.scss';
+@import 'core/pages/accesibility.scss';
+@import 'core/helpers/resources/aditional-css-pages.scss';

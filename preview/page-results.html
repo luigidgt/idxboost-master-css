@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Page Results | FlexIdx</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#4b4b4b">
+    <meta name="theme-color" content="#4b4b4b">
+    <meta name="msapplication-navbutton-color" content="#4b4b4b">
+    <link rel="stylesheet" href="../css/main.css">
+    <!--link(rel="stylesheet", href="css/main-project.css")-->
+    <!--Font-->
+    <!--link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800")-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese">
+  </head>
+  <body class="full-map">
+    <div class="wrap-preloader">
+      <div class="item-wrap-preloader"><img class="logo-preloader" src="images/logo.png"><span class="preloader-icon"></span></div>
+    </div>
+    <!--include header.jade-->
+    <main class="page-results">
+      <!--span pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon pokemon-->
+      <div class="wrap-page-idx">
+        <div class="content-filters">
+          <div class="search-page-ft" id="wrap-filters">
+            <div class="gwr">
+              <ul id="filters">
+                <li class="mini-search">
+                  <form action="#">
+                    <input type="search" placeholder="Select Area or Enter City, Zip, Condo Name" id="autocomplete-ajax">
+                    <label class="line-form"></label>
+                    <div class="icon-search" id="submit-ms">
+                      <input type="submit" value="Submit">
+                    </div>
+                  </form>
+                </li>
+                <li class="price">
+                  <button> <span><span id="text-price">Any Price</span></span></button>
+                </li>
+                <li class="beds">
+                  <button> <span><span id="text-beds">Beds</span></span></button>
+                </li>
+                <li class="baths">
+                  <button> <span><span id="text-baths">Baths</span></span></button>
+                </li>
+                <li class="type">
+                  <button> <span><span id="text-type">Single Family</span></span></button>
+                </li>
+                <li class="all">
+                  <button><span><span>Advance</span></span></button>
+                </li>
+                <li class="save"><strong id="properties-found"><span>36,324</span>Properties</strong>
+                  <button class="refresh-btn"><span>Clear</span></button>
+                  <button class="show-modal save-btn" data-modal="modal_save_search"><span>Save</span></button>
+                </li>
+              </ul>
+              <div id="all-filters">
+                <ul class="hidden-sr" id="mini-filters">
+                  <li class="filter-box">
+                    <div class="gwr">
+                      <h4 class="icon-arrow-select">Property search</h4>
+                      <div class="wrap-item">
+                        <ul class="list-type-sr">
+                          <li>
+                            <button class="active" id="for-sale"> <span>For sale</span></button>
+                          </li>
+                          <li>
+                            <button id="for-rent"> <span>For Rent</span></button>
+                          </li>
+                        </ul>
+                        <input type="search" placeholder="Select Area or Enter City, Zip, Condo Name or Keyword" id="autocomplete-ajax-min">
+                        <div class="icon-search" id="submit-ms-min">
+                          <input type="submit" value="Submit">
+                        </div>
+                        <label class="line-form"></label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="cities">
+                    <div class="gwr">
+                      <div class="wrap-item">
+                        <div id="cities-list">
+                          <ul>
+                            <li data-slug="Aventura|city">Aventura</li>
+                            <li class="active" data-slug="Bal Harbour|city">Bal Harbour</li>
+                            <li data-slug="Bay Harbor Islands|city">Bay Harbor Islands</li>
+                            <li data-slug="Biscayne Park|city">Biscayne Park</li>
+                            <li data-slug="Brickell|city">Brickell</li>
+                            <li data-slug="Brickell Key|city">Brickell Key</li>
+                            <li data-slug="Coconut Grove|city">Coconut Grove</li>
+                            <li data-slug="Coral Gables|city">Coral Gables</li>
+                            <li data-slug="Cutler Bay|city">Cutler Bay</li>
+                            <li data-slug="Doral|city">Doral</li>
+                            <li data-slug="Eastern Shores|city">Eastern Shores</li>
+                            <li data-slug="El Portal|city">El Portal</li>
+                            <li data-slug="Fisher Island|city">Fisher Island</li>
+                            <li data-slug="Florida City|city">Florida City</li>
+                            <li data-slug="Fort Lauderdale|city">Fort Lauderdale</li>
+                            <li data-slug="Golden Beach|city">Golden Beach</li>
+                            <li data-slug="Goulds|city">Goulds</li>
+                            <li data-slug="Hialeah Gardens|city">Hialeah Gardens</li>
+                            <li data-slug="Hollywood|city">Hollywood</li>
+                            <li data-slug="Homestead|city">Homestead</li>
+                            <li data-slug="Indian Creek|city">Indian Creek</li>
+                            <li data-slug="Kendall|city">Kendall</li>
+                            <li data-slug="Key Biscayne|city">Key Biscayne</li>
+                            <li data-slug="Medley|city">Medley</li>
+                            <li data-slug="Miami|city">Miami</li>
+                            <li data-slug="Miami Beach|city">Miami Beach</li>
+                            <li data-slug="Miami Gardens|city">Miami Gardens</li>
+                            <li data-slug="Miami Lakes|city">Miami Lakes</li>
+                            <li data-slug="Miami Shores|city">Miami Shores</li>
+                            <li data-slug="Miami Springs|city">Miami Springs</li>
+                            <li data-slug="North Bay Village|city">North Bay Village</li>
+                            <li data-slug="North Miami|city">North Miami</li>
+                            <li data-slug="North Miami Beach|city">North Miami Beach</li>
+                            <li data-slug="Opa-Locka|city">Opa-Locka</li>
+                            <li data-slug="Palmetto Bay|city">Palmetto Bay</li>
+                            <li data-slug="Pembroke Pines|city">Pembroke Pines</li>
+                            <li data-slug="Pinecrest|city">Pinecrest</li>
+                            <li data-slug="South Miami|city">South Miami</li>
+                            <li data-slug="Sunny Isles Beach|city">Sunny Isles Beach</li>
+                            <li data-slug="Surfside|city">Surfside</li>
+                            <li data-slug="Sweetwater|city">Sweetwater</li>
+                            <li data-slug="Virginia Gardens|city">Virginia Gardens</li>
+                            <li data-slug="West Miami|city">West Miami</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="price">
+                    <div class="gwr">
+                      <h4 class="icon-arrow-select">Price Range</h4>
+                      <div class="wrap-item">         
+                        <div class="wrap-inputs">
+                          <input id="price_from" type="text" name="" value="$0"><span>to</span>
+                          <input id="price_to" type="text" name="" value="$50,000,000">
+                        </div>
+                        <div class="wrap-range">
+                          <div class="range-slide" id="range-price"></div>
+                        </div><span class="direct-results"> 
+                          <label>4,109 </label>Properties</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="baths">
+                    <div class="gwr">
+                      <h4 class="icon-arrow-select">Bathrooms</h4>
+                      <div class="wrap-item">
+                        <div class="wrap-range">
+                          <div class="range-slide" id="range-baths"></div>
+                        </div>
+                        <ul class="markers-range">
+                          <li>0</li>
+                          <li></li>
+                          <li>1</li>
+                          <li></li>
+                          <li>2</li>
+                          <li></li>
+                          <li>3</li>
+                          <li></li>
+                          <li>4</li>
+                          <li></li>
+                          <li>5</li>
+                          <li></li>
+                          <li>+</li>
+                        </ul><span class="direct-results"> 
+                          <label>4,109 </label>Properties</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="beds">
+                    <div class="gwr">
+                      <h4 class="icon-arrow-select">Bedrooms</h4>
+                      <div class="wrap-item">
+                        <div class="wrap-range">
+                          <div class="range-slide" id="range-beds"></div>
+                        </div>
+                        <ul class="markers-range">
+                          <li>Studio</li>
+                          <li>1</li>
+                          <li>2</li>
+                          <li>3</li>
+                          <li>4</li>
+                          <li>5</li>
+                          <li>+</li>
+                        </ul><span class="direct-results"> 
+                          <label>4,109 </label>Properties  </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="type">
+                    <div class="gwr">
+                      <h4 class="icon-arrow-select">Property type</h4>
+                      <div class="wrap-item">
+                        <div class="wrap-checks">
+                          <ul>
+                            <li>
+                              <input type="checkbox" value="" id="first">
+                              <label for="first">Single Family Home</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" value="" id="second">
+                              <label for="second">Condo / Townhome</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" value="" id="third">
+                              <label for="third">Vacant Land</label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="living">
+                    <div class="gwr">
+                      <h4 class="icon-arrow-select">Living size</h4>
+                      <div class="wrap-item">
+                        <div class="wrap-inputs">
+                          <input id="living_from" type="text" name="" value="0 SF"><span>to</span>
+                          <input id="living_to" type="text" name="" value="9,000 SF">
+                        </div>
+                        <div class="wrap-range">
+                          <div class="range-slide" id="range-living"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="year">
+                    <div class="gwr">
+                      <h4 class="icon-arrow-select">Year Built</h4>
+                      <div class="wrap-item">
+                        <div class="wrap-inputs">
+                          <input id="year_from" type="text" name="" value="1961"><span>to</span>
+                          <input id="year_to" type="text" name="" value="2021">
+                        </div>
+                        <div class="wrap-range">
+                          <div class="range-slide" id="range-year"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="waterfront">
+                    <div class="gwr">
+                      <h4 class="icon-arrow-select">Waterfront description</h4>
+                      <div class="wrap-item">
+                        <div class="wrap-select icon-arrow-select">
+                          <select>
+                            <option value="">Any</option>
+                            <option value="">Bay Front</option>
+                            <option value="">Canal</option>
+                            <option value="">Fixed Bridge</option>
+                            <option value="">Intracoastal</option>
+                            <option value="">Lake front</option>
+                            <option value="">Ocean acces</option>
+                            <option value="">Ocean Front</option>
+                            <option value="">Point lot</option>
+                            <option value="">River front</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="parking">
+                    <div class="gwr">
+                      <h4 class="icon-arrow-select">Parking spaces</h4>
+                      <div class="wrap-item">
+                        <div class="wrap-select icon-arrow-select">
+                          <select>
+                            <option value="0">Any</option>
+                            <option value="#{p}">1</option>
+                            <option value="#{p}">2</option>
+                            <option value="#{p}">3</option>
+                            <option value="+">4+</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="land">
+                    <div class="gwr">
+                      <h4 class="icon-arrow-select">Land size</h4>
+                      <div class="wrap-item">
+                        <div class="wrap-inputs">
+                          <input id="land_from" type="text" name="" value="0 SF"><span>to</span>
+                          <input id="land_to" type="text" name="" value="9,000 SF">
+                        </div>
+                        <div class="wrap-range">
+                          <div class="range-slide" id="range-land"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="features">
+                    <div class="gwr">
+                      <h4 class="icon-arrow-select"> 
+                        <label>Features</label>
+                      </h4>
+                      <div class="wrap-item">
+                        <div class="wrap-checks">
+                          <ul>
+                            <li>
+                              <input type="checkbox" value="" id="check1">
+                              <label for="check1">Waterfront</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" value="" id="check2">
+                              <label for="check2">Ocean Acces</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" value="" id="check3">
+                              <label for="check3">Ocean Views</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" value="" id="check4">
+                              <label for="check4">Tennis Courts</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" value="" id="check5">
+                              <label for="check5">Swimming Poll</label>
+                            </li>
+                            <li>
+                              <input type="checkbox" value="" id="check6">
+                              <label for="check6">Golf Course</label>
+                            </li>
+                            <!--li
+                            input(type='checkbox', value='', id="check7")
+                            label(for="check7") Guest House
+                            -->
+                            <!--li
+                            input(type='checkbox', value='', id="check8")
+                            label(for="check8") Boat Dock
+                            -->
+                            <!--li
+                            input(type='checkbox', value='', id="check9")
+                            label(for="check9") Covered Parking
+                            -->
+                            <!--li
+                            input(type='checkbox', value='', id="check10")
+                            label(for="check10") Bated Community
+                            -->
+                            <!--li
+                            input(type='checkbox', value='', id="check11")
+                            label(for="check11") Bated Lorem
+                            -->
+                            <!--li
+                            input(type='checkbox', value='', id="check12")
+                            label(for="check12") Ipsum Community
+                            -->
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="action-filter">
+                    <button id="apply-filters-min">Matching <span>29K </span>Listings</button>
+                  </li>
+                </ul>
+                <button id="apply-filters"><span>Apply Filters</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="search-page-ft" id="wrap-subfilters">
+          <div class="gwr"><span id="title-subfilters"><span>Villa, Condo, Twnhouse in Fl from $100,000 to $1,500,000</span></span>
+            <ul id="sub-filters">
+              <li id="link-favorites"><a href="#" title="Save Favorites" rel="nofollow"><span><span>999999</span>Favorites</span></a></li>
+              <li id="filter-by"><span class="filter-text">Beds High to Low</span>
+                <select>
+                  <option value="price-desc">Highest Price</option>
+                  <option value="price-asc">Lowest Price</option>
+                  <option value="bed-desc">Beds High to Low</option>
+                  <option value="bed-asc">Beds Low to High</option>
+                  <option value="size-desc">Size High to Low</option>
+                  <option value="size-asc">Size Low  to High </option>
+                  <option value="year-newest">Year Newest</option>
+                  <option value="year-oldest">Year Oldest</option>
+                  <option value="newest-listed">Newest Listed</option>
+                  <option value="oldest-listed">Oldest Listed</option>
+                  <option value="#" selected="selected">Newest First</option>
+                </select>
+              </li>
+              <li class="grid" id="filter-views">
+                <select>
+                  <option value="grid" selected="selected">Grid</option>
+                  <option value="list">List</option>
+                  <option value="map">Map</option>
+                </select>
+                <ul>
+                  <li class="grid active">Grid</li>
+                  <li class="list">List</li>
+                  <li class="map">Map</li>
+                </ul>
+              </li>
+            </ul><span id="info-subfilters">Showing 1 to 24 of 15,201 Properties.</span>
+          </div>
+        </div>
+        <section class="view-grid" id="wrap-result">
+          <!--h1.title Search results-->
+          <div class="gwr">
+            <div id="wrap-list-result">
+              <ul id="head-list">
+                <li class="address">Address</li>
+                <li class="price">Asking Price</li>
+                <li class="pr">% / $</li>
+                <li class="beds">Beds</li>
+                <li class="baths">Baths</li>
+                <li class="living-size">Living Size</li>
+                <li class="price-sf">Price / SF </li>
+                <li class="development">Development / Subdivision</li>
+              </ul>
+              <ul class="slider-generator" id="result-search">
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$10,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$20,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$2,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$81,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$15,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$44,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$83,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$38,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$9,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$17,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$87,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$92,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$86,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$25,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$68,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$68,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$57,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$83,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$37,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$50,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$19,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$65,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$63,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+                <li class="propertie" data-id="343278191" data-mls="A10172834" data-counter="10" data-mode="idx">
+                  <h2><a href="#"><span>151012 Collins Avenue Suit<span>Fort Lauderdale , FL 33301</span></span></a></h2>
+                  <h3 class="flex-property-new-listing"><a href="#">Condo For Sale</a></h3>
+                  <ul class="features">
+                    <li class="address"><span>151012 Collins Avenue Suit Fort Lauderdale , FL 33301</span></li>
+                    <li class="price">$23,000,000</li>
+                    <li class="pr up">2.05%</li>
+                    <li class="beds">10  <span>Beds </span></li>
+                    <li class="baths">10.5 <span>Baths </span></li>
+                    <li class="living-size"> <span>20,534</span>Sq.Ft. <span>(452 m2)</span></li>
+                    <li class="price-sf"><span>$7,859 </span>/ Sq.Ft.<span>($84,635 m2)</span></li>
+                    <li class="development"><span>Indian Beach Corp Amd </span></li>
+                  </ul>
+                  <div class="wrap-slider">
+                    <ul>
+                      <li class="flex-slider-current"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                      <li class="flex-slider-item-hidden"><img src="http://retsimages.s3.amazonaws.com/29/A10364429_1.jpg" title="#" alt="#"></li>
+                    </ul>
+                    <button class="prev"><span class="icon-arrow-select"></span></button>
+                    <button class="next"><span class="icon-arrow-select"></span></button>
+                    <button class="clidxboost-btn-check clidxboost-icon-star"><span class="icon-check active"></span></button>
+                  </div><a class="view-detail" href="property-detail.html" rel="nofollow">Condo for sale Miami, FL 33145</a>
+                </li>
+              </ul>
+            </div>
+            <div id="wrap-map">
+              <div id="code-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28742.90968747849!2d-80.20231346071917!3d25.77506484106738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2sMiami%2C+Florida!5e0!3m2!1ses!2s!4v1490883858310" allowfullscreen></iframe>
+              </div>
+              <div class="show-message" id="map-actions">
+                <!--
+                #message-map 
+                  span Only showing 500 homes. 
+                  | Zoom in, or use filters to narrow your search.
+                #message-map
+                  span Only showing 500 homes. 
+                  | Zoom in, or use filters to narrow your search.
+                  a(href="javascript:void(0)")#close-drag Close
+                  a(href="javascript:void(0)")#apply-drag Apply
+                -->
+                <div class="content-map-btn-actions">
+                  <button class="open-map">Close</button>
+                  <button class="close-map hide">Open</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gwr">
+            <div id="paginator-cnt">
+              <nav id="nav-results"><span id="indicator">Pag 1 of 467</span><a class="ad visible" href="#" title="First Page" rel="nofollow" id="firstp"><span class="icon-arrow-select"></span><span class="icon-arrow-select"></span><span>First page</span></a><a class="arrow icon-arrow-select prevn visible" href="#" title="Prev Page" rel="nofollow" id="prevn"><span>Previus page</span></a>
+                <ul id="principal-nav">
+                  <li><a href="#" rel="nofollow">1</a></li>
+                  <li><a href="#" rel="nofollow">2</a></li>
+                  <li class="active"><a href="#" rel="nofollow">3</a></li>
+                  <li><a href="#" rel="nofollow">4</a></li>
+                  <li><a href="#" rel="nofollow">5</a></li>
+                  <li><a href="#" rel="nofollow">6</a></li>
+                  <li><a href="#" rel="nofollow">7</a></li>
+                </ul><a class="arrow icon-arrow-select nextn visible" href="#" title="Prev Page" rel="nofollow" id="nextn"><span>Next page</span></a><a class="ad visible" href="#" title="First Page" rel="nofollow" id="lastp"><span class="icon-arrow-select"></span><span class="icon-arrow-select"></span><span>Last page</span></a>
+              </nav>
+            </div>
+          </div>
+        </section>
+        <div class="content-rsp-btn">
+          <button class="show-modal" data-modal="modal_save_search" id="save-button-responsive"><span>Save search</span></button>
+          <button class="refresh-btn" id="refresh-button-responsive"><span>Clear</span></button>
+        </div>
+      </div>
+    </main>
+    <!--Modal register-->
+    <!--.overlay_modal#modal_login.active_modal
+    .modal_cm
+      button.close.close-modal(data-id="modal_login") Close
+        span 
+      .content_md
+        .body_md
+          .confirm-message
+            span.confirmation-icon
+            p Your changes have been saved successfully
+              
+    
+    .overlay_modal_closer(data-id="modal_schedule")
+    
+    -->
+    <div class="overlay_modal active_modal" id="modal_login">
+      <div class="modal_cm">
+        <button class="close close-modal" data-id="modal_login">Close<span> </span></button>
+        <div class="content_md">
+          <div class="heder_md">
+            <h2>Want to Compare Homes?</h2>
+          </div>
+          <div class="body_md">
+            <!--ul.contact-opt
+            li: a(href="tel:8558935390") (855) 893-5390
+            li: a(href="mailto:contact2@idxboost.com").cnt-opt-email contact2@idxboost.com
+            
+            -->
+            <ul class="social_login">
+              <li><a class="ico-google flex-social-login-gplus" href="#" id="gSignIn">Continue with Google+</a></li>
+              <li><a class="ico-facebook flex-social-login-fb" href="#">Continue with Facebook</a></li>
+            </ul>
+            <div class="line_or"><span>or</span></div>
+            <ul class="header-tab">
+              <li><a class="active" href="javascript:void(0)" data-tab="tabLogin">Sign in</a></li>
+              <li><a href="javascript:void(0)" data-tab="tabRegister">Register</a></li>
+              <li><a href="javascript:void(0)" data-tab="tabReset">Reset Password</a></li>
+            </ul>
+            <div class="item_tab active" id="tabLogin">
+              <div class="form_content">
+                <form id="formLogin" method="post">
+                  <input type="hidden" name="logon_type" value="">
+                  <input name="action" type="hidden" value="">
+                  <ul class="form_md" id="cntLoginForm">
+                    <li class="form_input">
+                      <input placeholder="Enter email" type="email">
+                    </li>
+                    <li class="form_input"> 
+                      <input placeholder="Enter password" type="password"><span class="showpassord" action="hide"></span>
+                    </li>
+                  </ul>
+                  <button class="btn_form" id="clidxboost-btn-user-login">Sign in</button>
+                </form>
+              </div>
+            </div>
+            <div class="item_tab" id="tabRegister">
+              <div class="form_content">
+                <div id="push-registration">
+                  <form id="formRegister" method="post">
+                    <input type="hidden" name="logon_type" id="formRegister_logonType" value="email">
+                    <input type="hidden" name="register_password" id="formRegister_password" value="">
+                    <input type="hidden" name="action" value="flex_idx_lead_signup">
+                    <ul class="pr-steps-container">
+                      <li class="pr-step active">
+                        <div class="wrapper-input">
+                          <label class="agile-label">Email Address <span class="txtgray">(Must be valid)</span></label>
+                          <input class="agile-height-default" id="agilefield-9" type="email">
+                        </div>
+                        <button class="pr-redbtn pr-next-step" type="button">Continue With Email</button>
+                        <div class="wrapper-login"><span>Already signed up? </span><a class="ib-switch-login-tab" href="#login">Log in</a></div>
+                      </li>
+                      <li class="pr-step email-registration">
+                        <h4 class="pr-title">Email Registration?</h4>
+                        <label class="agile-label">Just a few more details so we can help you <span class="txtgray">(All fields are required)</span></label>
+                        <div class="wrapper-input">
+                          <label class="agile-label">Full Name <span class="txtgray">(First &amp; Last)</span></label>
+                          <input class="agile-height-default" id="agilefield-6" type="text">
+                        </div>
+                        <div class="wrapper-input">
+                          <label class="agile-label">Phone Number <span class="txtgray">(Used as password)</span></label>
+                          <input class="agile-height-default" id="agilefield-8" type="text">
+                        </div>
+                        <button class="pr-redbtn pr-registering" type="button">I'm Finished</button>
+                      </li>
+                    </ul><span id="agile-error-msg"></span>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="item_tab" id="tabReset">
+              <div class="form_content">
+                <form id="formReset" method="post">
+                  <p>Enter you email address and we'll send you a link to your password</p>
+                  <ul class="form_md" id="cntResetForm">
+                    <li class="form_input">
+                      <input id="reset_email" placeholder="Enter E-mail" type="email">
+                    </li>
+                  </ul>
+                  <button class="btn_form" id="clidxboost-btn-user-reset">Send</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="footer_md terms-md">
+            <p>In agreement with our <a href="#" target="_blank">Terms of Use</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="overlay_modal_closer" data-id="modal_schedule"></div>
+    </div>
+    <!--include footer.jade-->
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../js/plugins/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="../js/dgt-master_X.js"></script>
+    <script type="text/javascript" src="../js/idx-js.js"></script>
+    <!--
+    script(type="text/javascript", src="../js/plugins/perfect-scrollbar.jquery.min.js")
+    script(type="text/javascript", src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbcWAf3LnqNPxdZ5TP5resRxl3I3BPZb8&#038")
+    script(type="text/javascript", src="../js/dgt-master.js")
+    script(type="text/javascript", src="js/dgt-project-master.js")
+    -->
+  </body>
+</html>

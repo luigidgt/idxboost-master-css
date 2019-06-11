@@ -1,0 +1,200 @@
+/*----------------------------------------------------------------------------------*/
+/* Property Deatail
+/*----------------------------------------------------------------------------------*/
+@media screen and (min-width: 1024px){
+	##{$prefijo}full-main{
+		.#{$prefijo}main{
+			.#{$prefijo}gwr {
+				max-width: 1431px;
+			}
+		}
+	}
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Reset wrap filters
+/*----------------------------------------------------------------------------------*/
+.#{$prefijo}content-filters{
+	##{$prefijo}wrap-filters{
+		.#{$prefijo}gwr-filters{
+			margin-top: -1px;
+			max-width: 100% !important;
+			width: 100% !important;
+		}
+	}
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Preloader
+/*----------------------------------------------------------------------------------*/
+.#{$prefijo}wrap-preloader{
+	background-color: #1d1d1d;
+	.#{$prefijo}item-wrap-preloader{
+		.#{$prefijo}text-logo{
+			h1.#{$prefijo}idx_site_text_tit {
+    		font-size: 36px !important;
+    		color: #FFF !important;
+    		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    		font-family: $oswald;
+    	}
+    	span{
+    		color: #FFF;
+    		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    		font-family: $oswald;
+    	}
+		}
+	}
+
+	.#{$prefijo}preloader-icon:before {
+		border-color: rgba(255,255,255,.3);
+		border-top-color: $colorweb;
+	}
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Blog
+/*----------------------------------------------------------------------------------*/
+##{$prefijo}blog-collection{
+	##{$prefijo}articles-blog{
+		li{
+			.#{$prefijo}content-article{
+				>h3{
+					font-family: $oswald;
+				}
+
+				time{
+					font-family: $oswald;
+					background-color: $colorweb;
+				}
+			}
+		}
+	}
+}
+
+
+/*----------------------------------------------------------------------------------*/
+/* Varios
+/*----------------------------------------------------------------------------------*/
+.#{$prefijo}form-content{
+	.#{$prefijo}gform_footer{
+		.#{$prefijo}button{
+			font-family: $oswald;
+		}	
+	}
+}
+
+##{$prefijo}full-main{
+	.#{$prefijo}title-conteiner{
+		.#{$prefijo}content-fixed{
+			.#{$prefijo}content-fixed-title {
+				.#{$prefijo}title-page{
+					font-family: $oswald;
+					span{
+						font-family: $oswald;
+						font-size: 1rem;
+					}
+				}
+
+				.#{$prefijo}breadcrumb-options{
+					a, button{
+						font-family: $oswald;
+						font-size: 1rem;
+					}
+				}
+			}
+			
+			.#{$prefijo}content-fixed-btn{
+				li {
+					a, button{
+						font-family: $oswald;
+						font-size: 14/16*1rem;
+					}
+				}
+			}
+		}
+	}
+
+	.#{$prefijo}moptions{
+		.#{$prefijo}slider-option{
+			.#{$prefijo}option-switch{
+				font-family: $oswald;
+				font-size: 14/16*1rem;
+			}
+		}
+	}
+}
+
+.#{$prefijo}modal-full-slider{
+	h4{
+		font-family: $oswald;
+		font-size: 1rem;
+	}
+}
+
+.#{$prefijo}avatar-content{
+	.#{$prefijo}avatar-information{
+		h2{
+			font-family: $oswald;
+		}
+	}
+}
+ 
+##{$prefijo}full-main{
+	.#{$prefijo}main-content{
+		.#{$prefijo}list-details{
+			.#{$prefijo}title-amenities,
+			.#{$prefijo}title-details{
+				font-family: $oswald;
+			}
+		}
+	}
+}
+
+.#{$prefijo}school-title,
+.#{$prefijo}similar-properties>h2,
+.#{$prefijo}flex-block-description .#{$prefijo}title-block,
+##{$prefijo}flex-about-theme .#{$prefijo}gwr.#{$prefijo}c-flex .#{$prefijo}flex-block-description .#{$prefijo}title-block,
+.#{$prefijo}condo-statics .#{$prefijo}subtitle-b, .#{$prefijo}wp-statisticss .#{$prefijo}subtitle-b, 
+##{$prefijo}flex-contact-theme .#{$prefijo}gwr.#{$prefijo}c-flex .#{$prefijo}flex-lateral-b h3,
+.#{$prefijo}flex-content-form .#{$prefijo}form-item .clidxboost-btn-link span,
+.#{$prefijo}widget .#{$prefijo}title{
+	font-family: $oswald;
+}
+
+##{$prefijo}modal_login .#{$prefijo}modal_cm .#{$prefijo}content_md .#{$prefijo}heder_md h2{
+	font-family: $oswald;
+	font-size: 26/16*1rem;
+}
+
+##{$prefijo}modal_login .#{$prefijo}modal_cm .#{$prefijo}header-tab li a{
+	font-family: $oswald;
+	font-size: 1rem;
+	letter-spacing: 0.5px;
+}
+
+.#{$prefijo}clidxboost-btn-link,
+.#{$prefijo}modal_cm .#{$prefijo}form_content .#{$prefijo}btn_form,
+##{$prefijo}modal_login .#{$prefijo}modal_cm ##{$prefijo}push-registration .#{$prefijo}pr-steps-container .#{$prefijo}pr-step .#{$prefijo}pr-next-step, 
+##{$prefijo}modal_login .#{$prefijo}modal_cm ##{$prefijo}push-registration .#{$prefijo}pr-steps-container .#{$prefijo}pr-step .#{$prefijo}pr-redbtn,
+.#{$prefijo}group-flex li a span, .#{$prefijo}group-flex li button span{
+	font-family: $oswald;
+	font-size: 14/16*1rem;
+}
+
+@keyframes expandUpx {
+  0% {
+    transform: translateY(100%) scale(0.6) scaleY(0.5);
+  }
+  100% {
+    transform: translateY(0%) scale(1) scaleY(1);
+  } 
+}
+
+.expandUpx{
+  animation-name: expandUpx;
+  -webkit-animation-name: expandUpx; 
+  animation-duration: 0.7s; 
+  -webkit-animation-duration: 0.7s;
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease;    
+}

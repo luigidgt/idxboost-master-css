@@ -1,0 +1,72 @@
+/*----------------------------------------------------------------------------------*/
+/* Contact Form Basic Theme
+/*----------------------------------------------------------------------------------*/
+.form-search{
+	h3{
+		font-size: 18/16*1rem;
+		font-weight: 600;
+		font-family: $opensans;
+	}
+
+	.flex-content-form {
+		.form-item{
+			margin-bottom: 10px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+			.medium{
+				padding: 0 1rem;
+				border: 1px solid $gris-lineas;
+				height: 40px;
+				width: 100%;
+				border-radius: 4px;
+			}
+
+			textarea{
+				&.medium{
+					padding: 10px;
+					height: 100px;
+					resize: none;
+				}
+			}
+			
+			.clidxboost-btn-link{
+				margin: 10px auto;
+				width: 200px;
+				display: block;
+				span{
+					font-size: 14px;
+					display: flex;
+					width: 100%;
+					height: 100%;
+					justify-content: center;
+					align-items: center;
+				}
+			}
+
+			span{
+				display: block;
+				width: 100%;
+				font-family: $opensans;
+				font-size: 14/16*1rem;
+				margin-bottom: 3px;
+			}
+		}
+	}
+}
+
+.overlay_modal{
+	.form-search{
+		.flex-content-form{
+			.form-item{
+				&:nth-child(6){
+					display: none;
+				}
+			}
+		}
+		
+		h3{
+			display: none;
+		}
+	}
+}

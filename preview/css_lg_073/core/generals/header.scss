@@ -1,0 +1,1049 @@
+/*----------------------------------------------------------------------------------*/
+/* Header
+/*----------------------------------------------------------------------------------*/
+##{$prefijo}header{
+	border-bottom: 1px solid $gris-lineas;
+	background-color: #FFF;
+
+	/*----------------------------------------------------------------------------------*/
+	/* Sección superior
+	/*----------------------------------------------------------------------------------*/
+	.#{$prefijo}wrap-options{
+		border-bottom: 1px solid $gris-lineas;
+
+		@media screen and (min-width: 991px){
+			border-bottom: 0;
+		}
+
+		.#{$prefijo}gwr{
+			height: 40px;
+			display: flex; 
+			align-items: flex-star;
+			position: relative;
+			justify-content: space-between;
+
+			@media screen and (min-width: 640px){
+				justify-content: flex-end;
+			}
+			
+			/*----------------------------------------------------------------------------------*/
+			/* Número de telefono
+			/*----------------------------------------------------------------------------------*/
+			##{$prefijo}call-us{
+				display: none;
+				font-family: $opensans;
+				font-size: 12/16*1rem;
+				font-weight: 600;
+				margin-right: 1rem;
+
+				@media screen and (min-width: 640px){
+					display: flex;
+					height: 100%;
+					align-items: center;
+				}
+			}
+
+			/*----------------------------------------------------------------------------------*/
+			/* Redes sociales
+			/*----------------------------------------------------------------------------------*/
+			.#{$prefijo}social-networks{
+				display: none;
+				position: relative;
+				align-items: center;
+				height: 100%;
+				margin-right: 1rem;
+
+				li{
+					margin: 0 3/16*1rem;
+					position: relative;
+					width: 22px;
+					height: 22px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					transition: all .3s;
+					top: 0;
+
+					&:hover{
+						top: -3px;
+					}
+
+					a{
+						overflow: hidden;
+						width: 100%;
+						height: 100%;
+						position: absolute;
+						text-indent: -999999px;
+						display: block;
+					}
+
+					&.clidxboost-icon-facebook,
+					&.clidxboost-icon-twitter,
+					&.clidxboost-icon-google-plus,
+					&.clidxboost-icon-instagram,
+					&.clidxboost-icon-linkedin,
+					&.clidxboost-icon-youtube,
+					&.clidxboost-icon-pinterest{
+
+						&:before{ 
+							font-family: $web-icons;
+							display: inline-block;
+							font-size: 22/16*1rem;
+							transition: color .3s;
+						}
+					}
+
+					&.clidxboost-icon-facebook{
+						&:before{
+							content: "\e92f";
+						}
+
+						/*&:hover{
+							&:before{
+								color: $color-facebook;
+							}
+						}*/
+					}
+
+					&.clidxboost-icon-twitter{
+						&:before{
+							content: "\e92d";
+						}
+
+						/*&:hover{
+							&:before{
+								color: $color-twittter;
+							}
+						}*/
+					}
+
+					&.clidxboost-icon-google-plus{
+						&:before{
+							content: "\e90b";
+						}
+
+						/*&:hover{
+							&:before{
+								color: $color-youtube;
+							}
+						}*/
+					}
+
+					&.clidxboost-icon-youtube{
+						&:before{
+							content: "\e92e";
+						}
+
+						/*&:hover{
+							&:before{
+								color: $color-youtube;
+							}
+						}*/
+					}
+
+					&.clidxboost-icon-instagram{
+						&:before{
+							content: "\e930";
+						}
+
+						/*&:hover{
+							&:before{
+								color: $color-instagram;
+							}
+						}*/
+					}
+
+					&.clidxboost-icon-linkedin{
+						&:before{
+							content: "\e92c";
+						}
+
+						/*&:hover{
+							&:before{
+								color: $color-linkedin;
+							}
+						}*/
+					}
+
+					&.clidxboost-icon-pinterest{
+						&:before{
+							content: "\e908";
+						}
+
+						/*&:hover{
+							&:before{
+								color: $color-pinterest;
+							}
+						}*/
+					}
+				}
+
+				@media screen and (min-width: 640px){
+					display: flex;
+				}
+			}
+
+			/*----------------------------------------------------------------------------------*/
+			/* Botones de login y registro
+			/*----------------------------------------------------------------------------------*/
+			##{$prefijo}user-options{
+				display: flex;
+				height: 100%;
+				align-items: center;
+
+				li{
+					position: relative;
+					padding-right: 1rem;
+					font-family: $opensans;
+
+					&:after{
+						content: "";
+						height: 10px;
+						width: 1px;
+						background-color: #333;
+						position: absolute;
+						right: 7px;
+						top: 8px;
+						display: block;
+					}
+
+					&:last-child{
+						padding-right: 0;
+						&:after{
+							display: none;
+						}
+					}
+
+					a{
+						font-weight: 600;
+						font-size: 10/16*1rem;
+						text-transform: uppercase;
+						font-family: $opensans;
+
+						@media screen and (min-width: 640px){
+							font-size: 12/16*1rem;
+						}
+					}
+				}
+
+				.menu_login_active{
+					overflow: hidden;
+					transition: all .3s;
+					z-index: 10;
+					position: absolute;
+					top: 100%;
+					right: 0;
+					>ul{
+						background-color: rgba(0,0,0,0.7);
+						width: 170px;
+						li{
+							padding: 0;
+							a{
+								color: #FFF;
+								transition: all .3s;
+								padding: 0;
+								display: flex;
+								font-size: 11/16*1rem;
+								height: 0;
+								align-items: center;
+								padding: 0 10px;
+								line-height: 1.1;
+								opacity: 0;
+								&:after{
+									display: none;
+								}
+								
+								&:hover{
+									background-color: rgba(0,0,0,0.6);
+								}
+							}
+							&:after{
+								display: none;
+							}
+						}
+					}
+				}
+
+				.show_modal_login_active{
+					padding-right: 15px !important;
+					position: relative;
+					&:before{
+						content: "";
+						width: 0;
+						height: 0;
+						border-left: 4px solid transparent;
+						border-right: 4px solid transparent;
+						border-top: 7px solid #434343;
+						position: absolute;
+						right: 0;
+						top: 50%;
+						margin-top: -2px;
+					}
+
+					&:hover{
+						.menu_login_active{
+							>ul{
+								li{
+									a{
+										height: 30px;
+										opacity: 1;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			/*----------------------------------------------------------------------------------*/
+			/* Selector de idiomas
+			/*----------------------------------------------------------------------------------*/
+			.#{$prefijo}available-languages-content{
+				margin-right: 1rem;
+				position: relative;
+				&.#{$prefijo}list-show{
+					.#{$prefijo}item-languages{
+						height: 30px;
+						opacity: 1;
+					}
+				}
+			}
+
+			##{$prefijo}available-languages{
+				position: relative;
+				display: flex;
+				align-items: center;
+				width: 70px;
+				height: 100%;
+				justify-content: flex-start;
+				color: #333;
+				font-family: $opensans;
+				font-size: 10/16*1rem;
+				font-weight: 600;
+				text-transform: uppercase;
+				@media screen and (min-width: 640px){
+					font-size: 12/16*1rem;
+					justify-content: center;
+				}
+
+				##{$prefijo}languages-map{
+					height: 16px;
+					width: 24px;
+					background-color: transparent;
+					background-image: url(../images/banderas.png);
+					background-repeat: no-repeat;
+					display: inline-block;
+					margin: 0 4px;
+					&.#{$prefijo}flag-english{
+						background-position: 0 0;
+					}
+
+					&.#{$prefijo}flag-russian{
+						background-position: 0px -36px;
+					}
+
+					&.#{$prefijo}flag-spanish{
+						background-position: 0px -72px;
+					}
+
+					&.#{$prefijo}flag-portuguese{
+						background-position: 0px -108px;
+					}
+
+					&.#{$prefijo}flag-french{
+						background-position: 0px -144px;
+					}
+
+					&.#{$prefijo}flag-italy{
+						background-position: 0px -180px;
+					}
+
+					&.#{$prefijo}flag-german{
+						background-position: 0px -216px;
+					}
+
+					&.#{$prefijo}flag-chinese{
+						background-position: 0px -252px;
+					}
+				}
+
+				&:after{
+					content: "";
+					width: 0;
+					height: 0;
+					border-left: 4px solid transparent;
+					border-right: 4px solid transparent;
+					border-top: 7px solid #434343;
+				}
+			}
+
+			.#{$prefijo}languages-list{
+				width: 70px;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				background-color: rgba(0,0,0,0.7);
+				z-index: 4;
+				.#{$prefijo}item-languages{
+					height: 0;
+					width: 100%;
+					position: relative;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					color: #FFF;
+					font-family: $opensans;
+					font-size: 10/16*1rem;
+					font-weight: 600;
+					text-transform: uppercase;
+					transition: all .3s;
+					overflow: hidden;
+					opacity: 0;
+					@media screen and (min-width: 640px){
+						font-size: 12/16*1rem;
+					}
+
+					span{
+						width: 25px;
+						display: inline-block;
+						text-align: center;
+					}
+
+					&.active{
+						display: none;
+					}
+
+					&:hover{
+						background-color: rgba(0,0,0,0.7);
+					}
+
+					&:after{
+						content: "";
+						display: inline-block;
+						height: 16px;
+						width: 24px;
+						background-image: url(../images/banderas.png);
+						background-repeat: no-repeat;
+						display: inline-block;
+						margin: 0 4px;
+					}
+
+					&.#{$prefijo}flag-english{
+						&:after{
+							background-position: 0 0;
+						}
+					}
+
+					&.#{$prefijo}flag-russian{
+						&:after{
+							background-position: 0px -36px;
+						}
+					}
+
+					&.#{$prefijo}flag-spanish{
+						&:after{
+							background-position: 0px -72px;
+						}
+					}
+
+					&.#{$prefijo}flag-portuguese{
+						&:after{
+							background-position: 0px -108px;
+						}
+					}
+
+					&.#{$prefijo}flag-french{
+						&:after{
+							background-position: 0px -144px;
+						}
+					}
+
+					&.#{$prefijo}flag-italy{
+						&:after{
+							background-position: 0px -180px;
+						}
+					}
+
+					&.#{$prefijo}flag-german{
+						&:after{
+							background-position: 0px -216px;
+						}
+					}
+
+					&.#{$prefijo}flag-chinese{
+						&:after{
+							background-position: 0px -252px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	/*----------------------------------------------------------------------------------*/
+	/* Sección inferior (Menú /Logo/ Menú responsive )
+	/*----------------------------------------------------------------------------------*/
+	.#{$prefijo}wrap-menu{
+		padding: 5px 0;
+
+		@media screen and (min-width: 1024px){
+			padding: 0;
+		}
+
+		.#{$prefijo}gwr{
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			/*----------------------------------------------------------------------------------*/
+			/* Logo
+			/*----------------------------------------------------------------------------------*/
+			.#{$prefijo}logo-content{
+				position: relative;
+				width: auto;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				display: flex;
+				/*----------------------------------------------------------------------------------*/
+				/* Logo con imagen
+				/*----------------------------------------------------------------------------------*/
+				img{
+					max-height: 50px;
+					width: auto;
+				}
+				/*----------------------------------------------------------------------------------*/
+				/* Logo con Texto
+				/*----------------------------------------------------------------------------------*/
+			}
+
+			@media screen and (min-width: 991px){
+				justify-content: flex-end;
+
+				.#{$prefijo}logo-content{
+					position: absolute;
+					height: 100px;
+					left: 0;
+					top: -100%;
+					img{
+						max-height: 90px;
+						padding: 5px 0;
+					}
+				}
+			}
+
+			/*----------------------------------------------------------------------------------*/
+			/* Logo con Textpo
+			/*----------------------------------------------------------------------------------*/
+			.idx_site_text{
+				position: relative;
+				@media screen and (min-width: 991px){
+					position: absolute;
+					height: 100px;
+					left: 0;
+					top: -100%;
+				}
+			}
+
+			.text-logo{
+				position: relative;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				justify-content: center;
+				height: 100%;
+				.idx_site_text_tit{
+					font-family: $opensans;
+					font-weight: 700;
+					font-size: 26/16*1rem;
+				}
+				span{
+					display: block;
+					font-family: $opensans;
+					font-size: 13/16*1rem;
+					margin-top: -3px;
+				}
+			}
+
+			/*----------------------------------------------------------------------------------*/
+			/* Menú principal
+			/*----------------------------------------------------------------------------------*/
+			##{$prefijo}menu-main{
+				display: none;
+
+				@media screen and (min-width: 1400px){
+					display: block;
+					margin-right: 1rem;
+				}
+
+				>ul{
+					display: flex;
+					height: 50px;
+
+					>li{
+						display: flex;
+						align-items: center;
+						height: 100%;
+						margin: 0 10/16*1rem;
+						position: relative;
+
+						&:after{
+							content: "";
+							display: block;
+							width: 100%;
+							height: 0;
+							transition: all .3s;
+							background-color: $colorweb;
+							position: absolute;
+							bottom: 0;
+							left: 0;
+							opacity: 0;
+						}
+
+						&:hover{
+							&:after{
+								height: 4px;
+								opacity: 1;
+							}
+						}
+
+						a{
+							font-family: $opensans;
+							font-size: 12/16*1rem;
+							font-weight: 600;
+							text-transform: uppercase;
+						}
+
+						.#{$prefijo}sub-menu{
+							position: absolute;
+							top: 100%;
+							left: 0;
+							width: 200px;
+							z-index: 32;
+							background: rgba(0,0,0,0.7);
+							max-height: 0;
+							overflow: hidden;
+							opacity: 0;
+							transition: opacity .6s;
+
+							&::-webkit-scrollbar {
+								width: 10px;
+							}
+							&::-webkit-scrollbar-thumb {
+								background-color: #FFF;
+							}
+							&::-webkit-scrollbar-track {
+								border: 0px solid black;
+								background-color: rgba(255, 255, 255, 0.35);
+							}
+
+							li{
+								a{
+									height: 37px;
+									display: flex;
+									align-items: center;
+									line-height: 1.1;
+									color: #FFF;
+									padding: 0 1rem;
+									font-family: $opensans;
+									font-size: 12/16*1rem;
+									font-weight: 600;
+									text-transform: uppercase;
+									transition: all .3s;
+									&:hover{
+										background-color: rgba(0,0,0,0.6);
+									}
+								}
+							}
+						}
+
+						&.#{$prefijo}menu-item-has-children{
+							&:hover{
+								.#{$prefijo}sub-menu{
+									opacity: 1;
+									max-height: 600px;
+									overflow-y: auto;
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			/*----------------------------------------------------------------------------------*/
+			/* Hamburguesa
+			/*----------------------------------------------------------------------------------*/
+			.#{$prefijo}hamburger-content{
+				height: 50px;
+				display: flex;
+				align-items: center;
+
+				##{$prefijo}hamburger{
+					width: 35px;
+					height: 35px;
+					position: relative;
+					background-color: transparent;
+
+					span{
+						text-indent: -999999px;
+						display: block;
+						width: 100%;
+						background: #333;
+						position: absolute;
+						left: 0;
+						top: 50%;
+						width: 100%;
+						height: 3px;
+						margin-top: -1.5px;
+						&:after,
+						&:before{
+							content: "";
+							position: absolute;
+							left: 0;
+							display: block;
+							width: 100%;
+							height: 3px;
+							background: #333;
+						}
+
+						&:after{
+    					top: 8px;
+						}
+
+						&:before{
+							top: -8px;
+						}
+					}
+				}
+			}
+
+			/*----------------------------------------------------------------------------------*/
+			/* Menú Latearl
+			/*----------------------------------------------------------------------------------*/
+			.#{$prefijo}menu-responsive{
+				position: fixed;
+				top: 0;
+				right: 0;
+				height: 100%;
+				z-index: 999;
+				width: 0;
+				transform: translate(100%, 0%);
+				overflow: hidden;
+				transition: all .3s ease-in-out;
+				background-color: $colorweb;
+				padding-top: 45px;
+				opacity: 0;
+
+				.#{$prefijo}hamburger-content{
+					height: auto;
+				}
+
+				@media screen and (min-width: 768px){
+					max-width: 450px;
+				}
+
+				.#{$prefijo}logo{
+					display: none;
+				}
+
+				##{$prefijo}hamburger-r{
+					width: 35px;
+					height: 35px;
+					top: 7px;
+					right: 5px;
+					position: absolute;
+					z-index: 4;
+					background-color: transparent;
+					display: block;
+					span{
+						text-indent: -999999px;
+						display: block;
+						width: 100%;
+						height: 100%;
+						position: relative;
+						overflow: hidden;
+						&:after,
+						&:before{
+							content: "";
+							position: absolute;
+							left: 0;
+							display: block;
+							width: 35px;
+							height: 1px;
+							background: #fff;
+							transform: rotate(45deg);
+							top: 16px;
+							text-indent: 0;
+						}
+
+						&:after{
+							transform: rotate(-45deg);
+						}
+					}
+				}
+				.#{$prefijo}menu-more-options{
+					overflow: auto;
+					height: calc(100vh - 45px);
+
+					li{
+						position: relative;
+
+						a{
+							color: #FFF;
+							font-family: $opensans;
+							display: flex;
+							align-items: center;
+							height: 35px;
+							padding: 0 1rem;
+							font-size: 14/16*1rem;
+							position: relative;
+						}
+
+						&.#{$prefijo}menu-item-has-children{
+							>a{
+								&:after{
+									content: "\e921";
+									font-family: $web-icons;
+									display: flex;
+									width: 12px;
+									height: 100%;
+									font-size: 18px;
+									position: absolute;
+									justify-content: center;
+									align-items: center;
+									transition: all .6s;
+									color: #FFF;
+									right: 1rem;
+									top: 0;
+									margin: 0 auto;
+								}
+							}
+
+							&.#{$prefijo}active{
+								>a{
+									background-color: rgba(0,0,0,0.5);
+									&:after{
+										transform: rotate(-180deg);
+									}
+								}
+								.#{$prefijo}sub-menu{
+									padding: 1rem;
+									opacity: 1;
+									max-height: 600px;
+								}
+							}
+						}
+
+						.#{$prefijo}sub-menu{
+							background-color: rgba(0,0,0,0.3);
+							transition: all .3s;
+							opacity: 1;
+							overflow: hidden;
+							max-height: 0;
+							padding: 0 1rem;
+							border: 0;
+						}
+					}
+
+					&::-webkit-scrollbar {
+						width: 10px;
+					}
+
+					&::-webkit-scrollbar-thumb {
+						background-color: #FFF;
+					}
+
+					&::-webkit-scrollbar-track {
+						border: 0px solid black;
+						background-color: rgba(255, 255, 255, 0.35);
+					}
+				}
+			}
+		}
+	}
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Layer de fondo para el menú lateral
+/*----------------------------------------------------------------------------------*/
+.#{$prefijo}r-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 32;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.65s ease;
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Activación del menú lateral
+/*----------------------------------------------------------------------------------*/
+.#{$prefijo}opened-menu{
+	##{$prefijo}header{
+		.#{$prefijo}wrap-menu{
+			.#{$prefijo}gwr{
+				.#{$prefijo}menu-responsive{
+					opacity: 1;
+					width: 100%;
+					transform: translateX(0);
+				}
+			}
+		}
+	}
+	
+	.#{$prefijo}r-overlay {
+		visibility: visible;
+		opacity: 0.5;
+	}
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Google Translate
+/*----------------------------------------------------------------------------------*/
+.#{$prefijo}skiptranslate {
+  display: none;
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Menú en el Home
+/*----------------------------------------------------------------------------------*/
+##{$prefijo}header{
+	height: 112px;
+	@media screen and (min-width: 1024px){
+		height: 90px;
+	}
+
+	&.#{$prefijo}header-home{
+		border: 0;
+		z-index: 999;
+		position: fixed !important;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-color: transparent;
+		padding: 0;
+		/*@media screen and (min-width: 1024px){
+			padding: 12px 0;
+		}*/
+		
+		.lgl-headertxt{
+			color: #FFF;
+			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+		}
+
+		.#{$prefijo}wrap-options{
+			border: 0 !important;
+			.#{$prefijo}gwr{
+				.#{$prefijo}social-networks{
+					li{
+						&:before{
+							color: #FFF !important;
+							text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+						}
+					}
+				}
+
+				##{$prefijo}call-us{
+					color: #FFF;
+					text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+				}
+
+				##{$prefijo}available-languages{
+					.#{$prefijo}languages-text{
+						color: #FFF;
+						text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+					}
+				}
+
+				##{$prefijo}user-options{
+					li{
+						a{
+							color: #FFF;
+							text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+						}
+						&:after{
+							background-color: #FFF;
+							box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+						}
+					}
+				}
+				
+				##{$prefijo}available-languages{
+					&:after {
+						border-top: 7px solid #FFF;
+					}
+				}
+			}
+		}
+		
+		.#{$prefijo}wrap-menu{
+			.#{$prefijo}gwr{
+				.#{$prefijo}text-logo{
+					span{
+						color: #FFF !important;
+						text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+					}
+				}
+
+				##{$prefijo}menu-main{
+					>ul{
+						>li{
+							a{
+								color: #FFF;
+								text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+							}
+							&:after{
+								background-color: #FFF;
+							}
+						}
+					}
+				}
+				
+				.#{$prefijo}hamburger-content{
+					##{$prefijo}hamburger{
+						span{
+							background-color: #FFF;
+							&:after, &:before{
+								background-color: #FFF;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		h1.#{$prefijo}idx_site_text_tit{
+			color: #FFF !important;
+			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+		}
+	}
+}
+
+/*
+@media (max-width: 640px){
+	#header{
+		.wrap-menu{
+			.gwr{
+				.logo-content{
+					img{
+						max-width: 160px;
+					}
+				}
+			}
+		}
+	}
+}*/
+
+#header.header-home .wrap-options .gwr #user-options li.show_modal_login_active:after{
+	display: none;
+}
+
+#header.header-home .wrap-options .gwr #user-options .show_modal_login_active:before {
+  border-top: 7px solid #FFF;
+}

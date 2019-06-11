@@ -1,0 +1,54 @@
+doctype html
+html(lang='en')
+	head
+		title Blog Detail | Flexidx
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		meta(name="apple-mobile-web-app-capable", content="yes")
+		meta(name="apple-mobile-web-app-status-bar-style", content="#4b4b4b")
+		meta(name="theme-color", content="#4b4b4b")
+		meta(name="msapplication-navbutton-color", content="#4b4b4b")
+		link(rel="stylesheet", href="css/main-project.css")
+		link(rel="stylesheet", href="https://file.myfontastic.com/v6vr22zQVKSnTWTxBBpbWC/icons.css")
+	body
+		include header.jade
+		main#flex-blog-detail-theme
+			.gwr
+				.flex-breadcrumb
+					ol
+						li: a(href="#", title="Home") Home
+						li Life in miami beach
+						
+			.gwr.c-flex
+				article.flex-block-description
+					h1.flex-page-title Life in miami beach
+					span.date-publish Thursday, February 23, 2017
+					.flex-block-share.mini
+						span.title-share Share this article
+						.social-networks
+							li.icon-facebook: a(href="#", title="Facebook", target="_blank", rel="nofollow") Facebook
+							li.icon-twitter: a(href="#", title="Twitter", target="_blank", rel="nofollow") Twitter
+							li.icon-google-plus: a(href="#", title="Google+", target="_blank", rel="nofollow") Google+
+							li.icon-instagram: a(href="#", title="Instagram", target="_blank", rel="nofollow") Instagram
+							li.icon-linkedin: a(href="#", title="Linked In", target="_blank", rel="nofollow") Linked In
+					
+					img(src="images/a1.jpg", title="Life in Miami Beach", alt="Life in Miami Beach").full-img
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					.flex-block-img
+						img(src="images/a2.jpg", title="Life in Miami Beach", alt="Life in Miami Beach")
+						img(src="images/a3.jpg", title="Life in Miami Beach", alt="Life in Miami Beach")
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					.flex-block-share.standar
+						span.title-share Share this article
+						.social-networks
+							li.icon-facebook: a(href="#", title="Facebook", target="_blank", rel="nofollow") Facebook
+							li.icon-twitter: a(href="#", title="Twitter", target="_blank", rel="nofollow") Twitter
+							li.icon-google-plus: a(href="#", title="Google+", target="_blank", rel="nofollow") Google+
+							li.icon-instagram: a(href="#", title="Instagram", target="_blank", rel="nofollow") Instagram
+							li.icon-linkedin: a(href="#", title="Linked In", target="_blank", rel="nofollow") Linked In
+					
+					a(href="#", title="Back to Blog").back-link Back to Blog 
+		include footer.jade
+		script(type="text/javascript", src="../js/jquery-3.1.1.min.js")

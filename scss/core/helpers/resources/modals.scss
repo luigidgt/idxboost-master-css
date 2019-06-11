@@ -1,0 +1,1504 @@
+/*----------------------------------------------------------------------------------*/
+/* Modals
+/*----------------------------------------------------------------------------------*/
+
+/*Contenedor principal del modal*/
+.#{$prefijo}overlay_modal{
+	//position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.9333) !important;
+	//overflow: hidden;
+	visibility: hidden;
+	z-index: 35;
+	opacity: 0;
+	
+	/** DEMO PARA MOBILE **/
+	position: fixed;
+	//right: 0;
+	//bottom: 0;
+	//overflow-y: auto;
+	//-webkit-overflow-scrolling: auto; 
+	cursor: pointer;
+	/** DEMO PARA MOBILE **/
+	overflow: scroll;
+
+	&.#{$prefijo}active_modal{
+		/*z-index: 1000;*/
+		opacity: 1;
+		visibility: visible;
+		transition: opacity .4s;
+		overflow-y: auto;
+		.#{$prefijo}modal_cm{
+			animation-duration: .6s;
+  		animation-fill-mode: both;
+			animation-name: fadeInUp;
+		}
+	}
+
+	/*&.#{$prefijo}registration_forced{
+		background-color: rgba(0,0,0,0.96);
+	}*/
+}
+
+/*Layer para cerrar el modal*/
+.#{$prefijo}overlay_modal_closer,
+.#{$prefijo}overlay_modal_closer_pt{
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 1;
+	cursor: pointer;
+}
+
+/*Contenedor general del modal*/
+.#{$prefijo}modal_cm{
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #f4f5f9;
+
+  /** DEMO PARA MOBILE **/
+  position: relative;
+  min-height: 100%;
+  height: auto;
+
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+
+  @media screen and (min-width: 640px){
+		min-height: auto;
+  }
+  /** DEMO PARA MOBILE **/
+	
+	/*Informacion de contacto*/
+	.#{$prefijo}contact-opt{
+		margin-bottom: 1rem;
+		&:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		li{
+			float: left;
+			position: relative;
+			width: auto;
+			margin-right: 20px;
+			font-size: 13/16*1rem;
+			&:after{
+				content: "";
+				width: 1px;
+				height: 10px;
+				background-color: #333;
+				position: absolute;
+				top: 50%;
+				margin-top: -5px;
+				right: -11px;
+				display: block;
+			}
+			&:last-child{
+				margin-right: 0;
+				&:after{
+					display: none;
+				}
+			}
+			a{
+				font-size: 13/16*1rem;
+				&.#{$prefijo}cnt-opt-email{
+					color: #0b6bbd;
+					&:hover{
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+
+	/*Mensaje*/
+	.#{$prefijo}message-alert{
+		padding: 10/16*1rem 1rem;
+		margin-bottom: 1rem;
+		font-weight: 600;
+	}
+
+	/*Boton close del modal*/
+	.#{$prefijo}close-modal{
+		width: 30px;
+		height: 30px;
+		background-color: transparent;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		z-index: 4;
+		overflow: hidden;
+		display: block;
+		text-indent: -999999px;
+		span{
+			display: flex;
+			width: 100%;
+			height: 100%;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			color: #afaeb5;
+			transition: all .3s;
+			&:before{
+				content: "\e913";
+				display: inline-block;
+				font-family: $web-icons;
+				font-size: 1rem;
+				text-indent: 0;
+			}
+			&:hover{
+				color: #333;
+			}
+		}
+	}
+	
+	/*Contendor principal del modal*/
+	.#{$prefijo}content_md{
+		padding-bottom: 1rem;
+		*{
+			font-size: 14/16*1rem;
+			font-family: $opensans;
+		}
+
+		/*Cabecera del modal*/
+		.#{$prefijo}heder_md{
+			padding: 1rem;
+			padding-right: 50/16*1rem;
+			h2, font{
+				margin: 0;
+				font-weight: 600;
+				color: #333;
+				font-size: 22/16*1rem;
+				transition: all .3s;
+				span{
+					display: block;
+					margin-top: 10px;
+				}
+			}
+		}
+
+		/*Cuerpo del modal*/
+		.#{$prefijo}body_md{
+			padding: 0 1rem;
+			p{
+				line-height: 1.6;
+				margin-bottom: 1rem;
+			}
+		}
+
+		/*Footer del modal*/
+		.#{$prefijo}footer_md{
+			border-top: 1px solid $gris-lineas;
+			padding: 1rem 1rem 0 1rem;
+		}
+	}
+
+	/*formulario en el modal*/
+	.#{$prefijo}form_content{
+		margin-bottom: 1rem;
+		
+		/*Inicio con Gravity Form*/
+		.#{$prefijo}gform_body{
+			.#{$prefijo}gform_fields{
+				display: flex;
+				flex-wrap: wrap;
+				-webkit-flex-wrap: wrap;
+				justify-content: space-between;
+				.#{$prefijo}gfield{
+					margin-bottom: 10/16*1rem;
+					width: 100%;
+					.#{$prefijo}gfield_label{
+						display: block;
+						margin-bottom: 3/16*1rem;
+					}
+					.#{$prefijo}medium{
+						border: 1px solid $gris-lineas;
+						border-radius: 4px;
+						width: 100%;
+						height: 40px;
+						padding: 0 1rem;
+						&.#{$prefijo}textarea{
+							padding: 10/16*1rem 1rem;
+							height: 100px;
+							resize: none;
+						}
+					}
+					select{
+						background-image: url('../images/select.png');
+						background-position: center right;
+						background-repeat: no-repeat;
+						&.#{$prefijo}medium{
+							padding-right: 2rem;
+						}
+					}
+				}
+			}
+		}
+
+		.#{$prefijo}gform_footer{
+			.#{$prefijo}gform_button{
+				height: 45px;
+				background-color: #333;
+				border: 1px solid #333;
+				color: #FFF;
+				width: 100%;
+				text-align: center;
+				text-transform: uppercase;
+				transition: all .3s;
+				font-weight: 600;
+				font-size: 12/16*1rem;
+				&:hover{
+					background-color: #FFF;
+					color: #333;
+				}
+			}
+		}
+
+		/*Inicio login y register Form*/
+		.#{$prefijo}form_md{
+			display: flex;
+			flex-wrap: wrap;
+			-webkit-flex-wrap: wrap;
+			justify-content: space-between;
+			.#{$prefijo}form_input{
+				width: 100%;
+				margin-bottom: 10/16*1rem;
+				position: relative;
+				input{
+					border: 1px solid $gris-lineas;
+					border-radius: 4px;
+					width: 100%;
+					height: 40px;
+					padding: 0 1rem;
+				}
+			}
+		}
+
+		.#{$prefijo}btn_form{
+			height: 45px;
+			background-color: #333;
+			border: 1px solid #333;
+			color: #FFF;
+			width: 100%;
+			text-align: center;
+			text-transform: uppercase;
+			transition: all .3s;
+			font-weight: 600;
+			font-size: 12/16*1rem;
+			&:hover{
+				background-color: #FFF;
+				color: #333;
+			}
+		}
+
+		/*Show password*/
+		.#{$prefijo}showpassord{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			display: flex;
+			width: 35px!important;
+			height: 40px!important;
+			justify-content: center;
+			align-items: center;
+			background-color: transparent;
+			color: $gris-intermedio;
+			cursor: pointer;
+			transition: color .3s;
+			&:before{
+				content: "\e9ce";
+				font-family: $web-icons;
+				display: inline-block;
+				font-size: 1rem;
+			}
+			&:hover{
+				color: #333;
+			}
+			&.blocked{
+				&:before{
+					content: "\e9d1";
+					color: #333;
+				}
+			}
+		}
+	}
+	
+	/*Header tab*/
+	.#{$prefijo}header-tab{
+		display: flex;
+		margin-bottom: 1rem;
+		li{
+			width: 33.33%;
+			flex-grow: 1;
+			height: 38px;
+			a{
+				display: flex;
+				width: 100%;
+				height: 100%;
+				align-items: center;
+				justify-content: flex-start;
+				border-bottom: 2px solid $gris-lineas;
+				color: $gris-intermedio;
+				transition: all .3s;
+				&.#{$prefijo}active{
+					border-color: #333;
+					color: #333;
+				}
+			}
+		}
+	}
+
+	/*Item Tabs*/
+	.#{$prefijo}item_tab{
+		display: none;
+		&.#{$prefijo}active{
+			display: block;
+		}
+	}
+
+	/*Listado de checks*/
+	.#{$prefijo}list-check{
+		margin-top: 10/16*1rem;
+		label{
+			position: relative;
+			display: flex;
+			align-items: center;
+			margin-bottom: 3/16*1rem;
+			cursor: pointer;
+			&:before{
+				content: "";
+				width: 18px;
+				height: 18px;
+				border: 1px solid $gris-lineas;
+				display: inline-block;
+				margin-right: 7/16*1rem;
+				background-color: #FFF;
+				transition: all .3s;
+			}
+			&:after{
+				content: "\e939";
+				font-family: $web-icons;
+				font-size: 12/16*1rem;
+				width: 20px;
+				height: 20px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: absolute;
+				top: 0;
+				left: 0;
+				transition: all .3s;
+				transform: scale(0);
+			}
+			&:hover{
+				&:before{
+					border-color: #333;
+				}
+			}
+		}
+
+		input[type=checkbox] {
+			right: 0;
+			left: auto;
+			position: absolute;
+			&:checked+label{
+				&:before{
+					border-color: #333;
+				}
+				&:after{
+					transform: scale(1);
+				}
+			}
+		}
+	}
+
+	/*Terminos y condiciones*/
+	.#{$prefijo}terms-opt{
+		margin-bottom: 1rem;
+		li{
+			span, a{
+				font-size: 12/16*1rem;
+				font-weight: 600;
+			}
+			a{
+				color: #0b6bbd;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	/*Push Registration*/
+	##{$prefijo}push-registration{
+		.#{$prefijo}pr-steps-container{
+			.#{$prefijo}pr-step{
+				display: none;
+
+				/** ICONOS **/
+				&.pr-radio{
+					.pr-ico{
+						height: 52px;
+						width: 52px;
+						border-radius: 50%;
+						background-color: #EBEDE8;
+						margin-left: auto;
+						margin-right: auto;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						margin-bottom: 14px;
+						background-repeat: no-repeat;
+						background-position: center center;
+
+						&.timeline-icon {
+							background-image: url("https://www.idxboost.com/assets/idxboost/timeline.png") !important;
+						}
+
+						&.pre_approved-icon {
+						  background-image: url("https://www.idxboost.com/assets/idxboost/pre_approved.png") !important;
+						}
+						
+						&.sell-icon {
+							background-image: url("https://www.idxboost.com/assets/idxboost/sell.png") !important;
+						}
+					}
+				}
+				/** ICONOS **/
+
+				>h4{
+					font-weight: 600;
+					font-size: 18/16*1rem;
+					text-align: center;
+					margin-bottom: 1rem;
+				}
+
+				.pr-radio-list{
+					li{
+						width: 100%;
+						display: block;
+						height: 40px;
+						margin-bottom: 10/16*1rem;
+						&:last-child{
+							margin-bottom: 0;
+						}
+
+						label{
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							width: 100%;
+							height: 100%;
+							font-size: 14/16*1rem;
+							font-weight: 600;
+							font-family: $opensans;
+							/*border: 1px solid rgba(255,255,255,0.8);
+							background-color: rgba(255,255,255,0.3);*/
+							color: #333;
+							background-color: #F2F4F0;
+							border: 1px solid #E3E5E1;
+							transition: all .3s;
+							&:hover{
+								/*background-color: rgba(255,255,255,0.9);*/
+								background-color: #e5e9e1;
+								border-color: #e5e9e1;
+							}
+						}
+					}
+				}
+
+				label{
+					width: 100%;
+					display: block;
+					font-size: 13/16*1rem;
+					margin-bottom: 3/16*1rem;
+					span{
+						color: $gris-intermedio;
+						font-size: 11/16*1rem;
+					}
+				}
+				
+				.#{$prefijo}pr-dgray{
+					font-size: 13/16*1rem;
+				}
+
+				.#{$prefijo}wrapper-input{
+					display: flex;
+					flex-wrap: wrap;
+					-webkit-flex-wrap: wrap;
+					margin-bottom: 10/16*1rem;
+					input{
+						border: 1px solid #E5E5E5;
+						border-radius: 4px;
+						width: 100%;
+						height: 40px;
+						padding: 0 1rem;
+					}
+				}
+				
+				.#{$prefijo}pr-redbtn,
+				.#{$prefijo}pr-next-step{
+					height: 45px;
+					background-color: #333;
+					border: 1px solid #333;
+					color: #FFF;
+					width: 100%;
+					text-align: center;
+					text-transform: uppercase;
+					transition: all .3s;
+					font-weight: 600;
+					font-size: 12/16*1rem;
+					&:hover{
+						background-color: #FFF;
+						color: #333;
+					}
+				}
+
+				.#{$prefijo}wrapper-login{
+					text-align: center;
+					margin: 1rem 0;
+					span{
+						color: $gris-intermedio;
+					}
+					a{
+						color: #0b6bbd;
+						&:hover{
+							text-decoration: underline;
+						}
+					}
+				}
+
+				&.#{$prefijo}email-registration{
+					>.#{$prefijo}agile-label{
+						text-align: center;
+						margin-bottom: 1rem;
+						.#{$prefijo}txtgray{
+							display: block;
+						}
+					}
+				}
+
+				&.#{$prefijo}active{
+					display: block;
+				}
+			}
+		}
+	}
+
+	/*Mensaje Confirmacion*/
+	.#{$prefijo}confirm-message{
+		padding: 116px 0;
+		text-align: center;
+		.#{$prefijo}confirmation-icon{
+			width: 100px;
+			height: 100px;
+			position: relative;
+			display: block;
+			margin: 0 auto;
+			&:before{
+				content: "\e917";
+				font-family: $web-icons;
+				font-size: 100px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+		h2{
+			margin-top: 1rem;
+			font-weight: 600;
+			font-size: 24/16*1rem;
+			font-family: $opensans;
+		}
+		p{
+			margin-top: 10/16*1rem;
+			padding: 0 1rem;
+			font-weight: 600;
+			font-size: 18/16*1rem;
+			font-family: $opensans;
+			&:after{
+				content: "";
+				width: 84px;
+				height: 2px;
+				margin: 1rem auto;
+				display: block;
+				background-color: #333;
+			}
+		}
+	}
+}
+
+/*Botones de redes sociales*/
+.#{$prefijo}ico-google,
+.#{$prefijo}ico-facebook{
+	width: 100%;
+	height: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #FFF;
+	position: relative;
+}
+
+.#{$prefijo}social_login{
+	li{
+		margin-bottom: 10/16*1rem;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	.#{$prefijo}ico-google {
+		background: #e54c3c;
+	  background: linear-gradient(#f0765e, #e54c3c);
+	  border: 1px solid #e5493a;
+	  border-radius: 4px;
+	  transition: all .3s;
+	  &:before{
+			content: "\e926";
+			display: inline-block;
+			font-family: $web-icons;
+			font-size: 22/16*1rem;
+			font-weight: 300;
+			margin-right: 10/16*1rem;
+		}
+		&:hover{
+			background: #e54c3c;
+		}
+	}
+
+	.#{$prefijo}ico-facebook {
+		/*background: #3a5a93;
+		background: linear-gradient(#486db1, #3a5a93);
+		border: 1px solid #3b5995;*/
+		background-color: #3C5A99;
+		border: 1px solid #3C5A99;
+		border-radius: 4px;
+		transition: all .3s;
+		&:before{
+			content: "\e927";
+			display: inline-block;
+			font-family: "idx-icons"!important;
+			font-size: 24px;
+			font-weight: normal;
+			margin-right: 0.625rem;
+		}
+		&:hover{
+			background-color: #2a4879;
+			border-color: #2a4879;
+		}
+	}
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Modal - Schedule
+/*----------------------------------------------------------------------------------*/
+##{$prefijo}modal_schedule{
+	.#{$prefijo}modal_cm{
+		.#{$prefijo}form_content{
+			.#{$prefijo}gform_body{
+				.#{$prefijo}gform_fields{
+					.#{$prefijo}gfield{
+						&:nth-child(7),
+						&:nth-child(8){
+							width: 48%;
+						}
+
+						&.field_sublabel_below{
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	.gfield{
+		&.date{
+			.ginput_container{
+				position: relative;
+				.ui-datepicker{
+					position: absolute !important;
+					top: auto !important;
+					right: 0 !important;
+					left: auto !important;
+					bottom: 100% !important;
+				}
+			}
+		}
+	}
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Modal - Email to a Friend
+/*----------------------------------------------------------------------------------*/
+##{$prefijo}modal_email_to_friend{
+	.#{$prefijo}modal_cm{
+		.#{$prefijo}form_content{
+			.#{$prefijo}gform_body{
+				.#{$prefijo}gform_fields{
+					.#{$prefijo}gfield{
+						label{
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Modal - Mortgage calculator
+/*----------------------------------------------------------------------------------*/
+##{$prefijo}modal_calculator{
+	.#{$prefijo}modal_cm{
+		.#{$prefijo}form_content{
+			.#{$prefijo}gform_body{
+				.#{$prefijo}gform_fields{
+					justify-content: space-between;
+					.#{$prefijo}gfield{
+						width: 49%;
+					}
+				}
+			}
+		}
+
+		.#{$prefijo}detail-mortgage{
+			h3{
+				font-family: $opensans;
+				font-size: 20/16*1rem;
+				font-weight: 600;
+				border-bottom: 3px solid #333;
+				margin-bottom: 10/16*1rem;
+				padding-bottom: 10/16*1rem;
+			}
+			ul{
+				width: 100%;
+				li{
+					display: flex;
+					justify-content: space-between;
+					font-size: 14/16*1rem;
+					align-items: center;
+					span{
+						color: $gris-intermedio;
+						font-weight: 400;
+						padding-right: 10px;
+						strong{
+							font-weight: 600;
+							font-size: 12/16*1rem;
+						}
+						&.text-bold{
+							padding-right: 0;
+							font-weight: 600;
+							color: #333;
+							&.mtotal{
+								font-size: 22/16*1rem;
+							}
+						}
+					}
+					&.line-top{
+						margin-top: 10/16*1rem;
+						padding-top: 10/16*1rem;
+						border-top: 1px solid $gris-lineas;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Modal - Ocultando en Reset Password
+/*----------------------------------------------------------------------------------*/
+##{$prefijo}modal_login{
+	&.#{$prefijo}tabResetHidden{
+		.#{$prefijo}modal_cm{
+			.#{$prefijo}content_md{
+				.#{$prefijo}line_or,
+				.#{$prefijo}social_login{
+					margin: 0;
+					height: 0;
+					overflow: hidden;
+				}
+			}
+		}
+	}
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Modal - Force Registration
+/*----------------------------------------------------------------------------------*/
+/*.#{$prefijo}registration_forced{
+	.#{$prefijo}overlay_modal_closer{
+		display: none;
+	}
+
+	.close-modal {
+		display: block !important;
+		visibility: visible !important;
+	}
+}*/
+
+/** Resize: 480 **/
+@media screen and (min-width: 640px){
+	.#{$prefijo}overlay_modal{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		height: 100vh;
+		overflow: hidden;
+	}
+
+	.#{$prefijo}modal_cm{
+		margin: 0;
+		position: relative;
+		height: auto;
+		width: 400px;
+		.#{$prefijo}content_md{
+			.#{$prefijo}heder_md{
+				padding-left: 20/16*1rem;
+			}
+			.#{$prefijo}body_md,
+			.#{$prefijo}footer_md{
+				padding-left: 20/16*1rem;
+				padding-right: 20/16*1rem;
+			}
+		}
+	}
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Modal - Properties
+/*----------------------------------------------------------------------------------*/
+/*
+.#{$prefijo}overlay_modal{
+  &##{$prefijo}modal_property_detail{
+  	overflow-y: auto;
+    align-items: flex-start;
+    z-index: 999;
+
+    #md-body{
+    	position: relative;
+    	z-index: 2;
+    }
+
+    #full-main{
+    	background-color: #FFF;
+
+    	#md-title{
+    		padding: 0;
+    		display: flex;
+    		flex-wrap: wrap;
+    		.title-page{
+    			order: 2;
+    			padding: 10px;
+    			font-size: 24/16*1rem;
+    			font-weight: 600;
+    			font-family: $opensans;
+    			width: 100%;
+    			span{
+    				font-size: 12/16*1rem;
+    				font-family: $opensans;
+    				font-weight: normal;
+    				display: block;
+    				text-align: left;
+    			}
+    		}
+
+    		.options-modal{
+    			display: flex;
+    			width: 100%;
+    			order: 1;
+    			border-bottom: 1px solid $gris-lineas;
+    			li{
+    				width: 50%;
+    				border-right: 1px solid $gris-lineas;
+    				&:last-child{
+    					border-right: 0;
+    				}
+    				a, button{
+    					background-color: #FFF;
+    					display: block;
+    					text-align: center;
+    					height: 45px;
+    					width: 100%;
+    					line-height: 45px;
+    					font-size: 13/16*1rem;
+    					font-family: $opensans;
+    					font-weight: 600;
+    					text-transform: uppercase;
+    					&:before{
+								content: "";
+								display: inline-block;
+								font-size: 20px;
+								margin-right: 0.625rem;
+								font-weight: normal;
+								font-family: $web-icons;
+								vertical-align: middle;
+								margin-top: -3px;
+    					}
+    				}
+
+    				.expand-btn{
+    					&:before{
+    						content: "\e915";
+    					}
+    				}
+
+    				.expand-btn{
+    					&:before{
+    						content: "\e915";
+    					}
+    				}
+
+    				.close-modal{
+    					&:before{
+    						content: "\e914";
+    					}
+    				}
+    			}
+    		}
+    	}
+    }
+
+
+    &.#{$prefijo}detail-modal{
+      width: 100% !important;
+
+      @media screen and (min-width: 768px){
+        width: calc(100% - 50px) !important;
+      }
+
+      @media screen and (min-width: 1300px){
+        width: 1200px !important;
+      }
+
+      .#{$prefijo}title-conteiner{
+        &.#{$prefijo}gwr{
+          max-width: 100% !important;
+          width: 100% !important;
+
+          @media screen and (min-width: 768px){
+            width: calc(100% - 67px) !important;
+          }
+
+          @media screen and (min-width: 1300px){
+            width: 1200px !important;
+          }
+        }
+
+        .#{$prefijo}title-page{
+          span{
+            margin-top: 5px;
+          }
+        }
+      }
+
+      .#{$prefijo}form-content{
+        .#{$prefijo}gform_body{
+          .#{$prefijo}gform_button{
+            text-align: center !important;
+          }
+        }
+      } 
+    }
+		
+		.#{$prefijo}property-details{
+			@media screen and (min-width: 768px){
+				margin-top: 55px;
+			}
+		}
+    
+
+    @media screen and (min-width: 1024px){
+      ##{$prefijo}full-slider{
+        .#{$prefijo}wrap-slider{
+          ul{
+            li {
+              height: 350px!important;
+            }
+          }
+        }
+      }
+    }
+
+    ##{$prefijo}full-slider{
+      .#{$prefijo}wrap-slider{
+        ul{
+          li{
+            img{
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    .aside{
+    	margin-left: 0;
+    	margin-right: 16px;
+    }
+  }
+}*/
+
+/*----------------------------------------------------------------------------------*/
+/* Modal - Properties (z-index y propiedades adiciones)
+/*----------------------------------------------------------------------------------*/
+/*.#{$prefijo}modal-properties-active{
+	overflow: hidden;
+	height: 100%;
+	body{
+		overflow: hidden;
+	}
+}
+
+.#{$prefijo}fixed-content-md{
+  @media screen and (min-width: 1024px){
+    width: 320px;
+    bottom: auto;
+    top: 50px;
+    position: fixed;
+    width: 250px;
+  }
+
+  @media screen and (min-width: 1130px){
+    width: 320px;
+  }
+}
+
+.#{$prefijo}sp-modal{
+  .#{$prefijo}full-zindex{
+    z-index: 99999999 !important;
+  }
+}
+
+.#{$prefijo}clidxboost-nmap{
+  ##{$prefijo}modal_login,
+  ##{$prefijo}modal_img_propertie{
+    z-index: 99999999 !important;
+  }
+}
+*/
+
+.alt-ss{
+	.alt-ss-title{
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: $opensans;
+    &:after{
+			content: "";
+			width: 84px;
+			height: 2px;
+			margin: 1rem auto;
+			display: block;
+			background-color: #333;
+    }
+	}
+
+	p{
+		font-size: 14/16*1rem !important;
+    font-weight: normal !important;
+    &:after{
+    	display: none !important;
+    }
+	}
+
+	.btn-link{
+		height: 45px;
+    line-height: 45px;
+    display: inline-block;
+    padding: 0 30px;
+    background-color: $colorweb;
+    color: #FFF;
+    border: 1px solid $colorweb;
+    transition: all .3s;
+    &:hover{
+    	background-color: #FFF;
+    	color: #333;
+    }
+	}
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Modal - Properties (z-index y propiedades adiciones)
+/*----------------------------------------------------------------------------------*/
+.overlay_modal{
+  &#modal_property_detail{
+    align-items: flex-start;
+
+    #full-main{
+    	margin-top: 100px;
+    	@media screen and (min-width: 768px){
+    		margin-top: 57px;
+    	}
+    }
+
+    .clidxboost-schools-container{
+    	.list-amenities{
+    		display: flex;
+    		width: 100%;
+    		flex-direction: column;
+    		align-items: center;
+    		justify-content: flex-start;
+    	}
+    }
+    .modal_cm{
+			position: relative;
+			background-color: #FFF;
+			width: 100%;
+			max-width: 100%;
+			margin: 0 auto;
+			height: auto;
+			min-height: 100%;
+      &.detail-modal{
+				padding: 0;
+				background-color: #FFF;
+				width: 100% !important;
+				animation: none !important;
+
+        @media screen and (min-width: 768px){
+          width: calc(100% - 50px) !important;
+        }
+
+        @media screen and (min-width: 1300px){
+          width: 1200px !important;
+        }
+
+
+				/*<section id="md-title">
+				<div class="content-fixed-title">
+				<h2 class="title-page" id="ib_main-heading"><?php echo $property['address_short']; ?><span><?php echo $property['address_large']; ?></span></h2>
+				</div>
+				<ul class="options-modal">
+				<li>
+				<a href="<?php echo $property_permalink; ?>" id="ib_main-link" target="_blank" title="View all detail" class="expand-btn">Open</a>
+				</li>
+				<li>
+				<button data-id="modal_property_detail" class="close-modal">
+				<span class="close-btn">Close</span>
+				</button>
+				</li>
+				</ul>
+				</section>*/
+
+				#md-title{
+					display: flex;
+					flex-wrap: wrap;
+					width: 100%;
+					position: fixed;
+					top: 0;
+					background-color: #FFF;
+					z-index: 6;
+					box-shadow: 0 2px 3px -2px rgba(0, 0, 0, 0.16);
+					@media screen and (min-width: 768px){
+						width: calc(100% - 67px);
+					}
+					@media screen and (min-width: 1300px){
+						width: 1200px;
+					}
+
+					.content-fixed-title{
+						order: 2;
+						width: 100%;
+						padding: 7px 10px;
+						.title-page{
+							font-size: 1.25rem;
+							font-weight: 600;
+							width: 100%;
+							display: block;
+							overflow: hidden;
+							-o-text-overflow: ellipsis;
+							text-overflow: ellipsis;
+							white-space: nowrap;
+							font-family: $opensans;
+							span{
+								color: #a7a6ae;
+								font-weight: normal;
+								font-size: 0.8125rem;
+								text-transform: uppercase;
+								display: block;
+								overflow: hidden;
+								-o-text-overflow: ellipsis;
+								text-overflow: ellipsis;
+								white-space: nowrap;
+								font-family: $opensans;
+								margin-top: -4px;
+							}
+						}
+
+						@media screen and (min-width: 768px){
+							width: 75%;
+							order: 1;
+							padding: 5px 10px;
+							.title-page{
+								font-size: 24/16*1rem;
+							}
+						}
+					}
+
+          .options-modal{
+						display: flex;
+						order: 1;
+						width: 100%;
+						li{
+							width: 50%;
+							border-left: 1px solid #ccc;
+							height: 45px;
+							border-bottom: 1px solid #ccc;
+							button, a{
+								display: block;
+								width: 100%;
+								height: 100%;
+								font-family: $opensans;
+								font-size: 13px;
+								text-transform: uppercase;
+								position: relative;
+								top: 0;
+								left: 0;
+								color: #333 !important;
+								font-weight: 600;
+								transition: all .3s !important;
+								background-color: #FFF;
+								span{
+									display: flex;
+									height: 100%;
+									width: 100%;
+									align-items: center;
+									justify-content: center;
+									position: relative;
+									top: 0;
+									left: 0;
+									text-indent: 0;
+									color: #333 !important;
+									&:before{
+										content: "";
+										display: inline-block;
+										font-size: 19px;
+										margin-right: 0.625rem;
+										font-weight: normal;
+										font-family: "idx-icons"!important;
+										font-weight: normal;
+									}
+								}
+								
+								&:hover{
+									background-color: $colorweb;
+									color: #FFF !important;
+									span{
+										color: #FFF !important;
+									}
+								}
+
+								&.close-modal-pt{
+									span:before{
+										content: "\e914";
+									}
+								}
+								&.expand-btn{
+									margin-left: -1px;
+									span:before{
+										content: "\e915";
+									}
+								}
+							}
+						}
+
+						@media screen and (min-width: 768px){
+							width: 25%;
+							order: 2;
+							li{
+								height: 100%;
+								border-bottom: 0;
+								button, a{
+									&.expand-btn{
+										margin-left: 0;
+									}
+								}
+							}
+						}
+				  }
+        }
+
+        .form-content{
+          .gform_body{
+            .gform_button{
+              text-align: center !important;
+            }
+          }
+        } 
+				
+				.main{
+					.aside {
+						margin-left: 0;
+						@media (min-width: 1024px){
+							width: 320px;
+						}
+					}
+				}
+      }
+    }
+
+    /*@media screen and (min-width: 1024px){
+      #full-slider{
+        .wrap-slider{
+          ul{
+            li {
+              height: 350px!important;
+            }
+          }
+        }
+      }
+    }
+
+    #full-slider{
+      .wrap-slider{
+        ul{
+          li{
+            img{
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }*/
+  }
+}
+
+body.modal-property-active{
+	overflow: hidden !important;
+	.active_modal{
+		&:not(.modal_property_detail){
+			z-index: 1010;
+		}
+	}
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Modal - Contacto Fixed LG
+/*----------------------------------------------------------------------------------*/
+.home-contact-wrap-form{
+	>h3{
+		display: none;
+	}
+	.close-modal-ct{
+		width: 30px;
+		height: 30px;
+		background-color: transparent;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		z-index: 4;
+		overflow: hidden;
+		display: none;
+		text-indent: -999999px;
+		span{
+			display: flex;
+			width: 100%;
+			height: 100%;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			color: #FFF;
+			transition: all .3s;
+			&:before{
+				content: "\e913";
+				display: inline-block;
+				font-family: $web-icons;
+				font-size: 1rem;
+				text-indent: 0;
+			}
+		}
+	}
+}
+
+.active_modal_contact{
+	.home-contact-wrap-form{
+		position: fixed;
+		z-index: 52;
+		width: auto;
+		padding: 35px 0 !important;
+		animation: aparece .5s;
+		width: 100%;
+		overflow-y: auto;
+		z-index: 1000;
+		padding: 35px;
+		height: auto;
+		min-height: 100vh;
+		top: 0;
+		left: 0;
+		background-color: $colorweb;
+
+		@media screen and (min-width: 640px){
+			min-height: auto;
+			max-height: 100vh;
+			height: auto;
+			padding: 35px !important;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			max-width: 630px;
+		}
+		
+		.close-modal-ct{
+			display: block;
+		}
+	}
+	
+	.overlay_modal_ct{
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		/*position: absolute;*/
+		z-index: 999;
+		background-color: rgba(0, 0, 0, 0.6);
+		position: fixed;
+	}
+}
+
+@media screen and (min-width: 640px){
+	.ib-frm-active{
+		overflow: hidden;
+	}
+}
+
+@-webkit-keyframes aparece {
+  0% {
+    margin-top: 20px;
+    opacity: 0; }
+  100% {
+    margin-top: 0;
+    opacity: 1; } }
+
+@keyframes aparece {
+  0% {
+    margin-top: 20px;
+    opacity: 0; }
+  100% {
+    margin-top: 0;
+    opacity: 1; } }

@@ -1,0 +1,215 @@
+/*----------------------------------------------------------------------------------*/
+/* Full Slider
+/*----------------------------------------------------------------------------------*/
+##{$prefijo}full-slider{
+	width: 100%;
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	transition: height .6s;
+
+	&.#{$prefijo}show-slider-psl{
+		height: auto;
+		.#{$prefijo}moptions{
+			opacity: 1;
+		}
+
+		.gs-item-slider{
+			cursor: pointer;
+			@media screen and (min-width: 640px){
+				border-left: 1px solid #FFF;
+				&:first-child{
+					border-right: 0;
+				}
+			}
+		}
+	}
+
+	##{$prefijo}map-view{
+		display: none;
+	}
+
+	&.#{$prefijo}active{
+		##{$prefijo}map-view{
+			display: block;
+		}
+		.#{$prefijo}clidxboost-full-slider{
+			display: none;
+		}
+	}
+
+	/*overflow: hidden;
+	height: 0;
+	&.#{$prefijo}wo-images{
+		height: auto;
+	}
+
+	&.#{$prefijo}built{
+		height: auto;
+		.#{$prefijo}wrap-slider,
+		.#{$prefijo}moptions{
+			opacity: 1;
+		}
+
+		
+
+		&.#{$prefijo}active{
+			.#{$prefijo}wrap-slider,
+			.#{$prefijo}full-screen{
+				display: none;
+			}
+			##{$prefijo}map-view{
+				display: block;
+			}
+		}
+	}*/
+
+	.#{$prefijo}wrap-slider{
+		position: relative;
+		/*opacity: 0;
+		transition: opacity .3s;
+		&.#{$prefijo}built{
+			opacity: 1;
+		}*/
+
+		/*&.#{$prefijo}built + .#{$prefijo}moptions{
+			opacity: 1;
+		}*/
+
+		>ul{
+			width: 100%;
+			overflow: hidden;
+			transition: all .5s linear;
+			display: flex;
+			li{
+				position: relative;
+				width: 100%;
+				border: 0;
+				overflow: hidden;
+				cursor: pointer;
+				&.#{$prefijo}loading{
+					img{
+						opacity: 0;
+					}
+				}
+				&:before{
+					content: "";
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					margin: auto;
+					width: 50px;
+					height: 50px;
+					border-radius: 50%;
+					border: 10px solid #ccc;
+					border-top-color: #333;
+					border-width: 5px;
+					animation: spin 1s infinite linear;
+					z-index: 1;
+				}
+				&:after{
+					content: "";
+					display: block;
+					padding-bottom: 85%;
+				}
+				img{
+					transition: opacity .3s;
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					object-fit: cover;
+					z-index: 2;
+					@media screen and (min-width: 480px){
+						border-left: 1px solid #FFF;
+						border-right: 1px solid #FFF;
+					}
+				}
+			}
+		}
+
+		.#{$prefijo}prev,
+		.#{$prefijo}next{
+			position: absolute;
+			top: 50%;
+			width: 35px;
+			height: 46px;
+			background-color: rgba(0, 0, 0, 0.7);
+			margin-top: -23px;
+			z-index: 3;
+			transition: all .3s;
+			span{
+				display: flex;
+				width: 100%;
+				height: 100%;
+				align-items: center;
+				justify-content: center;
+				&:before{
+					content: "\e921";
+					font-family: "idx-icons"!important;
+					display: flex;
+					width: 12px;
+					height: 100%;
+					font-size: 18px;
+					position: absolute;
+					justify-content: center;
+					align-items: center;
+					transition: all .6s;
+					color: #FFF;
+					right: 0;
+					left: 0;
+					margin: 0 auto;
+				}
+			}
+		}
+
+		.#{$prefijo}prev{
+			left: 1px;
+			span{
+				&:before{
+					transform: rotate(90deg);
+				}
+			}
+		}
+
+		.#{$prefijo}next{
+			right: 1px;
+			span{
+				&:before{
+					transform: rotate(-90deg);
+				}
+			}
+		}
+	}
+}
+
+.clidxboost-full-slider{
+	&.gs-infs{
+		.gs-wrapper-items {
+	  	background-color: #fff;
+	  }
+
+	  .gs-item-slider{
+			border: 0;
+	  }
+
+		.gs-wrapper-content{
+		  img{
+				display: block;
+				height: 100%;
+				position: relative;
+				left: 50%;
+				transform: translateX(-50%);
+				width: auto;
+				object-fit: unset;
+		  }
+
+		  &:after{
+		  	padding: 0;
+		  }
+		}
+	}
+}

@@ -1,0 +1,67 @@
+doctype html
+html(lang='en')
+  head
+    title Master Elite 2017
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style", content="#0073AC")
+    meta(name="theme-color", content="#0073AC")
+    meta(name="msapplication-navbutton-color", content="#0073AC")
+    link(rel="stylesheet", href="../css/main.css")
+  body
+    include header.jade
+
+    //BATERIA TIENES QUE COPIAR: DESDE AQUI
+    main.no-scrolling.collection-neighborhood
+      #wrap-neighborhood
+        section#neighborhood.scrooll-neighborhood
+          header
+            .gwr
+              .title-header
+                h1  Miami Featured Neighborhoods
+              //a(href="#", title="Find Your dream home now", rel="nofollow").btnb-blue Request more information
+              #wrap-breacrumb
+                .gwr
+                  ol#breacrumb
+                    li: a(href='#') Home
+                    li Neighborhoods
+              
+              #neighborhood-header-control.wrap-subfilters
+                .icon-arrow-select.list#filter-views
+                  select
+                    option(value="list") List
+                    option(value="map") Map
+                  
+
+          section.gwr#wrap-result-neighborhoods
+            h2.title Miami Beach Properties
+            #wrap-list-neighborhoods
+              ul.neighborhoods-list
+                - for(b = 0; b < 9; b++)
+                  li.properties
+                    h2: a(href="#") Aventura
+                    //ul.nav-list
+                      li: h3 Allison Island Real Estate
+                      li: a(href="#", title="Home For Sale") Home For Sale
+                      li: a(href="#", title="Condos For Sale") Condos For Sale
+                      li: a(href="#", title="Rentals") Rentals
+                      li: a(href="#", title="Luxury Condos") Luxury Condos
+                      li: a(href="#", title="Communities") Communities
+                    .wrap-image
+                      img(src='../images/propiertie.jpg', title='#', alt='#')
+                    a(href="#", title="Aventura").btn-link Aventura
+
+
+          
+        #wrap-map
+          #code-map
+            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28742.90968747849!2d-80.20231346071917!3d25.77506484106738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2sMiami%2C+Florida!5e0!3m2!1ses!2s!4v1490883858310", allowfullscreen)
+    //BATERIA TIENES QUE COPIAR: HASTA AQUI
+      
+    //include footer.jade
+    script(type="text/javascript", src="../js/jquery-3.1.1.min.js")
+    script(type="text/javascript", src="../js/plugins/perfect-scrollbar.jquery.min.js")
+    script(type="text/javascript", src="../js/plugins/jquery-ui.min.js")
+    script(type="text/javascript", src="../js/plugins/jquery.ui.touch-punch.min.js")
+    script(type="text/javascript", src="../js/dgt-master.min.js")

@@ -1,0 +1,285 @@
+/*----------------------------------------------------------------------------------*/
+/* Modal Register
+/*----------------------------------------------------------------------------------*/
+/*.#{$prefijo}overlay_modal{ Activar si se desea que sea general*/
+
+##{$prefijo}modal_login{ /*Solo para el modal de registro*/
+	.#{$prefijo}modal_cm{
+		/*background-color: rgba(0,0,0,0.6);
+		&:before{
+			content: "";
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: linear-gradient(to bottom,#000 0,rgba(0,0,0,0) 100%);
+			z-index: 1;
+		}*/
+
+		.list-check{
+			li{
+				margin-bottom: 7px
+			}
+			label{
+				&:hover{
+					&:before{
+						border-color: #a0a0a0;
+					}
+				}
+				&:after{
+					color: $colorweb;
+				}
+				&:before{
+					border-color: #a0a0a0;
+					background-color: transparent;
+				}
+			}
+			
+			input[type=checkbox]{
+				&:checked+label{
+					color: $colorweb;
+					&:before{
+						border-color: $colorweb;
+					}
+				}
+			}
+		}
+
+		.#{$prefijo}contact-opt{
+			li{
+				a{
+					color: $colorweb;
+				}
+			}
+		}
+
+		.#{$prefijo}confirm-message{
+			.#{$prefijo}confirmation-icon {
+				color: #65af5c;
+			}
+			h2{
+				color: #FFF;
+			}
+			p{
+				&:after{
+					background-color: #a0a0a0;
+				}
+			}
+		}
+		
+		##{$prefijo}push-registration{
+			.#{$prefijo}pr-steps-container{
+				.#{$prefijo}pr-step{
+
+					/*> h4{
+						color: #FFF;
+					}
+
+					.#{$prefijo}pr-title{
+						color: #FFF;
+					}
+
+					label{
+						color: #FFF;
+					}
+					
+					.#{$prefijo}wrapper-login{
+						color: #FFF;
+						span{
+							color: #FFF;
+						}
+						a{
+							color: #013766;
+						}
+					}*/
+
+					.#{$prefijo}pr-next-step,
+					.#{$prefijo}pr-redbtn{
+						background-color: $colorweb;
+						border: 1px solid $colorweb;
+						color: #FFF;
+						&:hover{
+							background-color: #FFF;
+							color: #333
+						}
+					}
+
+					.#{$prefijo}pr-dgray{
+						color: #333;
+						display: block;
+						margin-bottom: 1rem;
+						font-weight: 14/16*1rem;
+						.txtgray{
+							color: #333;
+						}
+					}
+				}
+			}
+		}
+
+		/*.#{$prefijo}close-modal{
+			border: 2px solid #013766;
+			border-radius: 100%;
+			span{
+				color: #013766;
+				&:before{
+					font-size: 12/16*1rem;
+				}
+			}
+		}*/
+
+		.#{$prefijo}header-tab{
+			li{
+				height: 45px;
+				a{
+					text-align: center;
+					justify-content: center;
+					border-bottom: 1px solid $gris-lineas;
+					padding: 0 5/16*1rem;
+					&:hover,
+					&.active{
+						border-color: $colorweb;
+						color: $colorweb;
+						/*background-color: rgba(0,0,0,0.6);*/
+					}
+				}
+			}
+		}
+
+		.#{$prefijo}content_md{
+			z-index: 2;
+			position: relative;
+			.heder_md{
+				padding-top: 45/16*1rem;
+				padding-right: 1rem;
+				h2{
+					color: #333;
+					text-align: center;
+				}
+			}
+			
+			.#{$prefijo}body_md{
+				p{
+					color: #333;
+				}
+			}
+
+			.#{$prefijo}social_login{
+				li{
+					a{
+						height: 45px;
+						&.#{$prefijo}ico-google{
+							background: #e54c3c;
+							&:hover{
+								background: #f0765e;
+							}
+						}
+
+						&.#{$prefijo}ico-facebook{
+							background: #3a5a93;
+							&:hover{
+								background: #486db1;
+							}
+						}
+					}
+				}
+			}
+
+			.#{$prefijo}line_or{
+				position: relative;
+				text-align: center;
+				margin: 15px 0;
+				&:before{
+					content: '';
+					position: absolute;
+					left: 0;
+					right: 0;
+					height: 1px;
+					top: 50%;
+					background: #adadad;
+					z-index: 1;
+				}
+				span{
+					display: inline-block;
+					position: relative;
+					z-index: 2;
+					vertical-align: top;
+					width: 25px;
+					height: 25px;
+					line-height: 22px;
+					border-radius: 50%;
+					background: #adadad;
+					/*background: #4A4A4A;*/
+					color: #fff;
+					font-size: 13/16*1rem;
+					font-family: $opensans;
+				}
+			}
+
+			.#{$prefijo}footer_md{
+				padding-top: 2rem;
+				height: 70px;
+				border: 0;
+				width: 100%;
+				text-align: center;
+				color: #333;
+				a{
+					color: #013766;
+					&:hover{
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+
+		/*.#{$prefijo}form_content{
+			.#{$prefijo}btn_form,
+			.#{$prefijo}gform_footer .#{$prefijo}gform_button {
+				background-color: #013766;
+				border: 1px solid #013766;
+				color: #FFF;
+				&:hover{
+					background-color: #333;
+					border-color: #333;
+				}
+			}
+			
+			.#{$prefijo}gform_body{
+				.#{$prefijo}gform_fields{
+					.#{$prefijo}gfield{
+						color: #a0a0a0;
+						.#{$prefijo}gfield_label{
+							color: #a0a0a0;
+						}
+					}
+				}
+			}
+		}*/
+	}
+}
+
+/*Activar si se desea que sea general
+##{$prefijo}modal_calculator{
+	.#{$prefijo}modal_cm{
+		.#{$prefijo}detail-mortgage{
+			h3 {
+		    border-bottom: 3px solid #a0a0a0;
+		    color: #a0a0a0;
+		  }
+		  ul{
+		  	li{
+		  		span{
+		  			color: #a0a0a0;
+		  			&.#{$prefijo}text-bold{
+							color: #FFF;
+						}
+		  		}
+		  		&.#{$prefijo}line-top{
+		  			border-color: #a0a0a0;
+		  		}
+		  	}
+		  }
+		}
+	}
+}*/

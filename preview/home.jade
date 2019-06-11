@@ -1,0 +1,194 @@
+doctype html
+html(lang='en')
+	head
+		title Home | Flexidx
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		meta(name="apple-mobile-web-app-capable", content="yes")
+		meta(name="apple-mobile-web-app-status-bar-style", content="#4b4b4b")
+		meta(name="theme-color", content="#4b4b4b")
+		meta(name="msapplication-navbutton-color", content="#4b4b4b")
+		link(rel="stylesheet", href="../css/main.css")
+		link(rel="stylesheet", href="css/main-project.css")
+	body.clidxboost-ngrid
+		//include header.jade
+		main#flex-home-theme
+			.gwr
+				.clidxboost-content-slider
+					#slider-main.clidxboost-slider(
+					data-items='1', 
+					data-responsive='', 
+					data-animate='true', 
+					data-transition='6500',
+					data-nav='',
+					data-bullets='',
+					data-autoplay='true')
+						.clidxboost-wrap-slider
+							ul
+								//
+									li
+										.clidxboost-item-slider
+											iframe(src="https://www.youtube.com/embed/-y3h9p_c5-M", frameborder="0", allow="autoplay; encrypted-media")
+									li
+										.clidxboost-item-slider
+											video(autoplay="",loop="", muted="", poster="http://opulenceridxb.staging.wpengine.com/wp-content/themes/Opulence/images/preload.jpg", src="https://24e3d2766e918fc4369a-2005f80a01533296a927e19ca48f1dcf.ssl.cf1.rackcdn.com/opulence/JP__Branded-__450_Alton_Road.m4v")
+											source(type="video/mp4")
+								li
+									.clidxboost-item-slider
+										img.data-blazy.clidxboost-item-img(alt="Imagen", title="Imagen", src="", data-src="images/1.jpg")
+									//
+										a(href="#").wrap-information.btn-play
+											h2 Contempory Luxury Oasis
+											span 709 East Dilido Drive
+											ul
+												li 6 Beds
+												li 6.5 Baths
+												li 6.200 SQ.FT
+
+								li.active
+									.clidxboost-item-slider
+										img.data-blazy.clidxboost-item-img(alt="Imagen", title="Imagen", src="", data-src="https://wallpapersultra.net/wp-content/uploads/3D-Full-HD-Wallpapers.jpg")
+								li
+									.clidxboost-item-slider
+										img.data-blazy.clidxboost-item-img(alt="Imagen", title="Imagen", src="", data-src="images/3.jpg")
+								li
+									.clidxboost-item-slider
+										img.data-blazy.clidxboost-item-img(alt="Imagen", title="Imagen", src="", data-src="images/2.jpg")
+
+							.clidxboost-nav
+								.clidxboost-bullets
+								.clidxboost-next-prev
+									button.clidxboost-prev: span.clidxboost-icon-arrow-select
+									button.clidxboost-next: span.clidxboost-icon-arrow-select
+
+						//#flex-bubble-search
+							h2 Your miami real estate resource
+							.content-flex-bubble-search
+								form(name="", action="POST")
+
+									.form-item
+										select
+											option(value="1") For Sale
+											option(value="2") For Rent
+										span.select-arrow
+
+									input(type="search", placeholder="Search by address, zip code, neighborhood")
+									button#btn-search: span.icon-search
+								a(href="#", title="Advanced search options").flex-link + Advanced search options
+				
+				.clidxboost-content-slider
+					#slider-main-2.clidxboost-slider(
+					data-items='1', 
+					data-responsive='', 
+					data-animate='', 
+					data-transition='5000',
+					data-nav='',
+					data-bullets='',
+					data-autoplay='true')
+						.clidxboost-wrap-slider
+							ul
+								li
+									.clidxboost-item-slider
+										img.data-blazy.clidxboost-item-img(alt="Imagen", title="Imagen", src="", data-src="https://www.movilzona.es/app/uploads/2017/05/fondos-google.jpg?x=720")
+								li
+									.clidxboost-item-slider
+										img.data-blazy.clidxboost-item-img(alt="Imagen", title="Imagen", src="", data-src="http://kb4images.com/images/google-wallpaper/38173047-google-wallpaper.jpg")
+								li
+									.clidxboost-item-slider
+										img.data-blazy.clidxboost-item-img(alt="Imagen", title="Imagen", src="", data-src="images/hompage2.jpg")
+
+							.clidxboost-nav
+								.clidxboost-bullets
+								.clidxboost-next-prev
+									button.clidxboost-prev: span.clidxboost-icon-arrow-select
+									button.clidxboost-next: span.clidxboost-icon-arrow-select
+
+						//#flex-bubble-search
+							h2 Your miami real estate resource
+							.content-flex-bubble-search
+								form(name="", action="POST")
+
+									.form-item
+										select
+											option(value="1") For Sale
+											option(value="2") For Rent
+										span.select-arrow
+
+									input(type="search", placeholder="Search by address, zip code, neighborhood")
+									button#btn-search: span.icon-search
+								a(href="#", title="Advanced search options").flex-link + Advanced search options
+				section.flex-block-description
+					h2.title-block The Difference is in service
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+					p
+						span Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+					a(href="#", title="Meet Us").btn-link 
+						span Meet Us
+
+				section.flex-block-description.mtop-60
+					h2.title-block.single More near by properties
+					.wrap-result.view-grid
+						
+						#slider-properties.wrap-list-result.clidxboost-slider(
+							data-items='4', 
+							data-responsive='[{"breakpoint":"1024","itemstoshow":"3"},{"breakpoint":"768","itemstoshow":"2"},{"breakpoint":"480","itemstoshow":"1"}]', 
+							data-animate='', 
+							data-transition='6500',
+							data-nav='false',
+							data-bullets='relative',
+							data-autoplay=''
+						)
+							.clidxboost-wrap-slider
+								ul.result-search.slider-generator
+									- for(b = 0; b < 8; b++)
+										- var price = Math.floor(Math.random() * 101)
+										li.propertie(data-id='343278191', data-mls='A10172834', data-counter='10', data-mode="idx")
+											.clidxboost-item-slider
+												h2(title="Nombre completo de la dirección")
+													span 151012 Collins Avenue Suit
+												ul.features
+													li.house-type: h3 Condo For Sale
+													li.address Miami, FL 33145
+													li.price $#{price},000,000
+													li.pr.down 2.05%
+													li.beds 10  
+														span Beds 
+													li.baths 8 
+														span Baths 
+													li.living-size 
+														span 2,534
+														| SF 
+														span (452 m2)
+													li.price-sf
+														span $345 
+														| / SF
+														span ($244 m2)
+													li.type: span Davis citrus Farms
+													li.build-year
+														span Built 
+														| 2015
+													li.development: span Star Island Corr
+												.wrap-slider
+													ul
+														li
+															img(src='http://retsimages.s3.amazonaws.com/13/A10168913_1.jpg', title='#', alt='#', style="opacity:1")
+													button.prev: span.clidxboost-icon-arrow-select
+													button.next: span.clidxboost-icon-arrow-select
+													button.clidxboost-btn-check: span.clidxboost-icon-check
+												a(href="javascript:void(0)", data-modal="modal_property_detail", data-position="0", rel="nofollow").view-detail.show-modal View detail
+						
+								.clidxboost-nav
+									.clidxboost-bullets
+									.clidxboost-next-prev
+										button.clidxboost-prev: span.clidxboost-icon-arrow-select
+										button.clidxboost-next: span.clidxboost-icon-arrow-select
+
+
+					a(href="#", title="View more listings").btn-link 
+						span View more listings
+		//include footer.jade
+		script(type="text/javascript", src="../js/jquery-3.1.1.min.js")
+		script(type="text/javascript", src="../js/plugins/jquery-ui.min.js")
+		script(type="text/javascript", src="../js/plugins/jquery.ui.touch-punch.min.js")
+		script(type="text/javascript", src="../js/dgt-master.min.js")
+		script(type="text/javascript", src="js/dgt-project-master.js")

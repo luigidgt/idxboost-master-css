@@ -1,0 +1,19 @@
+/*----------------------------------------------------------------------------------*/
+/* LG - ESTILOS DEFINIDOS POR EL MAQUETADOR ASIGNADO
+/*----------------------------------------------------------------------------------*/
+.lg-main{
+	background-color: #333;
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+	height: 100vh;
+	.lg-layer{
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
