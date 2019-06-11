@@ -216,6 +216,7 @@ $colorp: #333333;
 				}
 
 				.ib-btext {
+					color: #fff;
 					position: absolute;
 					top: -400px;
 					left:0;
@@ -577,7 +578,7 @@ $colorp: #333333;
 				}
 				.ib-iftxt {
 					font-size: .85em;
-					color: #BCBCBC;
+					color: #333;
 				}
 			//
 
@@ -1452,10 +1453,10 @@ $colorp: #333333;
 					}
 
 					.ib-ghtypes {
+						color: #333;
 						font-size: .68em;
 						text-align: left;
 						max-width: 335px;
-						color: #A9A9A9;
 					}
 				//
 			//
@@ -1701,6 +1702,7 @@ $colorp: #333333;
 					}
 
 					.ib-pitem {
+						background-color: #333;
 						border: 1px solid #E1E1E1;
 						margin-bottom: 15px;
 						position: relative;
