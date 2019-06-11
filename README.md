@@ -1,2 +1,2 @@
 # idxboost-master-css
-IDX Boost
+Accessibility patterns for IDX Boost
