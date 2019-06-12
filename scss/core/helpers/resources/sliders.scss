@@ -115,7 +115,7 @@
         position: relative;
         text-indent: -999999px;
         width: 30px;
-        &:after{
+        &:before{
           content: "";
           background-color: #ababad;
           border-radius: 100%;
@@ -131,7 +131,7 @@
           width: 13px;
         }
         &.gs-bullet-active{
-          &:after{
+          &:before{
             background-color: #333;
           }
         }
