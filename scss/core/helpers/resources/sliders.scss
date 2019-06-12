@@ -167,6 +167,9 @@
     width: 30px;
     height: 30px;
     background-color: transparent;
+    overflow: hidden;
+    position: relative;
+    text-indent: -999999px;
     &:before{
       content: "";
       display: block;
@@ -175,6 +178,11 @@
       background-color: #d2d2d2;
       border-radius: 100%;
       margin: auto;
+      margin-left: -6.5px;
+      position: absolute;
+      margin-top: -6.5px;
+      top: 50%;
+      left: 50%;
     }
     &.gs-bullet-active{
       &:before{
