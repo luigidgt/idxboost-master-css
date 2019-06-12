@@ -45,11 +45,16 @@ body{
 								}
 							}
 							.clidxboost-btn-check {
-								top: auto;
 								margin-top: 10/16*1rem;
+								overflow: hidden;
+								text-indent: -999999px;
+								top: auto;
 								/*HEART*/
-								&.clidxboost-icon-heart{
+								&.clidxboost-icon-heart{									
 									span{
+										position: absolute;
+										top: 0;
+										left: 0;
 										&:before{
 											opacity: 1;
 											background-position: 0 -66px;
@@ -64,6 +69,9 @@ body{
 								/*STAR*/
 								&.clidxboost-icon-star{
 									span{
+										position: absolute;
+										top: 0;
+										left: 0;
 										&:before{
 											opacity: 1;
 											background-position: 0 -168px;
@@ -78,6 +86,9 @@ body{
 								/*SQUARE*/
 								&.clidxboost-icon-square{
 									span{
+										position: absolute;
+										top: 0;
+										left: 0;
 										&:before{
 											opacity: 1;
 											background-position: 0 -264px;
