@@ -113,8 +113,8 @@
         margin: 0;
         overflow: hidden;
         position: relative;
-        text-indent: -999999px;
         width: 30px;
+        text-indent: -999999px;
         &:before{
           content: "";
           background-color: #ababad;
