@@ -180,12 +180,14 @@
 
 	#clidxboost-btn-search{
 		width: 40px;
-    height: 45px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: transparent;
-    &:after{
+		height: 45px;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		background-color: transparent;
+		text-indent: -99999px;
+		overflow: hidden;
+		&:after{
 			content: "\e922";
 			font-family: $web-icons;
 			display: flex;
@@ -200,8 +202,9 @@
 			font-weight: 600;
 			color: #a7a6ae;
 			transition: color .3s;
+			text-indent: 0;
 		}
-  }
+  	}
 
 	#clidxboost-modal-search{
 		width: 100%;
