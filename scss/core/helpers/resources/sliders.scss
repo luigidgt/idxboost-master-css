@@ -108,22 +108,30 @@
     margin: 1rem 0;
     .gs-wrapper-bullets{
       .gs-bullet{
-        margin: 0;
-        width: 30px;
-        height: 30px;
         background-color: transparent;
-        &:before{
+        height: 30px;
+        margin: 0;
+        overflow: hidden;
+        position: relative;
+        text-indent: -999999px;
+        width: 30px;
+        &:after{
           content: "";
-          width: 13px;
-          height: 13px;
           background-color: #ababad;
-          display: block;
           border-radius: 100%;
-          transition: all .3s;
+          display: block;
+          height: 13px;
+          left: 50%;
           margin: 0 auto;
+          margin-left: -6.5px;
+          margin-top: -6.5px;
+          position: absolute;
+          top: 50%;
+          transition: all .3s;
+          width: 13px;
         }
         &.gs-bullet-active{
-          &:before{
+          &:after{
             background-color: #333;
           }
         }
