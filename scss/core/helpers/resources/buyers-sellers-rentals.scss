@@ -23,6 +23,7 @@ $colorp: #FFF;
 
 // ESTILOS GENERALES DE LOS FORMS
 	.ib-form-buyandsell {
+		background-color: #333;
 		@include flexpa();
 		position: relative;
 		min-height: calc(100vh - 169px);
