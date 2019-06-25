@@ -76,7 +76,8 @@
           height: 100%;
           transition: all .3s;
         }
-        &:hover{
+        &:hover,
+        &:focus{
           span{
             background-color: $colorweb;
             color: #FFF;
