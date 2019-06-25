@@ -1029,6 +1029,7 @@ $colorp: #333333;
 				background-color: #fff;
 				border: 1px solid #E5E5E5;
 				border-top: 2px solid $colorp;
+				display: none;
 				width: 300px;
 				position: absolute;
 				top:45px;
@@ -1067,6 +1068,7 @@ $colorp: #333333;
 					z-index: 5;
 
 					.ib-fimini {
+						display: block;
 						opacity: 1;
 						top:55px;
 					}
