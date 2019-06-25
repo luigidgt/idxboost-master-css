@@ -872,6 +872,7 @@ $colorp: #333333;
 					display:none;
 				}
 				background-color: #fff;
+				display: none;
 				position: absolute;
 				left: 50%;
 				transform: translateX(-50%);
@@ -1074,6 +1075,7 @@ $colorp: #333333;
 					}
 
 					.ib-fdesktop {
+						display: block;
 						top:105px;
 						opacity: 1;
 
