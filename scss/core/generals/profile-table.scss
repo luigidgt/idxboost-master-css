@@ -119,7 +119,7 @@
       li{
         border: none;
         width: 19%;
-        margin: 0 10px;
+        margin: 10px;
         a, button{
           text-align: center;
           border: 1px solid #ccc;
@@ -692,17 +692,20 @@
   }
 }
 
-.form-profile{
+.form-profile {
+
   .content-form{
     width: 100%;
     margin-bottom: 0.625rem;
-    label{
+
+    label {
       font-size: 14px;
       width: 100%;
       display: block;
       margin-bottom: 0.3125rem;
     }
-    .input-form{
+
+    .input-form {
       border: 1px solid #ccc;
       border-radius: 4px;
       height: 40px;
@@ -710,9 +713,16 @@
       width: 100%;
       text-align: left;
       background-color: #FFF !important;
-      box-shadow: none !important;
+      box-shadow: none;
       font-size: 14px;
+
+      &:focus {
+        border-color: #80bdff;
+        box-shadow: 0 0 0 3.2px rgba(0,123,255,.25);
+        outline: 0;
+      }
     }
+
   }
 
   p{
