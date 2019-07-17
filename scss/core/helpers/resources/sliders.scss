@@ -163,13 +163,23 @@
   display: flex;
   justify-content: center;
   margin: 10/16*1rem 0;
-  .gs-bullet{
-    width: 30px;
-    height: 30px;
+  .gs-bullet {
     background-color: transparent;
+    border-radius: 4px;
+    height: 20px;
+    margin: 0 5px;
     overflow: hidden;
     position: relative;
     text-indent: -999999px;
+    transition: all .3s;
+    width: 20px;
+
+    &:focus {
+      border-color: #80bdff;
+      box-shadow: 0 0 0 3.2px rgba(0,123,255,.25);
+      outline: 0;
+    }
+
     &:before{
       content: "";
       display: block;
