@@ -43,8 +43,7 @@
 				margin-bottom: 1rem;
 				overflow: hidden;
 				width: 100%;
-				&:hover,
-				&:focus {
+				&:hover {
 					.#{$prefijo}wrap-slider{
 						.#{$prefijo}prev{
 							left: 0;
@@ -436,6 +435,10 @@
 					height: 100%;
 					border: 1px solid $gris-lineas;
 					transition: border-color .3s;
+
+					&:focus {
+						border-color: $colorweb;
+					}
 				}
 			}
 		}
