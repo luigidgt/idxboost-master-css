@@ -188,11 +188,10 @@
       background-color: #d2d2d2;
       border-radius: 100%;
       margin: auto;
-      margin-left: -6.5px;
       position: absolute;
-      margin-top: -6.5px;
       top: 50%;
       left: 50%;
+      transform: translate(-50%, -50%);
     }
     &.gs-bullet-active{
       &:before{
