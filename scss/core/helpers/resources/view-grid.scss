@@ -43,7 +43,8 @@
 				margin-bottom: 1rem;
 				overflow: hidden;
 				width: 100%;
-				&:hover{
+				&:hover,
+				&:focus {
 					.#{$prefijo}wrap-slider{
 						.#{$prefijo}prev{
 							left: 0;
