@@ -356,7 +356,8 @@ $colorp: #333333;
 					transition: all .3s linear;
 				}
 
-				&:hover {
+				&:hover, 
+				&:focus {
 					background-color: $colorp;
 					color: #fff;
 					cursor:pointer;
