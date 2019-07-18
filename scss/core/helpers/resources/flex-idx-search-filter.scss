@@ -333,6 +333,7 @@ $colorp: #333333;
 			}
 
 			.ib-dbitem {
+				background-color: #F0F0F0;
 				width: 70px;
 				height: 100%;
 				transition: all .3s linear;
@@ -348,7 +349,8 @@ $colorp: #333333;
 					transition: all .3s linear;
 				}
 
-				&:hover {
+				&:hover,
+				&:focus {
 					background-color: $colorp;
 					color: #fff;
 					cursor:pointer;
