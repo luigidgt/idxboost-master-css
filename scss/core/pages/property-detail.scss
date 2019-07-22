@@ -529,6 +529,13 @@
               text-indent: -999999px;
               width: 100%;
               position: relative;
+
+              &:focus {
+                border-color: #80bdff;
+                box-shadow: 0 0 0 3.2px rgba(0, 123, 255, 0.25);
+                outline: 0;
+              }
+
               &:before{
                 position: absolute;
                 top: 0;
