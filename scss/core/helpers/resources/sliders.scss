@@ -313,9 +313,10 @@
       transform: rotate(-90deg);
     }
   }
-  .gs-fs.gs-attached{
-    opacity: 0;
+  .gs-fs.gs-attached {
+    display: none;
     height: 0;
+    opacity: 0;
     width: 0;
   }
 
