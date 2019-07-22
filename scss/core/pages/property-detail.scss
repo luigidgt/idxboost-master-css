@@ -34,6 +34,9 @@
             margin-right: 0;
           }
         }
+        .panel-options {
+          padding: 4px 0;
+        }
         .main-content{
           padding-left: 0;
           padding-right: 0;
@@ -391,6 +394,7 @@
             background-color: transparent;
             border-radius: 4px;
             padding: 0 5px;
+            transition: all .3s;
 
             &:focus,
             &:hover {
@@ -535,6 +539,12 @@
           &:hover,
           &:focus {
             color: #333;
+          }
+
+          &:focus {
+            border-color: #80bdff;
+            box-shadow: 0 0 0 3.2px rgba(0, 123, 255, 0.25);
+            outline: 0;
           }
         }
 
