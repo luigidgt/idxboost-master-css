@@ -494,6 +494,7 @@
         }
 
         ##{$prefijo}show-shared{
+          border-radius: 4px;
           display: block;
           height: 40px;
           //text-indent: -999999px;
@@ -531,7 +532,8 @@
             left: 50%;
             transform: translate(-50%, -50%);*/
           }
-          &:hover{
+          &:hover,
+          &:focus {
             color: #333;
           }
         }
@@ -557,6 +559,7 @@
               text-indent: -999999px;
               width: 100%;
               position: relative;
+              transition: all .3s;
 
               &:focus {
                 border-color: #80bdff;
@@ -1196,8 +1199,11 @@
 		.#{$prefijo}panel-options{
 			.#{$prefijo}options-list{
 				.#{$prefijo}shared-content{
-					##{$prefijo}show-shared{
-						text-indent: 0;
+					##{$prefijo}show-shared {
+            height: 32px;
+            padding: 0 5px;
+            text-indent: 0;
+
 						&:before{
 							display: inline-block;
 							vertical-align: middle;
