@@ -87,7 +87,7 @@
     }
   }
 
-  .#{$prefijo}moptions{
+  .#{$prefijo}moptions {
     opacity: 0;
     transition: opacity .3s;
     position: absolute;
@@ -96,15 +96,16 @@
     right: 0;
     width: 100%;
     max-width: 1460px;
-    //max-width: 1230px;
     margin: 0 auto;
-    .#{$prefijo}slider-option{
+
+    .#{$prefijo}slider-option {
       position: absolute; 
       top: 1rem;
       left: 1rem;
       z-index: 4;
       display: flex;
-      .#{$prefijo}option-switch{
+
+      .#{$prefijo}option-switch {
         font-size: 10/16*1rem;
         font-family: $opensans;
         color: #FFF;
@@ -114,13 +115,23 @@
         text-transform: uppercase;
         margin-right: 5/16*1rem;
         border-radius: 4px;
-        &.#{$prefijo}active{
+
+        &:focus {
+          border-color: #80bdff;
+          box-shadow: 0 0 0 3.2px rgba(0, 123, 255, 0.25);
+          outline: 0;
+        }
+
+        &.#{$prefijo}active {
           background-color: #FFF;
           color: #333;
         }
+
       }
+
     }
-    .full-screen{
+
+    .full-screen {
       color: #fff;
       position: absolute;
       top: 1rem;
@@ -132,6 +143,13 @@
       border-radius: 4px;
       cursor: pointer;
       text-indent: -999999px;
+
+      &:focus {
+        border-color: #80bdff;
+        box-shadow: 0 0 0 3.2px rgba(0, 123, 255, 0.25);
+        outline: 0;
+      }
+
       &:before{
         color: #FFF;
         content: "\e912";
@@ -148,7 +166,9 @@
         top: 0;
         width: 32px;
       }
+
     }
+
   }
 
   .#{$prefijo}title-conteiner{
@@ -369,12 +389,20 @@
           font-family: $opensans;
           .#{$prefijo}chk_save{
             background-color: transparent;
+            border-radius: 4px;
+            padding: 0 5px;
 
             &:focus,
             &:hover {
               span {
                 color: #333;
               }
+            }
+
+            &:focus {
+              border-color: #80bdff;
+              box-shadow: 0 0 0 3.2px rgba(0, 123, 255, 0.25);
+              outline: 0;
             }
 
             span{
@@ -605,22 +633,20 @@
             border-right: 0;
           }
 
-          a{
+          a {
+            align-items: center;
             border-radius: 4px;
-            height: 100%;
-            //text-indent: -999999px;
-            height: 40px;
-            position: relative;
             color: #5A585F;
-            transition: all .3s;
+            display: flex;
 						font-family: $opensans;
 						font-size: 11px;
-						//text-transform: uppercase;
-            text-transform: capitalize;
 						font-weight: 600;
-            display: flex;
-            align-items: center;
+            height: 100%;
+            height: 40px;
             justify-content: center;
+            position: relative;
+            text-transform: capitalize;
+            transition: all .3s;
 
             &:before{
               font-family: $web-icons;
@@ -1194,11 +1220,12 @@
 				.#{$prefijo}action-list{
 					li{
 						a{
-							display: flex;
 							align-items: center;
+              display: flex;
+              height: 32px;
 							justify-content: center;
-              text-indent: 0;
               padding: 0 5px;
+              text-indent: 0;
 							&:before{
 								display: inline-block;
 								vertical-align: middle;
