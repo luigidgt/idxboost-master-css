@@ -48,7 +48,7 @@
 		$("#map").removeAttr("data-lng");
 	}
 	function temporalHeight(){
-		var finalTop = ($(".property-information").height()) + ($(".panel-options").height()) + 30;
+		var finalTop = ($(".property-information").height()) + ($(".panel-options").innerHeight()) + 30;
 		var heightContent = $("#property-description").height();
 		var finalHeight = heightContent + 60;
 		$(".temporal-content").height(finalHeight).css({'top': finalTop+'px'});
