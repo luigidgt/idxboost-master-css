@@ -599,6 +599,7 @@
           }
 
           a{
+            border-radius: 4px;
             height: 100%;
             //text-indent: -999999px;
             height: 40px;
@@ -636,8 +637,15 @@
               margin-right: 5px;
             }
 
-            &:hover{
+            &:hover,
+            &:focus {
               color: #333;
+            }
+
+            &:focus {
+              border-color: #80bdff;
+              box-shadow: 0 0 0 3.2px rgba(0, 123, 255, 0.25);
+              outline: 0;
             }
 
             &.#{$prefijo}ico-calculator{
@@ -1182,7 +1190,8 @@
 							display: flex;
 							align-items: center;
 							justify-content: center;
-							text-indent: 0;
+              text-indent: 0;
+              padding: 0 5px;
 							&:before{
 								display: inline-block;
 								vertical-align: middle;
@@ -1373,6 +1382,7 @@
 
 		.#{$prefijo}panel-options{
 			.#{$prefijo}options-list{
+        align-items: center;
 				justify-content: space-between;
 				.#{$prefijo}shared-content{
 					display: flex;
