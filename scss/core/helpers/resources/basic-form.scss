@@ -36,6 +36,13 @@
 					font-family: $opensans;
 					font-size: 14/16*1rem;
 					padding: 0 1rem;
+					transition: all .3s;
+
+					&:focus {
+						border-color: #80bdff;
+						box-shadow: 0 0 0 3.2px rgba(0, 123, 255, 0.25);
+						outline: 0;
+					}
 
 					&.#{$prefijo}textarea{
 						resize: none;
@@ -63,7 +70,8 @@
 			font-weight: 600;
 			font-size: 14/16*1rem;
 
-			&:hover{
+			&:hover,
+			&:focus{
 				background-color: #FFF;
 				color: #333;
 			}
