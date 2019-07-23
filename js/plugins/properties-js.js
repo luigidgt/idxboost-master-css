@@ -107,7 +107,7 @@ var yDown = null;
   }
 
   function temporalHeight() {
-    var finalTop = ($(".property-information").height()) + ($(".panel-options").height()) + 21;
+    var finalTop = ($(".property-information").height()) + ($(".panel-options").innerHeight()) + 21;
     var propertyDescription = $("#property-description");
 
     if (propertyDescription.length) {
