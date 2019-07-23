@@ -303,6 +303,12 @@
     position: relative;
     text-indent: -999999px;
 
+    &:focus {
+      border-color: #80bdff;
+      box-shadow: 0 0 0 3.2px rgba(0, 123, 255, 0.25);
+      outline: 0;
+    }
+
     &:before {
       align-items: center;
       color: #fff;
@@ -312,7 +318,7 @@
       font-size: 22px;
       height: 100%;
       justify-content: center;
-      margin-top: 3px;
+      margin: auto;
       text-indent: 0;
       transform: rotate(90deg);
       width: 100%;
