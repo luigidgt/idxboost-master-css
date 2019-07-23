@@ -77,11 +77,15 @@
           transition: all .3s;
         }
         &:hover,
-        &:focus{
+        &:focus {
           span{
             background-color: $colorweb;
             color: #FFF;
           }
+        }
+
+        &:focus {
+          border-color: #333;
         }
       }
 
