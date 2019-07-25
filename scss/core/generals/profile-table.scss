@@ -237,6 +237,13 @@
   .table-header {
     display: none;
 
+    .flex-table-row-item {
+      background-color: #fff;
+      color: #333;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
     @media screen and (min-width: 768px) {
       background-color: #fff;
       color: #333;
@@ -244,12 +251,6 @@
       span {
         width: 380px;
       }
-    }
-
-    .flex-table-row-item {
-      color: #333;
-      font-size: 13px;
-      font-weight: 600;
     }
 
   }
