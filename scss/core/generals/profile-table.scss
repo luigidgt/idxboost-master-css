@@ -942,23 +942,25 @@
     label{
       width: auto;
     }
+
     .opt_content{
+
       span {
-        position: relative;
-        color: #909090;
+        align-items: center;
+        color: #333;
+        display: flex;
+        font-size: 11px;
+        margin-right: 1rem;
         overflow: hidden;
+        position: relative;
         text-overflow: ellipsis;
         white-space: nowrap;
         width: auto;
-        align-items: center;
-        font-size: 11px;
-        display: flex;
-        margin-right: 1rem;
         &:before{
           content: "";
           width: 15px;
           height: 16px;
-          background-color: #FFF;
+          background-color: #fff;
           display: inline-block;
           margin-right: 5px;
           border: 1px solid #333;
@@ -977,9 +979,12 @@
           transform: scale(0);
         }
       }
+
       input:checked+span:after {
         transform: scale(1);
       }
+
     }
+
   }
 }
