@@ -2902,7 +2902,7 @@ $colorp: #333333;
 				min-height: 24px;
 				@include flexpa();
 				color: #fff;
-				transition: all .2s linear;
+				transition: all .3s linear;
 				background-color:rgba(0, 0, 0, 0.75);
 				text-transform: uppercase;
 				font-size: .66em;
@@ -2925,6 +2925,12 @@ $colorp: #333333;
 
 				&:hover {
 					cursor:pointer;
+				}
+
+				&:focus {
+					border-color: #80bdff;
+					box-shadow: 0 0 0 3.2px rgba(0,123,255,.25);
+					outline: 0;
 				}
 			}
 
@@ -3411,6 +3417,12 @@ $colorp: #333333;
 					font-size: 1.2em;
 				}
 
+				&:focus {
+					border-color: #80bdff;
+					box-shadow: 0 0 0 3.2px rgba(0,123,255,.25);
+					outline: 0;
+				}
+
 				@media screen and (min-width: 768px) {
 					height: 45px;
 				}
@@ -3452,9 +3464,6 @@ $colorp: #333333;
 				position: absolute;
 				top: -200px;
 				left:0;
-			}
-
-			.ib-plsifb {
 			}
 
 			.ib-pshared {
@@ -3806,6 +3815,7 @@ $colorp: #333333;
 					border:1px solid #E5E5E5;
 					border-radius: 3px;
 					font-size: .8em;
+					transition: all .3s;
 				}
 
 				.ib-cftextarea {
@@ -3841,7 +3851,8 @@ $colorp: #333333;
 					transition: all .2s linear;
 					border: 1px solid $colorp;
 
-					&:hover {
+					&:hover,
+					&:focus {
 						color: $colorp;
 						background-color: #fff;
 

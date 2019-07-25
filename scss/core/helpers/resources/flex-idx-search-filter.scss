@@ -2912,7 +2912,7 @@ $colorp: #333333;
 				min-height: 24px;
 				@include flexpa();
 				color: #fff;
-				transition: all .2s linear;
+				transition: all .3s linear;
 				background-color:rgba(0, 0, 0, 0.75);
 				text-transform: uppercase;
 				font-size: .66em;
@@ -2935,6 +2935,12 @@ $colorp: #333333;
 
 				&:hover {
 					cursor:pointer;
+				}
+
+				&:focus {
+					border-color: #80bdff;
+					box-shadow: 0 0 0 3.2px rgba(0,123,255,.25);
+					outline: 0;
 				}
 			}
 
@@ -3025,6 +3031,13 @@ $colorp: #333333;
 					.ib-btnfs {
 						top: 15px;
 						right: 15px;
+						transition: all .3s;
+
+						&:focus {
+							border-color: #80bdff;
+							box-shadow: 0 0 0 3.2px rgba(0,123,255,.25);
+							outline: 0;
+						}
 
 						/*@media screen and (max-width: 1023px) {
 							display: none;
@@ -3223,9 +3236,7 @@ $colorp: #333333;
 			.ib-pfavorite {
 				transition: all .2s linear;
 				@include flexpa();
-				flex-direction: column;
-
-				
+				flex-direction: column;				
 
 				&:hover {
 					cursor:pointer;
@@ -3327,22 +3338,9 @@ $colorp: #333333;
 					border-right: 0;
 				}
 
-				&:hover {
-					cursor: pointer;
-
-					.ib-psbtn {
-						&:before {
-							color: $colorp;
-						}
-
-						.ib-pstxt {
-							color: $colorp
-						}
-					}
-				}
-
 				@media screen and (min-width: 1024px) {
 					margin-right: 15px;
+					padding: 4px 0;
 
 					&:last-child {
 						margin-right: 0;
@@ -3357,12 +3355,14 @@ $colorp: #333333;
 			}
 
 			.ib-psbtn {
+				border-radius: 4px;
 				width: 100%;
 				height: 100%;
 				position: relative;
 				overflow: hidden;
 				@include flexpa();
 				padding: 0 10px;
+				transition: all .3s;
 
 				&:before {
 					@include flexpa();
@@ -3370,6 +3370,27 @@ $colorp: #333333;
 					@include ibfont();
 					transition: all .2s linear;
 					font-size: 1.15em;
+				}
+
+				&:hover,
+				&:focus {
+					&:before {
+						color: $colorp;
+					}
+
+					.ib-pstxt {
+						color: $colorp
+					}
+				}
+
+				&:hover {
+					cursor: pointer;
+				}
+
+				&:focus {
+					border-color: #80bdff;
+					box-shadow: 0 0 0 3.2px rgba(0,123,255,.25);
+					outline: 0;
 				}
 			}
 
@@ -3416,12 +3437,19 @@ $colorp: #333333;
 				overflow: hidden;
 				display: block;
 				@include flexpa();
+				transition: all .3s;
 
 				&:before {
 					@include ibfont();
 					@include flexpa();
 					color: #fff;
 					font-size: 1.2em;
+				}
+
+				&:focus {
+					border-color: #80bdff;
+					box-shadow: 0 0 0 3.2px rgba(0,123,255,.25);
+					outline: 0;
 				}
 
 				@media screen and (min-width: 768px) {
@@ -3466,10 +3494,6 @@ $colorp: #333333;
 				top: -200px;
 				left:0;
 			}
-
-			.ib-plsifb {
-			}
-
 			.ib-pshared {
 
 				.ib-psbtn {
@@ -3821,6 +3845,13 @@ $colorp: #333333;
 					border:1px solid #E5E5E5;
 					border-radius: 3px;
 					font-size: .8em;
+					transition: all .3s;
+
+					&:focus {
+						border-color: #80bdff;
+						box-shadow: 0 0 0 3.2px rgba(0,123,255,.25);
+						outline: 0;
+					}
 				}
 
 				.ib-cftextarea {
@@ -3856,7 +3887,8 @@ $colorp: #333333;
 					transition: all .2s linear;
 					border: 1px solid $colorp;
 
-					&:hover {
+					&:hover,
+					&:focus {
 						color: $colorp;
 						background-color: #fff;
 
