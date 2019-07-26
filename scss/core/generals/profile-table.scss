@@ -938,17 +938,20 @@
 }
 
 
-.flex-table{
-  .chk-cnt{
+.flex-table {
+
+  .chk-cnt {
     display: flex;
-    z-index: 4;
     overflow: hidden;
     position: relative;
     width: 100%;
+    z-index: 4;
+
     input{
       top: -100%;
       position: absolute;;
     }
+
     label{
       width: auto;
     }
@@ -957,6 +960,7 @@
 
       span {
         align-items: center;
+        border-radius: 4px;
         color: #333;
         display: flex;
         font-size: 11px;
@@ -966,31 +970,39 @@
         text-overflow: ellipsis;
         white-space: nowrap;
         width: auto;
-        &:before{
-          content: "";
-          width: 15px;
-          height: 16px;
+
+        &:before {
           background-color: #fff;
-          display: inline-block;
-          margin-right: 5px;
           border: 1px solid #333;
+          border-radius: 4px;
+          content: "";
+          display: inline-block;
+          height: 16px;
+          margin-right: 5px;
+          width: 15px;
         }
-        &:after{
-          content: ""!important;
-          width: 9px;
-          height: 10px;
+        &:after {
           background-color: #333;
-          display: inline-block!important;
           border: 1px solid #ebebeb;
+          content: ""!important;
+          display: inline-block!important;
+          height: 10px;
+          left: 3px!important;
           position: absolute;
           top: 3px!important;
-          left: 3px!important;
-          transition: all .3s;
           transform: scale(0);
+          transition: all .3s;
+          width: 9px;
         }
       }
 
-      input:checked+span:after {
+      input:focus + span:before {
+        border-color: #80bdff;
+        box-shadow: 0 0 0 3.2px rgba(0, 123, 255, 0.25);
+        outline: 0;
+      }
+
+      input:checked + span:after {
         transform: scale(1);
       }
 
