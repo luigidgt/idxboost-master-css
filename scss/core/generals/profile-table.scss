@@ -612,9 +612,15 @@
               color: #5d5f60;
             }
 
-            legend {
-              color: #333;
+            fieldset {
+              background-color: #fff;
+
+              legend {
+                color: #333;
+              }
+              
             }
+            
           }
           .action-info-b{
             margin-top: 5px;
