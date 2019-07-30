@@ -278,18 +278,30 @@
       }
     } 
 
-    .content-fixed-btn{
-      .btn-request{
+    .content-fixed-btn {
+      
+      .btn-request {
         background-color: $colorweb !important;
         color: #FFF;
         border: 1px solid $colorweb;
         transition: all .3s;
-        &:hover{
+
+        &:hover,
+        &:focus {
           background-color: #FFF !important;
           color: #333;
         }
+        
+        &:focus {
+          border-color: #80bdff;
+          box-shadow: 0 0 0 3.2px rgba(0, 123, 255, 0.25);
+          outline: 0;
+        }
+
       }
+
     }
+
   }
 
   .#{$prefijo}temporal-content{
