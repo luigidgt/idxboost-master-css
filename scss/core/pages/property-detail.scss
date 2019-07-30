@@ -286,16 +286,9 @@
         border: 1px solid $colorweb;
         transition: all .3s;
 
-        &:hover,
-        &:focus {
+        &:hover {
           background-color: #FFF !important;
           color: #333;
-        }
-        
-        &:focus {
-          border-color: #80bdff;
-          box-shadow: 0 0 0 3.2px rgba(0, 123, 255, 0.25);
-          outline: 0;
         }
 
       }
@@ -1100,17 +1093,20 @@
 							}
 						}
 
-						.#{$prefijo}btn-request{
+						.#{$prefijo}btn-request {
 							display: none;
 							padding: 10/16*1rem 1rem;
 							color: #FFF;
 							border: 1px solid #333;
 							transition: all .3s;
               background-color: $colorweb;
-							&:hover{
-								background-color: #FFF;
+
+              &:hover,
+              &:focus {
+                background-color: #FFF;
 								color: #333;
-							}
+              }
+              
 						}
 
 						.#{$prefijo}btn-active-favorite{
