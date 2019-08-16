@@ -1717,7 +1717,19 @@ $colorp: #333333;
 						position: relative;
 						transition: all .15s linear;
 						width: 100%;
-						z-index: 1;						
+						z-index: 1;		
+
+						&:hover {
+							border: 1px solid $colorp;
+
+							.gs-prev-arrow {
+								left: 0;
+							}
+
+							.gs-next-arrow {
+								right: 0;
+							}
+						}				
 
 						&:before {
 							content: "";
@@ -1763,6 +1775,7 @@ $colorp: #333333;
 								overflow: hidden;
 								@include flexpa();
 								z-index: 5;
+								background-color: transparent;
 
 								span {
 									position: absolute;
@@ -3338,10 +3351,10 @@ $colorp: #333333;
 					border-bottom: 1px solid #E5E5E5;
 				}
 
-				@media screen and (min-width: 1024px) {
+				/*@media screen and (min-width: 1024px) {
 					padding-left: 15px;
 					padding-right: 15px;
-				}
+				}*/
 			}
 
 			.ib-pscitem {
@@ -3382,6 +3395,7 @@ $colorp: #333333;
 				@include flexpa();
 				padding: 0 10px;
 				transition: all .3s;
+				background-color: transparent;
 
 				&:before {
 					@include flexpa();
@@ -4680,4 +4694,8 @@ $colorp: #333333;
 .flex-map-draw-erase {
     background-position: 5px -182px;
     display: none;
+}
+
+.ib-pfavorite{
+	background-color: transparent;
 }
